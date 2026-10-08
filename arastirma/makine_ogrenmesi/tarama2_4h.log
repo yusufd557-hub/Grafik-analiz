@@ -1,2 +1,6 @@
   ml_4h_sp_PORT3_logit_H6_k2.0_ortusen_uzun_temel: ret1=4.033 sh1=0.96 ret2=2.376 sh2=0.76 mdd=-0.34 tr=704 exp=0.48 cost=0.40 (11.3s)
   ml_4h_sp_PORT3_logit_H6_k3.0_ortusen_uzun_temel: ret1=3.835 sh1=1.10 ret2=2.791 sh2=0.95 mdd=-0.31 tr=491 exp=0.33 cost=0.24 (0.5s)
+  ml_4h_sp_PORT3_logit_H12_k2.0_ortusen_uzun_temel: ret1=9.020 sh1=1.13 ret2=6.671 sh2=1.03 mdd=-0.45 tr=385 exp=0.64 cost=0.27 (5.0s)
+  ml_4h_sp_PORT3_logit_H12_k3.0_ortusen_uzun_temel: ret1=5.948 sh1=1.08 ret2=4.618 sh2=0.98 mdd=-0.41 tr=327 exp=0.55 cost=0.21 (0.4s)
+  ml_4h_sp_PORT3_hgb_clf_H6_k2.0_ortusen_uzun_temel: ret1=9.725 sh1=1.23 ret2=5.114 sh2=0.98 mdd=-0.43 tr=881 exp=0.63 cost=0.56 (47.2s)
+  ml_4h_sp_PORT3_hgb_clf_H6_k3.0_ortusen_uzun_temel: ret1=6.474 sh1=1.19 ret2=3.989 sh2=0.98 mdd=-0.41 tr=762 exp=0.50 cost=0.40 (0.5s)
