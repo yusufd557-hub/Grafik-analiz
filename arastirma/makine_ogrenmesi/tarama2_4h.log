@@ -1,0 +1,2 @@
+  ml_4h_sp_PORT3_logit_H6_k2.0_ortusen_uzun_temel: ret1=4.033 sh1=0.96 ret2=2.376 sh2=0.76 mdd=-0.34 tr=704 exp=0.48 cost=0.40 (11.3s)
+  ml_4h_sp_PORT3_logit_H6_k3.0_ortusen_uzun_temel: ret1=3.835 sh1=1.10 ret2=2.791 sh2=0.95 mdd=-0.31 tr=491 exp=0.33 cost=0.24 (0.5s)
