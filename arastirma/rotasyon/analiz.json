@@ -1,0 +1,433 @@
+{
+ "n_trials": 248,
+ "n_unique": 243,
+ "var_sr": 0.19251139568353662,
+ "stratejiler": {
+  "rotasyon_spot_top1_L14_gunluk": {
+   "dsr_dev_valid": 0.155580915350656,
+   "dsr_dev_train": 0.9298632556637958,
+   "ciro_yillik_valid": 19.622710622710628,
+   "ciro_yillik_train": 13.237107864202835,
+   "yillik": {
+    "2017": 0.42400074333183957,
+    "2018": 0.0717600369764817,
+    "2019": 0.16476182105262738,
+    "2020": 0.9590991153091719,
+    "2021": 1.8407434203913824,
+    "2022": -0.06204200522065284,
+    "2023": 0.8829024011046223,
+    "2024": 0.13894846395755578,
+    "2025": -0.037441886339954045
+   },
+   "yarim_yil_valid": {
+    "2024-H1": 0.19157474902081595,
+    "2024-H2": -0.04416532416997432,
+    "2025-H1": -0.037441886339954045
+   },
+   "aday": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": true,
+    "dogrulama_2x_maliyette_net_pozitif": true,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "aday": false
+   },
+   "train": {
+    "total_return": 16.472076350174934,
+    "cagr": 0.566753140554048,
+    "sharpe": 1.8081413968284066,
+    "max_drawdown": -0.22442498883082707,
+    "trades": 127,
+    "exposure": 0.5515463917525774,
+    "total_costs": 0.1012,
+    "total_funding": 0.0,
+    "skew": 0.9980023268015751,
+    "kurtosis": 13.126374252195191,
+    "days": 2327,
+    "p_value": 0.0
+   },
+   "train_2x": {
+    "total_return": 14.791034054033537,
+    "sharpe": 1.7486448417336227
+   },
+   "valid": {
+    "total_return": 0.09630408502299104,
+    "cagr": 0.06343782975846168,
+    "sharpe": 0.4245641640916385,
+    "max_drawdown": -0.2473481379352087,
+    "trades": 44,
+    "exposure": 0.5722120658135283,
+    "total_costs": 0.03520000000000001,
+    "total_funding": 0.0,
+    "skew": 1.0838013704033147,
+    "kurtosis": 12.221657714940994,
+    "days": 546,
+    "p_value": 0.3174,
+    "win_rate": 0.36363636363636365,
+    "profit_factor": 1.3333255649724287,
+    "total_without_best": -0.03258904539222984
+   },
+   "valid_2x": {
+    "total_return": 0.058383444782337035,
+    "sharpe": 0.2969426046972937,
+    "max_drawdown": -0.2590337223882112
+   }
+  },
+  "rotasyon_spot_top2_L28_gunluk": {
+   "dsr_dev_valid": 0.07037763513998374,
+   "dsr_dev_train": 0.901051024833267,
+   "ciro_yillik_valid": 21.18360805860806,
+   "ciro_yillik_train": 14.126557799742157,
+   "yillik": {
+    "2017": 0.805630754896479,
+    "2018": -0.3219489439164034,
+    "2019": 0.12568055099820885,
+    "2020": 1.866273621396156,
+    "2021": 4.776348674851902,
+    "2022": -0.0047032363070697025,
+    "2023": 1.4604466360178745,
+    "2024": -0.01243664769814068,
+    "2025": -0.028868249478731345
+   },
+   "yarim_yil_valid": {
+    "2024-H1": 0.004735430289304565,
+    "2024-H2": -0.017091144066156194,
+    "2025-H1": -0.028868249478731345
+   },
+   "aday": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "aday": false
+   },
+   "train": {
+    "total_return": 54.87841671257584,
+    "cagr": 0.8804010983596928,
+    "sharpe": 1.7639126161144973,
+    "max_drawdown": -0.5020143076730751,
+    "trades": 136,
+    "exposure": 0.5824742268041238,
+    "total_costs": 0.10800000000000001,
+    "total_funding": 0.0,
+    "skew": -0.11943252850516754,
+    "kurtosis": 14.276138802256332,
+    "days": 2327,
+    "p_value": 0.0
+   },
+   "train_2x": {
+    "total_return": 49.158417665838044,
+    "sharpe": 1.7218169767819
+   },
+   "valid": {
+    "total_return": -0.04094587292844254,
+    "cagr": -0.02758008526582756,
+    "sharpe": 0.03904840059562958,
+    "max_drawdown": -0.3500176190324509,
+    "trades": 47,
+    "exposure": 0.5594149908592322,
+    "total_costs": 0.038000000000000006,
+    "total_funding": 0.0,
+    "skew": 0.45465266614917876,
+    "kurtosis": 8.496485327429749,
+    "days": 546,
+    "p_value": 0.4692,
+    "win_rate": 0.425531914893617,
+    "profit_factor": 1.0647077205945066,
+    "total_without_best": -0.17637163065646466
+   },
+   "valid_2x": {
+    "total_return": -0.07671702652116386,
+    "sharpe": -0.05172333038889328,
+    "max_drawdown": -0.35882286005434794
+   }
+  },
+  "rotasyon_vadeli_uzunkisa_karma28": {
+   "dsr_dev_valid": 0.00010023974992370721,
+   "dsr_dev_train": 0.4556545123439302,
+   "ciro_yillik_valid": 24.082417582417584,
+   "ciro_yillik_train": 14.223492063492063,
+   "yillik": {
+    "2019": 0.0,
+    "2020": 0.5635738490711717,
+    "2021": 0.9323197251649475,
+    "2022": 0.2082359870782402,
+    "2023": 0.12488884608523221,
+    "2024": -0.23674353630893963,
+    "2025": -0.20369806351707842
+   },
+   "yarim_yil_valid": {
+    "2024-H1": -0.23044571604548603,
+    "2024-H2": -0.008183724520499647,
+    "2025-H1": -0.20369806351707842
+   },
+   "aday": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "aday": false
+   },
+   "train": {
+    "total_return": 3.1063764716165503,
+    "cagr": 0.38759909634833156,
+    "sharpe": 1.1900013700118202,
+    "max_drawdown": -0.35760901412401225,
+    "trades": 93,
+    "exposure": 0.9105329949238579,
+    "total_costs": 0.04293333333333333,
+    "total_funding": 0.22963829666666663,
+    "skew": 0.10656099922587806,
+    "kurtosis": 19.194221964404544,
+    "days": 1575,
+    "p_value": 0.0028
+   },
+   "train_2x": {
+    "total_return": 2.9345594334277347,
+    "sharpe": 1.1591072371136826
+   },
+   "valid": {
+    "total_return": -0.39221739992970206,
+    "cagr": -0.2833005134784833,
+    "sharpe": -1.6957297640930755,
+    "max_drawdown": -0.39912277215365033,
+    "trades": 54,
+    "exposure": 1.0,
+    "total_costs": 0.0252,
+    "total_funding": -0.0002144866666666668,
+    "skew": -0.9011986286516191,
+    "kurtosis": 7.70704662930944,
+    "days": 546,
+    "p_value": 0.9866,
+    "win_rate": 0.3888888888888889,
+    "profit_factor": 0.617117244509243,
+    "total_without_best": -0.45016811678293633
+   },
+   "valid_2x": {
+    "total_return": -0.40734344252858123,
+    "sharpe": -1.7871323525308997,
+    "max_drawdown": -0.4138065100479187
+   }
+  },
+  "rotasyon_vadeli_uzunkisa_L21_volesit": {
+   "dsr_dev_valid": 0.03450007382416861,
+   "dsr_dev_train": 0.6830428482539392,
+   "ciro_yillik_valid": 61.70666692597127,
+   "ciro_yillik_train": 48.44058848019435,
+   "yillik": {
+    "2019": 0.0,
+    "2020": 0.47570183547327516,
+    "2021": 0.9602979371878451,
+    "2022": 0.1512556556552236,
+    "2023": 0.019880922954307545,
+    "2024": -0.14090552575522297,
+    "2025": 0.08345178278767751
+   },
+   "yarim_yil_valid": {
+    "2024-H1": -0.08839122342484718,
+    "2024-H2": -0.05760618335385981,
+    "2025-H1": 0.08345178278767751
+   },
+   "aday": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "aday": false
+   },
+   "train": {
+    "total_return": 2.396580761481486,
+    "cagr": 0.3278565369045048,
+    "sharpe": 1.4686679586575675,
+    "max_drawdown": -0.12913826485142177,
+    "trades": 342,
+    "exposure": 0.9263959390862944,
+    "total_costs": 0.1462169713878556,
+    "total_funding": 0.059484475980816534,
+    "skew": 0.7444120571296526,
+    "kurtosis": 12.88536612115525,
+    "days": 1575,
+    "p_value": 0.0006
+   },
+   "train_2x": {
+    "total_return": 1.9346068076100327,
+    "sharpe": 1.304890942263333
+   },
+   "valid": {
+    "total_return": -0.06921256029645406,
+    "cagr": -0.046847561723342146,
+    "sharpe": -0.2520943246683836,
+    "max_drawdown": -0.20078928305033084,
+    "trades": 148,
+    "exposure": 1.0,
+    "total_costs": 0.06457026173608821,
+    "total_funding": -0.0035254899957823604,
+    "skew": 0.7547402541102098,
+    "kurtosis": 16.616693660192198,
+    "days": 546,
+    "p_value": 0.634,
+    "win_rate": 0.40540540540540543,
+    "profit_factor": 0.9174037038510076,
+    "total_without_best": -0.1290737944163125
+   },
+   "valid_2x": {
+    "total_return": -0.12745518896009078,
+    "sharpe": -0.544386923098645,
+    "max_drawdown": -0.22966517364205552
+   }
+  },
+  "rotasyon_oran_SOLBTC_n50_yukari": {
+   "dsr_dev_valid": 0.0014041689381534622,
+   "dsr_dev_train": 0.813994338862255,
+   "ciro_yillik_valid": 28.76510989010989,
+   "ciro_yillik_train": 12.754761904761905,
+   "yillik": {
+    "2019": 0.0,
+    "2020": 0.0,
+    "2021": 5.3162964685977,
+    "2022": -0.16071331454660975,
+    "2023": 1.0026202386029617,
+    "2024": -0.18065269684813468,
+    "2025": -0.11662313883475528
+   },
+   "yarim_yil_valid": {
+    "2024-H1": -0.05117922017147092,
+    "2024-H2": -0.13645725244346174,
+    "2025-H1": -0.11662313883475528
+   },
+   "aday": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "aday": false
+   },
+   "train": {
+    "total_return": 9.616257420660679,
+    "cagr": 0.7295282600428703,
+    "sharpe": 1.6372847932520092,
+    "max_drawdown": -0.2857219353485516,
+    "trades": 56,
+    "exposure": 0.3895939086294416,
+    "total_costs": 0.0385,
+    "total_funding": 0.016548005000000005,
+    "skew": 2.3220591053346435,
+    "kurtosis": 20.73403007285661,
+    "days": 1575,
+    "p_value": 0.0
+   },
+   "train_2x": {
+    "total_return": 9.215316080560287,
+    "sharpe": 1.6134541895647485
+   },
+   "valid": {
+    "total_return": -0.27620755113749695,
+    "cagr": -0.1944584082035301,
+    "sharpe": -1.2213561614388107,
+    "max_drawdown": -0.34842394855594516,
+    "trades": 42,
+    "exposure": 0.4149908592321755,
+    "total_costs": 0.0301,
+    "total_funding": 6.0165000000000045e-05,
+    "skew": 0.14520467145964966,
+    "kurtosis": 8.01599623530937,
+    "days": 546,
+    "p_value": 0.9224,
+    "win_rate": 0.40476190476190477,
+    "profit_factor": 0.5671616960302452,
+    "total_without_best": -0.3666149759467353
+   },
+   "valid_2x": {
+    "total_return": -0.2976552716702753,
+    "sharpe": -1.3441609727272947,
+    "max_drawdown": -0.36577408190790694
+   }
+  }
+ },
+ "al_tut": {
+  "BTC spot": {
+   "dev_train": {
+    "start": "2017-08-17 00:00:00+00:00",
+    "total_return": 8.85527860684916,
+    "cagr": 0.43208242099385297,
+    "sharpe": 0.86090182000583,
+    "max_drawdown": -0.8320252047704546
+   },
+   "dev_valid": {
+    "start": "2024-01-01 00:00:00+00:00",
+    "total_return": 1.533997830836464,
+    "cagr": 0.8626387084959577,
+    "sharpe": 1.4689590811357156,
+    "max_drawdown": -0.2809527676693755
+   }
+  },
+  "ETH spot": {
+   "dev_train": {
+    "start": "2017-08-17 00:00:00+00:00",
+    "total_return": 6.54652526181529,
+    "cagr": 0.3733230609839977,
+    "sharpe": 0.8143434682868997,
+    "max_drawdown": -0.9396657301347165
+   },
+   "dev_valid": {
+    "start": "2024-01-01 00:00:00+00:00",
+    "total_return": 0.08922506540688069,
+    "cagr": 0.05883932085558663,
+    "sharpe": 0.4281318665200493,
+    "max_drawdown": -0.6375196811651247
+   }
+  },
+  "SOL spot": {
+   "dev_train": {
+    "start": "2020-08-11 00:00:00+00:00",
+    "total_return": 29.80570941506749,
+    "cagr": 1.7513722590495706,
+    "sharpe": 1.4154971145832114,
+    "max_drawdown": -0.9626949421462017
+   },
+   "dev_valid": {
+    "start": "2024-01-01 00:00:00+00:00",
+    "total_return": 0.5219229256783375,
+    "cagr": 0.3243801769625565,
+    "sharpe": 0.753081701261843,
+    "max_drawdown": -0.5976638546398438
+   }
+  },
+  "BTC/ETH/SOL spot eşit ağırlık": {
+   "dev_train": {
+    "start": "2017-08-17 00:00:00+00:00",
+    "total_return": 30.89150382233876,
+    "cagr": 0.7219457474513882,
+    "sharpe": 1.1191591136172105,
+    "max_drawdown": -0.8546280200924699
+   },
+   "dev_valid": {
+    "start": "2024-01-01 00:00:00+00:00",
+    "total_return": 0.7366853054007023,
+    "cagr": 0.446648091802329,
+    "sharpe": 0.8951903450878153,
+    "max_drawdown": -0.49067937385534766
+   }
+  },
+  "BTC vadeli uzun (fonlama dahil)": {
+   "dev_train": {
+    "start": "2019-09-08 00:00:00+00:00",
+    "total_return": 1.2502581209778647,
+    "cagr": 0.20693631949909252,
+    "sharpe": 0.6247294399701941,
+    "max_drawdown": -0.7892920308786637
+   },
+   "dev_valid": {
+    "start": "2024-01-01 00:00:00+00:00",
+    "total_return": 1.1977636708951662,
+    "cagr": 0.6934417019658001,
+    "sharpe": 1.281840212382675,
+    "max_drawdown": -0.29385578391874523
+   }
+  }
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "kirilim_kanal4h_spot": {
+  "ozet": {
+   "total_return": 0.47561141802849316,
+   "sharpe": 1.1273406582251198,
+   "max_drawdown": -0.14211413237473536,
+   "trades": 47,
+   "exposure": 0.41651432053625836,
+   "win_rate": 0.46808510638297873,
+   "profit_factor": 2.0250320381436686,
+   "best_trade": 0.15020411039342357,
+   "total_without_best": 0.28291266280013994,
+   "total_costs": 0.0376,
+   "total_funding": 0.0,
+   "avg_bars": 55.765957446808514
+  },
+  "yillar": {
+   "2024": {
+    "getiri": 0.4845228250972553,
+    "sharpe": 1.6057506327771056,
+    "islem": 32
+   },
+   "2025": {
+    "getiri": -0.006002876424738179,
+    "sharpe": 0.06937901355503735,
+    "islem": 15
+   }
+  },
+  "bacaklar": {
+   "spot:BTCUSDT": {
+    "getiri": 0.343164806668653,
+    "sharpe": 0.8205587600683407,
+    "mdd": -0.3036617610590273,
+    "islem": 19
+   },
+   "spot:ETHUSDT": {
+    "getiri": 0.58638118216227,
+    "sharpe": 1.0685322128034833,
+    "mdd": -0.2522815458001586,
+    "islem": 13
+   },
+   "spot:SOLUSDT": {
+    "getiri": 0.35067397873173123,
+    "sharpe": 0.6882557785446538,
+    "mdd": -0.2714475688231549,
+    "islem": 15
+   }
+  },
+  "yon": {
+   "1": {
+    "n": 47,
+    "toplam_net": 0.4770925475351621
+   }
+  },
+  "al_tut_korelasyon_gunluk": 0.5561154558918149,
+  "beta_al_tuta": 0.22761370827597316
+ },
+ "kirilim_kanal4h_vadeli_iki": {
+  "ozet": {
+   "total_return": 0.059998262840284866,
+   "sharpe": 0.2850704274603934,
+   "max_drawdown": -0.2620126222731223,
+   "trades": 89,
+   "exposure": 0.6188299817184644,
+   "win_rate": 0.34831460674157305,
+   "profit_factor": 1.1438306857635523,
+   "best_trade": 0.15736932952044602,
+   "total_without_best": -0.0841313694743464,
+   "total_costs": 0.04153333333333333,
+   "total_funding": 0.054212540000000004,
+   "avg_bars": 43.20224719101124
+  },
+  "yillar": {
+   "2024": {
+    "getiri": 0.23614552816521162,
+    "sharpe": 0.8170887797621921,
+    "islem": 55
+   },
+   "2025": {
+    "getiri": -0.14249719091438862,
+    "sharpe": -0.5758983135852334,
+    "islem": 34
+   }
+  },
+  "bacaklar": {
+   "futures:BTCUSDT": {
+    "getiri": -0.11167766602460016,
+    "sharpe": -0.04644524242762383,
+    "mdd": -0.42323762334396253,
+    "islem": 34
+   },
+   "futures:ETHUSDT": {
+    "getiri": 0.6275717367879785,
+    "sharpe": 0.9279009698267106,
+    "mdd": -0.3272345515576155,
+    "islem": 26
+   },
+   "futures:SOLUSDT": {
+    "getiri": -0.32741144520313004,
+    "sharpe": -0.18928129669659796,
+    "mdd": -0.4910948891324869,
+    "islem": 29
+   }
+  },
+  "yon": {
+   "-1": {
+    "n": 44,
+    "toplam_net": -0.3342623461600796
+   },
+   "1": {
+    "n": 45,
+    "toplam_net": 0.47380526500515935
+   }
+  },
+  "al_tut_korelasyon_gunluk": 0.06619195001816898,
+  "beta_al_tuta": 0.03634277044906267
+ },
+ "kirilim_kanal4h_vadeli_uzun": {
+  "ozet": {
+   "total_return": 0.473554927477408,
+   "sharpe": 1.1303846850957295,
+   "max_drawdown": -0.15195837696562253,
+   "trades": 45,
+   "exposure": 0.4152955514929921,
+   "win_rate": 0.4888888888888889,
+   "profit_factor": 2.1126672119551553,
+   "best_trade": 0.15736932952044602,
+   "total_without_best": 0.2731933445030661,
+   "total_costs": 0.021,
+   "total_funding": 0.062233043333333335,
+   "avg_bars": 57.51111111111111
+  },
+  "yillar": {
+   "2024": {
+    "getiri": 0.44078806134864545,
+    "sharpe": 1.4984830952200103,
+    "islem": 31
+   },
+   "2025": {
+    "getiri": 0.02274232207205551,
+    "sharpe": 0.3060700706480149,
+    "islem": 14
+   }
+  },
+  "bacaklar": {
+   "futures:BTCUSDT": {
+    "getiri": 0.25711144844078304,
+    "sharpe": 0.6691446311137618,
+    "mdd": -0.2931926988749384,
+    "islem": 19
+   },
+   "futures:ETHUSDT": {
+    "getiri": 0.7000957194501205,
+    "sharpe": 1.1991723590263965,
+    "mdd": -0.2523160494876543,
+    "islem": 12
+   },
+   "futures:SOLUSDT": {
+    "getiri": 0.3447422531914224,
+    "sharpe": 0.6872522934982027,
+    "mdd": -0.23628861695416892,
+    "islem": 14
+   }
+  },
+  "yon": {
+   "1": {
+    "n": 45,
+    "toplam_net": 0.47380526500515935
+   }
+  },
+  "al_tut_korelasyon_gunluk": 0.556701731932205,
+  "beta_al_tuta": 0.22585100990331702
+ },
+ "korelasyon": {
+  "kirilim_kanal4h_spot~kirilim_kanal4h_vadeli_iki": 0.7143243468063564,
+  "kirilim_kanal4h_spot~kirilim_kanal4h_vadeli_uzun": 0.986522926951059,
+  "kirilim_kanal4h_vadeli_iki~kirilim_kanal4h_vadeli_uzun": 0.7241154232163081
+ },
+ "dsr_duyarlilik": {
+  "kirilim_kanal4h_spot": {
+   "resmi_dsr": 0.009754847657161628,
+   "yalniz_4h_kanal_varyansi_ile": 0.444907490747703,
+   "4h_kanal_deneme_sayisi_ve_varyansi_ile": 0.48936660088581785,
+   "n_4h_kanal": 182,
+   "var_4h_kanal": 0.1763505404164566,
+   "var_tum": 1.0160945015972895
+  },
+  "kirilim_kanal4h_vadeli_iki": {
+   "resmi_dsr": 0.000501660682792662,
+   "yalniz_4h_kanal_varyansi_ile": 0.12169702479366468,
+   "4h_kanal_deneme_sayisi_ve_varyansi_ile": 0.14492850587506578,
+   "n_4h_kanal": 182,
+   "var_4h_kanal": 0.1763505404164566,
+   "var_tum": 1.0160945015972895
+  },
+  "kirilim_kanal4h_vadeli_uzun": {
+   "resmi_dsr": 0.009512070891879824,
+   "yalniz_4h_kanal_varyansi_ile": 0.4461309648305347,
+   "4h_kanal_deneme_sayisi_ve_varyansi_ile": 0.49085523452829366,
+   "n_4h_kanal": 182,
+   "var_4h_kanal": 0.1763505404164566,
+   "var_tum": 1.0160945015972895
+  }
+ }
+}
