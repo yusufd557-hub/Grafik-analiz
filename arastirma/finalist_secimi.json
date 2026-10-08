@@ -1,0 +1,499 @@
+{
+ "kural": {
+  "min_islem": 30,
+  "korelasyon_siniri": 0.7,
+  "en_fazla": 3,
+  "puan": "dev_valid 2x maliyet Sharpe"
+ },
+ "tablo": [
+  {
+   "ad": "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc",
+   "aile": "makine_ogrenmesi",
+   "getiri_1x": 0.0908675028475161,
+   "getiri_2x": 0.08218492172354219,
+   "sharpe_1x": 1.8839800065802985,
+   "sharpe_2x": 1.7894699160546454,
+   "islem": 27,
+   "dusus": -0.02228519224783554,
+   "maruziyet": 0.009216940889701401
+  },
+  {
+   "ad": "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot",
+   "aile": "makine_ogrenmesi",
+   "getiri_1x": 0.13161207823143162,
+   "getiri_2x": 0.1032063851392846,
+   "sharpe_1x": 1.4986882361398324,
+   "sharpe_2x": 1.2076047328196684,
+   "islem": 112,
+   "dusus": -0.03529519050465413,
+   "maruziyet": 0.045475319926873856
+  },
+  {
+   "ad": "kirilim_kanal4h_vadeli_uzun",
+   "aile": "kirilim",
+   "getiri_1x": 0.473554927477408,
+   "getiri_2x": 0.44293027855669465,
+   "sharpe_1x": 1.1303846850957295,
+   "sharpe_2x": 1.0754599277533234,
+   "islem": 45,
+   "dusus": -0.15195837696562253,
+   "maruziyet": 0.4152955514929921
+  },
+  {
+   "ad": "formasyon_ucgen_kama_4h_hacim_iki",
+   "aile": "formasyon",
+   "getiri_1x": 0.3072437416635645,
+   "getiri_2x": 0.27411839934608295,
+   "sharpe_1x": 1.1301964413487926,
+   "sharpe_2x": 1.0297963224521227,
+   "islem": 55,
+   "dusus": -0.1856511413241264,
+   "maruziyet": 0.3769043266301036
+  },
+  {
+   "ad": "kirilim_kanal4h_spot",
+   "aile": "kirilim",
+   "getiri_1x": 0.47561141802849316,
+   "getiri_2x": 0.42113022498220976,
+   "sharpe_1x": 1.1273406582251198,
+   "sharpe_2x": 1.029438696718449,
+   "islem": 47,
+   "dusus": -0.14211413237473536,
+   "maruziyet": 0.41651432053625836
+  },
+  {
+   "ad": "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot",
+   "aile": "makine_ogrenmesi",
+   "getiri_1x": 0.23140696629600632,
+   "getiri_2x": 0.15165102396309016,
+   "sharpe_1x": 1.4136669764565346,
+   "sharpe_2x": 0.9832327676502081,
+   "islem": 320,
+   "dusus": -0.08860750019753671,
+   "maruziyet": 0.17268433881779402
+  },
+  {
+   "ad": "formasyon_hepsi_4h_trend_10bar_uzun",
+   "aile": "formasyon",
+   "getiri_1x": 0.24539513306496685,
+   "getiri_2x": 0.20117626176435088,
+   "sharpe_1x": 1.1218151393157456,
+   "sharpe_2x": 0.9502009911619,
+   "islem": 78,
+   "dusus": -0.09286244425499224,
+   "maruziyet": 0.19865935405240706
+  },
+  {
+   "ad": "formasyon_ucgen_kama_4h_trend_uzun",
+   "aile": "formasyon",
+   "getiri_1x": 0.24783639155869652,
+   "getiri_2x": 0.22535659430824095,
+   "sharpe_1x": 0.996038210060587,
+   "sharpe_2x": 0.9227118542648943,
+   "islem": 39,
+   "dusus": -0.1293625290050181,
+   "maruziyet": 0.2845825716026813
+  },
+  {
+   "ad": "od_dip_ret4h_fut_port3_1h",
+   "aile": "ortalamaya_donus",
+   "getiri_1x": 0.13874992399246322,
+   "getiri_2x": 0.10418896996232441,
+   "sharpe_1x": 1.093553522902121,
+   "sharpe_2x": 0.8499543812557551,
+   "islem": 66,
+   "dusus": -0.05563638948711236,
+   "maruziyet": 0.04090493601462523
+  },
+  {
+   "ad": "trend_ens_spot_port3_4h_vt",
+   "aile": "trend",
+   "getiri_1x": 0.42694429664652644,
+   "getiri_2x": 0.3869684094442478,
+   "sharpe_1x": 0.9084358861868793,
+   "sharpe_2x": 0.8480534434151288,
+   "islem": 66,
+   "dusus": -0.29867734234355303,
+   "maruziyet": 0.9390615478366849
+  },
+  {
+   "ad": "trend_ens_spot_port3_4h",
+   "aile": "trend",
+   "getiri_1x": 0.3863197815445367,
+   "getiri_2x": 0.34219904777282206,
+   "sharpe_1x": 0.7732359327211709,
+   "sharpe_2x": 0.7146959195653025,
+   "islem": 66,
+   "dusus": -0.33290508511975225,
+   "maruziyet": 0.9390615478366849
+  },
+  {
+   "ad": "trend_ens_spot_port3_1d",
+   "aile": "trend",
+   "getiri_1x": 0.32506090034466784,
+   "getiri_2x": 0.2839376319800413,
+   "sharpe_1x": 0.693880581545035,
+   "sharpe_2x": 0.6366461471117137,
+   "islem": 36,
+   "dusus": -0.33823480602283995,
+   "maruziyet": 0.9250457038391224
+  },
+  {
+   "ad": "trend_ens_vadeli_port3_4h_alim",
+   "aile": "trend",
+   "getiri_1x": 0.26528527469505314,
+   "getiri_2x": 0.22070840995695162,
+   "sharpe_1x": 0.6040886166012736,
+   "sharpe_2x": 0.5403943561573143,
+   "islem": 62,
+   "dusus": -0.3407428096412668,
+   "maruziyet": 0.9390615478366849
+  },
+  {
+   "ad": "od_dip_ens4_fut_port3_1h",
+   "aile": "ortalamaya_donus",
+   "getiri_1x": 0.07471845413952516,
+   "getiri_2x": 0.04084359106516189,
+   "sharpe_1x": 0.8598683734849513,
+   "sharpe_2x": 0.49255052210599115,
+   "islem": 140,
+   "dusus": -0.04495071759182956,
+   "maruziyet": 0.1964503351614869
+  },
+  {
+   "ad": "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel",
+   "aile": "makine_ogrenmesi",
+   "getiri_1x": 0.03411948653083807,
+   "getiri_2x": 0.019747574939145807,
+   "sharpe_1x": 0.7616264092079686,
+   "sharpe_2x": 0.45220342200992236,
+   "islem": 55,
+   "dusus": -0.028847274375094267,
+   "maruziyet": 0.02795551492992078
+  }
+ ],
+ "karar": [
+  {
+   "ad": "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc",
+   "karar": "elendi: 27 işlem < 30"
+  },
+  {
+   "ad": "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot",
+   "karar": "FİNALİST"
+  },
+  {
+   "ad": "kirilim_kanal4h_vadeli_uzun",
+   "karar": "FİNALİST"
+  },
+  {
+   "ad": "formasyon_ucgen_kama_4h_hacim_iki",
+   "karar": "FİNALİST"
+  },
+  {
+   "ad": "kirilim_kanal4h_spot",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "formasyon_hepsi_4h_trend_10bar_uzun",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "formasyon_ucgen_kama_4h_trend_uzun",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "od_dip_ret4h_fut_port3_1h",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "trend_ens_spot_port3_4h_vt",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "trend_ens_spot_port3_4h",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "trend_ens_spot_port3_1d",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "trend_ens_vadeli_port3_4h_alim",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "od_dip_ens4_fut_port3_1h",
+   "karar": "elendi: 3 finalist dolu"
+  },
+  {
+   "ad": "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel",
+   "karar": "elendi: 3 finalist dolu"
+  }
+ ],
+ "finalistler": [
+  "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot",
+  "kirilim_kanal4h_vadeli_uzun",
+  "formasyon_ucgen_kama_4h_hacim_iki"
+ ],
+ "korelasyon": {
+  "trend_ens_spot_port3_1d": {
+   "trend_ens_spot_port3_1d": 1.0,
+   "trend_ens_spot_port3_4h": 0.996,
+   "trend_ens_spot_port3_4h_vt": 0.987,
+   "trend_ens_vadeli_port3_4h_alim": 0.995,
+   "od_dip_ret4h_fut_port3_1h": 0.242,
+   "od_dip_ens4_fut_port3_1h": 0.473,
+   "kirilim_kanal4h_spot": 0.757,
+   "kirilim_kanal4h_vadeli_uzun": 0.761,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.571,
+   "formasyon_ucgen_kama_4h_hacim_iki": -0.055,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.45,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.139,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.098,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.032,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": -0.001
+  },
+  "trend_ens_spot_port3_4h": {
+   "trend_ens_spot_port3_1d": 0.996,
+   "trend_ens_spot_port3_4h": 1.0,
+   "trend_ens_spot_port3_4h_vt": 0.991,
+   "trend_ens_vadeli_port3_4h_alim": 0.998,
+   "od_dip_ret4h_fut_port3_1h": 0.235,
+   "od_dip_ens4_fut_port3_1h": 0.471,
+   "kirilim_kanal4h_spot": 0.76,
+   "kirilim_kanal4h_vadeli_uzun": 0.765,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.577,
+   "formasyon_ucgen_kama_4h_hacim_iki": -0.06,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.46,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.127,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.09,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.019,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": -0.017
+  },
+  "trend_ens_spot_port3_4h_vt": {
+   "trend_ens_spot_port3_1d": 0.987,
+   "trend_ens_spot_port3_4h": 0.991,
+   "trend_ens_spot_port3_4h_vt": 1.0,
+   "trend_ens_vadeli_port3_4h_alim": 0.99,
+   "od_dip_ret4h_fut_port3_1h": 0.241,
+   "od_dip_ens4_fut_port3_1h": 0.449,
+   "kirilim_kanal4h_spot": 0.77,
+   "kirilim_kanal4h_vadeli_uzun": 0.774,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.586,
+   "formasyon_ucgen_kama_4h_hacim_iki": -0.053,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.454,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.107,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.085,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.019,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": -0.022
+  },
+  "trend_ens_vadeli_port3_4h_alim": {
+   "trend_ens_spot_port3_1d": 0.995,
+   "trend_ens_spot_port3_4h": 0.998,
+   "trend_ens_spot_port3_4h_vt": 0.99,
+   "trend_ens_vadeli_port3_4h_alim": 1.0,
+   "od_dip_ret4h_fut_port3_1h": 0.232,
+   "od_dip_ens4_fut_port3_1h": 0.46,
+   "kirilim_kanal4h_spot": 0.768,
+   "kirilim_kanal4h_vadeli_uzun": 0.772,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.578,
+   "formasyon_ucgen_kama_4h_hacim_iki": -0.051,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.47,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.127,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.099,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.027,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": -0.011
+  },
+  "od_dip_ret4h_fut_port3_1h": {
+   "trend_ens_spot_port3_1d": 0.242,
+   "trend_ens_spot_port3_4h": 0.235,
+   "trend_ens_spot_port3_4h_vt": 0.241,
+   "trend_ens_vadeli_port3_4h_alim": 0.232,
+   "od_dip_ret4h_fut_port3_1h": 1.0,
+   "od_dip_ens4_fut_port3_1h": 0.539,
+   "kirilim_kanal4h_spot": 0.138,
+   "kirilim_kanal4h_vadeli_uzun": 0.186,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.084,
+   "formasyon_ucgen_kama_4h_hacim_iki": -0.031,
+   "formasyon_hepsi_4h_trend_10bar_uzun": -0.011,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.115,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": -0.004,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.079,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.116
+  },
+  "od_dip_ens4_fut_port3_1h": {
+   "trend_ens_spot_port3_1d": 0.473,
+   "trend_ens_spot_port3_4h": 0.471,
+   "trend_ens_spot_port3_4h_vt": 0.449,
+   "trend_ens_vadeli_port3_4h_alim": 0.46,
+   "od_dip_ret4h_fut_port3_1h": 0.539,
+   "od_dip_ens4_fut_port3_1h": 1.0,
+   "kirilim_kanal4h_spot": 0.211,
+   "kirilim_kanal4h_vadeli_uzun": 0.262,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.195,
+   "formasyon_ucgen_kama_4h_hacim_iki": -0.136,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.043,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.2,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": -0.083,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.001,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.048
+  },
+  "kirilim_kanal4h_spot": {
+   "trend_ens_spot_port3_1d": 0.757,
+   "trend_ens_spot_port3_4h": 0.76,
+   "trend_ens_spot_port3_4h_vt": 0.77,
+   "trend_ens_vadeli_port3_4h_alim": 0.768,
+   "od_dip_ret4h_fut_port3_1h": 0.138,
+   "od_dip_ens4_fut_port3_1h": 0.211,
+   "kirilim_kanal4h_spot": 1.0,
+   "kirilim_kanal4h_vadeli_uzun": 0.987,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.448,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.048,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.447,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.061,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.182,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.094,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.027
+  },
+  "kirilim_kanal4h_vadeli_uzun": {
+   "trend_ens_spot_port3_1d": 0.761,
+   "trend_ens_spot_port3_4h": 0.765,
+   "trend_ens_spot_port3_4h_vt": 0.774,
+   "trend_ens_vadeli_port3_4h_alim": 0.772,
+   "od_dip_ret4h_fut_port3_1h": 0.186,
+   "od_dip_ens4_fut_port3_1h": 0.262,
+   "kirilim_kanal4h_spot": 0.987,
+   "kirilim_kanal4h_vadeli_uzun": 1.0,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.437,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.038,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.448,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.071,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.169,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.087,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.026
+  },
+  "formasyon_ucgen_kama_4h_trend_uzun": {
+   "trend_ens_spot_port3_1d": 0.571,
+   "trend_ens_spot_port3_4h": 0.577,
+   "trend_ens_spot_port3_4h_vt": 0.586,
+   "trend_ens_vadeli_port3_4h_alim": 0.578,
+   "od_dip_ret4h_fut_port3_1h": 0.084,
+   "od_dip_ens4_fut_port3_1h": 0.195,
+   "kirilim_kanal4h_spot": 0.448,
+   "kirilim_kanal4h_vadeli_uzun": 0.437,
+   "formasyon_ucgen_kama_4h_trend_uzun": 1.0,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.203,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.616,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.076,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.014,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": -0.019,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": -0.031
+  },
+  "formasyon_ucgen_kama_4h_hacim_iki": {
+   "trend_ens_spot_port3_1d": -0.055,
+   "trend_ens_spot_port3_4h": -0.06,
+   "trend_ens_spot_port3_4h_vt": -0.053,
+   "trend_ens_vadeli_port3_4h_alim": -0.051,
+   "od_dip_ret4h_fut_port3_1h": -0.031,
+   "od_dip_ens4_fut_port3_1h": -0.136,
+   "kirilim_kanal4h_spot": 0.048,
+   "kirilim_kanal4h_vadeli_uzun": 0.038,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.203,
+   "formasyon_ucgen_kama_4h_hacim_iki": 1.0,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.154,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.013,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.077,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.071,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.036
+  },
+  "formasyon_hepsi_4h_trend_10bar_uzun": {
+   "trend_ens_spot_port3_1d": 0.45,
+   "trend_ens_spot_port3_4h": 0.46,
+   "trend_ens_spot_port3_4h_vt": 0.454,
+   "trend_ens_vadeli_port3_4h_alim": 0.47,
+   "od_dip_ret4h_fut_port3_1h": -0.011,
+   "od_dip_ens4_fut_port3_1h": 0.043,
+   "kirilim_kanal4h_spot": 0.447,
+   "kirilim_kanal4h_vadeli_uzun": 0.448,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.616,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.154,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 1.0,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.014,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.043,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.021,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": -0.004
+  },
+  "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": {
+   "trend_ens_spot_port3_1d": 0.139,
+   "trend_ens_spot_port3_4h": 0.127,
+   "trend_ens_spot_port3_4h_vt": 0.107,
+   "trend_ens_vadeli_port3_4h_alim": 0.127,
+   "od_dip_ret4h_fut_port3_1h": 0.115,
+   "od_dip_ens4_fut_port3_1h": 0.2,
+   "kirilim_kanal4h_spot": 0.061,
+   "kirilim_kanal4h_vadeli_uzun": 0.071,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.076,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.013,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.014,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 1.0,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.359,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.396,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.218
+  },
+  "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": {
+   "trend_ens_spot_port3_1d": 0.098,
+   "trend_ens_spot_port3_4h": 0.09,
+   "trend_ens_spot_port3_4h_vt": 0.085,
+   "trend_ens_vadeli_port3_4h_alim": 0.099,
+   "od_dip_ret4h_fut_port3_1h": -0.004,
+   "od_dip_ens4_fut_port3_1h": -0.083,
+   "kirilim_kanal4h_spot": 0.182,
+   "kirilim_kanal4h_vadeli_uzun": 0.169,
+   "formasyon_ucgen_kama_4h_trend_uzun": 0.014,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.077,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.043,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.359,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 1.0,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.797,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.675
+  },
+  "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": {
+   "trend_ens_spot_port3_1d": 0.032,
+   "trend_ens_spot_port3_4h": 0.019,
+   "trend_ens_spot_port3_4h_vt": 0.019,
+   "trend_ens_vadeli_port3_4h_alim": 0.027,
+   "od_dip_ret4h_fut_port3_1h": 0.079,
+   "od_dip_ens4_fut_port3_1h": 0.001,
+   "kirilim_kanal4h_spot": 0.094,
+   "kirilim_kanal4h_vadeli_uzun": 0.087,
+   "formasyon_ucgen_kama_4h_trend_uzun": -0.019,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.071,
+   "formasyon_hepsi_4h_trend_10bar_uzun": 0.021,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.396,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.797,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 1.0,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 0.736
+  },
+  "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": {
+   "trend_ens_spot_port3_1d": -0.001,
+   "trend_ens_spot_port3_4h": -0.017,
+   "trend_ens_spot_port3_4h_vt": -0.022,
+   "trend_ens_vadeli_port3_4h_alim": -0.011,
+   "od_dip_ret4h_fut_port3_1h": 0.116,
+   "od_dip_ens4_fut_port3_1h": 0.048,
+   "kirilim_kanal4h_spot": 0.027,
+   "kirilim_kanal4h_vadeli_uzun": 0.026,
+   "formasyon_ucgen_kama_4h_trend_uzun": -0.031,
+   "formasyon_ucgen_kama_4h_hacim_iki": 0.036,
+   "formasyon_hepsi_4h_trend_10bar_uzun": -0.004,
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.218,
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": 0.675,
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": 0.736,
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": 1.0
+  }
+ }
+}

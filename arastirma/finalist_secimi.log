@@ -1,0 +1,84 @@
+trend_ens_spot_port3_1d: sharpe2x=0.637 islem=36 (1 sn)
+trend_ens_spot_port3_4h: sharpe2x=0.715 islem=66 (1 sn)
+trend_ens_spot_port3_4h_vt: sharpe2x=0.848 islem=66 (1 sn)
+trend_ens_vadeli_port3_4h_alim: sharpe2x=0.540 islem=62 (1 sn)
+od_dip_ret4h_fut_port3_1h: sharpe2x=0.850 islem=66 (1 sn)
+od_dip_ens4_fut_port3_1h: sharpe2x=0.493 islem=140 (1 sn)
+kirilim_kanal4h_spot: sharpe2x=1.029 islem=47 (0 sn)
+kirilim_kanal4h_vadeli_uzun: sharpe2x=1.075 islem=45 (0 sn)
+formasyon_ucgen_kama_4h_trend_uzun: sharpe2x=0.923 islem=39 (2 sn)
+formasyon_ucgen_kama_4h_hacim_iki: sharpe2x=1.030 islem=55 (0 sn)
+formasyon_hepsi_4h_trend_10bar_uzun: sharpe2x=0.950 islem=78 (0 sn)
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot: sharpe2x=0.983 islem=320 (149 sn)
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot: sharpe2x=1.208 islem=112 (113 sn)
+ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel: sharpe2x=0.452 islem=55 (118 sn)
+ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc: sharpe2x=1.789 islem=27 (130 sn)
+{
+ "finalistler": [
+  "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot",
+  "kirilim_kanal4h_vadeli_uzun",
+  "formasyon_ucgen_kama_4h_hacim_iki"
+ ],
+ "karar": [
+  [
+   "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc",
+   "elendi: 27 işlem < 30"
+  ],
+  [
+   "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot",
+   "FİNALİST"
+  ],
+  [
+   "kirilim_kanal4h_vadeli_uzun",
+   "FİNALİST"
+  ],
+  [
+   "formasyon_ucgen_kama_4h_hacim_iki",
+   "FİNALİST"
+  ],
+  [
+   "kirilim_kanal4h_spot",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "formasyon_hepsi_4h_trend_10bar_uzun",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "formasyon_ucgen_kama_4h_trend_uzun",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "od_dip_ret4h_fut_port3_1h",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "trend_ens_spot_port3_4h_vt",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "trend_ens_spot_port3_4h",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "trend_ens_spot_port3_1d",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "trend_ens_vadeli_port3_4h_alim",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "od_dip_ens4_fut_port3_1h",
+   "elendi: 3 finalist dolu"
+  ],
+  [
+   "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel",
+   "elendi: 3 finalist dolu"
+  ]
+ ]
+}
