@@ -1,9 +1,11 @@
-"""Binance spot mum verisi: aylık resmî arşiv ve REST API.
+"""Binance mum ve fonlama verisi: aylık resmî arşiv ve REST API.
 
-Geçmiş veri `data.binance.vision` aylık ZIP arşivlerinden alınır ve yayımlanan
-SHA256 değeriyle doğrulanır. Arşivde henüz bulunmayan son günler REST API'den
+Spot ve USDⓈ-M vadeli (perpetual) piyasalar desteklenir. Geçmiş veri
+`data.binance.vision` aylık ZIP arşivlerinden alınır ve yayımlanan SHA256
+değeriyle doğrulanır. Arşivde henüz bulunmayan son günler REST API'den
 sayfalanarak çekilir. REST için birden fazla adres sırayla denenir; bazı
-bölgelerde `api.binance.com` erişimi kısıtlıdır (HTTP 451).
+bölgelerde `api.binance.com` ve `fapi.binance.com` erişimi kısıtlıdır
+(HTTP 451), `www.binance.com` aynı uç noktaları sunar.
 """
 
 from __future__ import annotations
@@ -20,13 +22,27 @@ import requests
 
 from ..config import INTERVAL_MS
 
-ARCHIVE_BASE = "https://data.binance.vision/data/spot/monthly/klines"
+SPOT = "spot"
+FUTURES = "futures"
+MARKETS = (SPOT, FUTURES)
+
+ARCHIVE_BASES = {
+    SPOT: "https://data.binance.vision/data/spot/monthly/klines",
+    FUTURES: "https://data.binance.vision/data/futures/um/monthly/klines",
+}
+FUNDING_ARCHIVE_BASE = "https://data.binance.vision/data/futures/um/monthly/fundingRate"
+ARCHIVE_BASE = ARCHIVE_BASES[SPOT]
 
 REST_HOSTS: tuple[str, ...] = (
     "https://api.binance.com",
     "https://data-api.binance.vision",
     "https://www.binance.com",
 )
+FUTURES_REST_HOSTS: tuple[str, ...] = (
+    "https://fapi.binance.com",
+    "https://www.binance.com",
+)
+REST_PATHS = {SPOT: "/api/v3/klines", FUTURES: "/fapi/v1/klines"}
 
 RAW_COLUMNS = [
     "open_time",
@@ -104,9 +120,33 @@ def empty_frame() -> pd.DataFrame:
     return frame
 
 
-def archive_url(symbol: str, interval: str, year: int, month: int) -> str:
+def archive_url(symbol: str, interval: str, year: int, month: int, market: str = SPOT) -> str:
     name = f"{symbol}-{interval}-{year:04d}-{month:02d}.zip"
-    return f"{ARCHIVE_BASE}/{symbol}/{interval}/{name}"
+    return f"{ARCHIVE_BASES[market]}/{symbol}/{interval}/{name}"
+
+
+def _download_verified(session: requests.Session, url: str, verify: bool, timeout: float) -> bytes | None:
+    response = session.get(url, timeout=timeout)
+    if response.status_code == 404:
+        return None
+    response.raise_for_status()
+    payload = response.content
+    if verify:
+        checksum = session.get(url + ".CHECKSUM", timeout=timeout)
+        if checksum.status_code == 200:
+            expected = checksum.text.split()[0].strip().lower()
+            actual = hashlib.sha256(payload).hexdigest()
+            if expected != actual:
+                raise DataError(f"SHA256 uyuşmuyor: {url}")
+    return payload
+
+
+def _read_csv_from_zip(payload: bytes, url: str) -> pd.DataFrame:
+    with zipfile.ZipFile(io.BytesIO(payload)) as archive:
+        names = [n for n in archive.namelist() if n.endswith(".csv")]
+        if not names:
+            raise DataError(f"arşivde CSV yok: {url}")
+        return pd.read_csv(archive.open(names[0]), header=None, dtype=str)
 
 
 def fetch_month_archive(
@@ -117,53 +157,87 @@ def fetch_month_archive(
     month: int,
     verify: bool = True,
     timeout: float = 60.0,
+    market: str = SPOT,
 ) -> pd.DataFrame | None:
-    """Bir aylık arşivi indirir. Arşiv yoksa (404) `None` döner."""
-    url = archive_url(symbol, interval, year, month)
-    response = session.get(url, timeout=timeout)
-    if response.status_code == 404:
+    """Bir aylık mum arşivini indirir. Arşiv yoksa (404) `None` döner."""
+    url = archive_url(symbol, interval, year, month, market)
+    payload = _download_verified(session, url, verify, timeout)
+    if payload is None:
         return None
-    response.raise_for_status()
-    payload = response.content
+    return parse_klines(_read_csv_from_zip(payload, url))
 
-    if verify:
-        checksum = session.get(url + ".CHECKSUM", timeout=timeout)
-        if checksum.status_code == 200:
-            expected = checksum.text.split()[0].strip().lower()
-            actual = hashlib.sha256(payload).hexdigest()
-            if expected != actual:
-                raise DataError(f"SHA256 uyuşmuyor: {url}")
 
-    with zipfile.ZipFile(io.BytesIO(payload)) as archive:
-        names = [n for n in archive.namelist() if n.endswith(".csv")]
-        if not names:
-            raise DataError(f"arşivde CSV yok: {url}")
-        raw = pd.read_csv(archive.open(names[0]), header=None, dtype=str)
-    return parse_klines(raw)
+def parse_funding(raw: pd.DataFrame | Sequence[dict]) -> pd.DataFrame:
+    """Fonlama kayıtlarını `funding_rate` sütunlu, zaman indeksli tabloya çevirir.
+
+    Arşiv satırları (`calc_time, funding_interval_hours, last_funding_rate`) ve
+    REST yanıtları (`fundingTime`, `fundingRate`) desteklenir. Zaman damgası
+    birkaç milisaniye kayık gelebildiği için en yakın saniyeye yuvarlanır.
+    """
+    if isinstance(raw, pd.DataFrame):
+        frame = raw.copy()
+        if str(frame.iloc[0, 0]).strip().lower() == "calc_time":
+            frame = frame.iloc[1:]
+        times = pd.to_numeric(frame.iloc[:, 0]).to_numpy(dtype=np.int64)
+        rates = pd.to_numeric(frame.iloc[:, -1]).to_numpy(dtype=float)
+    else:
+        rows = list(raw)
+        if not rows:
+            return empty_funding()
+        times = np.array([int(r["fundingTime"]) for r in rows], dtype=np.int64)
+        rates = np.array([float(r["fundingRate"]) for r in rows], dtype=float)
+    index = pd.DatetimeIndex(pd.to_datetime(times, unit="ms", utc=True).round("s"), name="funding_time")
+    out = pd.DataFrame({"funding_rate": rates}, index=index)
+    return out[~out.index.duplicated(keep="last")].sort_index()
+
+
+def empty_funding() -> pd.DataFrame:
+    return pd.DataFrame({"funding_rate": pd.Series(dtype=float)}, index=pd.DatetimeIndex([], tz="UTC", name="funding_time"))
+
+
+def fetch_month_funding(
+    session: requests.Session,
+    symbol: str,
+    year: int,
+    month: int,
+    verify: bool = True,
+    timeout: float = 60.0,
+) -> pd.DataFrame | None:
+    url = f"{FUNDING_ARCHIVE_BASE}/{symbol}/{symbol}-fundingRate-{year:04d}-{month:02d}.zip"
+    payload = _download_verified(session, url, verify, timeout)
+    if payload is None:
+        return None
+    return parse_funding(_read_csv_from_zip(payload, url))
 
 
 class RestClient:
-    """Kline uç noktası için adres yedekli, sayfalayan istemci."""
+    """Kline ve fonlama uç noktaları için adres yedekli, sayfalayan istemci."""
 
     def __init__(
         self,
         session: requests.Session | None = None,
-        hosts: Sequence[str] = REST_HOSTS,
+        hosts: Sequence[str] | None = None,
         timeout: float = 20.0,
         pause: float = 0.1,
+        market: str = SPOT,
     ) -> None:
+        if market not in MARKETS:
+            raise ValueError(f"bilinmeyen piyasa: {market}")
         self.session = session or requests.Session()
-        self.hosts = list(hosts)
+        self.market = market
+        default_hosts = FUTURES_REST_HOSTS if market == FUTURES else REST_HOSTS
+        self.hosts = list(hosts if hosts is not None else default_hosts)
         self.timeout = timeout
         self.pause = pause
         self._working: str | None = None
 
-    def _get(self, params: dict) -> list:
+    def _get(self, params: dict, path: str | None = None) -> list:
+        path = path or REST_PATHS[self.market]
         order = ([self._working] if self._working else []) + [h for h in self.hosts if h != self._working]
         errors: list[str] = []
         for host in order:
             try:
-                response = self.session.get(f"{host}/api/v3/klines", params=params, timeout=self.timeout)
+                response = self.session.get(f"{host}{path}", params=params, timeout=self.timeout)
             except requests.RequestException as exc:
                 errors.append(f"{host}: {exc.__class__.__name__}")
                 continue
@@ -173,7 +247,7 @@ class RestClient:
             if response.status_code == 429:
                 # Hız sınırı: kısa bekleyip aynı adresi bir kez daha dene.
                 time.sleep(float(response.headers.get("Retry-After", "2")))
-                response = self.session.get(f"{host}/api/v3/klines", params=params, timeout=self.timeout)
+                response = self.session.get(f"{host}{path}", params=params, timeout=self.timeout)
                 if response.status_code == 200:
                     self._working = host
                     return response.json()
@@ -212,3 +286,21 @@ class RestClient:
             if self.pause:
                 time.sleep(self.pause)
         return parse_klines(rows)
+
+    def funding(self, symbol: str, start_ms: int) -> pd.DataFrame:
+        """Vadeli fonlama oranları (`start_ms`'den itibaren)."""
+        if self.market != FUTURES:
+            raise ValueError("fonlama yalnızca vadeli piyasada vardır")
+        rows: list = []
+        cursor = int(start_ms)
+        while True:
+            batch = self._get({"symbol": symbol, "startTime": cursor, "limit": REST_LIMIT}, path="/fapi/v1/fundingRate")
+            if not batch:
+                break
+            rows.extend(batch)
+            if len(batch) < REST_LIMIT:
+                break
+            cursor = int(batch[-1]["fundingTime"]) + 1
+            if self.pause:
+                time.sleep(self.pause)
+        return parse_funding(rows)
