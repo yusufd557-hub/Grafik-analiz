@@ -75,3 +75,20 @@ bir kez değerlendirilir. Hiçbiri seçim kuralını sağlamazsa bu da raporlan�
 - 1d: veri az; hiçbir varyant al-tutu geçmedi.
 - Sonraki adım (2a): işlem eşiği k ∈ {2, 3} ile devir hızını düşürmek; vadelide
   yalnız alım.
+
+## EK 2 — Aşama 2a gözlemleri (yalnız dev_train; 42 yeni yapılandırma, toplam 96)
+
+- 4h spot: k=2/3 Sharpe'ı az değiştirdi (hgb_reg H12: 1,25/1,29; 2× 1,12/1,16).
+  Yıllık dökümde 2018 ve 2022 negatif, kârın çoğu 2021 ve SOL bacağından → betaya
+  dayalı, al-tut (aynı dönem Sharpe 1,17) ile benzer. Vadeli 4h yalnız alım 2022'de
+  −%53; iki yön 2022'de yaklaşık sıfır, açığa satış kâr getirmiyor.
+- **1h spot, yüksek eşik:** hgb_reg H4 k2 1× Sharpe 1,65 / 2× 1,12, en büyük düşüş
+  −%16, zamanın %14'ünde pozisyonda; hgb_clf H4 k3 1,41 / 1,10 (%6 pozisyonda);
+  hgb_clf H12 k3 1,41 / 1,13. Yıllık döküm (1×): hgb_reg H4 k2 bütün yıllar pozitif
+  (2018 +0,10, 2019 +0,07, 2020 +0,50, 2021 +1,39, 2022 +0,10, 2023 +0,14), üç coin
+  de pozitif. 2× maliyette 2022 ≈ 0. Bu, aşamaya kadar görülen tek rejimden
+  bağımsız örüntü. Logit aynı ayarda daha zayıf (1,23 / 0,72).
+- Vadeli 1h yalnız alım hgb_clf H12 k2: 1,27 / 1,00; 2022 −0,06.
+- Aşama 2b planı (1h odaklı): H ∈ {6, 8}; özellik seti (+mum, +btc); kayan pencere
+  (730/1095 gün); `esik` eşlemesi; HGB düzenlileştirme; vadelide H4 yalnız alım,
+  kendi verisiyle ve spot geçmişiyle eğitim (egitim="spot"), fonlama özelliği.
