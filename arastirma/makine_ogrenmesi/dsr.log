@@ -1,0 +1,12 @@
+deneme sayısı=161 (farklı ad: 157), dev_train 1× Sharpe varyansı=0.2324, ort=1.043, en büyük=1.900; dev_valid satırı=8
+                                                      ad  sr_valid  n_gun    skew     kurt    DSR  PSR(0)  aday
+ ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot    1.4137    547 -1.9291  58.3091 0.5507  0.9412  True
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot    1.4987    547  3.7016  55.4022 0.6082  0.9802  True
+   ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc    1.8840    547 11.0351 156.3756 0.9083  1.0000  True
+       ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel    0.7616    547  1.3059  72.6882 0.2531  0.8271  True
+dev_valid günlük getiri korelasyonu (1×):
+                                                          ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot  ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot  ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc  ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot                                                     1.000                                                     0.359                                                  0.218                                              0.396
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot                                                    0.359                                                     1.000                                                  0.675                                              0.797
+ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc                                                       0.218                                                     0.675                                                  1.000                                              0.736
+ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel                                                           0.396                                                     0.797                                                  0.736                                              1.000

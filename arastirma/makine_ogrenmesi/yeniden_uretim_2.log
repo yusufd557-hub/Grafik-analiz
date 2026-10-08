@@ -1,0 +1,8 @@
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot dev_train 1.0x getiri=+5.1305 sharpe=1.626 islem=1124 -> AYNI
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot dev_valid 1.0x getiri=+0.1316 sharpe=1.499 islem=112 -> AYNI
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot dev_train 2.0x getiri=+3.4747 sharpe=1.366 islem=1124 -> AYNI
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot dev_valid 2.0x getiri=+0.1032 sharpe=1.208 islem=112 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc dev_train 1.0x getiri=+2.4547 sharpe=1.460 islem=608 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc dev_valid 1.0x getiri=+0.0909 sharpe=1.884 islem=27 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc dev_train 2.0x getiri=+1.6281 sharpe=1.165 islem=608 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc dev_valid 2.0x getiri=+0.0822 sharpe=1.789 islem=27 -> AYNI

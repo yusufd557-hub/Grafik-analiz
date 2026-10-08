@@ -1,0 +1,6 @@
+spot BTCUSDT medyan 1h sigma (%) {'2018-19': 0.495, '2020-21': 0.642, '2022-23': 0.452, 'dv': 0.459}
+spot ETHUSDT medyan 1h sigma (%) {'2018-19': 0.686, '2020-21': 0.825, '2022-23': 0.569, 'dv': 0.605}
+spot SOLUSDT medyan 1h sigma (%) {'2018-19': None, '2020-21': 1.462, '2022-23': 0.926, 'dv': 0.83}
+futures BTCUSDT medyan 1h sigma (%) {'2018-19': None, '2020-21': 0.639, '2022-23': 0.452, 'dv': 0.459}
+futures ETHUSDT medyan 1h sigma (%) {'2018-19': None, '2020-21': 0.828, '2022-23': 0.572, 'dv': 0.607}
+futures SOLUSDT medyan 1h sigma (%) {'2018-19': None, '2020-21': 1.414, '2022-23': 0.92, 'dv': 0.828}

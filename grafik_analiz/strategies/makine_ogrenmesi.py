@@ -487,6 +487,70 @@ def make_spec(name: str, interval: str, market: str, universe: str = "PORT3", de
 # ---------------------------------------------------------------- dondurulmuş yapılandırmalar
 
 
+FROZEN: tuple = (
+    (
+        "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot",
+        "1h",
+        "futures",
+        {"model": "hgb_clf", "H": 6, "k": 3.0, "yon": "iki", "egitim": "spot"},
+        "1h vadeli BTC/ETH/SOL, alım + açığa satış. Spot geçmişiyle aylık ileriye yürüyen "
+        "HistGradientBoosting sınıflandırıcı, 6 bar ileri getiri işareti; kenar > 3 × gidiş-dönüş "
+        "maliyeti ise işlem, son 6 kararın ortalaması pozisyon.",
+    ),
+    (
+        "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot",
+        "1h",
+        "futures",
+        {"model": "hgb_reg", "H": 4, "k": 3.0, "yon": "uzun", "egitim": "spot"},
+        "1h vadeli BTC/ETH/SOL, yalnız alım. Spot geçmişiyle aylık ileriye yürüyen "
+        "HistGradientBoosting regresör, 4 bar ileri oynaklığa bölünmüş getiri; kenar > 3 × "
+        "gidiş-dönüş maliyeti ise alım, son 4 kararın ortalaması pozisyon.",
+    ),
+    (
+        "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel",
+        "1h",
+        "spot",
+        {"model": "hgb_reg", "H": 6, "k": 3.0},
+        "1h spot BTC/ETH/SOL, yalnız alım. Aylık ileriye yürüyen HistGradientBoosting regresör, "
+        "6 bar ileri oynaklığa bölünmüş getiri; kenar > 3 × gidiş-dönüş maliyeti ise alım, son 6 "
+        "kararın ortalaması pozisyon.",
+    ),
+    (
+        "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc",
+        "1h",
+        "spot",
+        {"model": "hgb_reg", "H": 4, "k": 3.0, "ozellik": "temel+btc"},
+        "1h spot BTC/ETH/SOL, yalnız alım. Aylık ileriye yürüyen HistGradientBoosting regresör "
+        "(temel + BTC getirisi özellikleri), 4 bar ileri oynaklığa bölünmüş getiri; kenar > 3 × "
+        "gidiş-dönüş maliyeti ise alım, son 4 kararın ortalaması pozisyon.",
+    ),
+)
+"""Dev_train'de seçilip donduruldu (bkz. arastirma/makine_ogrenmesi/NOTLAR.md, EK 5)."""
+
+FROZEN_CHECK: dict = {
+    "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": (
+        "GEÇTİ (dev_valid 1× +%23,1, Sharpe 1,41; 2× +%15,2; 320 işlem; kârın neredeyse tamamı SOL bacağından)"
+    ),
+    "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot": (
+        "GEÇTİ (dev_valid 1× +%13,2, Sharpe 1,50; 2× +%10,3; 112 işlem)"
+    ),
+    "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel": (
+        "GEÇTİ, sınırda (dev_valid 1× +%3,4, Sharpe 0,76; 2× +%2,0; 55 işlem)"
+    ),
+    "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc": (
+        "GEÇTİ (dev_valid 1× +%9,1, Sharpe 1,88; 2× +%8,2; yalnız 27 işlem, zamanın %0,9'unda pozisyonda)"
+    ),
+}
+"""dev_valid tek seferlik değerlendirmesinin candidate_check sonucu (yalnız açıklama metni;
+parametreleri ve sinyali etkilemez)."""
+
+
 def specs() -> list[StrategySpec]:
     """Dondurulup dev_valid'de bir kez değerlendirilen yapılandırmalar."""
-    return []
+    out = []
+    for name, interval, market, params, desc in FROZEN:
+        durum = FROZEN_CHECK.get(name)
+        if durum is not None:
+            desc = f"{desc} candidate_check: {durum}."
+        out.append(make_spec(name, interval, market, "PORT3", description=desc, **params))
+    return out

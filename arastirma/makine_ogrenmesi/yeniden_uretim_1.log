@@ -1,0 +1,8 @@
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot dev_train 1.0x getiri=+9.1934 sharpe=1.844 islem=2278 -> AYNI
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot dev_valid 1.0x getiri=+0.2314 sharpe=1.414 islem=320 -> AYNI
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot dev_train 2.0x getiri=+4.7136 sharpe=1.423 islem=2278 -> AYNI
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot dev_valid 2.0x getiri=+0.1517 sharpe=0.983 islem=320 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel dev_train 1.0x getiri=+3.1799 sharpe=1.457 islem=792 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel dev_valid 1.0x getiri=+0.0341 sharpe=0.762 islem=55 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel dev_train 2.0x getiri=+2.0213 sharpe=1.152 islem=792 -> AYNI
+ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel dev_valid 2.0x getiri=+0.0197 sharpe=0.452 islem=55 -> AYNI

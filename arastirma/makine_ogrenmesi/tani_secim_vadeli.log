@@ -1,0 +1,8 @@
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot 1.0x | 2020-01-01–2023: getiri=+9.19 sharpe=2.33 mdd=-0.28 | 2020:+0.83/2.83 2021:+2.71/4.61 2022:+0.21/0.71 2023:+0.24/2.47 | BTC:+3.47 ETH:+4.51 SOL:+21.11
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot 2.0x | 2020-01-01–2023: getiri=+4.71 sharpe=1.80 mdd=-0.29 | 2020:+0.58/2.20 2021:+1.88/3.79 2022:+0.07/0.37 2023:+0.17/1.81 | BTC:+2.22 ETH:+2.14 SOL:+8.46
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_uzun_temel_egspot 1.0x | 2020-01-01–2023: getiri=+6.79 sharpe=1.99 mdd=-0.30 | 2020:+0.55/2.61 2021:+2.71/4.08 2022:+0.07/0.37 2023:+0.26/2.92 | BTC:+1.34 ETH:+2.66 SOL:+30.99
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_uzun_temel_egspot 2.0x | 2020-01-01–2023: getiri=+4.23 sharpe=1.63 mdd=-0.31 | 2020:+0.42/2.11 2021:+2.11/3.57 2022:-0.02/0.15 2023:+0.21/2.40 | BTC:+0.87 ETH:+1.53 SOL:+16.45
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot 1.0x | 2020-01-01–2023: getiri=+5.13 sharpe=2.06 mdd=-0.22 | 2020:+0.37/2.09 2021:+1.93/4.13 2022:+0.26/0.86 2023:+0.21/2.15 | BTC:+0.94 ETH:+3.16 SOL:+15.70
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot 2.0x | 2020-01-01–2023: getiri=+3.47 sharpe=1.73 mdd=-0.23 | 2020:+0.28/1.69 2021:+1.51/3.58 2022:+0.19/0.68 2023:+0.17/1.80 | BTC:+0.64 ETH:+2.08 SOL:+9.35
+ml_1h_fu_PORT3_hgb_reg_H8_k3.0_ortusen_uzun_temel_egspot 1.0x | 2020-01-01–2023: getiri=+7.60 sharpe=1.92 mdd=-0.30 | 2020:+0.51/1.96 2021:+3.12/3.72 2022:+0.00/0.19 2023:+0.38/3.00 | BTC:+1.64 ETH:+2.80 SOL:+29.78
+ml_1h_fu_PORT3_hgb_reg_H8_k3.0_ortusen_uzun_temel_egspot 2.0x | 2020-01-01–2023: getiri=+4.83 sharpe=1.60 mdd=-0.33 | 2020:+0.37/1.54 2021:+2.49/3.31 2022:-0.07/-0.02 2023:+0.31/2.57 | BTC:+0.99 ETH:+1.53 SOL:+18.07

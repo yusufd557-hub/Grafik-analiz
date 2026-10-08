@@ -109,3 +109,93 @@ bir kez değerlendirilir. Hiçbiri seçim kuralını sağlamazsa bu da raporlan�
   2020–2023 her yıl pozitif; iki yön 2022'de +0,40 (2× +0,29).
 - Aşama 3 planı: vadeli egitim=spot çevresi (H 6/8, k 2/4, +btc, logit, üç ayda bir
   yeniden eğitim, iki yön), spot için üç ayda bir yeniden eğitim ve k=2,5.
+
+## EK 4 — Aşama 3 gözlemleri ve kalan plan (yalnız dev_train; 21 yeni, toplam 149)
+
+(Önceki oturum kullanım sınırında kesildiği için bu ek, devam eden oturumda, kayıtlı
+`tarama_sonuclari.jsonl` / `tarama4_*.log` / `tani_*.log` çıktılarından yazıldı.
+dev_valid hâlâ görülmedi.)
+
+- Vadeli, spot geçmişiyle eğitim (`egitim="spot"`) bölgesi komşularda sağlam: H ∈ {4, 6, 8},
+  k ∈ {2, 3, 4}, yalnız alım / iki yön, `+btc`, üç ayda bir yeniden eğitim, hgb_clf →
+  1× Sharpe 1,05–1,69, 2× 0,81–1,37 (dev_train Sharpe'ı 2017–2019'daki sıfır getirili
+  günleri de içerir; vadeli veri 2020'de başlar). Logit aynı ayarda daha zayıf
+  (yalnız alım 1,30 / 1,04; iki yön 1,00 / 0,67). k=4 devir hızını düşürüyor ama
+  Sharpe'ı da düşürüyor (1,05–1,18).
+- 2020-01-01'den ölçülünce (tani_donem): hgb_reg H4 k3 yalnız alım 2,06 / 1,73,
+  iki yön 2,06 / 1,58; hgb_clf H4 k3 iki yön 2,14 / 1,65. Al-tut vadeli 2020–2023
+  Sharpe ≈ 1,29 (1h).
+- Yıllık (tani_yillik3): hgb_reg H4 k3 iki yön ve hgb_clf H4 k3 iki yön 2020–2023 her
+  yıl 1× ve 2× pozitif; 2021 en büyük katkı, 2023 küçük (+0,03…+0,18). Bacak bazında
+  üç coin de pozitif, SOL ve ETH baskın, BTC en zayıf.
+- Spot: üç ayda bir yeniden eğitim (re3) ve k=2,5 aylık eğitimle benzer
+  (1,58 / 1,03; 1,45 / 1,07) → bölge düz, keskin bir tepe yok.
+- Kalan plan (Aşama 4, küçük): vadeli egitim=spot için (a) hgb_clf komşuları
+  (H4 k2/k4 iki yön, H6 k3 yalnız alım/iki yön), (b) HGB düzenlileştirme duyarlılığı
+  (hgb_reg H4, it200/lr0,03/min_yaprak 500; k3 yalnız alım/iki yön), (c) aynı fikrin 4h
+  sürümü (hgb_reg H6 k2 yalnız alım/iki yön; daha düşük devir hızı). Sonra seçilecek
+  yapılandırmaların yıllık dökümü ve dondurma. Yeni bir özellik/model ailesi açılmayacak.
+
+## EK 5 — Aşama 4 gözlemleri ve dondurma kararı (yalnız dev_train; 8 yeni, toplam 157; dev_valid görülmeden)
+
+Aşama 4 (tarama5.py, egitim="spot", 1h vadeli):
+
+| Yapılandırma | 1× Sharpe | 2× Sharpe | Not |
+|---|---|---|---|
+| hgb_clf H4 k2 iki yön | 1,90 | 1,21 | maliyet 1,12 (yüksek devir) |
+| hgb_clf H4 k4 iki yön | 1,47 | 1,22 | |
+| hgb_clf H6 k3 yalnız alım | 1,57 | 1,29 | |
+| hgb_clf H6 k3 iki yön | 1,84 | 1,42 | aramadaki en yüksek 2× Sharpe |
+| hgb_reg H4 k3 yalnız alım, düzenlileştirilmiş (it200/lr0,03/my500) | 1,49 | 1,24 | temel ayar 1,63 / 1,37 |
+| aynı, iki yön | 1,51 | 1,17 | temel ayar 1,63 / 1,25 |
+| 4h hgb_reg H6 k2 yalnız alım | 1,04 | 0,94 | 1h'den zayıf, en büyük düşüş −%63 |
+| 4h hgb_reg H6 k2 iki yön | 1,00 | 0,83 | |
+
+Düzenlileştirme değişikliği sonucu biraz düşürüyor ama bölge korunuyor; 4h sürümü zayıf.
+
+Kısa liste tanısı (tani_secim.py → tani_secim_*.log; tahminlerin başladığı tarihten 2023 sonuna):
+
+- Vadeli hgb_clf H6 k3 iki yön: 2020–2023 1× Sharpe 2,33 / 2× 1,80; her yıl 1× ve 2× pozitif
+  (2022: +0,21 / +0,07). Bacaklar: BTC +3,5, ETH +4,5, SOL +21,1 (1×).
+- Vadeli hgb_reg H4 k3 yalnız alım: 2,06 / 1,73; her yıl 1× ve 2× pozitif (2022 +0,26 / +0,19).
+- Vadeli hgb_clf H6 k3 yalnız alım ve hgb_reg H8 k3 yalnız alım: 2022 2× maliyette ≈ 0 / hafif negatif.
+- Spot hgb_reg H6 k3: 2018-09–2023 1,59 / 1,26; 2018–2023 **her yıl** 1× ve 2× pozitif.
+- Spot hgb_reg H4 k3 +btc: 1,60 / 1,27; 2019 hafif negatif (−0,02 / −0,03), diğer yıllar pozitif.
+- Spot hgb_reg H4 k2 +btc: 2× maliyette 2018, 2019, 2022 negatif → elendi.
+- Spot hgb_clf H12 k3: 2022 negatif (1× −0,03, 2× −0,10) → elendi.
+- Ortak zayıflık (raporda açıkça yazılacak): kârın büyük kısmı 2021'den ve SOL bacağından geliyor;
+  2022 hepsinde zayıf. 2021 çıkarıldığında da toplam pozitif kalıyor (ör. vadeli hgb_clf H6 k3
+  iki yön 1×: 1,83 × 1,21 × 1,24 − 1 ≈ +1,75).
+
+**Dondurma kararı** (önceden yazılan seçim kuralına göre: 1× ve 2× pozitif, 2× Sharpe'a göre
+sıralama, komşular pozitif, yılların çoğu pozitif, tek yıl taşımıyor; piyasa/model çeşitliliği):
+
+1. `ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot` — vadeli iki yön, en yüksek 2× Sharpe.
+2. `ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot` — vadeli yalnız alım, regresör;
+   2× Sharpe'ta ikinci, her yıl pozitif.
+3. `ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel` — spot; bütün yıllar pozitif.
+4. `ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc` — spotta en yüksek 2× Sharpe.
+
+Beşinci yapılandırma dondurulmadı: kalan adaylar (vadeli H6/H8 yalnız alım, hgb_clf H4 iki yön)
+seçilenlerle aynı modelin yakın komşuları ve 2022'de daha zayıf; dev_valid'e fazladan bakış
+eklememek için 4'te kalındı. Dört yapılandırma birbirine yakındır (aynı fikir: spot geçmişiyle
+eğitilen 1h HGB, kısa ufuk, yüksek eşik); dev_valid sonuçları bağımsız kanıt sayılmamalıdır.
+Sıradaki adım: `specs()` → `nedensellik.py` (assert_causal) → `dogrulama.py` (tek sefer).
+
+## EK 6 — Dondurma sonrası (dev_valid bir kez görüldü; hiçbir şey değiştirilmedi)
+
+- `nedensellik.py`: dört yapılandırma `assert_causal` (0,55/0,8/0,97 ve ek 0,3 kesimi) geçti
+  (nedensellik_*.log). Ardından `dogrulama.py` her birini bir kez `evaluate(spec)` ile
+  değerlendirdi (dogrulama_*.log, dondurulmus/*.json). Dördü de `candidate_check` geçti.
+- dev_valid'den sonra parametre, kural, özellik veya yapılandırma listesi DEĞİŞTİRİLMEDİ.
+  Yalnız `specs()` açıklama metinlerine candidate_check sonucu yazıldı (sinyali etkilemez).
+- Gözlemler: dev_valid'de pozisyonda kalma oranı dev_train'in çok altında (ör. vadeli hgb_reg
+  H4 %13 → %4,5; spot H4 +btc %6,7 → %0,9). Kenar σ ile ölçeklenip sabit maliyet eşiğiyle
+  karşılaştırıldığı için model oynaklığın yüksek olduğu coin ve dönemlerde işlem yapıyor; 1h
+  medyan σ dev_valid'de 2020–21'den düşük (tani_oynaklik.log). Kârın büyük kısmı SOL bacağından.
+  Vadeli iki yönlü hgb_clf'de 2× maliyette BTC ve ETH bacakları negatif, 2025'in ilk yarısı ≈ 0.
+
+Sayım düzeltmesi: `tarama_sonuclari.jsonl` ve defter aşama sayılarını 1: 54, 2a: 44, 2b: 32,
+3: 19, 4: 8 (toplam 157) olarak verir. EK 2 ve EK 3'teki ara toplamlar (96, 128) 2 eksik
+yazılmıştı; doğru ara toplamlar 98 ve 130'dur. Defter: 157 × 2 dev_train satırı + dondurulan 4
+yapılandırmanın 4'er satırı = 330 satır.

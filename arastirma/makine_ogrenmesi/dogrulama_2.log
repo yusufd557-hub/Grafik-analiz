@@ -1,0 +1,14 @@
+== ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot
+  dev_train 1.0x: getiri=+5.1305 sharpe=1.626 mdd=-0.218 islem=1124 pozda=0.131 maliyet=0.315 p=0.000
+  dev_train 2.0x: getiri=+3.4747 sharpe=1.366 mdd=-0.226 islem=1124 pozda=0.131 maliyet=0.630 p=0.000
+  dev_valid 1.0x: getiri=+0.1316 sharpe=1.499 mdd=-0.035 islem=112 pozda=0.045 maliyet=0.025 p=0.016
+  dev_valid 2.0x: getiri=+0.1032 sharpe=1.208 mdd=-0.036 islem=112 pozda=0.045 maliyet=0.051 p=0.043
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'aday': True}
+  dev_valid yıl (1x): {'2024': 0.075, '2025': 0.0526} bacak (1x): {'futures:BTCUSDT': 0.013, 'futures:ETHUSDT': 0.1301, 'futures:SOLUSDT': 0.2454}
+== ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc
+  dev_train 1.0x: getiri=+2.4547 sharpe=1.460 mdd=-0.144 islem=608 pozda=0.067 maliyet=0.274 p=0.000
+  dev_train 2.0x: getiri=+1.6281 sharpe=1.165 mdd=-0.145 islem=608 pozda=0.067 maliyet=0.547 p=0.000
+  dev_valid 1.0x: getiri=+0.0909 sharpe=1.884 mdd=-0.022 islem=27 pozda=0.009 maliyet=0.008 p=0.000
+  dev_valid 2.0x: getiri=+0.0822 sharpe=1.789 mdd=-0.023 islem=27 pozda=0.009 maliyet=0.016 p=0.001
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'aday': True}
+  dev_valid yıl (1x): {'2024': 0.0611, '2025': 0.0281} bacak (1x): {'spot:BTCUSDT': 0.001, 'spot:ETHUSDT': 0.0303, 'spot:SOLUSDT': 0.2526}

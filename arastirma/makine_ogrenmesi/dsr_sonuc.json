@@ -1,0 +1,46 @@
+{
+ "n_trials": 161,
+ "sharpe_var": 0.2323915102494872,
+ "satirlar": [
+  {
+   "ad": "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot",
+   "sr_valid": 1.4136669764565346,
+   "n_gun": 547,
+   "skew": -1.9290681267145413,
+   "kurt": 58.30909410666403,
+   "DSR": 0.5506610301159537,
+   "PSR(0)": 0.9411628221426674,
+   "aday": true
+  },
+  {
+   "ad": "ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot",
+   "sr_valid": 1.4986882361398324,
+   "n_gun": 547,
+   "skew": 3.7016166629159595,
+   "kurt": 55.40222063612521,
+   "DSR": 0.6082379315799895,
+   "PSR(0)": 0.9802030625958633,
+   "aday": true
+  },
+  {
+   "ad": "ml_1h_sp_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel-btc",
+   "sr_valid": 1.8839800065802985,
+   "n_gun": 547,
+   "skew": 11.035069920152228,
+   "kurt": 156.37558890396258,
+   "DSR": 0.9083251739520614,
+   "PSR(0)": 0.9999907491920326,
+   "aday": true
+  },
+  {
+   "ad": "ml_1h_sp_PORT3_hgb_reg_H6_k3.0_ortusen_uzun_temel",
+   "sr_valid": 0.7616264092079686,
+   "n_gun": 547,
+   "skew": 1.3059456903931475,
+   "kurt": 72.68815538909423,
+   "DSR": 0.2531337168083243,
+   "PSR(0)": 0.8270827697084313,
+   "aday": true
+  }
+ ]
+}

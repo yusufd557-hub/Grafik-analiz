@@ -1,0 +1,4 @@
+  ml_1h_fu_PORT3_hgb_clf_H4_k2.0_ortusen_iki_temel_egspot: ret1=15.460 sh1=1.90 ret2=4.369 sh2=1.21 mdd=-0.27 tr=3761 exp=0.31 cost=1.12 (170.1s)
+  ml_1h_fu_PORT3_hgb_clf_H4_k4.0_ortusen_iki_temel_egspot: ret1=3.710 sh1=1.47 ret2=2.524 sh2=1.22 mdd=-0.22 tr=1071 exp=0.10 cost=0.29 (0.7s)
+  ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_uzun_temel_egspot: ret1=6.793 sh1=1.57 ret2=4.228 sh2=1.29 mdd=-0.30 tr=1451 exp=0.23 cost=0.40 (165.6s)
+  ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot: ret1=9.193 sh1=1.84 ret2=4.714 sh2=1.42 mdd=-0.28 tr=2278 exp=0.28 cost=0.58 (1.0s)
