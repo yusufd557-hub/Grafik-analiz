@@ -88,7 +88,7 @@ def yillik(interval: str, market: str, universe: str = "PORT3", cost: float = 1.
     bacak = {}
     for leg, lr in res.legs.items():
         n = lr.net[lr.net.index < TRAIN_END]
-        bacak[leg[1]] = float((1 + n).prod() - 1)
+        bacak[f"{leg[0][:2]}:{leg[1][:3]}"] = float((1 + n).prod() - 1)
     out = pd.DataFrame(rows)
     out.attrs["bacak"] = bacak
     return out

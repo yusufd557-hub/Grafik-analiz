@@ -92,3 +92,20 @@ bir kez değerlendirilir. Hiçbiri seçim kuralını sağlamazsa bu da raporlan�
 - Aşama 2b planı (1h odaklı): H ∈ {6, 8}; özellik seti (+mum, +btc); kayan pencere
   (730/1095 gün); `esik` eşlemesi; HGB düzenlileştirme; vadelide H4 yalnız alım,
   kendi verisiyle ve spot geçmişiyle eğitim (egitim="spot"), fonlama özelliği.
+
+## EK 3 — Aşama 2b gözlemleri (yalnız dev_train; 32 yeni, toplam 128)
+
+- 1h spot kısa ufuk bölgesi sağlam: H ∈ {4, 6, 8}, hgb_reg/hgb_clf, k ∈ {2, 3}
+  için 1× Sharpe 1,35–1,66, 2× 0,93–1,17. `+btc` biraz daha iyi (1,70 / 1,15), `+mum`
+  nötr. HGB düzenlileştirme değişiklikleri benzer (1,35–1,51). Kayan pencere daha
+  kötü (730 gün 1,06 / 0,47; 1095 gün 1,38 / 0,80) → genişleyen pencere kalır.
+  Her bar karar (`esik`) maliyetle çöküyor (2× −0,35) → `ortusen` kalır.
+- Yıllık (spot hgb_clf H6 k2): 2018–2021 ve 2023 pozitif, 2022 −0,07 (2× −0,17).
+  Spot hgb_reg H4 k2 +btc: 2× maliyette 2018, 2019, 2022 hafif negatif.
+- **Vadeli, spot geçmişiyle eğitim (egitim="spot")** belirgin biçimde daha iyi:
+  hgb_reg H4 k3 yalnız alım 1,63 / 1,37; iki yön 1,63 / 1,25; hgb_clf H4 k2 yalnız
+  alım 1,70 / 1,23. Kendi (2020 sonrası) verisiyle eğitim 1,10 / 0,75; fonlama
+  özelliği eklemek değiştirmedi (1,13 / 0,84). Yıllık (hgb_reg H4 k3, 1× ve 2×):
+  2020–2023 her yıl pozitif; iki yön 2022'de +0,40 (2× +0,29).
+- Aşama 3 planı: vadeli egitim=spot çevresi (H 6/8, k 2/4, +btc, logit, üç ayda bir
+  yeniden eğitim, iki yön), spot için üç ayda bir yeniden eğitim ve k=2,5.
