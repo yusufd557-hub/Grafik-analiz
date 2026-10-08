@@ -1,0 +1,36 @@
+=== dev_valid: pencere (son 4 + ilk 5 gün) içi/dışı ortalama günlük brüt getiri (bp), spot ===
+BTCUSDT dev_train: içi   36.5  dışı    9.4  (gün 688/1640)
+BTCUSDT dev_valid: içi   -8.6  dışı   32.8  (gün 162/385)
+ETHUSDT dev_train: içi   59.3  dışı    4.6  (gün 688/1640)
+ETHUSDT dev_valid: içi  -37.3  dışı   27.5  (gün 162/385)
+SOLUSDT dev_train: içi   94.2  dışı   37.3  (gün 364/874)
+SOLUSDT dev_valid: içi  -31.5  dışı   38.7  (gün 162/385)
+
+=== dev_valid: her ay dönümünün pencere getirisi (brüt, %) ===
+         BTCUSDT  ETHUSDT  SOLUSDT  PORT3
+2024-01      4.4     -0.6     -1.8    0.7
+2024-02      1.4      1.5      1.5    1.5
+2024-03     23.2     14.2     21.1   19.5
+2024-04     -2.4     -5.2     -6.4   -4.7
+2024-05      0.4      0.2      4.7    1.7
+2024-06      2.4     -0.7      2.0    1.2
+2024-07     -7.0    -11.6     -1.8   -6.8
+2024-08    -20.4    -25.5    -29.4  -25.1
+2024-09     -5.4     -3.6    -11.8   -7.0
+2024-10     -4.8     -8.3     -8.3   -7.1
+2024-11      2.0     -3.4     -5.7   -2.4
+2024-12      5.4     13.8      2.2    7.2
+2025-01      4.3      9.1     15.8    9.7
+2025-02     -5.4    -12.4    -16.5  -11.4
+2025-03     -1.0    -10.8      3.1   -2.9
+2025-04     -4.2     -9.9    -13.1   -9.1
+2025-05      0.1     -0.0     -1.7   -0.5
+2025-06     -6.8     -9.3    -18.4  -11.5
+2025-07      0.2      2.9     11.3    4.8
+pozitif ay dönümü (PORT3): 8/19; medyan -2.36%
+
+Yalnız ay dönümü denemeleri: n=96, Sharpe std 0.280
+  tom_1d_fut_PORT3_a4_b5: dev_train SR 1.86 -> DSR (yalnız ay dönümü varyansı, N=96) 0.994
+  tom_1d_spot_PORT3_a4_b5: dev_train SR 1.41 -> DSR (yalnız ay dönümü varyansı, N=96) 0.965
+  tom_1d_fut_PORT2_a4_b5: dev_train SR 1.71 -> DSR (yalnız ay dönümü varyansı, N=96) 0.986
+  tomk_1d_fut_PORT3_a2-5_b2-5: dev_train SR 1.93 -> DSR (yalnız ay dönümü varyansı, N=96) 0.998

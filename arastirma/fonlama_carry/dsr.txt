@@ -1,0 +1,7 @@
+deneme satiri N=420, finite Sharpe=404, var=5.7842, ort=2.927, maks=6.703
+yalniz carry: N=269, var=3.7042, ort=4.186
+SR0 (yillik, tum aile) = 7.214; SR0 (yalniz carry) = 5.506
+fonlama_carry_sepet3_hizli           SR=7.363 gun=547 skew=2.440 kurt=16.143 DSR=0.5909 (yalniz carry denemeleriyle 0.9980)
+fonlama_carry_sepet3_yavas_dusuk     SR=13.099 gun=547 skew=2.853 kurt=16.546 DSR=1.0000 (yalniz carry denemeleriyle 1.0000)
+fonlama_carry_btc_surekli            SR=13.585 gun=547 skew=2.138 kurt=11.161 DSR=1.0000 (yalniz carry denemeleriyle 1.0000)
+fonlama_negatif_uzun_sepet3          SR=-0.677 gun=547 skew=-0.633 kurt=24.661 DSR=0.0000 (yalniz carry denemeleriyle 0.0000)

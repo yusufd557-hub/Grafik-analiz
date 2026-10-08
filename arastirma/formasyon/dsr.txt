@@ -1,0 +1,6 @@
+deneme sayısı (dev_train 1× satırı): 298; Sharpe'ı tanımlı: 296; yıllık Sharpe varyansı: 0.4675; dev_valid gün: 547
+dev_train 1× Sharpe dağılımı: ortalama 0.599, medyan 0.718, en yüksek 1.826
+formasyon_ucgen_kama_4h_trend_uzun: dev_valid Sharpe 0.996 çarpıklık 2.567 basıklık 25.69 → DSR 0.1005
+formasyon_ucgen_kama_4h_hacim_iki: dev_valid Sharpe 1.130 çarpıklık 1.293 basıklık 11.99 → DSR 0.1415
+formasyon_hepsi_4h_trend_10bar_uzun: dev_valid Sharpe 1.122 çarpıklık 3.065 basıklık 37.17 → DSR 0.1281
+formasyon_hepsi_1d_olcek234_iki: dev_valid Sharpe 0.315 çarpıklık 0.554 basıklık 12.49 → DSR 0.0205

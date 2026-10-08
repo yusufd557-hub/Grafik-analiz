@@ -1,0 +1,4 @@
+geçti: formasyon_ucgen_kama_4h_trend_uzun 7.0 sn
+geçti: formasyon_ucgen_kama_4h_hacim_iki 7.1 sn
+geçti: formasyon_hepsi_4h_trend_10bar_uzun 6.5 sn
+geçti: formasyon_hepsi_1d_olcek234_iki 1.6 sn

@@ -1,0 +1,13 @@
+                                                  ad   pencere                 baslangic  getiri   cagr  sharpe   maxdd  fonlama
+                                            BTC spot dev_train 2017-08-17 00:00:00+00:00  8.8553 0.4321  0.8609 -0.8320   0.0000
+                                            BTC spot dev_valid 2024-01-01 00:00:00+00:00  1.5340 0.8626  1.4690 -0.2810   0.0000
+                                            ETH spot dev_train 2017-08-17 00:00:00+00:00  6.5465 0.3733  0.8143 -0.9397   0.0000
+                                            ETH spot dev_valid 2024-01-01 00:00:00+00:00  0.0892 0.0588  0.4281 -0.6375   0.0000
+                                            SOL spot dev_train 2020-08-11 00:00:00+00:00 29.8057 1.7514  1.4155 -0.9627   0.0000
+                                            SOL spot dev_valid 2024-01-01 00:00:00+00:00  0.5219 0.3244  0.7531 -0.5977   0.0000
+                       BTC/ETH/SOL spot eşit ağırlık dev_train 2017-08-17 00:00:00+00:00 30.8915 0.7219  1.1192 -0.8546   0.0000
+                       BTC/ETH/SOL spot eşit ağırlık dev_valid 2024-01-01 00:00:00+00:00  0.7367 0.4466  0.8952 -0.4907   0.0000
+                     BTC vadeli uzun (fonlama dahil) dev_train 2020-01-01 00:00:00+00:00  2.2140 0.3390  0.7790 -0.7907   0.5989
+                     BTC vadeli uzun (fonlama dahil) dev_valid 2024-01-01 00:00:00+00:00  1.1971 0.6917  1.2817 -0.3302   0.1413
+BTC/ETH/SOL vadeli uzun eşit ağırlık (fonlama dahil) dev_train 2020-01-01 00:00:00+00:00 15.1433 1.0046  1.2770 -0.8555   0.4069
+BTC/ETH/SOL vadeli uzun eşit ağırlık (fonlama dahil) dev_valid 2024-01-01 00:00:00+00:00  0.5083 0.3159  0.7471 -0.5207   0.1435

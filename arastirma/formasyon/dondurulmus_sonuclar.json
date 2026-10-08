@@ -1,0 +1,581 @@
+{
+ "formasyon_ucgen_kama_4h_trend_uzun": {
+  "interval": "4h",
+  "legs": [
+   [
+    "futures",
+    "BTCUSDT"
+   ],
+   [
+    "futures",
+    "ETHUSDT"
+   ],
+   [
+    "futures",
+    "SOLUSDT"
+   ]
+  ],
+  "params": {
+   "yontem": "grafik",
+   "tipler": [
+    "ucgen",
+    "kama"
+   ],
+   "yon": "uzun",
+   "cikis": "hedef",
+   "trend_n": 200
+  },
+  "sonuc": {
+   "dev_train": {
+    "1.0": {
+     "start": "2020-01-01 00:00:00+00:00",
+     "end": "2023-12-31 20:00:00+00:00",
+     "days": 1461,
+     "total_return": 2.576450657388191,
+     "cagr": 0.375241107035452,
+     "sharpe": 1.5080442408066725,
+     "sortino": 1.048469756915162,
+     "volatility": 0.2283104574020687,
+     "max_drawdown": -0.2428277313900128,
+     "mean_daily": 0.0009432938915099366,
+     "daily_lower": 0.00041457979945238926,
+     "p_value": 0.0008,
+     "skew": 1.2911779479520638,
+     "kurtosis": 20.172650481984306,
+     "exposure": 0.30892083048140545,
+     "total_costs": 0.0434,
+     "total_funding": 0.15290023333333333,
+     "trades": 93,
+     "win_rate": 0.5161290322580645,
+     "avg_trade": 0.015399915310897771,
+     "best_trade": 0.15220268360200853,
+     "profit_factor": 2.395319970032245,
+     "total_without_best": 2.1040117405450873,
+     "avg_bars": 39.32258064516129
+    },
+    "2.0": {
+     "start": "2020-01-01 00:00:00+00:00",
+     "end": "2023-12-31 20:00:00+00:00",
+     "days": 1461,
+     "total_return": 2.424620372419202,
+     "cagr": 0.3604054323192245,
+     "sharpe": 1.4611235547675783,
+     "sortino": 1.011527178500817,
+     "volatility": 0.2282055573086284,
+     "max_drawdown": -0.2503855038006402,
+     "mean_daily": 0.0009135246989383548,
+     "daily_lower": 0.0003859848168013715,
+     "p_value": 0.0012,
+     "skew": 1.2724329292672962,
+     "kurtosis": 20.246221093820022,
+     "exposure": 0.30892083048140545,
+     "total_costs": 0.0868,
+     "total_funding": 0.15290023333333333,
+     "trades": 93,
+     "win_rate": 0.5161290322580645,
+     "avg_trade": 0.014933248644231106,
+     "best_trade": 0.15173601693534183,
+     "profit_factor": 2.325910056771419,
+     "total_without_best": 1.9734421100520807,
+     "avg_bars": 39.32258064516129
+    }
+   },
+   "dev_valid": {
+    "1.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 20:00:00+00:00",
+     "days": 547,
+     "total_return": 0.24783639155869652,
+     "cagr": 0.1593837589660243,
+     "sharpe": 0.996038210060587,
+     "sortino": 0.7174324882837506,
+     "volatility": 0.1611979632793986,
+     "max_drawdown": -0.1293625290050181,
+     "mean_daily": 0.00043988857756225875,
+     "daily_lower": -0.00013261923488149967,
+     "p_value": 0.1064,
+     "skew": 2.5672408267094284,
+     "kurtosis": 25.691997602414133,
+     "exposure": 0.2845825716026813,
+     "total_costs": 0.0182,
+     "total_funding": 0.02068925666666667,
+     "trades": 39,
+     "win_rate": 0.46153846153846156,
+     "avg_trade": 0.0066760385736421915,
+     "best_trade": 0.11125429853753861,
+     "profit_factor": 1.7065496912351619,
+     "total_without_best": 0.1229080447210924,
+     "avg_bars": 33.07692307692308
+    },
+    "2.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 20:00:00+00:00",
+     "days": 547,
+     "total_return": 0.22535659430824095,
+     "cagr": 0.14539095552926695,
+     "sharpe": 0.9227118542648943,
+     "sortino": 0.6627523807892652,
+     "volatility": 0.16079009450305562,
+     "max_drawdown": -0.13179326070120545,
+     "mean_daily": 0.0004064737705379235,
+     "daily_lower": -0.0001617802946600213,
+     "p_value": 0.1212,
+     "skew": 2.5289034472297267,
+     "kurtosis": 25.486166066726497,
+     "exposure": 0.2845825716026813,
+     "total_costs": 0.0364,
+     "total_funding": 0.02068925666666667,
+     "trades": 39,
+     "win_rate": 0.46153846153846156,
+     "avg_trade": 0.006209371906975528,
+     "best_trade": 0.11078763187087193,
+     "profit_factor": 1.6401367799863729,
+     "total_without_best": 0.10314209408724095,
+     "avg_bars": 33.07692307692308
+    }
+   }
+  },
+  "candidate_check": {
+   "gelistirme_egitim_net_pozitif": true,
+   "dogrulama_net_pozitif": true,
+   "dogrulama_2x_maliyette_net_pozitif": true,
+   "dogrulama_sharpe_yeterli": true,
+   "dogrulama_islem_sayisi": true,
+   "aday": true
+  }
+ },
+ "formasyon_ucgen_kama_4h_hacim_iki": {
+  "interval": "4h",
+  "legs": [
+   [
+    "futures",
+    "BTCUSDT"
+   ],
+   [
+    "futures",
+    "ETHUSDT"
+   ],
+   [
+    "futures",
+    "SOLUSDT"
+   ]
+  ],
+  "params": {
+   "yontem": "grafik",
+   "tipler": [
+    "ucgen",
+    "kama"
+   ],
+   "yon": "iki",
+   "cikis": "hedef",
+   "hacim_k": 1.5
+  },
+  "sonuc": {
+   "dev_train": {
+    "1.0": {
+     "start": "2020-01-01 00:00:00+00:00",
+     "end": "2023-12-31 20:00:00+00:00",
+     "days": 1461,
+     "total_return": 2.1850572043893974,
+     "cagr": 0.33596062832267415,
+     "sharpe": 1.2024043344405633,
+     "sortino": 1.0581877385665408,
+     "volatility": 0.2708998004751678,
+     "max_drawdown": -0.29788073898075984,
+     "mean_daily": 0.0008924139569600701,
+     "daily_lower": 0.00029404396958692227,
+     "p_value": 0.0052,
+     "skew": 1.450415140042212,
+     "kurtosis": 18.449453397023028,
+     "exposure": 0.5250969655487109,
+     "total_costs": 0.06813333333333332,
+     "total_funding": 0.03504371,
+     "trades": 146,
+     "win_rate": 0.5068493150684932,
+     "avg_trade": 0.009039014613188614,
+     "best_trade": 0.21051997896760183,
+     "profit_factor": 1.7253431332003133,
+     "total_without_best": 1.6311479857654145,
+     "avg_bars": 41.417808219178085
+    },
+    "2.0": {
+     "start": "2020-01-01 00:00:00+00:00",
+     "end": "2023-12-31 20:00:00+00:00",
+     "days": 1461,
+     "total_return": 1.9753167291496765,
+     "cagr": 0.3133993814027929,
+     "sharpe": 1.139587792359609,
+     "sortino": 0.9989901029202582,
+     "volatility": 0.27089427638777025,
+     "max_drawdown": -0.30050396769687926,
+     "mean_daily": 0.0008457748229906654,
+     "daily_lower": 0.00024407419922594064,
+     "p_value": 0.0086,
+     "skew": 1.4273638290381736,
+     "kurtosis": 18.41842916990704,
+     "exposure": 0.5250969655487109,
+     "total_costs": 0.13626666666666665,
+     "total_funding": 0.03504371,
+     "trades": 146,
+     "win_rate": 0.5,
+     "avg_trade": 0.008572347946521949,
+     "best_trade": 0.2100533123009352,
+     "profit_factor": 1.6752922773424188,
+     "total_without_best": 1.458831110087262,
+     "avg_bars": 41.417808219178085
+    }
+   },
+   "dev_valid": {
+    "1.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 20:00:00+00:00",
+     "days": 547,
+     "total_return": 0.3072437416635645,
+     "cagr": 0.19596594462202743,
+     "sharpe": 1.1301964413487926,
+     "sortino": 0.9205874898795533,
+     "volatility": 0.17103918414606242,
+     "max_drawdown": -0.1856511413241264,
+     "mean_daily": 0.0005296106226111798,
+     "daily_lower": -0.00015321271147990988,
+     "p_value": 0.11,
+     "skew": 1.2927240746203452,
+     "kurtosis": 11.98862131930091,
+     "exposure": 0.3769043266301036,
+     "total_costs": 0.025666666666666667,
+     "total_funding": -0.004790406666666665,
+     "trades": 55,
+     "win_rate": 0.4909090909090909,
+     "avg_trade": 0.005825607827585899,
+     "best_trade": 0.11869220860818892,
+     "profit_factor": 1.6096422181409382,
+     "total_without_best": 0.1685463897973869,
+     "avg_bars": 29.90909090909091
+    },
+    "2.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 20:00:00+00:00",
+     "days": 547,
+     "total_return": 0.27411839934608295,
+     "cagr": 0.17563760168929798,
+     "sharpe": 1.0297963224521227,
+     "sortino": 0.8348432174031869,
+     "volatility": 0.17108676397677955,
+     "max_drawdown": -0.19157366993349656,
+     "mean_daily": 0.0004826973160644436,
+     "daily_lower": -0.00020185644985049132,
+     "p_value": 0.133,
+     "skew": 1.2636748546117729,
+     "kurtosis": 11.953373151621841,
+     "exposure": 0.3769043266301036,
+     "total_costs": 0.051333333333333335,
+     "total_funding": -0.004790406666666665,
+     "trades": 55,
+     "win_rate": 0.4909090909090909,
+     "avg_trade": 0.0053589411609192335,
+     "best_trade": 0.11822554194152224,
+     "profit_factor": 1.547201641061179,
+     "total_without_best": 0.13941092521808396,
+     "avg_bars": 29.90909090909091
+    }
+   }
+  },
+  "candidate_check": {
+   "gelistirme_egitim_net_pozitif": true,
+   "dogrulama_net_pozitif": true,
+   "dogrulama_2x_maliyette_net_pozitif": true,
+   "dogrulama_sharpe_yeterli": true,
+   "dogrulama_islem_sayisi": true,
+   "aday": true
+  }
+ },
+ "formasyon_hepsi_4h_trend_10bar_uzun": {
+  "interval": "4h",
+  "legs": [
+   [
+    "futures",
+    "BTCUSDT"
+   ],
+   [
+    "futures",
+    "ETHUSDT"
+   ],
+   [
+    "futures",
+    "SOLUSDT"
+   ]
+  ],
+  "params": {
+   "yontem": "grafik",
+   "tipler": "hepsi",
+   "yon": "uzun",
+   "cikis": "sure",
+   "max_bar": 10,
+   "trend_n": 200
+  },
+  "sonuc": {
+   "dev_train": {
+    "1.0": {
+     "start": "2020-01-01 00:00:00+00:00",
+     "end": "2023-12-31 20:00:00+00:00",
+     "days": 1461,
+     "total_return": 2.4012033080536157,
+     "cagr": 0.35807361498821866,
+     "sharpe": 1.6431646733590461,
+     "sortino": 1.402713956061086,
+     "volatility": 0.19765477384853158,
+     "max_drawdown": -0.13020767966805746,
+     "mean_daily": 0.0008898064161881604,
+     "daily_lower": 0.00043041281732017386,
+     "p_value": 0.0002,
+     "skew": 5.539971190485962,
+     "kurtosis": 74.58930807143112,
+     "exposure": 0.19803787360255531,
+     "total_costs": 0.09286666666666665,
+     "total_funding": 0.07414800333333334,
+     "trades": 199,
+     "win_rate": 0.5276381909547738,
+     "avg_trade": 0.006606569706136099,
+     "best_trade": 0.14553607335779478,
+     "profit_factor": 2.255756898891577,
+     "total_without_best": 1.969093149623835,
+     "avg_bars": 10.492462311557789
+    },
+    "2.0": {
+     "start": "2020-01-01 00:00:00+00:00",
+     "end": "2023-12-31 20:00:00+00:00",
+     "days": 1461,
+     "total_return": 2.099683899912948,
+     "cagr": 0.32691580030915746,
+     "sharpe": 1.5285724382266237,
+     "sortino": 1.3084421277279594,
+     "volatility": 0.19723863196666475,
+     "max_drawdown": -0.13447093923011622,
+     "mean_daily": 0.0008260096892541602,
+     "daily_lower": 0.0003678868036665728,
+     "p_value": 0.0008,
+     "skew": 5.533516856318971,
+     "kurtosis": 74.80700540920786,
+     "exposure": 0.19803787360255531,
+     "total_costs": 0.1857333333333333,
+     "total_funding": 0.07414800333333334,
+     "trades": 199,
+     "win_rate": 0.5125628140703518,
+     "avg_trade": 0.0061399030394694324,
+     "best_trade": 0.1450694066911281,
+     "profit_factor": 2.11924880276867,
+     "total_without_best": 1.706983421092359,
+     "avg_bars": 10.492462311557789
+    }
+   },
+   "dev_valid": {
+    "1.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 20:00:00+00:00",
+     "days": 547,
+     "total_return": 0.24539513306496685,
+     "cagr": 0.15786824568775848,
+     "sharpe": 1.1218151393157456,
+     "sortino": 0.8071958346291249,
+     "volatility": 0.13903778896715532,
+     "max_drawdown": -0.09286244425499224,
+     "mean_daily": 0.0004273279358913496,
+     "daily_lower": -0.00010433381413143348,
+     "p_value": 0.0962,
+     "skew": 3.064793106844311,
+     "kurtosis": 37.17365139508863,
+     "exposure": 0.19865935405240706,
+     "total_costs": 0.036166666666666666,
+     "total_funding": 0.019863656666666667,
+     "trades": 78,
+     "win_rate": 0.5256410256410257,
+     "avg_trade": 0.0032126807429238733,
+     "best_trade": 0.07857368761656852,
+     "profit_factor": 1.5670923828948118,
+     "total_without_best": 0.15466856586965338,
+     "avg_bars": 10.756410256410257
+    },
+    "2.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 20:00:00+00:00",
+     "days": 547,
+     "total_return": 0.20117626176435088,
+     "cagr": 0.13024411967795468,
+     "sharpe": 0.9502009911619,
+     "sortino": 0.6774225377015219,
+     "volatility": 0.1387079560188193,
+     "max_drawdown": -0.09624537334513883,
+     "mean_daily": 0.0003610970884688311,
+     "daily_lower": -0.00016603313996523875,
+     "p_value": 0.139,
+     "skew": 3.0249642818088476,
+     "kurtosis": 37.15317354601471,
+     "exposure": 0.19865935405240706,
+     "total_costs": 0.07233333333333333,
+     "total_funding": 0.019863656666666667,
+     "trades": 78,
+     "win_rate": 0.48717948717948717,
+     "avg_trade": 0.0027460140762572078,
+     "best_trade": 0.07810702094990185,
+     "profit_factor": 1.465691574381427,
+     "total_without_best": 0.1141530835278437,
+     "avg_bars": 10.756410256410257
+    }
+   }
+  },
+  "candidate_check": {
+   "gelistirme_egitim_net_pozitif": true,
+   "dogrulama_net_pozitif": true,
+   "dogrulama_2x_maliyette_net_pozitif": true,
+   "dogrulama_sharpe_yeterli": true,
+   "dogrulama_islem_sayisi": true,
+   "aday": true
+  }
+ },
+ "formasyon_hepsi_1d_olcek234_iki": {
+  "interval": "1d",
+  "legs": [
+   [
+    "futures",
+    "BTCUSDT"
+   ],
+   [
+    "futures",
+    "ETHUSDT"
+   ],
+   [
+    "futures",
+    "SOLUSDT"
+   ]
+  ],
+  "params": {
+   "yontem": "grafik",
+   "tipler": "hepsi",
+   "yon": "iki",
+   "cikis": "hedef",
+   "olcekler": [
+    2.0,
+    3.0,
+    4.0
+   ]
+  },
+  "sonuc": {
+   "dev_train": {
+    "1.0": {
+     "start": "2019-09-08 00:00:00+00:00",
+     "end": "2023-12-31 00:00:00+00:00",
+     "days": 1575,
+     "total_return": 4.785631741242231,
+     "cagr": 0.5024249177680258,
+     "sharpe": 1.3262899508145771,
+     "sortino": 1.2725168571143752,
+     "volatility": 0.3533838950512074,
+     "max_drawdown": -0.35478073420475686,
+     "mean_daily": 0.001284080845989396,
+     "daily_lower": 0.0004896357844145785,
+     "p_value": 0.0046,
+     "skew": 0.6777929943432371,
+     "kurtosis": 12.03172257442186,
+     "exposure": 0.7373096446700508,
+     "total_costs": 0.03336666666666667,
+     "total_funding": 0.07914969333333333,
+     "trades": 72,
+     "win_rate": 0.5138888888888888,
+     "avg_trade": 0.03273419390465116,
+     "best_trade": 0.4523007694880432,
+     "profit_factor": 2.6135847666255985,
+     "total_without_best": 2.9837696590092344,
+     "avg_bars": 26.88888888888889
+    },
+    "2.0": {
+     "start": "2019-09-08 00:00:00+00:00",
+     "end": "2023-12-31 00:00:00+00:00",
+     "days": 1575,
+     "total_return": 4.595674986195053,
+     "cagr": 0.49083833530509113,
+     "sharpe": 1.304320449806143,
+     "sortino": 1.2533948983786567,
+     "volatility": 0.35341148161054253,
+     "max_drawdown": -0.3553792330240714,
+     "mean_daily": 0.0012629091031805982,
+     "daily_lower": 0.00046680517863393364,
+     "p_value": 0.0046,
+     "skew": 0.6759644424401456,
+     "kurtosis": 12.04043442174522,
+     "exposure": 0.7373096446700508,
+     "total_costs": 0.06673333333333334,
+     "total_funding": 0.07914969333333333,
+     "trades": 72,
+     "win_rate": 0.5138888888888888,
+     "avg_trade": 0.03226752723798449,
+     "best_trade": 0.4518341028213764,
+     "profit_factor": 2.572991392650605,
+     "total_without_best": 2.854211011658201,
+     "avg_bars": 26.88888888888889
+    }
+   },
+   "dev_valid": {
+    "1.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 00:00:00+00:00",
+     "days": 546,
+     "total_return": 0.07498713190950435,
+     "cagr": 0.04956032250626152,
+     "sharpe": 0.31490184739595095,
+     "sortino": 0.3161512057224822,
+     "volatility": 0.37544891738703473,
+     "max_drawdown": -0.4129660014786619,
+     "mean_daily": 0.0003239165964054439,
+     "daily_lower": -0.0008691562858644642,
+     "p_value": 0.3302,
+     "skew": 0.5542123466543124,
+     "kurtosis": 12.488058349048995,
+     "exposure": 0.9177330895795247,
+     "total_costs": 0.017733333333333334,
+     "total_funding": 0.025351980000000003,
+     "trades": 39,
+     "win_rate": 0.41025641025641024,
+     "avg_trade": 0.0017831778831651117,
+     "best_trade": 0.1452115510644657,
+     "profit_factor": 1.0958598827857287,
+     "total_without_best": -0.061320040903960815,
+     "avg_bars": 26.897435897435898
+    },
+    "2.0": {
+     "start": "2024-01-01 00:00:00+00:00",
+     "end": "2025-06-30 00:00:00+00:00",
+     "days": 546,
+     "total_return": 0.056108432499796246,
+     "cagr": 0.03719389360743475,
+     "sharpe": 0.28341025105840906,
+     "sortino": 0.28469351580339286,
+     "volatility": 0.3754152457420708,
+     "max_drawdown": -0.4172039995539958,
+     "mean_daily": 0.0002914973398545606,
+     "daily_lower": -0.00090413706517548,
+     "p_value": 0.3478,
+     "skew": 0.5528922547069011,
+     "kurtosis": 12.4951420383427,
+     "exposure": 0.9177330895795247,
+     "total_costs": 0.03546666666666667,
+     "total_funding": 0.025351980000000003,
+     "trades": 39,
+     "win_rate": 0.41025641025641024,
+     "avg_trade": 0.001316511216498444,
+     "best_trade": 0.144744884397799,
+     "profit_factor": 1.0697410544495651,
+     "total_without_best": -0.07742900021311783,
+     "avg_bars": 26.897435897435898
+    }
+   }
+  },
+  "candidate_check": {
+   "gelistirme_egitim_net_pozitif": true,
+   "dogrulama_net_pozitif": true,
+   "dogrulama_2x_maliyette_net_pozitif": true,
+   "dogrulama_sharpe_yeterli": false,
+   "dogrulama_islem_sayisi": true,
+   "aday": false
+  }
+ }
+}

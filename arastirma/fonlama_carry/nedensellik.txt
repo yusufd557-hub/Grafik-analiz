@@ -1,0 +1,4 @@
+GECTI fonlama_carry_sepet3_hizli
+GECTI fonlama_carry_sepet3_yavas_dusuk
+GECTI fonlama_carry_btc_surekli
+GECTI fonlama_negatif_uzun_sepet3

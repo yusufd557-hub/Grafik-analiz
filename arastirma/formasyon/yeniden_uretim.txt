@@ -1,0 +1,9 @@
+formasyon_ucgen_kama_4h_trend_uzun 1.0 getiri 2.576451 ref 2.576451 işlem 93 93 aynı
+formasyon_ucgen_kama_4h_trend_uzun 2.0 getiri 2.42462 ref 2.42462 işlem 93 93 aynı
+formasyon_ucgen_kama_4h_hacim_iki 1.0 getiri 2.185057 ref 2.185057 işlem 146 146 aynı
+formasyon_ucgen_kama_4h_hacim_iki 2.0 getiri 1.975317 ref 1.975317 işlem 146 146 aynı
+formasyon_hepsi_4h_trend_10bar_uzun 1.0 getiri 2.401203 ref 2.401203 işlem 199 199 aynı
+formasyon_hepsi_4h_trend_10bar_uzun 2.0 getiri 2.099684 ref 2.099684 işlem 199 199 aynı
+formasyon_hepsi_1d_olcek234_iki 1.0 getiri 4.785632 ref 4.785632 işlem 72 72 aynı
+formasyon_hepsi_1d_olcek234_iki 2.0 getiri 4.595675 ref 4.595675 işlem 72 72 aynı
+SONUÇ: hepsi aynı

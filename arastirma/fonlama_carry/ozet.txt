@@ -1,0 +1,68 @@
+benzersiz yapilandirma: 416 satir: 416
+                                     grup   evren  n  net>0  S_min  S_med  S_max  2x>0  DD_med  getiri_med
+         carry eşik 1e-4 kütle noktasında BTCUSDT 16     16  4.331  5.316  6.294    16  -0.010       0.248
+         carry eşik 1e-4 kütle noktasında ETHUSDT 16     16  4.505  5.519  6.221    16  -0.007       0.354
+         carry eşik 1e-4 kütle noktasında  SEPET3 16     16  3.622  5.259  6.227    16  -0.008       0.258
+         carry eşik 1e-4 kütle noktasında SOLUSDT 16     16  1.466  4.185  4.454    16  -0.009       0.180
+carry eşik 1e-4 kütle noktasında +son_neg BTCUSDT 16     16  4.610  5.213  5.887    16  -0.010       0.229
+carry eşik 1e-4 kütle noktasında +son_neg ETHUSDT 16     16  4.548  5.304  5.625    16  -0.008       0.345
+carry eşik 1e-4 kütle noktasında +son_neg  SEPET3 16     16  3.347  5.228  5.654    16  -0.008       0.246
+carry eşik 1e-4 kütle noktasında +son_neg SOLUSDT 16     16  1.238  3.652  4.116    16  -0.009       0.165
+                            carry giriş 0 BTCUSDT  4      4  1.497  4.710  6.280     3  -0.015       0.268
+                            carry giriş 0 ETHUSDT  4      4  2.168  5.288  6.207     3  -0.029       0.372
+                            carry giriş 0  SEPET3  4      4  0.909  3.043  4.049     3  -0.033       0.254
+                            carry giriş 0 SOLUSDT  4      3 -0.143  0.956  1.635     2  -0.075       0.132
+                   carry giriş 0 +son_neg BTCUSDT  4      0 -1.763 -1.732 -1.553     0  -0.259      -0.131
+                   carry giriş 0 +son_neg ETHUSDT  4      0 -0.540 -0.338 -0.205     0  -0.251      -0.030
+                   carry giriş 0 +son_neg  SEPET3  4      0 -1.104 -0.864 -0.679     0  -0.226      -0.069
+                   carry giriş 0 +son_neg SOLUSDT  4      0 -0.766 -0.322 -0.271     0  -0.186      -0.046
+                       carry giriş < 1e-4 BTCUSDT 12     12  2.053  5.104  6.640    11  -0.012       0.270
+                       carry giriş < 1e-4 ETHUSDT 12     12  2.877  5.669  6.373    12  -0.018       0.382
+                       carry giriş < 1e-4  SEPET3 14     14  1.607  3.228  5.009    12  -0.018       0.270
+                       carry giriş < 1e-4 SOLUSDT 12     12  0.342  1.172  1.676     8  -0.047       0.167
+                       carry giriş > 1e-4 BTCUSDT  7      7  5.012  5.226  5.688     7  -0.010       0.252
+                       carry giriş > 1e-4 ETHUSDT  7      7  5.541  5.589  5.732     7  -0.008       0.360
+                       carry giriş > 1e-4  SEPET2  2      2  5.728  5.879  6.031     2  -0.008       0.305
+                       carry giriş > 1e-4  SEPET3  9      9  5.311  5.563  5.684     9  -0.008       0.263
+                       carry giriş > 1e-4 SOLUSDT  7      7  4.099  4.512  4.657     7  -0.008       0.189
+              carry giriş > 1e-4 +son_neg BTCUSDT  4      4  4.678  5.197  5.642     4  -0.010       0.226
+              carry giriş > 1e-4 +son_neg ETHUSDT  4      4  4.922  5.252  5.484     4  -0.007       0.329
+              carry giriş > 1e-4 +son_neg  SEPET3  6      6  4.862  5.439  5.542     6  -0.008       0.249
+              carry giriş > 1e-4 +son_neg SOLUSDT  4      4  3.436  3.842  4.240     4  -0.009       0.166
+                            carry sürekli BTCUSDT  1      1  6.703  6.703  6.703     1  -0.014       0.342
+                            carry sürekli ETHUSDT  1      1  6.402  6.402  6.402     1  -0.013       0.437
+                            carry sürekli  SEPET3  3      3  0.894  0.986  1.051     3  -0.101       0.212
+                            carry sürekli SOLUSDT  1      0 -0.105 -0.105 -0.105     0  -0.276      -0.065
+           kaplama kontrol (yalnız trend) BTCUSDT  2      2  0.955  1.020  1.085     2  -0.328       3.734
+           kaplama kontrol (yalnız trend) ETHUSDT  2      2  0.759  0.809  0.858     2  -0.587       3.407
+           kaplama kontrol (yalnız trend)  SEPET3  2      2  1.208  1.248  1.288     2  -0.468       8.588
+      kaplama, filtre trend, uzun_poz 0.0 BTCUSDT  2      2  1.189  1.266  1.342     2  -0.177       2.120
+      kaplama, filtre trend, uzun_poz 0.0 ETHUSDT  2      2  0.655  0.698  0.742     2  -0.345       1.158
+      kaplama, filtre trend, uzun_poz 0.0  SEPET3  2      2  0.982  0.999  1.016     2  -0.341       1.637
+      kaplama, filtre trend, uzun_poz 1.0 BTCUSDT  2      2  1.038  1.111  1.183     2  -0.347       5.332
+      kaplama, filtre trend, uzun_poz 1.0 ETHUSDT  2      2  0.512  0.560  0.607     2  -0.599       1.537
+      kaplama, filtre trend, uzun_poz 1.0  SEPET3  2      2  0.891  0.910  0.929     2  -0.573       3.790
+        kaplama, filtre yok, uzun_poz 0.0 BTCUSDT  2      2  0.843  0.887  0.932     2  -0.477       2.268
+        kaplama, filtre yok, uzun_poz 0.0 ETHUSDT  2      2  0.908  0.939  0.970     2  -0.540       3.252
+        kaplama, filtre yok, uzun_poz 0.0  SEPET3  2      2  0.948  0.948  0.948     2  -0.581       3.073
+        kaplama, filtre yok, uzun_poz 1.0 BTCUSDT  2      2  0.765  0.809  0.853     2  -0.760       4.631
+        kaplama, filtre yok, uzun_poz 1.0 ETHUSDT  2      2  0.809  0.842  0.875     2  -0.812       6.714
+        kaplama, filtre yok, uzun_poz 1.0  SEPET3  2      2  0.885  0.886  0.887     2  -0.848       7.437
+                   yönlü kisa, filtre ile BTCUSDT  8      4  0.352  0.422  0.527     4  -0.059       0.080
+                   yönlü kisa, filtre ile ETHUSDT  8      0    NaN    NaN    NaN     0   0.000       0.000
+                   yönlü kisa, filtre ile  SEPET3  8      4  0.363  0.431  0.523     4  -0.020       0.030
+                   yönlü kisa, filtre yok BTCUSDT  8      1 -0.295  0.002  0.262     1  -0.576      -0.144
+                   yönlü kisa, filtre yok ETHUSDT  8      0 -0.972 -0.730 -0.654     0  -0.895      -0.845
+                   yönlü kisa, filtre yok  SEPET3  8      0 -1.557 -1.085 -0.892     0  -0.853      -0.817
+                   yönlü uzun, filtre ile BTCUSDT  8      8  0.336  0.863  1.192     8  -0.098       0.573
+                   yönlü uzun, filtre ile ETHUSDT  8      3 -0.301  0.016  0.354     3  -0.371      -0.054
+                   yönlü uzun, filtre ile  SEPET3  8      8  0.466  0.650  0.829     8  -0.303       0.562
+                   yönlü uzun, filtre yok BTCUSDT  8      8  0.481  1.089  1.390     8  -0.247       2.048
+                   yönlü uzun, filtre yok ETHUSDT  8      7  0.188  0.415  0.830     5  -0.574       0.398
+                   yönlü uzun, filtre yok  SEPET3  8      8  0.710  0.878  1.043     8  -0.531       2.206
+       yönlü yüzdelik iki yön, filtre ile BTCUSDT  4      4  0.989  1.456  1.613     4  -0.146       1.203
+       yönlü yüzdelik iki yön, filtre ile ETHUSDT  4      1 -0.206  0.019  0.415     1  -0.503      -0.198
+       yönlü yüzdelik iki yön, filtre ile  SEPET3  4      4  0.389  0.575  0.887     4  -0.220       0.462
+       yönlü yüzdelik iki yön, filtre yok BTCUSDT  4      3  0.041  0.356  0.410     3  -0.624       0.277
+       yönlü yüzdelik iki yön, filtre yok ETHUSDT  4      0 -0.303 -0.038  0.115     0  -0.713      -0.569
+       yönlü yüzdelik iki yön, filtre yok  SEPET3  4      1 -0.436 -0.201  0.211     0  -0.638      -0.548

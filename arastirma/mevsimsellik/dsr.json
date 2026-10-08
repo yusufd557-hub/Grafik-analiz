@@ -1,0 +1,43 @@
+{
+ "n_trials": 126,
+ "sharpe_var": 2.9928321089820202,
+ "kesif_hucre": 660,
+ "sonuc": {
+  "tom_1d_fut_PORT3_a4_b5": {
+   "dsr_dev_valid": 9.862247334350163e-12,
+   "dsr_dev_valid_muhafazakar": 1.1606780603283345e-15,
+   "dsr_dev_train": 3.3722282252590687e-09,
+   "n_days_valid": 547,
+   "skew_valid": -0.2532693773739326,
+   "kurt_valid": 26.12638659402377,
+   "sharpe_valid": -0.9774030291022541
+  },
+  "tom_1d_spot_PORT3_a4_b5": {
+   "dsr_dev_valid": 1.741137982121637e-11,
+   "dsr_dev_valid_muhafazakar": 2.2621927297060587e-15,
+   "dsr_dev_train": 1.0912326588390311e-15,
+   "n_days_valid": 547,
+   "skew_valid": -0.22897233118352223,
+   "kurt_valid": 26.148769695920066,
+   "sharpe_valid": -0.9086307268725962
+  },
+  "tom_1d_fut_PORT2_a4_b5": {
+   "dsr_dev_valid": 4.1711279035325825e-12,
+   "dsr_dev_valid_muhafazakar": 3.720918150806804e-16,
+   "dsr_dev_train": 4.810513428806422e-10,
+   "n_days_valid": 547,
+   "skew_valid": -0.659821602878134,
+   "kurt_valid": 19.46203580086514,
+   "sharpe_valid": -1.007955915532683
+  },
+  "tomk_1d_fut_PORT3_a2-5_b2-5": {
+   "dsr_dev_valid": 6.313988286165879e-11,
+   "dsr_dev_valid_muhafazakar": 1.442310665264053e-14,
+   "dsr_dev_train": 1.3767918380597005e-09,
+   "n_days_valid": 547,
+   "skew_valid": 1.111886445600469,
+   "kurt_valid": 39.49746499095269,
+   "sharpe_valid": -0.9442182099500541
+  }
+ }
+}

@@ -1,0 +1,28 @@
+
+== formasyon_ucgen_kama_4h_trend_uzun
+  train 1x: getiri=+2.5765 sharpe=1.508 mdd=-0.243 işlem=93 p=0.001 maruz=0.31
+  train 2x: getiri=+2.4246 sharpe=1.461 mdd=-0.250 işlem=93 p=0.001 maruz=0.31
+  valid 1x: getiri=+0.2478 sharpe=0.996 mdd=-0.129 işlem=39 p=0.106 maruz=0.28
+  valid 2x: getiri=+0.2254 sharpe=0.923 mdd=-0.132 işlem=39 p=0.121 maruz=0.28
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'aday': True}
+
+== formasyon_ucgen_kama_4h_hacim_iki
+  train 1x: getiri=+2.1851 sharpe=1.202 mdd=-0.298 işlem=146 p=0.005 maruz=0.53
+  train 2x: getiri=+1.9753 sharpe=1.140 mdd=-0.301 işlem=146 p=0.009 maruz=0.53
+  valid 1x: getiri=+0.3072 sharpe=1.130 mdd=-0.186 işlem=55 p=0.110 maruz=0.38
+  valid 2x: getiri=+0.2741 sharpe=1.030 mdd=-0.192 işlem=55 p=0.133 maruz=0.38
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'aday': True}
+
+== formasyon_hepsi_4h_trend_10bar_uzun
+  train 1x: getiri=+2.4012 sharpe=1.643 mdd=-0.130 işlem=199 p=0.000 maruz=0.20
+  train 2x: getiri=+2.0997 sharpe=1.529 mdd=-0.134 işlem=199 p=0.001 maruz=0.20
+  valid 1x: getiri=+0.2454 sharpe=1.122 mdd=-0.093 işlem=78 p=0.096 maruz=0.20
+  valid 2x: getiri=+0.2012 sharpe=0.950 mdd=-0.096 işlem=78 p=0.139 maruz=0.20
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'aday': True}
+
+== formasyon_hepsi_1d_olcek234_iki
+  train 1x: getiri=+4.7856 sharpe=1.326 mdd=-0.355 işlem=72 p=0.005 maruz=0.74
+  train 2x: getiri=+4.5957 sharpe=1.304 mdd=-0.355 işlem=72 p=0.005 maruz=0.74
+  valid 1x: getiri=+0.0750 sharpe=0.315 mdd=-0.413 işlem=39 p=0.330 maruz=0.92
+  valid 2x: getiri=+0.0561 sharpe=0.283 mdd=-0.417 işlem=39 p=0.348 maruz=0.92
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'aday': False}

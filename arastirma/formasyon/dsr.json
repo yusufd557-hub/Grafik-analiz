@@ -1,0 +1,31 @@
+{
+ "deneme_sayisi": 298,
+ "sharpe_varyansi": 0.46748774588819614,
+ "gun": 547,
+ "stratejiler": {
+  "formasyon_ucgen_kama_4h_trend_uzun": {
+   "sharpe": 0.996038210060587,
+   "skew": 2.5672408267094284,
+   "kurtosis": 25.691997602414133,
+   "dsr": 0.100529311523339
+  },
+  "formasyon_ucgen_kama_4h_hacim_iki": {
+   "sharpe": 1.1301964413487926,
+   "skew": 1.2927240746203452,
+   "kurtosis": 11.98862131930091,
+   "dsr": 0.14145371646542976
+  },
+  "formasyon_hepsi_4h_trend_10bar_uzun": {
+   "sharpe": 1.1218151393157456,
+   "skew": 3.064793106844311,
+   "kurtosis": 37.17365139508863,
+   "dsr": 0.12810273755607104
+  },
+  "formasyon_hepsi_1d_olcek234_iki": {
+   "sharpe": 0.31490184739595095,
+   "skew": 0.5542123466543124,
+   "kurtosis": 12.488058349048995,
+   "dsr": 0.020526035058166213
+  }
+ }
+}
