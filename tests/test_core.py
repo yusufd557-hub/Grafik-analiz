@@ -196,3 +196,21 @@ def test_wilson_interval():
     lo, hi = wilson_interval(50, 100)
     assert lo < 0.5 < hi and hi - lo == pytest.approx(0.19, abs=0.01)
     assert np.isnan(wilson_interval(0, 0)[0])
+
+
+def test_store_keeps_archive_when_rest_fails(tmp_path):
+    rows = [_row(int((pd.Timestamp("2026-08-01", tz="UTC") + pd.Timedelta(hours=i)).value // 1_000_000)) for i in range(24 * 31)]
+    payload = _zip(rows)
+
+    def archive(url, params):
+        if url.endswith("CHECKSUM"):
+            return FakeResponse(404)
+        return FakeResponse(200, payload) if "2026-08" in url else FakeResponse(404)
+
+    session = FakeSession([("https://data.binance.vision", archive), ("https://blocked", lambda u, p: FakeResponse(451))])
+    store = CandleStore(tmp_path, session=session, rest=RestClient(session=session, hosts=("https://blocked",), pause=0))
+    messages = []
+    frame = store.update("BTCUSDT", "1h", start="2025-01", now=pd.Timestamp("2026-10-08", tz="UTC"), progress=messages.append)
+    assert len(frame) == 24 * 31
+    assert store.load("BTCUSDT", "1h").index[-1] == pd.Timestamp("2026-08-31 23:00", tz="UTC")
+    assert any("alınamadı" in m for m in messages)

@@ -6,11 +6,12 @@ import math
 import traceback
 from collections.abc import Callable
 
+import requests
 from PySide6 import QtCore, QtGui, QtWidgets
 
 from ..analysis import AnalysisResult, analyze
 from ..config import INTERVAL_NAMES, INTERVALS, SYMBOLS
-from ..data import CandleStore
+from ..data import CandleStore, DataError
 from ..patterns.base import BROKEN, FORMING, RESOLVED, Formation
 from ..report import DIRECTION_NAMES, percent, price, scale_name, summary_text
 from ..stats import lookup
@@ -43,13 +44,22 @@ class Task(QtCore.QRunnable):
             self.signals.done.emit(result)
 
 
-def load_and_analyze(symbol: str, interval: str, refresh: bool, progress: Callable[[str], None]) -> AnalysisResult:
+def load_and_analyze(
+    symbol: str, interval: str, refresh: bool, progress: Callable[[str], None]
+) -> tuple[AnalysisResult, str | None]:
+    """Veriyi (gerekirse) günceller ve analiz eder. İkinci değer kullanıcıya gösterilecek uyarıdır."""
     store = CandleStore()
     frame = store.load(symbol, interval)
+    warning = None
     if refresh or frame.empty:
-        frame = store.update(symbol, interval, progress=progress)
+        try:
+            frame = store.update(symbol, interval, progress=progress)
+        except (DataError, requests.RequestException) as exc:
+            if frame.empty:
+                raise
+            warning = f"veri güncellenemedi ({exc}); kayıtlı veri gösteriliyor"
     progress(f"{symbol} {interval}: analiz ediliyor…")
-    return analyze(frame, symbol, interval)
+    return analyze(frame, symbol, interval), warning
 
 
 def _item(text: str, color: str | None = None, align_right: bool = False, data=None) -> QtWidgets.QTableWidgetItem:
@@ -226,12 +236,15 @@ class MainWindow(QtWidgets.QMainWindow):
         self._tasks.add(task)
         QtCore.QThreadPool.globalInstance().start(task)
 
-    def _on_done(self, result: AnalysisResult, request: int, task: Task) -> None:
+    def _on_done(self, outcome: tuple[AnalysisResult, str | None], request: int, task: Task) -> None:
         self._tasks.discard(task)
         if request != self._request:
             return
         self.refresh_button.setEnabled(True)
+        result, warning = outcome
         self.show_result(result)
+        if warning:
+            self.status.setText(self.status.text() + " · ⚠ " + warning)
 
     def _on_failed(self, error: str, request: int, task: Task) -> None:
         self._tasks.discard(task)

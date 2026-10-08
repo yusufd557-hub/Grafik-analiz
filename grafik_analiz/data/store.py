@@ -58,6 +58,9 @@ class CandleStore:
         rest: RestClient | None = None,
     ) -> None:
         self.root = Path(root) if root is not None else data_dir()
+        # Dışarıdan oturum verilirse (ör. testler) arşiv indirmeleri de onu kullanır;
+        # verilmezse her iş parçacığı kendi oturumunu açar.
+        self._shared_session = session
         self.session = session or requests.Session()
         self.rest = rest or RestClient(session=self.session)
 
@@ -93,6 +96,8 @@ class CandleStore:
         local = threading.local()
 
         def session() -> requests.Session:
+            if self._shared_session is not None:
+                return self._shared_session
             if not hasattr(local, "session"):
                 local.session = requests.Session()
             return local.session
@@ -165,8 +170,16 @@ class CandleStore:
         if next_open + step <= now:
             say(f"{symbol} {interval}: son mumlar REST API'den alınıyor")
             start_ms = int(next_open.value // 1_000_000)
-            recent = self.rest.klines(symbol, interval, start_ms, progress=say)
-            if not recent.empty:
+            try:
+                recent = self.rest.klines(symbol, interval, start_ms, progress=say)
+            except DataError as exc:
+                if not parts:
+                    raise
+                # Arşivden gelen kısım yine de kaydedilir; eksik son günler bir
+                # sonraki güncellemede tamamlanır.
+                say(f"{symbol} {interval}: son mumlar alınamadı ({exc})")
+                recent = None
+            if recent is not None and not recent.empty:
                 parts.append(recent)
 
         if not parts:
