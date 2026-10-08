@@ -1,0 +1,3 @@
+ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot: net +0.0090, 2x -0.0036, Sharpe 0.18, işlem 57, p 0.3816, Seviye1 False, Seviye2 False, al-tut -0.1364
+kirilim_kanal4h_vadeli_uzun: net +0.0984, 2x +0.0784, Sharpe 0.49, işlem 40, p 0.3324, Seviye1 False, Seviye2 False, al-tut -0.1372
+formasyon_ucgen_kama_4h_hacim_iki: net -0.1246, 2x -0.1467, Sharpe -0.60, işlem 55, p 0.7692, Seviye1 False, Seviye2 False, al-tut -0.1372
