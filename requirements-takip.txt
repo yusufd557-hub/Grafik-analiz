@@ -1,0 +1,7 @@
+# İleriye dönük takip için (masaüstü uygulaması paketleri olmadan)
+numpy>=1.26
+pandas>=2.2
+requests>=2.31
+pyarrow>=15
+scipy>=1.11
+scikit-learn>=1.4
