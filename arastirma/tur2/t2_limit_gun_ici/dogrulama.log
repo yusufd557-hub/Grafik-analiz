@@ -1,0 +1,32 @@
+t2_limit_gun_ici_fitil_1h_k4_H3_t50
+  dev_train 1x +164.95% (arama satiri +164.95%) sh 1.76 a +17.8% b +0.020
+  dev_valid 1x +2.76% 2x -1.97% sh 0.30/-0.17 dd -8.44% n 157 a +1.68% b +0.007 t +0.39
+  aday: False {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': False}
+  bacak {'BTCUSDT': -0.00554498270976711, 'ETHUSDT': -0.03275057956682337, 'SOLUSDT': 0.11917294912497378} yil {'2025': 0.027839670919408643, '2026': -0.00024759025070697493}
+t2_limit_gun_ici_fitil_5m_k8_H24_t50
+  dev_train 1x +185.38% (arama satiri +185.38%) sh 1.92 a +20.3% b +0.011
+  dev_valid 1x -5.89% 2x -10.19% sh -0.46/-0.84 dd -13.18% n 156 a -3.31% b +0.015 t -0.63
+  aday: False {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': False, 'aday': False}
+  bacak {'BTCUSDT': -0.08542704198972473, 'ETHUSDT': -0.1736078622018724, 'SOLUSDT': 0.0875084777992603} yil {'2025': -0.0395030673913207, '2026': -0.02015035116876418}
+t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_lim1.0s_m3
+  dev_train 1x +230.92% (arama satiri +230.92%) sh 1.87 a +22.0% b +0.024
+  dev_valid 1x +7.18% 2x +5.74% sh 0.81/0.66 dd -4.91% n 45 a +4.06% b +0.006 t +1.06
+  aday: True {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': True}
+  bacak {'BTCUSDT': 0.05053205591175103, 'ETHUSDT': 0.04042644286615249, 'SOLUSDT': 0.11521954691773195} yil {'2025': 0.03939673877957972, '2026': 0.03119924200751001}
+t2_limit_gun_ici_donus_15m_n16_e3_t50_H48_lim1.0s_m12
+  dev_train 1x +263.04% (arama satiri +263.04%) sh 1.71 a +23.6% b +0.029
+  dev_valid 1x -5.05% 2x -7.00% sh -0.54/-0.77 dd -11.52% n 69 a -2.91% b +0.013 t -0.75
+  aday: False {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': False, 'aday': False}
+  bacak {'BTCUSDT': -0.0033006545229850026, 'ETHUSDT': -0.016340379803758576, 'SOLUSDT': -0.1415752859635817} yil {'2025': -0.08831433975237968, '2026': 0.041477365333742355}
+t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_piyasa
+  dev_train 1x +181.69% (arama satiri +181.69%) sh 1.81 a +18.7% b +0.023
+  dev_valid 1x -1.74% 2x -4.15% sh -0.18/-0.46 dd -8.34% n 53 a -0.93% b +0.009 t -0.25
+  aday: False {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': False, 'aday': False}
+  bacak {'BTCUSDT': -0.0032247543160267567, 'ETHUSDT': -0.04377554543920392, 'SOLUSDT': -0.015541311174027572} yil {'2025': -0.023569132099000134, '2026': 0.006282209927532589}
+DSR t2_limit_gun_ici_fitil_1h_k4_H3_t50: 0.0000 (N=157, var=4.882, sh=0.30, skew=0.85, kurt=36.2)
+DSR t2_limit_gun_ici_fitil_5m_k8_H24_t50: 0.0000 (N=157, var=4.882, sh=-0.46, skew=4.07, kurt=93.9)
+DSR t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_lim1.0s_m3: 0.0000 (N=157, var=4.882, sh=0.81, skew=3.19, kurt=101.4)
+DSR t2_limit_gun_ici_donus_15m_n16_e3_t50_H48_lim1.0s_m12: 0.0000 (N=157, var=4.882, sh=-0.54, skew=-2.52, kurt=57.9)
+DSR t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_piyasa: 0.0000 (N=157, var=4.882, sh=-0.18, skew=0.08, kurt=91.7)
+al-tut dev_train: +2751.1% sh 1.26 dd -86.3% coin {'BTCUSDT': 5.354525719472631, 'ETHUSDT': 9.844740528663145, 'SOLUSDT': 54.339107420678175}
+al-tut dev_valid: -22.1% sh 0.06 dd -65.5% coin {'BTCUSDT': -0.16968491683064535, 'ETHUSDT': -0.24507006158343103, 'SOLUSDT': -0.3729693306705819}

@@ -1,0 +1,15 @@
+1d {'skor': 'mom_28'} yükleme 5.3s sinyal 0.5s
+  uzun sayısı: {'mean': 5.43, 'min': 0.0, 'max': 6.0} kısa: {'mean': 5.23, 'min': 0.0, 'max': 6.0}
+  brüt maruziyet ort/maks: 0.0339 0.0381 net ort: 0.00065
+  ilk pozisyon: 2020-03-04 00:00:00+00:00
+  evren dışı tutulan (örneklem): 0
+1d {'skor': 'fon_7', 'notr': 'beta', 'boyut': 'ters_oyn'} yükleme 2.6s sinyal 0.9s
+  uzun sayısı: {'mean': 5.22, 'min': 0.0, 'max': 6.0} kısa: {'mean': 5.16, 'min': 0.0, 'max': 6.0}
+  brüt maruziyet ort/maks: 0.018 0.0312 net ort: 0.00086
+  ilk pozisyon: 2020-03-11 00:00:00+00:00
+  evren dışı tutulan (örneklem): 0
+4h {'skor': 'rev_1', 'reb': 1} yükleme 3.2s sinyal 1.7s
+  uzun sayısı: {'mean': 5.76, 'min': 0.0, 'max': 6.0} kısa: {'mean': 5.76, 'min': 0.0, 'max': 6.0}
+  brüt maruziyet ort/maks: 0.0366 0.0381 net ort: 0.0
+  ilk pozisyon: 2020-02-29 20:00:00+00:00
+  evren dışı tutulan (örneklem): 0

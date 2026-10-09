@@ -1,0 +1,38 @@
+t2_meta_4h_kanal_n20_b3.0-1.5-H60_logit_tam_taban0.0
+  egitim: ret +4.1636 sh 1.315 alfa +0.3237 beta +0.037 t +2.605 tr 439
+  dogrulama 1x: ret -0.0138 sh 0.104 dd -0.2953 tr 227 alfa +0.0245 beta +0.063 t +0.121
+  dogrulama 2x: ret -0.1130 sh -0.118
+  aday: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': False}
+t2_meta_4h_kanal_top[n14-20-30-48]_n48_b3.0-1.5-H60_logit_tam_taban0.0
+  egitim: ret +2.8820 sh 1.301 alfa +0.2550 beta +0.036 t +2.515 tr 585
+  dogrulama 1x: ret +0.0314 sh 0.192 dd -0.2797 tr 283 alfa +0.0429 beta +0.042 t +0.241
+  dogrulama 2x: ret -0.0634 sh -0.040
+  aday: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': False}
+t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0
+  egitim: ret +2.7825 sh 0.931 alfa +0.3362 beta -0.011 t +2.156 tr 467
+  dogrulama 1x: ret -0.0714 sh 0.027 dd -0.3674 tr 241 alfa +0.0073 beta +0.023 t +0.030
+  dogrulama 2x: ret -0.1701 sh -0.170
+  aday: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': False}
+t2_meta_1h_kanal_n96_iz3.0-H120_logit_tam_taban0.0
+  egitim: ret +1.9021 sh 0.832 alfa +0.2678 beta -0.007 t +1.916 tr 558
+  dogrulama 1x: ret +0.2572 sh 0.592 dd -0.3535 tr 315 alfa +0.1715 beta +0.011 t +0.779
+  dogrulama 2x: ret +0.0853 sh 0.303
+  aday: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': True}
+t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150
+  egitim: ret +0.2721 sh 0.458 alfa +0.0774 beta -0.019 t +1.445 tr 125
+  dogrulama 1x: ret +0.0664 sh 0.346 dd -0.2094 tr 85 alfa +0.0465 beta -0.020 t +0.472
+  dogrulama 2x: ret +0.0250 sh 0.173
+  aday: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': False}
+DSR t2_meta_4h_kanal_n20_b3.0-1.5-H60_logit_tam_taban0.0: 0.0238 (deneme 191, varyans 0.338)
+DSR t2_meta_4h_kanal_top[n14-20-30-48]_n48_b3.0-1.5-H60_logit_tam_taban0.0: 0.0308 (deneme 191, varyans 0.338)
+DSR t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0: 0.0188 (deneme 191, varyans 0.338)
+DSR t2_meta_1h_kanal_n96_iz3.0-H120_logit_tam_taban0.0: 0.0835 (deneme 191, varyans 0.338)
+DSR t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150: 0.0480 (deneme 191, varyans 0.338)
+al-tut {'dev_train': {'total_return': 39.53378844872056, 'max_drawdown': -0.8514249572118242, 'sharpe': 1.2842322497907002}, 'dev_valid': {'total_return': -0.189314272490535, 'max_drawdown': -0.6431749506198859, 'sharpe': 0.09871795592606972}}
+                                                                        t2_meta_4h_kanal_n20_b3.0-1.5-H60_logit_tam_taban0.0  t2_meta_4h_kanal_top[n14-20-30-48]_n48_b3.0-1.5-H60_logit_tam_taban0.0  t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0  t2_meta_1h_kanal_n96_iz3.0-H120_logit_tam_taban0.0  t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150
+t2_meta_4h_kanal_n20_b3.0-1.5-H60_logit_tam_taban0.0                                                                   1.000                                                                   0.967                                               0.711                                               0.655                                                               0.303
+t2_meta_4h_kanal_top[n14-20-30-48]_n48_b3.0-1.5-H60_logit_tam_taban0.0                                                 0.967                                                                   1.000                                               0.734                                               0.680                                                               0.297
+t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0                                                                     0.711                                                                   0.734                                               1.000                                               0.854                                                               0.282
+t2_meta_1h_kanal_n96_iz3.0-H120_logit_tam_taban0.0                                                                     0.655                                                                   0.680                                               0.854                                               1.000                                                               0.274
+t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150                                                     0.303                                                                   0.297                                               0.282                                               0.274                                                               1.000
+BITTI

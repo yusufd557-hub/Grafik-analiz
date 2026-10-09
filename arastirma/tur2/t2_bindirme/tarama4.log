@@ -1,0 +1,13 @@
+seçilen (alt dönem şartıyla): ['ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot', 'od_dip_ret4h_fut_port3_1h', 'kirilim_kanal4h_vadeli_iki', 'formasyon_ucgen_kama_4h_hacim_iki']
+oynaklık 2020–2024: {'ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot': 0.2388562699548971, 'od_dip_ret4h_fut_port3_1h': 0.11830278777595336, 'kirilim_kanal4h_vadeli_iki': 0.496314361728211, 'formasyon_ucgen_kama_4h_hacim_iki': 0.2521691589641915}
+korelasyon:
+                                                         ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot  od_dip_ret4h_fut_port3_1h  kirilim_kanal4h_vadeli_iki  formasyon_ucgen_kama_4h_hacim_iki
+ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot                                                    1.000                      0.179                      -0.106                              0.045
+od_dip_ret4h_fut_port3_1h                                                                                  0.179                      1.000                       0.133                              0.103
+kirilim_kanal4h_vadeli_iki                                                                                -0.106                      0.133                       1.000                              0.279
+formasyon_ucgen_kama_4h_hacim_iki                                                                          0.045                      0.103                       0.279                              1.000
+esit_sermaye ret=6.173 ret2=4.718 sh=2.42 alfa=0.382 t=5.07 b=0.02 islem=1367 a20_23=0.435 a24=0.165 (303.4s)
+esit_risk_sermaye ret=4.416 ret2=3.376 sh=2.81 alfa=0.313 t=5.79 b=0.03 islem=1757 a20_23=0.353 a24=0.151 (1.2s)
+esit_risk_h0.10 ret=14.957 ret2=9.904 sh=2.74 alfa=0.521 t=5.62 b=0.05 islem=1757 a20_23=0.583 a24=0.273 (1.6s)
+esit_risk_h0.20 ret=61.927 ret2=33.580 sh=2.61 alfa=0.800 t=5.35 b=0.07 islem=1757 a20_23=0.899 a24=0.402 (1.3s)
+BITTI

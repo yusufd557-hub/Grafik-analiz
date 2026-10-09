@@ -1,0 +1,651 @@
+{
+ "yapilandirmalar": [
+  {
+   "ad": "t2_limit_gun_ici_fitil_1h_k4_H3_t50",
+   "aralik": "1h",
+   "parametreler": {
+    "yontem": "fitil",
+    "k": 4,
+    "H": 3,
+    "sig_n": 168,
+    "trend_gun": 50,
+    "trend_mod": "ile"
+   },
+   "onceki_dev_train_getiri": 1.649452,
+   "sonuclar": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 1.6494519762209134,
+      "cagr": 0.2150618852008459,
+      "sharpe": 1.7623768671448106,
+      "max_drawdown": -0.16425697730267041,
+      "trades": 601,
+      "win_rate": 0.5723793677204659,
+      "exposure": 0.026295384054004743,
+      "alfa": 0.1777252759683797,
+      "beta": 0.02038352910743873,
+      "alfa_t": 3.509215999962772,
+      "p_value": 0.0004,
+      "skew": 2.5548022193491207,
+      "kurtosis": 57.117299649010214,
+      "days": 1827,
+      "total_costs": 0.18030000000000002,
+      "total_funding": 0.01545875,
+      "total_without_best": 1.463989496337328,
+      "avg_bars": 3.0
+     },
+     "2.0": {
+      "total_return": 1.2122649332386413,
+      "cagr": 0.17203528755344077,
+      "sharpe": 1.4563107733279224,
+      "max_drawdown": -0.17269452349116943,
+      "trades": 601,
+      "win_rate": 0.5324459234608985,
+      "exposure": 0.026295384054004743,
+      "alfa": 0.14032012036826655,
+      "beta": 0.021494112452404575,
+      "alfa_t": 2.794455575039164,
+      "p_value": 0.0026,
+      "skew": 2.245139835955413,
+      "kurtosis": 57.68055190854025,
+      "days": 1827,
+      "total_costs": 0.36060000000000003,
+      "total_funding": 0.01545875,
+      "total_without_best": 1.0582989866831025,
+      "avg_bars": 3.0
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": 0.027585187837599667,
+      "cagr": 0.015701421080766442,
+      "sharpe": 0.2993040949109754,
+      "max_drawdown": -0.08443018626942356,
+      "trades": 157,
+      "win_rate": 0.5477707006369427,
+      "exposure": 0.017959770114942528,
+      "alfa": 0.01682537243567269,
+      "beta": 0.006625298941079663,
+      "alfa_t": 0.3873142535505734,
+      "p_value": 0.3428,
+      "skew": 0.8452673901727096,
+      "kurtosis": 36.16818534837224,
+      "days": 638,
+      "total_costs": 0.0471,
+      "total_funding": 0.00047922000000000004,
+      "total_without_best": 0.014338186269754694,
+      "avg_bars": 3.0
+     },
+     "2.0": {
+      "total_return": -0.019720639589031697,
+      "cagr": -0.011338691000097989,
+      "sharpe": -0.1717513171865384,
+      "max_drawdown": -0.09264252161499764,
+      "trades": 157,
+      "win_rate": 0.4968152866242038,
+      "exposure": 0.017959770114942528,
+      "alfa": -0.010237164616940875,
+      "beta": 0.007777637242323677,
+      "alfa_t": -0.23837255640644564,
+      "p_value": 0.5804,
+      "skew": 0.045332115551023164,
+      "kurtosis": 34.32568778350614,
+      "days": 638,
+      "total_costs": 0.0942,
+      "total_funding": 0.00047922000000000004,
+      "total_without_best": -0.03191185281144149,
+      "avg_bars": 3.0
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": true,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": true,
+    "aday": false
+   },
+   "dev_valid_gun_sayisi": 638,
+   "dev_valid_bacak_getirisi": {
+    "BTCUSDT": -0.00554498270976711,
+    "ETHUSDT": -0.03275057956682337,
+    "SOLUSDT": 0.11917294912497378
+   },
+   "dev_valid_yillik": {
+    "2025": 0.027839670919408643,
+    "2026": -0.00024759025070697493
+   },
+   "dsr": 3.5749312047946205e-14
+  },
+  {
+   "ad": "t2_limit_gun_ici_fitil_5m_k8_H24_t50",
+   "aralik": "5m",
+   "parametreler": {
+    "yontem": "fitil",
+    "k": 8,
+    "H": 24,
+    "sig_n": 288,
+    "trend_gun": 50,
+    "trend_mod": "ile"
+   },
+   "onceki_dev_train_getiri": 1.853827,
+   "sonuclar": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 1.8538270351525723,
+      "cagr": 0.23324201216535623,
+      "sharpe": 1.9162081454848865,
+      "max_drawdown": -0.17585673629211296,
+      "trades": 763,
+      "win_rate": 0.6146788990825688,
+      "exposure": 0.023706896551724137,
+      "alfa": 0.20346615442973076,
+      "beta": 0.010774230265534802,
+      "alfa_t": 4.0406475731166,
+      "p_value": 0.0,
+      "skew": 2.2097066583780847,
+      "kurtosis": 58.183272647042934,
+      "days": 1827,
+      "total_costs": 0.2289,
+      "total_funding": 0.013761286666666667,
+      "total_without_best": 1.6498984598015283,
+      "avg_bars": 24.0
+     },
+     "2.0": {
+      "total_return": 1.2696696355505779,
+      "cagr": 0.17804922954523184,
+      "sharpe": 1.5190144221623558,
+      "max_drawdown": -0.17591397783888985,
+      "trades": 763,
+      "win_rate": 0.5661861074705111,
+      "exposure": 0.023706896551724137,
+      "alfa": 0.1564114180449405,
+      "beta": 0.011819973373214046,
+      "alfa_t": 3.1285158157254447,
+      "p_value": 0.0016,
+      "skew": 1.9579136159257506,
+      "kurtosis": 59.158857209295796,
+      "days": 1827,
+      "total_costs": 0.4578,
+      "total_funding": 0.013761286666666667,
+      "total_without_best": 1.1083973493147488,
+      "avg_bars": 24.0
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": -0.05885741787990806,
+      "cagr": -0.03413182963673733,
+      "sharpe": -0.45901863382912933,
+      "max_drawdown": -0.13178090850891966,
+      "trades": 156,
+      "win_rate": 0.4423076923076923,
+      "exposure": 0.014204545454545454,
+      "alfa": -0.03312504047551952,
+      "beta": 0.014626733764428093,
+      "alfa_t": -0.6275560066703613,
+      "p_value": 0.7176,
+      "skew": 4.072871515819673,
+      "kurtosis": 93.93504544101307,
+      "days": 638,
+      "total_costs": 0.0468,
+      "total_funding": 0.00041783666666666663,
+      "total_without_best": -0.08079703739805233,
+      "avg_bars": 24.0
+     },
+     "2.0": {
+      "total_return": -0.10190996295715848,
+      "cagr": -0.05967961567910318,
+      "sharpe": -0.839981420772865,
+      "max_drawdown": -0.1526025242068325,
+      "trades": 156,
+      "win_rate": 0.41025641025641024,
+      "exposure": 0.014204545454545454,
+      "alfa": -0.0599455413623558,
+      "beta": 0.015323091679014056,
+      "alfa_t": -1.1364404421874044,
+      "p_value": 0.868,
+      "skew": 3.262175709588055,
+      "kurtosis": 84.59522051323768,
+      "days": 638,
+      "total_costs": 0.0936,
+      "total_funding": 0.00041783666666666663,
+      "total_without_best": -0.12244597661311862,
+      "avg_bars": 24.0
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": false,
+    "aday": false
+   },
+   "dev_valid_gun_sayisi": 638,
+   "dev_valid_bacak_getirisi": {
+    "BTCUSDT": -0.08542704198972473,
+    "ETHUSDT": -0.1736078622018724,
+    "SOLUSDT": 0.0875084777992603
+   },
+   "dev_valid_yillik": {
+    "2025": -0.0395030673913207,
+    "2026": -0.02015035116876418
+   },
+   "dsr": 5.673504026612607e-16
+  },
+  {
+   "ad": "t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_lim1.0s_m3",
+   "aralik": "1h",
+   "parametreler": {
+    "yontem": "donus",
+    "n": 4,
+    "esik": 3,
+    "vol_n": 500,
+    "yon": "uzun",
+    "trend_gun": 50,
+    "trend_mod": "ile",
+    "H": 12,
+    "sig_n": 168,
+    "giris": "limit",
+    "d_sig": 1.0,
+    "m": 3
+   },
+   "onceki_dev_train_getiri": 2.309187,
+   "sonuclar": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 2.3091868874478796,
+      "cagr": 0.2702931568955589,
+      "sharpe": 1.867605231265982,
+      "max_drawdown": -0.20736713894276237,
+      "trades": 189,
+      "win_rate": 0.6666666666666666,
+      "exposure": 0.03493887976646597,
+      "alfa": 0.2200378910103232,
+      "beta": 0.023980118876311404,
+      "alfa_t": 3.7414476091079294,
+      "p_value": 0.0,
+      "skew": 8.940794810471402,
+      "kurtosis": 160.58406394341588,
+      "days": 1827,
+      "total_costs": 0.05670000000000001,
+      "total_funding": 0.010140056666666664,
+      "total_without_best": 2.002744778544428,
+      "avg_bars": 12.0
+     },
+     "2.0": {
+      "total_return": 2.1268791680772154,
+      "cagr": 0.2559831925226579,
+      "sharpe": 1.7968417470339617,
+      "max_drawdown": -0.2073671389427626,
+      "trades": 189,
+      "win_rate": 0.6296296296296297,
+      "exposure": 0.03493887976646597,
+      "alfa": 0.20841240354735582,
+      "beta": 0.02411802229898952,
+      "alfa_t": 3.576201929651948,
+      "p_value": 0.0,
+      "skew": 8.79306698945394,
+      "kurtosis": 159.38874327690814,
+      "days": 1827,
+      "total_costs": 0.11340000000000001,
+      "total_funding": 0.010140056666666664,
+      "total_without_best": 1.83852135896819,
+      "avg_bars": 12.0
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": 0.07182512917458239,
+      "cagr": 0.04051140065395664,
+      "sharpe": 0.8087240809113475,
+      "max_drawdown": -0.04911296782037933,
+      "trades": 45,
+      "win_rate": 0.5333333333333333,
+      "exposure": 0.02442528735632184,
+      "alfa": 0.040594843682175426,
+      "beta": 0.00614175253163172,
+      "alfa_t": 1.061688106307849,
+      "p_value": 0.09,
+      "skew": 3.1863769794986982,
+      "kurtosis": 101.39631583248729,
+      "days": 638,
+      "total_costs": 0.0135,
+      "total_funding": 0.00031823000000000013,
+      "total_without_best": 0.046138919357958,
+      "avg_bars": 12.0
+     },
+     "2.0": {
+      "total_return": 0.05744510765852939,
+      "cagr": 0.03249587649765151,
+      "sharpe": 0.6578625407435668,
+      "max_drawdown": -0.049176824253357676,
+      "trades": 45,
+      "win_rate": 0.5111111111111111,
+      "exposure": 0.02442528735632184,
+      "alfa": 0.03284750143628365,
+      "beta": 0.006362441700015377,
+      "alfa_t": 0.8616768581004859,
+      "p_value": 0.139,
+      "skew": 2.712395079995508,
+      "kurtosis": 102.22163847992704,
+      "days": 638,
+      "total_costs": 0.027,
+      "total_funding": 0.00031823000000000013,
+      "total_without_best": 0.032573833855485956,
+      "avg_bars": 12.0
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": true,
+    "dogrulama_2x_maliyette_net_pozitif": true,
+    "dogrulama_sharpe_yeterli": true,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": true,
+    "aday": true
+   },
+   "dev_valid_gun_sayisi": 638,
+   "dev_valid_bacak_getirisi": {
+    "BTCUSDT": 0.05053205591175103,
+    "ETHUSDT": 0.04042644286615249,
+    "SOLUSDT": 0.11521954691773195
+   },
+   "dev_valid_yillik": {
+    "2025": 0.03939673877957972,
+    "2026": 0.03119924200751001
+   },
+   "dsr": 6.371773962252164e-13
+  },
+  {
+   "ad": "t2_limit_gun_ici_donus_15m_n16_e3_t50_H48_lim1.0s_m12",
+   "aralik": "15m",
+   "parametreler": {
+    "yontem": "donus",
+    "n": 16,
+    "esik": 3,
+    "vol_n": 2000,
+    "yon": "uzun",
+    "trend_gun": 50,
+    "trend_mod": "ile",
+    "H": 48,
+    "sig_n": 96,
+    "giris": "limit",
+    "d_sig": 1.0,
+    "m": 12
+   },
+   "onceki_dev_train_getiri": 2.630418,
+   "sonuclar": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 2.630417743587969,
+      "cagr": 0.29403488710219405,
+      "sharpe": 1.7054139943368767,
+      "max_drawdown": -0.21952190299875474,
+      "trades": 265,
+      "win_rate": 0.6377358490566037,
+      "exposure": 0.0477387794198139,
+      "alfa": 0.2362118630952268,
+      "beta": 0.02895984916101414,
+      "alfa_t": 3.370605828887426,
+      "p_value": 0.0,
+      "skew": 10.54869463977667,
+      "kurtosis": 204.5826504242901,
+      "days": 1827,
+      "total_costs": 0.0795,
+      "total_funding": 0.011937696666666664,
+      "total_without_best": 2.165503971479898,
+      "avg_bars": 48.0
+     },
+     "2.0": {
+      "total_return": 2.352884855880898,
+      "cagr": 0.2736238670419209,
+      "sharpe": 1.6131596596086977,
+      "max_drawdown": -0.2217464315131359,
+      "trades": 265,
+      "win_rate": 0.6075471698113207,
+      "exposure": 0.0477387794198139,
+      "alfa": 0.21988781634334675,
+      "beta": 0.02921749558982466,
+      "alfa_t": 3.156642233339214,
+      "p_value": 0.0002,
+      "skew": 10.542635247137698,
+      "kurtosis": 206.81624647088685,
+      "days": 1827,
+      "total_costs": 0.159,
+      "total_funding": 0.011937696666666664,
+      "total_without_best": 1.9247022106409717,
+      "avg_bars": 48.0
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": -0.05050002055275349,
+      "cagr": -0.029231154095903045,
+      "sharpe": -0.5440378611590929,
+      "max_drawdown": -0.11523646342487326,
+      "trades": 69,
+      "win_rate": 0.5362318840579711,
+      "exposure": 0.0376828631138976,
+      "alfa": -0.02905218169227205,
+      "beta": 0.01290387116400404,
+      "alfa_t": -0.7464021497367488,
+      "p_value": 0.7674,
+      "skew": -2.5222648020013816,
+      "kurtosis": 57.94775972210678,
+      "days": 638,
+      "total_costs": 0.020700000000000003,
+      "total_funding": 0.0009277333333333335,
+      "total_without_best": -0.07221336620514929,
+      "avg_bars": 48.0
+     },
+     "2.0": {
+      "total_return": -0.06995826542914318,
+      "cagr": -0.04067094539199889,
+      "sharpe": -0.7660339459207172,
+      "max_drawdown": -0.128005741983112,
+      "trades": 69,
+      "win_rate": 0.4927536231884058,
+      "exposure": 0.0376828631138976,
+      "alfa": -0.04089568200154314,
+      "beta": 0.013223585522434793,
+      "alfa_t": -1.0437325406701425,
+      "p_value": 0.8502,
+      "skew": -2.8708909932252573,
+      "kurtosis": 59.44522899120603,
+      "days": 638,
+      "total_costs": 0.041400000000000006,
+      "total_funding": 0.0009277333333333335,
+      "total_without_best": -0.09081205122883163,
+      "avg_bars": 48.0
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": false,
+    "aday": false
+   },
+   "dev_valid_gun_sayisi": 638,
+   "dev_valid_bacak_getirisi": {
+    "BTCUSDT": -0.0033006545229850026,
+    "ETHUSDT": -0.016340379803758576,
+    "SOLUSDT": -0.1415752859635817
+   },
+   "dev_valid_yillik": {
+    "2025": -0.08831433975237968,
+    "2026": 0.041477365333742355
+   },
+   "dsr": 5.337640969236162e-19
+  },
+  {
+   "ad": "t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_piyasa",
+   "aralik": "1h",
+   "parametreler": {
+    "yontem": "donus",
+    "n": 4,
+    "esik": 3,
+    "vol_n": 500,
+    "yon": "uzun",
+    "trend_gun": 50,
+    "trend_mod": "ile",
+    "H": 12,
+    "sig_n": 168,
+    "giris": "piyasa"
+   },
+   "onceki_dev_train_getiri": 1.816902,
+   "sonuclar": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 1.8169019616123214,
+      "cagr": 0.23004066692966463,
+      "sharpe": 1.8063943423138686,
+      "max_drawdown": -0.20736713894276249,
+      "trades": 215,
+      "win_rate": 0.641860465116279,
+      "exposure": 0.04043513957307061,
+      "alfa": 0.18696600263724547,
+      "beta": 0.023258385034523127,
+      "alfa_t": 3.569691870655157,
+      "p_value": 0.0,
+      "skew": 9.218941364006673,
+      "kurtosis": 145.18710469910926,
+      "days": 1827,
+      "total_costs": 0.10033333333333333,
+      "total_funding": 0.011554896666666667,
+      "total_without_best": 1.5813636877802542,
+      "avg_bars": 12.0
+     },
+     "2.0": {
+      "total_return": 1.5482654904176503,
+      "cagr": 0.20563940341276576,
+      "sharpe": 1.6561335113201887,
+      "max_drawdown": -0.20736713894276237,
+      "trades": 215,
+      "win_rate": 0.6093023255813953,
+      "exposure": 0.04043513957307061,
+      "alfa": 0.16620032302984286,
+      "beta": 0.02375786786424781,
+      "alfa_t": 3.2156843658274896,
+      "p_value": 0.0002,
+      "skew": 9.057658232592784,
+      "kurtosis": 144.04634398036646,
+      "days": 1827,
+      "total_costs": 0.20066666666666666,
+      "total_funding": 0.011554896666666667,
+      "total_without_best": 1.336188604101026,
+      "avg_bars": 12.0
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": -0.017434988407122987,
+      "cagr": -0.010019555838860605,
+      "sharpe": -0.17807498849756523,
+      "max_drawdown": -0.08339335849496665,
+      "trades": 53,
+      "win_rate": 0.5283018867924528,
+      "exposure": 0.028539707419017762,
+      "alfa": -0.00934249562409444,
+      "beta": 0.00859824176971437,
+      "alfa_t": -0.2501483191442285,
+      "p_value": 0.6218,
+      "skew": 0.0811544874553182,
+      "kurtosis": 91.67453052799597,
+      "days": 638,
+      "total_costs": 0.024733333333333333,
+      "total_funding": 0.00039011666666666667,
+      "total_without_best": -0.03894806822925545,
+      "avg_bars": 12.0
+     },
+     "2.0": {
+      "total_return": -0.04145885150550377,
+      "cagr": -0.023951008030168697,
+      "sharpe": -0.4619022070993508,
+      "max_drawdown": -0.09888685594590074,
+      "trades": 53,
+      "win_rate": 0.4528301886792453,
+      "exposure": 0.028539707419017762,
+      "alfa": -0.02353132606288755,
+      "beta": 0.009225371950885958,
+      "alfa_t": -0.6285785592779625,
+      "p_value": 0.7814,
+      "skew": -0.6707872086844557,
+      "kurtosis": 90.89689838650236,
+      "days": 638,
+      "total_costs": 0.049466666666666666,
+      "total_funding": 0.00039011666666666667,
+      "total_without_best": -0.06201779215171155,
+      "avg_bars": 12.0
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": false,
+    "aday": false
+   },
+   "dev_valid_gun_sayisi": 638,
+   "dev_valid_bacak_getirisi": {
+    "BTCUSDT": -0.0032247543160267567,
+    "ETHUSDT": -0.04377554543920392,
+    "SOLUSDT": -0.015541311174027572
+   },
+   "dev_valid_yillik": {
+    "2025": -0.023569132099000134,
+    "2026": 0.006282209927532589
+   },
+   "dsr": 3.71749864361449e-16
+  }
+ ],
+ "dsr": {
+  "deneme": 157,
+  "sharpe_varyans": 4.882443427042961,
+  "sharpe_std": 2.209625177952804
+ },
+ "al_tut": {
+  "dev_train": {
+   "total_return": 27.510544549371247,
+   "sharpe": 1.2633812049523225,
+   "max_drawdown": -0.8625111175203852,
+   "start": "2020-01-01 00:00:00+00:00",
+   "end": "2024-12-31 23:00:00+00:00",
+   "coin": {
+    "BTCUSDT": 5.354525719472631,
+    "ETHUSDT": 9.844740528663145,
+    "SOLUSDT": 54.339107420678175
+   }
+  },
+  "dev_valid": {
+   "total_return": -0.22130143092562948,
+   "sharpe": 0.05981193823014585,
+   "max_drawdown": -0.6546586245917696,
+   "start": "2025-01-01 00:00:00+00:00",
+   "end": "2026-09-30 23:00:00+00:00",
+   "coin": {
+    "BTCUSDT": -0.16968491683064535,
+    "ETHUSDT": -0.24507006158343103,
+    "SOLUSDT": -0.3729693306705819
+   }
+  }
+ }
+}

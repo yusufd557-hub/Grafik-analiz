@@ -1,0 +1,6 @@
+GECTI t2_meta_4h_kanal_n20_b3.0-1.5-H60_logit_tam_taban0.0: assert_causal 9 kesim + 10 hedefli kesim (24s)
+GECTI t2_meta_4h_kanal_top[n14-20-30-48]_n48_b3.0-1.5-H60_logit_tam_taban0.0: assert_causal 9 kesim + 10 hedefli kesim (50s)
+GECTI t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0: assert_causal 9 kesim + 10 hedefli kesim (29s)
+GECTI t2_meta_1h_kanal_n96_iz3.0-H120_logit_tam_taban0.0: assert_causal 9 kesim + 10 hedefli kesim (31s)
+GECTI t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150: assert_causal 9 kesim + 10 hedefli kesim (12s)
+BITTI

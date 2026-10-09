@@ -1,0 +1,35 @@
+== t2_meta_4h_kanal_n20_b3.0-1.5-H60_logit_tam_taban0.0
+  egitim: olay 1712 taban 0.388 auc 0.575 hepsi_ort -0.0010 kabul 776 kabul_ort +0.0109 red_ort -0.0108
+  dogrulama: olay 782 taban 0.359 auc 0.567 hepsi_ort -0.0032 kabul 393 kabul_ort +0.0010 red_ort -0.0075
+ yil  getiri  sharpe   alfa  beta    BTC    ETH    SOL
+2025  -0.036   0.004 -0.001 0.039 -0.085  0.162 -0.246
+2026   0.024   0.246  0.056 0.106  0.055 -0.034  0.009
+  islem 227 uzun 139 kisa 88 uzun_net_top 0.0525 kisa_net_top 0.0028
+== t2_meta_4h_kanal_top[n14-20-30-48]_n48_b3.0-1.5-H60_logit_tam_taban0.0
+  egitim: olay 6171 taban 0.393 auc 0.560 hepsi_ort -0.0000 kabul 2746 kabul_ort +0.0085 red_ort -0.0069
+  dogrulama: olay 2804 taban 0.368 auc 0.552 hepsi_ort -0.0027 kabul 1395 kabul_ort +0.0009 red_ort -0.0063
+ yil  getiri  sharpe  alfa  beta    BTC    ETH    SOL
+2025  -0.007   0.092 0.021 0.029 -0.047  0.271 -0.245
+2026   0.038   0.331 0.071 0.066 -0.015 -0.042  0.151
+  islem 283 uzun 160 kisa 123 uzun_net_top 0.1064 kisa_net_top -0.004
+== t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0
+  egitim: olay 2657 taban 0.377 auc 0.548 hepsi_ort -0.0020 kabul 1133 kabul_ort +0.0067 red_ort -0.0085
+  dogrulama: olay 1117 taban 0.364 auc 0.549 hepsi_ort -0.0013 kabul 557 kabul_ort +0.0033 red_ort -0.0059
+ yil  getiri  sharpe   alfa   beta    BTC    ETH   SOL
+2025  -0.007   0.129  0.035  0.089 -0.076 -0.083 0.037
+2026  -0.065  -0.093 -0.025 -0.093 -0.039 -0.215 0.036
+  islem 241 uzun 132 kisa 109 uzun_net_top 0.0455 kisa_net_top -0.0216
+== t2_meta_1h_kanal_n96_iz3.0-H120_logit_tam_taban0.0
+  egitim: olay 2658 taban 0.359 auc 0.572 hepsi_ort -0.0033 kabul 1089 kabul_ort +0.0060 red_ort -0.0098
+  dogrulama: olay 1118 taban 0.369 auc 0.565 hepsi_ort -0.0009 kabul 636 kabul_ort +0.0041 red_ort -0.0076
+ yil  getiri  sharpe   alfa   beta    BTC    ETH   SOL
+2025   0.363   1.221  0.349  0.037 -0.041  0.771 0.360
+2026  -0.078  -0.223 -0.063 -0.033 -0.112 -0.253 0.144
+  islem 315 uzun 165 kisa 150 uzun_net_top 0.1073 kisa_net_top 0.1991
+== t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150
+  egitim: olay 229 taban 0.406 auc 0.531 hepsi_ort +0.0018 kabul 126 kabul_ort +0.0059 red_ort -0.0033
+  dogrulama: olay 145 taban 0.407 auc 0.508 hepsi_ort +0.0043 kabul 86 kabul_ort +0.0027 red_ort +0.0066
+ yil  getiri  sharpe   alfa   beta    BTC    ETH    SOL
+2025   0.205   1.377  0.199 -0.037  0.055 -0.006  0.598
+2026  -0.115  -1.410 -0.158  0.009 -0.059 -0.142 -0.155
+  islem 85 uzun 42 kisa 43 uzun_net_top -0.0394 kisa_net_top 0.1175

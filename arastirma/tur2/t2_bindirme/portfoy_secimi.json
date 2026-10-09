@@ -1,0 +1,67 @@
+{
+  "kural": "alt dönem şartıyla",
+  "secilen": [
+    "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot",
+    "od_dip_ret4h_fut_port3_1h",
+    "kirilim_kanal4h_vadeli_iki",
+    "formasyon_ucgen_kama_4h_hacim_iki"
+  ],
+  "oynaklik_2020_2024": {
+    "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.2388562699548971,
+    "od_dip_ret4h_fut_port3_1h": 0.11830278777595336,
+    "kirilim_kanal4h_vadeli_iki": 0.496314361728211,
+    "formasyon_ucgen_kama_4h_hacim_iki": 0.2521691589641915
+  },
+  "korelasyon": {
+    "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 1.0,
+      "od_dip_ret4h_fut_port3_1h": 0.179,
+      "kirilim_kanal4h_vadeli_iki": -0.106,
+      "formasyon_ucgen_kama_4h_hacim_iki": 0.045
+    },
+    "od_dip_ret4h_fut_port3_1h": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.179,
+      "od_dip_ret4h_fut_port3_1h": 1.0,
+      "kirilim_kanal4h_vadeli_iki": 0.133,
+      "formasyon_ucgen_kama_4h_hacim_iki": 0.103
+    },
+    "kirilim_kanal4h_vadeli_iki": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": -0.106,
+      "od_dip_ret4h_fut_port3_1h": 0.133,
+      "kirilim_kanal4h_vadeli_iki": 1.0,
+      "formasyon_ucgen_kama_4h_hacim_iki": 0.279
+    },
+    "formasyon_ucgen_kama_4h_hacim_iki": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.045,
+      "od_dip_ret4h_fut_port3_1h": 0.103,
+      "kirilim_kanal4h_vadeli_iki": 0.279,
+      "formasyon_ucgen_kama_4h_hacim_iki": 1.0
+    }
+  },
+  "cesitler": {
+    "esit_sermaye": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.25,
+      "od_dip_ret4h_fut_port3_1h": 0.25,
+      "kirilim_kanal4h_vadeli_iki": 0.25,
+      "formasyon_ucgen_kama_4h_hacim_iki": 0.25
+    },
+    "esit_risk_sermaye": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.2248458526325495,
+      "od_dip_ret4h_fut_port3_1h": 0.453969366946361,
+      "kirilim_kanal4h_vadeli_iki": 0.10820932420256933,
+      "formasyon_ucgen_kama_4h_hacim_iki": 0.21297545621852026
+    },
+    "esit_risk_h0.10": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.41866181707887706,
+      "od_dip_ret4h_fut_port3_1h": 0.8452886181294736,
+      "kirilim_kanal4h_vadeli_iki": 0.20148520315187146,
+      "formasyon_ucgen_kama_4h_hacim_iki": 0.3965592002240059
+    },
+    "esit_risk_h0.20": {
+      "ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot": 0.8373236341577541,
+      "od_dip_ret4h_fut_port3_1h": 1.6905772362589473,
+      "kirilim_kanal4h_vadeli_iki": 0.4029704063037429,
+      "formasyon_ucgen_kama_4h_hacim_iki": 0.7931184004480119
+    }
+  }
+}

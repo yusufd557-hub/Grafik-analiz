@@ -1,0 +1,30 @@
+t2_bindirme_vol_nakit_1d_h0.4_n40_b0.1: dev_valid 1× -0.1331 2× -0.1360 Sharpe -0.013 MDD -0.5527 işlem 0 alfa -0.0426 beta 0.640 alfa_t -0.69 | aday: False
+t2_bindirme_trend_yarim_4h_L15_b0.15_f7: dev_valid 1× +0.1377 2× +0.1157 Sharpe 0.584 MDD -0.1625 işlem 55 alfa +0.0745 beta 0.163 alfa_t 0.93 | aday: True
+t2_bindirme_trendvol_tam_4h_L10_h0.3_n30_b0.1_f7: dev_valid 1× +0.1884 2× +0.1600 Sharpe 0.686 MDD -0.1910 işlem 98 alfa +0.1014 beta 0.177 alfa_t 1.08 | aday: True
+t2_bindirme_portfoy_esit_risk_sermaye: dev_valid 1× -0.0150 2× -0.0473 Sharpe -0.106 MDD -0.0911 işlem 297 alfa -0.0065 beta -0.003 alfa_t -0.14 | aday: False
+{
+ "_dsr": {
+  "deneme": 136,
+  "egitim_sharpe_varyansi": 0.39126981435400604,
+  "sonlu_sharpe": 136
+ },
+ "_altut_dev_valid": {
+  "spot": {
+   "getiri": -0.18935324860150116,
+   "sharpe": 0.0979584529233988,
+   "en_buyuk_dusus": -0.6430824617523083
+  },
+  "futures": {
+   "getiri": -0.189314272490535,
+   "sharpe": 0.09871795592606972,
+   "en_buyuk_dusus": -0.6431749506198859
+  }
+ }
+}
+{'t2_bindirme_vol_nakit_1d_h0.4_n40_b0.1': 0.0141, 't2_bindirme_trend_yarim_4h_L15_b0.15_f7': 0.0762, 't2_bindirme_trendvol_tam_4h_L10_h0.3_n30_b0.1_f7': 0.0945, 't2_bindirme_portfoy_esit_risk_sermaye': 0.0101}
+                                                  t2_bindirme_vol_nakit_1d_h0.4_n40_b0.1  t2_bindirme_trend_yarim_4h_L15_b0.15_f7  t2_bindirme_trendvol_tam_4h_L10_h0.3_n30_b0.1_f7  t2_bindirme_portfoy_esit_risk_sermaye
+t2_bindirme_vol_nakit_1d_h0.4_n40_b0.1                                             1.000                                    0.700                                             0.697                                 -0.010
+t2_bindirme_trend_yarim_4h_L15_b0.15_f7                                            0.700                                    1.000                                             0.958                                  0.348
+t2_bindirme_trendvol_tam_4h_L10_h0.3_n30_b0.1_f7                                   0.697                                    0.958                                             1.000                                  0.391
+t2_bindirme_portfoy_esit_risk_sermaye                                             -0.010                                    0.348                                             0.391                                  1.000
+BITTI

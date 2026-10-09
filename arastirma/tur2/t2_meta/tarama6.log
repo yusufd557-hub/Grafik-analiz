@@ -1,0 +1,4 @@
+t2_meta_4h_kanal_n20_b3.0-1.5-H60_logit_tam_taban0.0 x2.0: ret +3.207 sh 1.17 dd -0.249 tr 439 alfa +0.283 b +0.04 t +2.28 | olay 2058 taban 0.398 auc 0.575 kabul 776 k_net +0.0109 r_net -0.0108 (3s)
+t2_meta_1h_kanal_n96_iz3.0-H120_logit_tam_taban0.0 x2.0: ret +1.237 sh 0.66 dd -0.295 tr 558 alfa +0.216 b -0.01 t +1.54 | olay 2966 taban 0.365 auc 0.572 kabul 1089 k_net +0.0060 r_net -0.0098 (3s)
+t2_meta_4h_kanal_top[n14-20-30-48]_n48_b3.0-1.5-H60_hepsi x1.0: ret -0.157 sh 0.13 dd -0.579 tr 1018 alfa +0.141 b -0.08 t +0.75 | olay 7473 taban 0.402 auc nan kabul 6171 k_net -0.0000 r_net +nan (1s)
+BITTI

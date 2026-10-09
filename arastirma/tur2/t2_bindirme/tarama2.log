@@ -1,0 +1,20 @@
+1/19 trend_ens_vadeli_port3_4h_alim ret=21.152 ret2=18.986 alfa=0.227 t=1.73 a20_23=0.317 a24=-0.160 vol=0.452
+2/19 trend_ens_vadeli_port3_4h_ls_vt ret=3.258 ret2=2.668 alfa=0.304 t=1.93 a20_23=0.400 a24=-0.117 vol=0.353
+3/19 rotasyon_vadeli_uzunkisa_karma28 ret=2.134 ret2=1.952 alfa=0.250 t=1.94 a20_23=0.392 a24=-0.237 vol=0.305
+4/19 rotasyon_vadeli_uzunkisa_L21_volesit ret=1.918 ret2=1.412 alfa=0.224 t=2.61 a20_23=0.325 a24=-0.101 vol=0.204
+5/19 rotasyon_oran_SOLBTC_n50_yukari ret=7.698 ret2=7.202 alfa=0.310 t=2.18 a20_23=0.464 a24=-0.283 vol=0.359
+6/19 od_dip_ens4_fut_port3_1h ret=0.862 ret2=0.693 alfa=0.095 t=3.22 a20_23=0.111 a24=0.030 vol=0.069
+7/19 od_dip_ret4h_fut_port3_1h ret=1.817 ret2=1.548 alfa=0.187 t=3.57 a20_23=0.206 a24=0.110 vol=0.118
+8/19 kirilim_kanal4h_vadeli_iki ret=9.525 ret2=8.354 alfa=0.609 t=2.74 a20_23=0.717 a24=0.149 vol=0.496
+9/19 kirilim_kanal4h_vadeli_uzun ret=13.258 ret2=12.362 alfa=0.320 t=2.56 a20_23=0.354 a24=0.178 vol=0.335
+10/19 fonlama_negatif_uzun_sepet3 ret=2.571 ret2=2.345 alfa=0.037 t=0.29 a20_23=0.050 a24=0.028 vol=0.343
+11/19 tom_1d_fut_PORT3_a4_b5 ret=8.691 ret2=7.943 alfa=0.283 t=2.09 a20_23=0.470 a24=-0.493 vol=0.360
+12/19 tom_1d_fut_PORT2_a4_b5 ret=6.413 ret2=5.812 alfa=0.249 t=1.90 a20_23=0.410 a24=-0.419 vol=0.343
+13/19 tomk_1d_fut_PORT3_a2-5_b2-5 ret=5.633 ret2=5.121 alfa=0.233 t=2.16 a20_23=0.399 a24=-0.447 vol=0.286
+14/19 ml_1h_fu_PORT3_hgb_clf_H6_k3.0_ortusen_iki_temel_egspot ret=11.528 ret2=5.712 alfa=0.405 t=4.25 a20_23=0.482 a24=0.187 vol=0.239
+15/19 ml_1h_fu_PORT3_hgb_reg_H4_k3.0_ortusen_uzun_temel_egspot ret=5.590 ret2=3.735 alfa=0.254 t=3.24 a20_23=0.310 a24=0.074 vol=0.210
+16/19 formasyon_ucgen_kama_4h_trend_uzun ret=3.501 ret2=3.258 alfa=0.185 t=2.13 a20_23=0.199 a24=0.128 vol=0.217
+17/19 formasyon_ucgen_kama_4h_hacim_iki ret=2.732 ret2=2.433 alfa=0.309 t=2.73 a20_23=0.341 a24=0.179 vol=0.252
+18/19 formasyon_hepsi_4h_trend_10bar_uzun ret=3.121 ret2=2.661 alfa=0.206 t=2.64 a20_23=0.226 a24=0.123 vol=0.186
+19/19 formasyon_hepsi_1d_olcek234_iki ret=4.193 ret2=3.963 alfa=0.425 t=2.78 a20_23=0.580 a24=-0.043 vol=0.365
+BITTI

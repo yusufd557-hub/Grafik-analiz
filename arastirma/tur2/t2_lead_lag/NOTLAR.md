@@ -217,3 +217,15 @@ sürümler ani düşüşlerin devam ettiği durumda zarar eder.
 Sonraki adım: `dogrulama.py` her yapılandırmayı bir kez `evaluate(spec)` ile
 ölçer, `candidate_check` ve `assert_causal` uygular. Sonuçtan sonra parametre
 değişmez.
+
+## İç doğrulama yapıldı (9 Ekim 2026, 16:43 UTC) — dondurmadan sonra
+
+- `nedensellik.py`: beş yapılandırma `assert_causal`'ı varsayılan
+  (0,55/0,8/0,97) ve ek (0,3/0,62/0,9) kesimlerle geçti (`nedensellik.log`).
+- `dogrulama.py` bir kez çalıştı (`dogrulama.log`, `dogrulama_sonuc.json`).
+  Defterde her yapılandırma için tam bir dev_valid 1× ve 2× satırı var.
+- candidate_check: 1, 4, 5 geçti; 2 (baz 15m) ve 3 (sv k6 iki yön) geçmedi.
+- dev_valid'den sonra parametre, yapılandırma ya da seçim değişmedi. Yalnız
+  modüldeki açıklamalara sonuç eklendi (`SONUC` sözlüğü; sinyali etkilemez)
+  ve betimleyici döküm (`dogrulama_dokum.py/.txt`) yapıldı.
+- Ayrıntı ve yorum: `RAPOR.md`.

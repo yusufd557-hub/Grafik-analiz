@@ -375,7 +375,18 @@ DONDURULAN = [
 """Dondurulan yapılandırmalar (ad, zaman dilimi, parametreler, açıklama). Seçim yalnız dev_train'e göre;
 gerekçe ``arastirma/tur2/t2_lead_lag/NOTLAR.md`` (dondurma kararı)."""
 
-SONUC: dict[str, str] = {}
+SONUC: dict[str, str] = {
+    "baz_5m_kendi_w288_e6_t12_limt2b2": "candidate_check GEÇTİ (aday). dev_valid 1× net +%16,57, 2× +%14,55, Sharpe 1,125, "
+    "113 işlem, alfa +0,089 (t 1,489), beta +0,026; Deflated Sharpe ≈ 0.",
+    "baz_15m_kendi_w192_e5_t8_limt2b2": "candidate_check GEÇMEDİ. dev_valid 1× net −%8,72, 2× −%9,76, Sharpe −0,722, 80 işlem, "
+    "alfa −0,051 (t −0,977).",
+    "sv_5m_hepsi_k6_e4_t36_limt2b2": "candidate_check GEÇMEDİ. dev_valid 1× net −%0,76, 2× −%1,42, Sharpe −0,005, 36 işlem, "
+    "alfa −0,002 (t −0,025).",
+    "baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": "candidate_check GEÇTİ (aday). dev_valid 1× net +%19,81, 2× +%18,90, Sharpe "
+    "1,246, 48 işlem, alfa +0,106 (t 1,642), beta +0,010; Deflated Sharpe ≈ 0.",
+    "sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": "candidate_check GEÇTİ (aday). dev_valid 1× net +%17,19, 2× +%16,73, Sharpe 1,194, "
+    "27 işlem, alfa +0,093 (t 1,573), beta +0,009; Deflated Sharpe ≈ 0.",
+}
 """İç doğrulama sonucu (candidate_check), değerlendirmeden sonra açıklamaya eklenir; parametreleri değiştirmez."""
 
 

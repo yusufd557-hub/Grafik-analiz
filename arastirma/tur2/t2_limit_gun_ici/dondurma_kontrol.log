@@ -1,0 +1,17 @@
+t2_limit_gun_ici_fitil_1h_k4_H3_t50 defterle_ayni: True
+  assert_causal: gecti
+t2_limit_gun_ici_fitil_5m_k8_H24_t50 defterle_ayni: True
+  assert_causal: gecti
+t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_lim1.0s_m3 defterle_ayni: True
+  assert_causal: gecti
+t2_limit_gun_ici_donus_15m_n16_e3_t50_H48_lim1.0s_m12 defterle_ayni: True
+  assert_causal: gecti
+t2_limit_gun_ici_donus_1h_n4_e3_t50_H12_piyasa defterle_ayni: True
+  assert_causal: gecti
+dev_train gunluk getiri korelasyonu:
+                                      fitil_1h_k4_H3_t50  fitil_5m_k8_H24_t50  donus_1h_n4_e3_t50_H12_lim1.0s_m3  donus_15m_n16_e3_t50_H48_lim1.0s_m12  donus_1h_n4_e3_t50_H12_piyasa
+fitil_1h_k4_H3_t50                                  1.00                 0.61                               0.16                                  0.32                           0.18
+fitil_5m_k8_H24_t50                                 0.61                 1.00                              -0.05                                  0.14                          -0.03
+donus_1h_n4_e3_t50_H12_lim1.0s_m3                   0.16                -0.05                               1.00                                  0.66                           0.93
+donus_15m_n16_e3_t50_H48_lim1.0s_m12                0.32                 0.14                               0.66                                  1.00                           0.68
+donus_1h_n4_e3_t50_H12_piyasa                       0.18                -0.03                               0.93                                  0.68                           1.00

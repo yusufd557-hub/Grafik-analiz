@@ -1,0 +1,9 @@
+[
+ ["donus_1h_n4_e3_t50_H12_lim1.0s_m3", "1h", {"yontem": "donus", "n": 4, "esik": 3, "vol_n": 500, "yon": "uzun", "trend_gun": 50, "trend_mod": "ile", "H": 12, "sig_n": 168, "giris": "limit", "d_sig": 1.0, "m": 3}],
+ ["donus_1h_n4_e3_t50_H12_lim2.0s_m3", "1h", {"yontem": "donus", "n": 4, "esik": 3, "vol_n": 500, "yon": "uzun", "trend_gun": 50, "trend_mod": "ile", "H": 12, "sig_n": 168, "giris": "limit", "d_sig": 2.0, "m": 3}],
+ ["donus_15m_n16_e3_t50_H48_lim1.0s_m12", "15m", {"yontem": "donus", "n": 16, "esik": 3, "vol_n": 2000, "yon": "uzun", "trend_gun": 50, "trend_mod": "ile", "H": 48, "sig_n": 96, "giris": "limit", "d_sig": 1.0, "m": 12}],
+ ["donus_5m_n48_e3_t50_H144_lim2.0s_m36", "5m", {"yontem": "donus", "n": 48, "esik": 3, "vol_n": 6000, "yon": "uzun", "trend_gun": 50, "trend_mod": "ile", "H": 144, "sig_n": 288, "giris": "limit", "d_sig": 2.0, "m": 36}],
+ ["donus_15m_iki_n4_e3_H8_lim1.0s_m4", "15m", {"yontem": "donus", "n": 4, "esik": 3, "vol_n": 500, "yon": "iki", "H": 8, "sig_n": 96, "giris": "limit", "d_sig": 1.0, "m": 4}],
+ ["orb_15m_or2_seviye_m8", "15m", {"yontem": "orb", "or_saat": 2, "yon": "iki", "sig_n": 96, "giris": "seviye", "m": 8}],
+ ["saat_15m_21_2_uzun_lim3b_cik3b", "15m", {"yontem": "saat", "bas_saat": 21, "sure_saat": 2, "yon": "uzun", "d_bps": 3, "cikis_bps": 3, "cikis_m": 4, "sig_n": 96}]
+]

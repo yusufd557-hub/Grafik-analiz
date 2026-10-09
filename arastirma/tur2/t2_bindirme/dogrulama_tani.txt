@@ -1,0 +1,33 @@
+t2_bindirme_vol_nakit_1d_h0.4_n40_b0.1
+  ('spot', 'BTCUSDT'): net katkı (toplam) -0.0067  fonlama -0.0000 (+ = gelir)  maliyet 0.0007  ort. pozisyon +0.871
+  ('spot', 'ETHUSDT'): net katkı (toplam) +0.0010  fonlama -0.0000 (+ = gelir)  maliyet 0.0015  ort. pozisyon +0.627
+  ('spot', 'SOLUSDT'): net katkı (toplam) -0.0032  fonlama -0.0000 (+ = gelir)  maliyet 0.0012  ort. pozisyon +0.599
+  2025-01-01–2025-07-01: strateji -0.0476  al-tut (vadeli) -0.0873
+  2025-07-01–2026-01-01: strateji -0.0057  al-tut (vadeli) -0.0607
+  2026-01-01–2026-10-01: strateji -0.0846  al-tut (vadeli) -0.0544
+  en iyi 5 gün toplamı +0.3985; en iyi 10 gün çıkarılınca bileşik getiri -0.5492
+  ortalama net maruziyet (sermaye payı): {'BTCUSDT': 0.2904974209157995, 'ETHUSDT': 0.20893744749841903, 'SOLUSDT': 0.19966610473354546}
+t2_bindirme_trend_yarim_4h_L15_b0.15_f7
+  ('spot', 'BTCUSDT'): net katkı (toplam) -0.0159  fonlama -0.0000 (+ = gelir)  maliyet 0.0016  ort. pozisyon +0.915
+  ('futures', 'BTCUSDT'): net katkı (toplam) +0.0371  fonlama +0.0059 (+ = gelir)  maliyet 0.0042  ort. pozisyon -0.468
+  ('spot', 'ETHUSDT'): net katkı (toplam) -0.0167  fonlama -0.0000 (+ = gelir)  maliyet 0.0020  ort. pozisyon +0.898
+  ('futures', 'ETHUSDT'): net katkı (toplam) +0.1217  fonlama +0.0049 (+ = gelir)  maliyet 0.0036  ort. pozisyon -0.469
+  ('spot', 'SOLUSDT'): net katkı (toplam) +0.0039  fonlama -0.0000 (+ = gelir)  maliyet 0.0045  ort. pozisyon +0.636
+  ('futures', 'SOLUSDT'): net katkı (toplam) +0.0154  fonlama +0.0000 (+ = gelir)  maliyet 0.0036  ort. pozisyon -0.223
+  2025-01-01–2025-07-01: strateji +0.0037  al-tut (vadeli) -0.0873
+  2025-07-01–2026-01-01: strateji +0.0542  al-tut (vadeli) -0.0607
+  2026-01-01–2026-10-01: strateji +0.0753  al-tut (vadeli) -0.0544
+  en iyi 5 gün toplamı +0.2010; en iyi 10 gün çıkarılınca bileşik getiri -0.1723
+  ortalama net maruziyet (sermaye payı): {'BTCUSDT': 0.07446592360385462, 'ETHUSDT': 0.07144723092998954, 'SOLUSDT': 0.0688385289678393}
+t2_bindirme_trendvol_tam_4h_L10_h0.3_n30_b0.1_f7
+  ('spot', 'BTCUSDT'): net katkı (toplam) -0.0144  fonlama -0.0000 (+ = gelir)  maliyet 0.0021  ort. pozisyon +0.936
+  ('futures', 'BTCUSDT'): net katkı (toplam) +0.0491  fonlama +0.0022 (+ = gelir)  maliyet 0.0088  ort. pozisyon -0.232
+  ('spot', 'ETHUSDT'): net katkı (toplam) -0.0074  fonlama -0.0000 (+ = gelir)  maliyet 0.0018  ort. pozisyon +0.910
+  ('futures', 'ETHUSDT'): net katkı (toplam) +0.1167  fonlama +0.0049 (+ = gelir)  maliyet 0.0039  ort. pozisyon -0.467
+  ('spot', 'SOLUSDT'): net katkı (toplam) -0.0016  fonlama -0.0000 (+ = gelir)  maliyet 0.0037  ort. pozisyon +0.636
+  ('futures', 'SOLUSDT'): net katkı (toplam) +0.0506  fonlama +0.0001 (+ = gelir)  maliyet 0.0038  ort. pozisyon -0.243
+  2025-01-01–2025-07-01: strateji +0.0162  al-tut (vadeli) -0.0873
+  2025-07-01–2026-01-01: strateji +0.0168  al-tut (vadeli) -0.0607
+  2026-01-01–2026-10-01: strateji +0.1501  al-tut (vadeli) -0.0544
+  en iyi 5 gün toplamı +0.2459; en iyi 10 gün çıkarılınca bileşik getiri -0.1862
+  ortalama net maruziyet (sermaye payı): {'BTCUSDT': 0.11735978695362234, 'ETHUSDT': 0.0738020238381274, 'SOLUSDT': 0.0655231040604213}

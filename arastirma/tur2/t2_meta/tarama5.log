@@ -1,0 +1,16 @@
+7 yapılandırma
+t2_meta_1h_kanal_n96_b3.0-1.5-H240_logit_tam_taban0.0 x1.0: ret +0.941 sh 0.82 dd -0.178 tr 710 alfa +0.113 b +0.03 t +1.40 | olay 2966 taban 0.363 auc 0.554 kabul 1112 k_net +0.0019 r_net -0.0069 (5s)
+t2_meta_1h_kanal_n96_b3.0-1.5-H240_logit_tam_taban0.0 x2.0: ret +0.393 sh 0.45 dd -0.187 tr 710 alfa +0.048 b +0.03 t +0.59 | olay 2966 taban 0.363 auc 0.554 kabul 1112 k_net +0.0019 r_net -0.0069 (5s)
+t2_meta_1h_kanal_n96_iz4.0-H240_hepsi x1.0: ret +0.029 sh 0.26 dd -0.528 tr 847 alfa +0.183 b -0.05 t +0.82 | olay 2965 taban 0.383 auc nan kabul 2657 k_net -0.0020 r_net +nan (1s)
+t2_meta_1h_kanal_n96_iz4.0-H240_hepsi x2.0: ret -0.307 sh 0.10 dd -0.610 tr 847 alfa +0.105 b -0.05 t +0.47 | olay 2965 taban 0.383 auc nan kabul 2657 k_net -0.0020 r_net +nan (1s)
+t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0 x1.0: ret +2.783 sh 0.93 dd -0.329 tr 467 alfa +0.336 b -0.01 t +2.16 | olay 2965 taban 0.383 auc 0.548 kabul 1133 k_net +0.0067 r_net -0.0085 (2s)
+t2_meta_1h_kanal_n96_iz4.0-H240_logit_tam_taban0.0 x2.0: ret +2.042 sh 0.80 dd -0.347 tr 467 alfa +0.293 b -0.01 t +1.87 | olay 2965 taban 0.383 auc 0.548 kabul 1133 k_net +0.0067 r_net -0.0085 (2s)
+t2_meta_4h_kanal-donus-fonlama_n20_k6z2.5_fz2.0_b3.0-1.5-H60_hepsi x1.0: ret -0.740 sh -0.29 dd -0.876 tr 1492 alfa -0.205 b +0.05 t -0.93 | olay 3255 taban 0.377 auc nan kabul 2912 k_net -0.0018 r_net +nan (1s)
+t2_meta_4h_kanal-donus-fonlama_n20_k6z2.5_fz2.0_b3.0-1.5-H60_hepsi x2.0: ret -0.870 sh -0.57 dd -0.935 tr 1492 alfa -0.344 b +0.05 t -1.55 | olay 3255 taban 0.377 auc nan kabul 2912 k_net -0.0018 r_net +nan (1s)
+t2_meta_4h_kanal-donus-fonlama_n20_k6z2.5_fz2.0_b3.0-1.5-H60_logit_tam_taban0.0 x1.0: ret +1.073 sh 0.56 dd -0.575 tr 701 alfa -0.036 b +0.23 t -0.22 | olay 3255 taban 0.377 auc 0.549 kabul 1381 k_net +0.0053 r_net -0.0081 (2s)
+t2_meta_4h_kanal-donus-fonlama_n20_k6z2.5_fz2.0_b3.0-1.5-H60_logit_tam_taban0.0 x2.0: ret +0.495 sh 0.40 dd -0.623 tr 701 alfa -0.102 b +0.23 t -0.62 | olay 3255 taban 0.377 auc 0.549 kabul 1381 k_net +0.0053 r_net -0.0081 (2s)
+t2_meta_4h_ema_e20-100_b3.0-1.5-H60_hepsi x1.0: ret +0.068 sh 0.16 dd -0.285 tr 229 alfa +0.050 b -0.02 t +0.69 | olay 380 taban 0.413 auc nan kabul 229 k_net +0.0018 r_net +nan (1s)
+t2_meta_4h_ema_e20-100_b3.0-1.5-H60_hepsi x2.0: ret -0.040 sh 0.03 dd -0.293 tr 229 alfa +0.029 b -0.02 t +0.40 | olay 380 taban 0.413 auc nan kabul 229 k_net +0.0018 r_net +nan (1s)
+t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150 x1.0: ret +0.272 sh 0.46 dd -0.156 tr 125 alfa +0.077 b -0.02 t +1.44 | olay 380 taban 0.413 auc 0.531 kabul 126 k_net +0.0059 r_net -0.0033 (1s)
+t2_meta_4h_ema_e20-100_b3.0-1.5-H60_logit_tam_taban0.0_min_olay150 x2.0: ret +0.200 sh 0.36 dd -0.176 tr 125 alfa +0.066 b -0.02 t +1.23 | olay 380 taban 0.413 auc 0.531 kabul 126 k_net +0.0059 r_net -0.0033 (1s)
+BITTI

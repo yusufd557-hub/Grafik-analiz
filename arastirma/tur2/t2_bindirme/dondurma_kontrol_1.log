@@ -1,0 +1,10 @@
+t2_bindirme_vol_nakit_1d_h0.4_n40_b0.1: defterde aynı parametre: True
+  assert_causal varsayılan: GEÇTİ (0s)
+  assert_causal ek kesimler (0.3, 0.9, 0.995): GEÇTİ (0s)
+t2_bindirme_trend_yarim_4h_L15_b0.15_f7: defterde aynı parametre: True
+  assert_causal varsayılan: GEÇTİ (2s)
+  assert_causal ek kesimler (0.3, 0.9, 0.995): GEÇTİ (2s)
+t2_bindirme_trendvol_tam_4h_L10_h0.3_n30_b0.1_f7: defterde aynı parametre: True
+  assert_causal varsayılan: GEÇTİ (2s)
+  assert_causal ek kesimler (0.3, 0.9, 0.995): GEÇTİ (2s)
+BITTI
