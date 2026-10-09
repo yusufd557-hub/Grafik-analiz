@@ -1,0 +1,20 @@
+gözlem 1496736, corr(zf, zr) = 0.648
+uyumsuzluk > 3,5 (uzun)                       n=  2609  ort ileri   +87.8 bps  medyan  +26.4  isabet 0.58  ort zr -4.50 zf -0.15
+zr < -5 (fiyat dönüşü uzun)                   n=  1486  ort ileri  +148.1 bps  medyan  +52.6  isabet 0.67  ort zr -5.98 zf -1.58
+zr < -4                                       n=  4946  ort ileri   +63.2 bps  medyan  +17.9  isabet 0.58  ort zr -4.88 zf -1.55
+u>3,5 ve zr<-4                                n=  1822  ort ileri  +139.4 bps  medyan  +48.1  isabet 0.63  ort zr -5.54 zf -1.02
+u>3,5 ve zr>=-4                               n=   787  ort ileri   -31.8 bps  medyan   -9.2  isabet 0.46  ort zr -2.08 zf +1.87
+zr<-4 ve u<=3,5                               n=  3124  ort ileri   +18.8 bps  medyan   +9.4  isabet 0.56  ort zr -4.49 zf -1.86
+
+zr < -4 olaylarında zf'ye göre üçte birlikler:
+  zf düşük (satış ağır)  n= 1649 ort   +55.8 bps isabet 0.62 zr ort -4.98
+  orta                   n= 1648 ort   +18.5 bps isabet 0.55 zr ort -4.84
+  zf yüksek              n= 1649 ort  +115.4 bps isabet 0.59 zr ort -4.82
+
+zr aralığına göre, akış yüksek/düşük (zf - beklenen):
+  zr (-inf, -6.0]   n=  475  artık>0:  +275.6 bps (n=475)  artık<=0:    +nan bps (n=0)
+  zr (-6.0, -5.0]   n= 1011  artık>0:   +86.0 bps (n=997)  artık<=0:  +246.7 bps (n=14)
+  zr (-5.0, -4.0]   n= 3460  artık>0:   +27.3 bps (n=3263)  artık<=0:   +18.7 bps (n=197)
+  zr (-4.0, -3.0]   n=10456  artık>0:    +8.9 bps (n=9072)  artık<=0:    +0.0 bps (n=1384)
+
+zr<-3 olaylarında fwd ~ 1 + zr + zf: katsayı (bps) ve t: ['-160.0 (t -17.53)', '-54.0 (t -24.68)', '+17.0 (t +6.41)']

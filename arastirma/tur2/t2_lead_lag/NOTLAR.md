@@ -117,3 +117,44 @@ başlanmadı. Devralınan durum:
   - D `baz` 15m/1h: vadeli/spot log fiyat farkı düzeyi, birkaç yapılandırma.
 - Her tarama `tarama_*.py` + `.csv` + `.log` olarak kaydedilir; defterde adı
   olan yapılandırma yeniden çalıştırılmaz (kesintiye dayanıklı).
+
+## Kesinti ve devam (2) (9 Ekim 2026, 16:30 UTC)
+
+Çalışma ikinci kez kesildi (son kayıt 11:54 UTC; oturum yaklaşık 16:27
+UTC'de yeniden başladı). Baştan başlanmadı; devralınan durum:
+
+- Aşama 1 taramaları tamamdı: `tarama1` (spot_vadeli 5m/15m, 81
+  yapılandırma), `tarama2` (prim 1h, spot_vadeli 1h, baz 15m/1h, 25),
+  `tarama3` (yetis/lider 5m/15m, limitli yetis dahil, 38). Defterde 144 satır,
+  hepsi `dev_train`, maliyet katı 1,0. Günlükler ve csv'ler tam (yarım
+  kalmış tarama yok).
+- `inceleme.py` ile eğitim içi yıllık inceleme yapılmıştı (`inceleme1.txt`,
+  `inceleme1b.txt`).
+- dev_valid'e hiç bakılmadı; dondurma kararı yoktu.
+
+Aşama 1'den çıkan tablo (yalnız dev_train, 1×):
+
+- `yetis` ve `lider` (coinler arası öncü–izleyen): bütün 38 yapılandırma
+  zararda (net −%34 … −%100), alfa negatif; limit emir maliyeti azaltıyor ama
+  kenar yok. Tanılamadaki birkaç bps'lik kenar maliyetin altında.
+- `prim` (1h): 12 yapılandırmanın hepsi zararda.
+- `spot_vadeli`: tek coin kaynaklı ("kendi") 5m/15m sinyaller çoğunlukla
+  zararda. Üç coinin ortalaması ("hepsi") 5m k=3 e=5: net +%99 … +%162,
+  Sharpe ≈ 1,1, alfa t ≈ 2,8–3,0, ama yalnız 249 işlem (≈ 83 olay × 3 coin),
+  kazancın büyük kısmı 2021 ve uzun işlemlerden; en iyi 10 işlem çıkınca
+  +%34. BTC kaynaklı 5m k=3 e=5 de pozitif (+%36 … +%61) ama en iyi 5 işlem
+  çıkınca negatif.
+- `baz` 15m w=96 e=4 t=8: net +%139, Sharpe 0,91, alfa t 2,23 (949 işlem) —
+  yalnız iki komşusu ölçülmüştü.
+- `spot_vadeli` 1h kendi e=3 t=6: +%56, Sharpe 0,57.
+
+### Aşama 2 planı (bu oturum, dev_valid görülmeden önce)
+
+1. `baz` taraması: 5m/15m/1h, kaynak ∈ {kendi, hepsi}, pencere, eşik, tutma.
+2. `spot_vadeli` "hepsi" komşuluğu: k ∈ {2, 3, 4, 6}, eşik ∈ {4, 4,5, 5, 6},
+   tutma; pencere 288/576.
+3. Yön kısıtı (`taraf="uzun"`): eğitimde kâr uzun işlemlerden geliyor; yalnız
+   uzun varyantı ayrı yapılandırma olarak ölçülür (seçim yalnız dev_train).
+4. Limit emir: giriş/çıkış/tüm, 0–5 bps, piyasa emrine dönüş 1–6 bar.
+5. Umut veren bölgelerde 2× maliyet ve eğitim içi yıllık tutarlılık.
+6. Dondurma ölçütleri yukarıdaki planla aynı.

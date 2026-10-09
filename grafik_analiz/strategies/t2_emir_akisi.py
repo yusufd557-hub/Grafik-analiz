@@ -281,6 +281,55 @@ def make_spec(name: str, market: str, interval: str, universe: str = "PORT3", de
     )
 
 
+FROZEN = (
+    # (ad, piyasa, aralık, parametreler, açıklama)
+    (
+        "uyum_5m_n72_k3.5_h12",
+        "futures",
+        "5m",
+        dict(kind="uyumsuzluk", n=72, L=2000, k=3.5, mode="devam", hold=12),
+        "CVD–fiyat uyumsuzluğu (akış z − 6 saatlik getiri z), |S|>3,5'te S yönünde 1 saat; vadeli BTC/ETH/SOL.",
+    ),
+    (
+        "uyum_15m_n24_k3.5_h2",
+        "futures",
+        "15m",
+        dict(kind="uyumsuzluk", n=24, L=2000, k=3.5, mode="devam", hold=2),
+        "CVD–fiyat uyumsuzluğu, 15m, n=24 (6 saat), |S|>3,5'te S yönünde 30 dakika; vadeli BTC/ETH/SOL.",
+    ),
+    (
+        "artik_15m_n12_k3.5_h8",
+        "futures",
+        "15m",
+        dict(kind="akis_artik", n=12, L=2000, k=3.5, mode="devam", hold=8),
+        "Fiyatla açıklanamayan akış (3 saatlik akışın getiriye kayan regresyon artığı), |z|>3,5'te devam, 2 saat; vadeli.",
+    ),
+    (
+        "uyum_spot_5m_n72_k3.5_h12_uzun",
+        "spot",
+        "5m",
+        dict(kind="uyumsuzluk", n=72, L=2000, k=3.5, mode="devam", hold=12, side="uzun"),
+        "CVD–fiyat uyumsuzluğu, spot BTC/ETH/SOL, yalnız uzun, 1 saat tutma.",
+    ),
+    (
+        "kontrol_getiri_donus_5m_n72_k5_h12",
+        "futures",
+        "5m",
+        dict(kind="getiri", n=72, L=2000, k=5.0, mode="donus", hold=12),
+        "AKIŞSIZ KONTROL: 6 saatlik getiri z-skoru |z|>5'te ters yönde 1 saat (işlem sayısı 1. yapılandırmayla eşlenmiş fiyat dönüşü).",
+    ),
+)
+
+CHECK = {
+    # candidate_check sonucu (dev_valid'de tek değerlendirme; bkz. RAPOR.md). Parametreler değişmedi.
+}
+
+
 def specs() -> list[StrategySpec]:
     """Dondurulan ve dev_valid'de bir kez değerlendirilen yapılandırmalar."""
-    return []
+    out = []
+    for name, market, interval, params, desc in FROZEN:
+        note = CHECK.get(name)
+        full = desc + (f" candidate_check: {note}" if note else "")
+        out.append(make_spec(name, market, interval, description=full, **params))
+    return out

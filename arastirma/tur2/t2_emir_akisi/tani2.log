@@ -1,0 +1,79 @@
+
+== uyum5m: toplam log +1.704, aktif gün 225, en iyi 5 gün payı 0.31, en iyi 10 gün 0.46, en iyi 20 gün 0.68
+   en iyi 5 gün: 2021-09-07 +15.3%, 2020-03-13 +13.6%, 2024-01-03 +9.8%, 2021-05-19 +9.2%, 2021-05-13 +7.9%
+   en kötü 5 gün: 2020-03-12 -5.2%, 2022-05-11 -4.6%, 2021-01-08 -3.1%, 2024-05-20 -3.0%, 2020-11-26 -2.6%
+   yön -1: işlem 174, ort net +7.5 bps (portföy payı), toplam +13.0%
+   yön +1: işlem 224, ort net +69.6 bps (portföy payı), toplam +155.8%
+   yıllar: 2020:+34% 2021:+141% 2022:+20% 2023:+16% 2024:+23%
+/home/user/grafik-analiz/arastirma/tur2/t2_emir_akisi/tani2.py:43: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + r).groupby(r.index.to_period("M")).prod() - 1
+   en iyi 5 ay: 2021-05 +31.9%, 2021-09 +21.0%, 2021-04 +10.3%, 2024-01 +10.3%, 2021-01 +8.5% | pozitif ay oranı 0.77 (60 ay)
+
+== uyum15m: toplam log +1.546, aktif gün 208, en iyi 5 gün payı 0.32, en iyi 10 gün 0.53, en iyi 20 gün 0.77
+   en iyi 5 gün: 2021-05-23 +15.5%, 2021-01-11 +11.0%, 2021-01-04 +8.7%, 2021-04-18 +8.7%, 2021-09-07 +7.9%
+   en kötü 5 gün: 2020-03-12 -7.6%, 2022-11-09 -4.7%, 2023-06-10 -3.3%, 2021-01-08 -3.3%, 2023-01-14 -2.9%
+   yön -1: işlem 191, ort net +10.8 bps (portföy payı), toplam +20.6%
+   yön +1: işlem 288, ort net +45.9 bps (portföy payı), toplam +132.2%
+   yıllar: 2020:+15% 2021:+165% 2022:+30% 2023:+0% 2024:+18%
+/home/user/grafik-analiz/arastirma/tur2/t2_emir_akisi/tani2.py:43: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + r).groupby(r.index.to_period("M")).prod() - 1
+   en iyi 5 ay: 2021-05 +36.6%, 2021-01 +21.8%, 2021-04 +15.7%, 2021-09 +15.1%, 2021-02 +12.1% | pozitif ay oranı 0.63 (60 ay)
+
+== uyum5m_n36: toplam log +1.725, aktif gün 417, en iyi 5 gün payı 0.32, en iyi 10 gün 0.51, en iyi 20 gün 0.77
+   en iyi 5 gün: 2022-11-08 +19.6%, 2021-05-19 +11.3%, 2020-03-13 +10.2%, 2023-08-17 +8.5%, 2021-05-13 +8.4%
+   en kötü 5 gün: 2020-03-12 -10.1%, 2024-03-05 -4.2%, 2021-01-08 -4.1%, 2024-11-06 -4.0%, 2021-02-22 -3.8%
+   yön -1: işlem 314, ort net +8.3 bps (portföy payı), toplam +26.1%
+   yön +1: işlem 378, ort net +38.8 bps (portföy payı), toplam +146.6%
+   yıllar: 2020:+19% 2021:+108% 2022:+60% 2023:+15% 2024:+24%
+/home/user/grafik-analiz/arastirma/tur2/t2_emir_akisi/tani2.py:43: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + r).groupby(r.index.to_period("M")).prod() - 1
+   en iyi 5 ay: 2021-05 +29.6%, 2022-11 +27.2%, 2022-05 +13.6%, 2021-09 +11.9%, 2021-04 +10.9% | pozitif ay oranı 0.75 (60 ay)
+
+== artik15m: toplam log +1.007, aktif gün 449, en iyi 5 gün payı 0.49, en iyi 10 gün 0.75, en iyi 20 gün 0.99
+   en iyi 5 gün: 2021-05-19 +19.6%, 2023-08-17 +9.2%, 2020-03-13 +9.0%, 2024-08-05 +7.6%, 2021-09-07 +7.4%
+   en kötü 5 gün: 2020-03-16 -3.8%, 2022-09-21 -2.6%, 2021-02-26 -2.5%, 2023-10-24 -2.3%, 2024-05-20 -2.2%
+   yön -1: işlem 299, ort net +1.6 bps (portföy payı), toplam +4.8%
+   yön +1: işlem 326, ort net +30.7 bps (portföy payı), toplam +100.0%
+   yıllar: 2020:+12% 2021:+50% 2022:+23% 2023:+16% 2024:+15%
+/home/user/grafik-analiz/arastirma/tur2/t2_emir_akisi/tani2.py:43: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + r).groupby(r.index.to_period("M")).prod() - 1
+   en iyi 5 ay: 2021-05 +17.7%, 2021-01 +12.8%, 2022-11 +12.2%, 2023-08 +10.1%, 2024-04 +9.2% | pozitif ay oranı 0.65 (60 ay)
+
+== artik5m: toplam log +1.095, aktif gün 626, en iyi 5 gün payı 0.48, en iyi 10 gün 0.66, en iyi 20 gün 0.93
+   en iyi 5 gün: 2021-05-19 +23.6%, 2022-11-08 +10.9%, 2023-08-17 +9.7%, 2024-04-13 +7.3%, 2022-05-11 +5.0%
+   en kötü 5 gün: 2020-03-16 -3.5%, 2022-01-21 -3.2%, 2020-11-05 -2.2%, 2022-10-14 -2.1%, 2023-10-24 -2.0%
+   yön -1: işlem 426, ort net +5.7 bps (portföy payı), toplam +24.1%
+   yön +1: işlem 439, ort net +20.8 bps (portföy payı), toplam +91.2%
+   yıllar: 2020:+15% 2021:+61% 2022:+25% 2023:+23% 2024:+4%
+/home/user/grafik-analiz/arastirma/tur2/t2_emir_akisi/tani2.py:43: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + r).groupby(r.index.to_period("M")).prod() - 1
+   en iyi 5 ay: 2021-05 +31.1%, 2022-11 +14.6%, 2022-05 +12.8%, 2024-04 +9.3%, 2021-09 +8.7% | pozitif ay oranı 0.57 (60 ay)
+
+== uyum_spot5m: toplam log +1.361, aktif gün 196, en iyi 5 gün payı 0.34, en iyi 10 gün 0.50, en iyi 20 gün 0.73
+   en iyi 5 gün: 2020-03-13 +13.9%, 2021-09-07 +10.1%, 2024-01-03 +9.4%, 2024-04-13 +7.3%, 2021-05-19 +7.2%
+   en kötü 5 gün: 2022-09-13 -2.5%, 2020-10-02 -1.8%, 2022-01-20 -1.7%, 2020-03-12 -1.6%, 2024-05-24 -1.5%
+   yön +1: işlem 321, ort net +43.1 bps (portföy payı), toplam +138.2%
+   yıllar: 2020:+32% 2021:+79% 2022:+24% 2023:+3% 2024:+29%
+/home/user/grafik-analiz/arastirma/tur2/t2_emir_akisi/tani2.py:43: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + r).groupby(r.index.to_period("M")).prod() - 1
+   en iyi 5 ay: 2021-05 +15.1%, 2020-03 +11.6%, 2021-09 +10.2%, 2024-04 +9.6%, 2024-01 +9.6% | pozitif ay oranı 0.72 (60 ay)
+
+== getiri5m_k5: toplam log +1.635, aktif gün 160, en iyi 5 gün payı 0.29, en iyi 10 gün 0.49, en iyi 20 gün 0.73
+   en iyi 5 gün: 2020-03-13 +14.3%, 2024-01-03 +9.3%, 2021-09-07 +9.2%, 2021-05-19 +9.1%, 2024-04-13 +7.9%
+   en kötü 5 gün: 2020-03-12 -6.2%, 2024-05-20 -3.6%, 2022-10-25 -1.9%, 2024-11-06 -1.7%, 2024-07-05 -1.4%
+   yön -1: işlem 122, ort net +14.3 bps (portföy payı), toplam +17.4%
+   yön +1: işlem 174, ort net +84.2 bps (portföy payı), toplam +146.6%
+   yıllar: 2020:+26% 2021:+97% 2022:+34% 2023:+18% 2024:+30%
+/home/user/grafik-analiz/arastirma/tur2/t2_emir_akisi/tani2.py:43: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + r).groupby(r.index.to_period("M")).prod() - 1
+   en iyi 5 ay: 2021-05 +13.5%, 2021-09 +12.5%, 2022-11 +10.5%, 2021-01 +10.2%, 2024-01 +9.9% | pozitif ay oranı 0.82 (60 ay)
+
+Günlük getiri korelasyonu (dev_train):
+             uyum5m  uyum15m  uyum5m_n36  artik15m  artik5m  uyum_spot5m  getiri5m_k5
+uyum5m         1.00     0.59        0.63      0.61     0.37         0.74         0.79
+uyum15m        0.59     1.00        0.44      0.41     0.25         0.45         0.44
+uyum5m_n36     0.63     0.44        1.00      0.64     0.57         0.52         0.65
+artik15m       0.61     0.41        0.64      1.00     0.70         0.57         0.66
+artik5m        0.37     0.25        0.57      0.70     1.00         0.33         0.41
+uyum_spot5m    0.74     0.45        0.52      0.57     0.33         1.00         0.80
+getiri5m_k5    0.79     0.44        0.65      0.66     0.41         0.80         1.00

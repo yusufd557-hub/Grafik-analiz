@@ -28,6 +28,8 @@ Beş sinyal türü (``tur``), hepsi aynı zaman diliminde, aynı açılış zama
 
 Tetik: |s| > ``esik`` → yön = ``yon`` · sign(s). Pozisyon son tetikten sonra
 ``tut`` bar tutulur; yeni tetik süreyi uzatır, ters tetik yönü çevirir.
+``taraf="uzun"`` (ya da ``"kisa"``) yalnız o yöndeki tetikleri kullanır
+(varsayılan ``"iki"``: iki yön).
 
 Bilgi bacakları: sinyal için gereken ama işlem görmeyen vadeli seriler
 (örneğin yalnız ETH/SOL işlenirken BTC vadeli) sıfır ağırlıklı bacak olarak
@@ -249,6 +251,7 @@ def signal_fn(
     limit_bps: float | None = None,
     limit_mod: str = "giris",
     limit_bar: int | None = None,
+    taraf: str = "iki",
     interval: str = "5m",
 ) -> dict:
     win = int(win or VARSAYILAN_WIN.get(interval, 288))
@@ -270,6 +273,12 @@ def signal_fn(
         else:
             raise ValueError(f"bilinmeyen tür: {tur}")
         trig = np.sign(s).where(s.abs() > esik, 0.0).fillna(0.0) * float(yon)
+        if taraf == "uzun":
+            trig = trig.clip(lower=0.0)
+        elif taraf == "kisa":
+            trig = trig.clip(upper=0.0)
+        elif taraf != "iki":
+            raise ValueError(f"bilinmeyen taraf: {taraf}")
         targets[coin] = _hold(trig, tut)
     if hedge and tur == "yetis":
         idx = data[(FUT, lider)].index

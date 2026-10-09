@@ -1,0 +1,5 @@
+t2_emir_akisi_uyum_5m_n72_k3.5_h12: assert_causal geçti (7 kesim); defterde 1 eş dev_train satırı, Sharpe 2.2599
+t2_emir_akisi_uyum_15m_n24_k3.5_h2: assert_causal geçti (7 kesim); defterde 1 eş dev_train satırı, Sharpe 2.021688
+t2_emir_akisi_artik_15m_n12_k3.5_h8: assert_causal geçti (7 kesim); defterde 1 eş dev_train satırı, Sharpe 1.480018
+t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun: assert_causal geçti (7 kesim); defterde 1 eş dev_train satırı, Sharpe 2.211679
+t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12: assert_causal geçti (7 kesim); defterde 1 eş dev_train satırı, Sharpe 2.288404

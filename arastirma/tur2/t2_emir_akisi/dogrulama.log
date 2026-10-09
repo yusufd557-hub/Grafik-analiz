@@ -1,0 +1,92 @@
+t2_emir_akisi_uyum_5m_n72_k3.5_h12 | train +4.4983 alfa +0.3650 | valid 1x +0.0209 2x -0.0468 Sharpe +0.177 dd -0.2094 işlem 147 alfa +0.0158 beta +0.000 t +0.23 | aday False
+t2_emir_akisi_uyum_15m_n24_k3.5_h2 | train +3.6918 alfa +0.3242 | valid 1x +0.0257 2x -0.0410 Sharpe +0.185 dd -0.1340 işlem 144 alfa +0.0212 beta -0.004 t +0.25 | aday False
+t2_emir_akisi_artik_15m_n12_k3.5_h8 | train +1.7384 alfa +0.2354 | valid 1x -0.0324 2x -0.1256 Sharpe -0.354 dd -0.0970 işlem 217 alfa -0.0169 beta -0.011 t -0.45 | aday False
+t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun | train +2.9001 alfa +0.2939 | valid 1x -0.0534 2x -0.1530 Sharpe -0.427 dd -0.1580 işlem 139 alfa -0.0306 beta +0.027 t -0.61 | aday False
+t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12 | train +4.1318 alfa +0.3522 | valid 1x +0.0398 2x +0.0021 Sharpe +0.355 dd -0.1594 işlem 79 alfa +0.0247 beta +0.001 t +0.47 | aday False
+{
+ "zaman": "2026-10-09T16:35:36+00:00",
+ "dsr_girdi": {
+  "deneme_satir": 606,
+  "deneme_benzersiz": 594,
+  "sharpe_varyans": 4.602169,
+  "sharpe_ort": -0.368953,
+  "sharpe_max": 2.288404
+ },
+ "al_tut_port3": {
+  "futures": {
+   "dev_train": {
+    "getiri": 39.533788,
+    "sharpe": 1.284232,
+    "max_dusus": -0.851425,
+    "baslangic": "2019-09-08"
+   },
+   "dev_valid": {
+    "getiri": -0.189314,
+    "sharpe": 0.098718,
+    "max_dusus": -0.643175,
+    "baslangic": "2025-01-01"
+   }
+  },
+  "spot": {
+   "dev_train": {
+    "getiri": 63.223976,
+    "sharpe": 1.107917,
+    "max_dusus": -0.879255,
+    "baslangic": "2017-08-17"
+   },
+   "dev_valid": {
+    "getiri": -0.189353,
+    "sharpe": 0.097958,
+    "max_dusus": -0.643082,
+    "baslangic": "2025-01-01"
+   }
+  }
+ },
+ "dev_valid_korelasyon": {
+  "t2_emir_akisi_uyum_5m_n72_k3.5_h12": {
+   "t2_emir_akisi_uyum_5m_n72_k3.5_h12": 1.0,
+   "t2_emir_akisi_uyum_15m_n24_k3.5_h2": 0.874854,
+   "t2_emir_akisi_artik_15m_n12_k3.5_h8": 0.31954,
+   "t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun": 0.646307,
+   "t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12": 0.78685
+  },
+  "t2_emir_akisi_uyum_15m_n24_k3.5_h2": {
+   "t2_emir_akisi_uyum_5m_n72_k3.5_h12": 0.874854,
+   "t2_emir_akisi_uyum_15m_n24_k3.5_h2": 1.0,
+   "t2_emir_akisi_artik_15m_n12_k3.5_h8": 0.253942,
+   "t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun": 0.615372,
+   "t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12": 0.754753
+  },
+  "t2_emir_akisi_artik_15m_n12_k3.5_h8": {
+   "t2_emir_akisi_uyum_5m_n72_k3.5_h12": 0.31954,
+   "t2_emir_akisi_uyum_15m_n24_k3.5_h2": 0.253942,
+   "t2_emir_akisi_artik_15m_n12_k3.5_h8": 1.0,
+   "t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun": -0.1215,
+   "t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12": 0.217915
+  },
+  "t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun": {
+   "t2_emir_akisi_uyum_5m_n72_k3.5_h12": 0.646307,
+   "t2_emir_akisi_uyum_15m_n24_k3.5_h2": 0.615372,
+   "t2_emir_akisi_artik_15m_n12_k3.5_h8": -0.1215,
+   "t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun": 1.0,
+   "t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12": 0.536927
+  },
+  "t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12": {
+   "t2_emir_akisi_uyum_5m_n72_k3.5_h12": 0.78685,
+   "t2_emir_akisi_uyum_15m_n24_k3.5_h2": 0.754753,
+   "t2_emir_akisi_artik_15m_n12_k3.5_h8": 0.217915,
+   "t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun": 0.536927,
+   "t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12": 1.0
+  }
+ }
+}
+t2_emir_akisi_uyum_5m_n72_k3.5_h12 | DSR 0.0 DSR(benzersiz) 0.0 DSR(eğitim) 0.0 | {"gelistirme_egitim_net_pozitif": true, "dogrulama_net_pozitif": true, "dogrulama_2x_maliyette_net_pozitif": false, "dogrulama_sharpe_yeterli": false, "dogrulama_islem_sayisi": true, "egitim_alfa_pozitif": true, "dogrulama_alfa_pozitif": true, "aday": false}
+    {"yillik": {"2025": -0.043174, "2026": 0.066974}, "aktif_gun": 96, "en_iyi_10_gun_payi": 10.402242, "en_iyi_5_gun": {"2026-02-06": 0.055656, "2026-06-05": 0.028634, "2026-08-22": 0.027173, "2025-05-09": 0.019882, "2025-01-20": 0.016699}, "en_kotu_5_gun": {"2026-08-19": -0.052752, "2025-10-10": -0.040309, "2025-08-22": -0.029829, "2025-04-02": -0.02147, "2025-03-02": -0.020973}, "yon": {"-1": {"islem": 60, "toplam_net": -0.032927, "ort_brut_bps": -2.638524}, "1": {"islem": 87, "toplam_net": 0.054324, "ort_brut_bps": 32.42533}}, "bacak_getiri": {"BTCUSDT": 0.142048, "ETHUSDT": -0.161457, "SOLUSDT": 0.073313}, "maliyet_toplam": 0.0686, "fonlama_toplam": -0.001395}
+t2_emir_akisi_uyum_15m_n24_k3.5_h2 | DSR 0.0 DSR(benzersiz) 0.0 DSR(eğitim) 0.0 | {"gelistirme_egitim_net_pozitif": true, "dogrulama_net_pozitif": true, "dogrulama_2x_maliyette_net_pozitif": false, "dogrulama_sharpe_yeterli": false, "dogrulama_islem_sayisi": true, "egitim_alfa_pozitif": true, "dogrulama_alfa_pozitif": true, "aday": false}
+    {"yillik": {"2025": -0.009061, "2026": 0.035116}, "aktif_gun": 75, "en_iyi_10_gun_payi": 10.529053, "en_iyi_5_gun": {"2026-02-06": 0.074422, "2025-04-07": 0.035656, "2026-06-05": 0.033969, "2025-05-09": 0.025945, "2026-08-22": 0.025305}, "en_kotu_5_gun": {"2026-08-19": -0.070555, "2025-10-10": -0.049278, "2026-01-31": -0.039454, "2025-03-02": -0.031487, "2025-08-22": -0.022007}, "yon": {"-1": {"islem": 58, "toplam_net": -0.045396, "ort_brut_bps": -9.616124}, "1": {"islem": 86, "toplam_net": 0.077762, "ort_brut_bps": 40.785933}}, "bacak_getiri": {"BTCUSDT": 0.053171, "ETHUSDT": 0.003849, "SOLUSDT": 0.000948}, "maliyet_toplam": 0.0672, "fonlama_toplam": -0.00147}
+t2_emir_akisi_artik_15m_n12_k3.5_h8 | DSR 0.0 DSR(benzersiz) 0.0 DSR(eğitim) 0.0 | {"gelistirme_egitim_net_pozitif": true, "dogrulama_net_pozitif": false, "dogrulama_2x_maliyette_net_pozitif": false, "dogrulama_sharpe_yeterli": false, "dogrulama_islem_sayisi": true, "egitim_alfa_pozitif": true, "dogrulama_alfa_pozitif": false, "aday": false}
+    {"yillik": {"2025": -0.041676, "2026": 0.009721}, "aktif_gun": 175, "en_iyi_10_gun_payi": -3.520044, "en_iyi_5_gun": {"2026-08-22": 0.025788, "2025-10-10": 0.019755, "2025-02-18": 0.012281, "2026-07-14": 0.01079, "2025-05-09": 0.010234}, "en_kotu_5_gun": {"2025-08-22": -0.028705, "2026-08-19": -0.017867, "2025-03-02": -0.014355, "2026-02-18": -0.012045, "2025-04-06": -0.007827}, "yon": {"-1": {"islem": 107, "toplam_net": -0.007641, "ort_brut_bps": 11.742926}, "1": {"islem": 110, "toplam_net": -0.024065, "ort_brut_bps": 7.29449}}, "bacak_getiri": {"BTCUSDT": 0.049107, "ETHUSDT": -0.110727, "SOLUSDT": -0.041696}, "maliyet_toplam": 0.101267, "fonlama_toplam": -0.000966}
+t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun | DSR 0.0 DSR(benzersiz) 0.0 DSR(eğitim) 0.0 | {"gelistirme_egitim_net_pozitif": true, "dogrulama_net_pozitif": false, "dogrulama_2x_maliyette_net_pozitif": false, "dogrulama_sharpe_yeterli": false, "dogrulama_islem_sayisi": true, "egitim_alfa_pozitif": true, "dogrulama_alfa_pozitif": false, "aday": false}
+    {"yillik": {"2025": -0.090994, "2026": 0.041387}, "aktif_gun": 83, "en_iyi_10_gun_payi": -2.582163, "en_iyi_5_gun": {"2026-02-06": 0.042059, "2025-04-03": 0.015812, "2026-06-25": 0.015124, "2025-01-20": 0.014185, "2026-06-05": 0.012457}, "en_kotu_5_gun": {"2025-10-10": -0.050339, "2026-01-31": -0.027796, "2025-04-02": -0.025558, "2025-12-01": -0.014282, "2025-04-06": -0.01206}, "yon": {"1": {"islem": 139, "toplam_net": -0.052991, "ort_brut_bps": 12.563144}}, "bacak_getiri": {"BTCUSDT": -0.012779, "ETHUSDT": -0.192681, "SOLUSDT": 0.041549}, "maliyet_toplam": 0.1112, "fonlama_toplam": 0.0}
+t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12 | DSR 0.0 DSR(benzersiz) 0.0 DSR(eğitim) 0.0 | {"gelistirme_egitim_net_pozitif": true, "dogrulama_net_pozitif": true, "dogrulama_2x_maliyette_net_pozitif": true, "dogrulama_sharpe_yeterli": false, "dogrulama_islem_sayisi": true, "egitim_alfa_pozitif": true, "dogrulama_alfa_pozitif": true, "aday": false}
+    {"yillik": {"2025": 0.017336, "2026": 0.02206}, "aktif_gun": 47, "en_iyi_10_gun_payi": 3.80497, "en_iyi_5_gun": {"2026-02-06": 0.049393, "2025-05-09": 0.024797, "2025-09-22": 0.01176, "2026-06-04": 0.011643, "2025-04-03": 0.011451}, "en_kotu_5_gun": {"2026-08-19": -0.05834, "2025-10-10": -0.018985, "2025-02-03": -0.015344, "2025-06-13": -0.014696, "2025-04-02": -0.009028}, "yon": {"-1": {"islem": 35, "toplam_net": -0.01784, "ort_brut_bps": -1.564263}, "1": {"islem": 44, "toplam_net": 0.056118, "ort_brut_bps": 52.299687}}, "bacak_getiri": {"BTCUSDT": 0.069982, "ETHUSDT": -0.165701, "SOLUSDT": 0.223591}, "maliyet_toplam": 0.036867, "fonlama_toplam": -0.000267}

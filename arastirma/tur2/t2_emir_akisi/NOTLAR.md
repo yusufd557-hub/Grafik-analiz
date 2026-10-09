@@ -130,3 +130,114 @@ maliyetle (dev_train). Izgara:
 - `uyumsuzluk` 5m: n {36, 72, 144} × k {2.5, 3, 3.5} × hold {6, 12, 24}.
 - Merkez noktalarda L {1000, 4000}, `exit_z` erken çıkış, tek yön (uzun /
   kısa) ayrıştırması, limit emir yürütmesi ve spot sürümü ayrı adımda.
+
+## Kesinti ve devam (2) (9 Ekim 2026, 16:30 UTC)
+
+Çalışma ikinci kez durdu (kullanım sınırı/oturum kesintisi; son defter satırı
+11:54 UTC). Hiçbir dev_valid değerlendirmesi yapılmadı; defterde 657 satır var,
+hepsi `dev_train` (288 + 135 satır 1×; Aşama 2b'nin 117 yapılandırması 1× ve 2×
+= 234 satır). Kaldığı yerden sürdürülüyor; mevcut satırlar deneme sayılır,
+silinmez, değiştirilmez.
+
+Durum kontrolü:
+
+- `tarama3.py` dört grubu da bitirmiş: artik15 36, artik5 27, uyum15 27,
+  uyum5 27 = 117 yapılandırma; `tarama3.csv` 117 satır + başlık; defterle
+  birebir (117 × 2 satır). Kesik tarama yok.
+- `tarama1.csv` başlığı 25 sütunlu, bacak sütunları (`leg_*`) olan satırlar
+  28 alanlı; dosya bozuk değil, okurken başlık `tarama2.csv`'den alınmalı.
+
+### Aşama 2b sonuçları (dev_train, vadeli PORT3, piyasa emri; `tarama3.csv`)
+
+- `uyumsuzluk` devam: k=3,5 bölgesi 5m ve 15m'de her n'de güçlü ve komşu
+  parametrelerde düzgün. Örn. 5m n72 k3,5 h12: %+450, Sharpe 2,26, düşüş
+  %−16, 398 işlem, alfa %+36,5 (t 5,2), beta −0,01, brüt 140 bps/işlem,
+  2× maliyette %+357; yılların hepsi pozitif (2020 +34, 2021 +140, 2022 +20,
+  2023 +16, 2024 +22 %). 15m n24 k3,5 h2: %+369, Sharpe 2,02, 479 işlem.
+  15m n48 belirgin zayıf (Sharpe 0,7–1,0). k=2,5 işlem sayısını 2–3 katına
+  çıkarıyor, brüt/işlem 20–60 bps'e düşüyor, 2× maliyette çoğu zararda.
+- `akis_artik` devam: k ≥ 3'te 5m n144 ve 15m n12/n24 bölgeleri pozitif,
+  yıllar arası tutarlı (5m n144 k3 h24: %+199, Sharpe 1,44, alfa %+26,
+  865 işlem, brüt 54 bps). 15m n48 ve k=2,5 zayıf/negatif.
+- Uyarı: Aşama 2a'daki "akışsız fiyat dönüşü" kontrolü aynı k ile yapıldı;
+  `uyumsuzluk` skorunun ölçeği farklı olduğundan aynı k'da işlem sayısı
+  2–2,5 kat az (örn. 5m n72 k3 h12: getiri 1645, uyumsuzluk 693 işlem).
+  Adil karşılaştırma için işlem sayısı eşlenmiş kontrol gerekiyor.
+
+### Aşama 2c planı (sonuçlar görülmeden önce yazıldı)
+
+Hepsi dev_train, 1× ve 2× maliyet:
+
+1. Eşlenmiş kontrol: `getiri` dönüş, k {4, 5}, merkez noktalarda
+   (5m n72 h12, 5m n36 h24, 5m n144 h12, 15m n24 h2, 15m n24 h4).
+   Akış, eşit sıklıktaki aşırı fiyat dönüşüne bilgi katıyor mu?
+2. Dayanıklılık (uyumsuzluk 5m n72 k3,5 h12; 15m n24 k3,5 h2; 5m n36 k3,5 h24;
+   akis_artik 5m n144 k3 h24; 15m n12 k3,5 h8): L {1000, 4000}, k 4,
+   tek yön (uzun / kısa), `exit_z` 0.
+3. Limit emir yürütmesi (uyumsuzluk 5m n72 k3,5 h12 ve 15m n24 k3,5 h2):
+   giriş limiti 0 / 10 / 30 bps, çıkış piyasa; giriş piyasa + çıkış limiti
+   10 bps (zaman aşımı 3 bar). Ters seçilim (dolmayan işlemlerin iyi
+   olanlar olması) ölçülür.
+4. Spot sürümü (yalnız uzun, spot maliyeti) aynı merkezlerde.
+5. 1h uyumsuzluk: n {6, 12} × k {3, 3,5} × hold {1, 3}.
+
+### Aşama 2c sonuçları (dev_train, 1× ve 2×; `tarama4.csv`, `tani1.log`, `tani2.log`)
+
+61 yapılandırma (`tarama4.py`: kontrol 10, dayanım 30, limit 8, spot 5, 1h 8).
+Bu aşamadan sonra defterde 779 satır: 601 dev_train 1×, 178 dev_train 2×.
+
+- **Eşlenmiş kontrol (en önemli bulgu):** akışsız fiyat dönüşü, işlem sayısı
+  eşlenince `uyumsuzluk` kadar iyi. 5m n72 h12: getiri dönüş k5 %+413,
+  Sharpe 2,29, 296 işlem, alfa %+35 (uyumsuzluk k3,5: %+450, 2,26, 398 işlem,
+  alfa %+36,5). 15m n24 h2: getiri k5 Sharpe 1,85 / uyumsuzluk 2,02.
+  5m n36 h24: getiri k5 1,91 / uyumsuzluk 1,93. Günlük getiri korelasyonu
+  uyumsuzluk 5m ↔ getiri k5 = 0,79. Tanı 1: `uyumsuzluk > 3,5` olaylarının
+  kârı, aynı anda fiyat z-skoru < −4 olan olaylardan geliyor (+139 bps,
+  n=1822 bar); fiyat düşüşü olmadan akış güçlü olan olaylar −32 bps (n=787).
+  Fiyat z < −4 olaylarında akış üçte birliklerine göre ileri getiri monoton
+  değil (+56 / +19 / +115 bps). **Sonuç: uyumsuzluk kenarının çoğu aşırı
+  fiyat düşüşünden dönüş (çöküş sonrası tepki); akışın ek katkısı küçük ve
+  belirsiz.**
+- `akis_artik` (fiyattan arındırılmış akış, devam): 15m n12 k3,5 h8 L'ye
+  dayanıklı (L1000 Sharpe 1,36, L4000 1,50, k4 1,52); 5m n144 k3 h24 L'ye
+  dayanıksız (L1000 0,37, L4000 0,29) → elendi. Kenarın tamamına yakını uzun
+  yönde (uzun %+163, kısa %+5). Spot sürümü çalışmıyor (Sharpe 0,40).
+  Kâr çok yoğun: en iyi 20 gün toplam log getirinin %99'u.
+- Yön: bütün merkezlerde kenar uzun yönde (çöküş sonrası alım); kısa yön
+  küçük pozitif (Sharpe 0,2–0,7).
+- `exit_z` 0: küçük iyileşme (5m n72: Sharpe 2,25 / %+470), merkez korunur.
+- Limit emir: giriş limiti 0/10/30 bps ya da çıkış limiti 10 bps sonucu
+  pek değiştirmiyor (5m n72: Sharpe 2,20–2,25; 15m n24: 1,95–2,00). Brüt
+  kenar (100–140 bps/işlem) maliyetin (13–14 bps/işlem) çok üstünde
+  olduğundan limit emre gerek yok; ters seçilim de görülmedi.
+- Spot (yalnız uzun): uyumsuzluk 5m n72 k3,5 h12 %+290, Sharpe 2,21,
+  321 işlem, alfa %+29, 2× %+202.
+- 1h uyumsuzluk: n6 k3 h1 Sharpe 1,29; n12 zayıf (0,28–0,52). 5m/15m'nin
+  gerisinde.
+- Yoğunlaşma (tani2): bütün adaylarda kârın büyük kısmı az sayıda çöküş
+  gününden geliyor (uyumsuzluk 5m: en iyi 10 gün %46, en iyi 20 gün %68;
+  aktif gün 225 / ~1650). 2× maliyet testi geçiliyor ama çöküş anlarında
+  gerçek kayma 2 bps'ten büyük olabilir; bu, varsayımın en zayıf yeri.
+
+## Dondurma kararı (9 Ekim 2026, dev_valid değerlendirmesinden ÖNCE yazıldı)
+
+Seçim yalnız dev_train sonuçlarına dayanır. Beş yapılandırma:
+
+| # | Ad | Piyasa | Aralık | Parametreler | Gerekçe (dev_train) |
+|---|---|---|---|---|---|
+| 1 | `t2_emir_akisi_uyum_5m_n72_k3.5_h12` | vadeli PORT3 | 5m | uyumsuzluk, n72, L2000, k3,5, devam, hold 12, iki yön, piyasa emri | Ailenin en güçlü bölgesinin merkezi: %+450, Sharpe 2,26, alfa %+36,5 (t 5,2), 2× %+357, 5 yılın hepsi pozitif; L, k, exit_z, limit komşuları Sharpe 1,79–2,25. |
+| 2 | `t2_emir_akisi_uyum_15m_n24_k3.5_h2` | vadeli PORT3 | 15m | uyumsuzluk, n24, L2000, k3,5, devam, hold 2 | Farklı zaman dilimi (1 ile korelasyon 0,59): %+369, Sharpe 2,02, alfa %+32; L1000/L4000 1,68/1,78, k4 1,77. |
+| 3 | `t2_emir_akisi_artik_15m_n12_k3.5_h8` | vadeli PORT3 | 15m | akis_artik, n12, L2000, k3,5, devam, hold 8 | Fiyattan arındırılmış saf akış sinyali: %+174, Sharpe 1,48, alfa %+23,5, 2× %+105, 5 yıl pozitif; L1000/L4000 1,36/1,50, k4 1,52. (5m n144 L'ye dayanıksız olduğu için seçilmedi.) |
+| 4 | `t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun` | spot PORT3 | 5m | uyumsuzluk, n72, L2000, k3,5, devam, hold 12, yalnız uzun | Spot (kaldıraçsız, fonlamasız) uygulama: %+290, Sharpe 2,21, alfa %+29, 2× %+202. |
+| 5 | `t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12` | vadeli PORT3 | 5m | getiri (akışsız), n72, L2000, k5, dönüş, hold 12 | **Akışsız kontrol**, önceden kayda geçirilmiş: işlem sayısı eşlenmiş fiyat dönüşü (%+413, Sharpe 2,29). 1 ile karşılaştırılarak akışın dev_valid'de ek katkı yapıp yapmadığı ölçülür. |
+
+Her biri `evaluate(spec)` ile bir kez (dev_train + dev_valid, 1× ve 2×)
+değerlendirilir, ardından `candidate_check`; `assert_causal` değerlendirmeden
+önce çalıştırılır. Deflated Sharpe: deneme sayısı = defterdeki
+`pencere == "dev_train"` ve `maliyet_kat == 1.0` satırları. dev_valid'den sonra
+parametre değişikliği yapılmaz.
+
+Beklenti (önceden yazılıyor): Kâr çöküş günlerine bağlı olduğundan dev_valid
+sonucu bu dönemdeki ani düşüşlerin sayısına çok duyarlı olacak; az çöküş
+olursa işlem sayısı ve getiri düşük kalabilir. 1 ile 5 arasındaki fark,
+akışın ek bilgisinin ölçüsüdür.

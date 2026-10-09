@@ -1,0 +1,60 @@
+== t2_lead_lag_baz_15m_kendi_w192_e5_t8 x1.0: toplam=+1.8894 islem=448 ilk5_cikinca=+0.9664 ilk10_cikinca=+0.6341
+   yillik: 2020:+0.106(n=102) 2021:+0.913(n=100) 2022:+0.137(n=68) 2023:+0.171(n=87) 2024:+0.027(n=91)
+   bacak: futures:BTCUSDT:n=188,toplam=+0.231 futures:ETHUSDT:n=174,toplam=+0.305 futures:SOLUSDT:n=86,toplam=+0.565
+   en iyi 5: 2021-05-19 13:00 SOL +1 +0.1697; 2021-09-07 15:00 SOL +1 +0.0693; 2022-12-29 21:30 SOL +1 +0.0640; 2021-05-19 13:00 ETH +1 +0.0580; 2020-03-13 00:00 ETH +1 +0.0435
+   en kötü 3: 2020-03-12 10:45 ETH +1 -0.0315; 2023-01-14 00:45 SOL -1 -0.0344; 2022-11-08 17:15 SOL +1 -0.0492
+   yön: -1:n=278,toplam=+0.330,ort=+11.9bps +1:n=170,toplam=+0.772,ort=+45.4bps
+   yıl×yön toplam: 2020:[-1:+0.039,+1:+0.055] 2021:[-1:+0.189,+1:+0.500] 2022:[-1:+0.047,+1:+0.078] 2023:[-1:+0.015,+1:+0.151] 2024:[-1:+0.040,+1:-0.012]
+/home/user/grafik-analiz/arastirma/tur2/t2_lead_lag/inceleme2.py:30: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + d).groupby(d.index.to_period("M")).prod() - 1
+   aylık: pozitif ay oranı=0.65 (aktif ay 57), en iyi ay +0.331 (2021-05), en kötü ay -0.047 (2024-04)
+== t2_lead_lag_baz_15m_kendi_w192_e5_t4 x1.0: toplam=+1.4186 islem=465 ilk5_cikinca=+0.7778 ilk10_cikinca=+0.5090
+   yillik: 2020:+0.123(n=106) 2021:+0.459(n=103) 2022:+0.160(n=70) 2023:+0.168(n=91) 2024:+0.090(n=95)
+   bacak: futures:BTCUSDT:n=193,toplam=+0.102 futures:ETHUSDT:n=182,toplam=+0.333 futures:SOLUSDT:n=90,toplam=+0.471
+   en iyi 5: 2020-03-13 02:15 ETH +1 +0.1124; 2021-05-19 13:00 SOL +1 +0.0839; 2022-12-29 21:30 SOL +1 +0.0437; 2021-05-19 12:45 SOL -1 +0.0397; 2021-09-07 15:00 SOL +1 +0.0397
+   en kötü 3: 2021-02-08 12:45 BTC -1 -0.0255; 2020-03-12 10:45 BTC +1 -0.0272; 2022-11-08 17:15 SOL +1 -0.0482
+   yön: -1:n=288,toplam=+0.343,ort=+11.9bps +1:n=177,toplam=+0.562,ort=+31.8bps
+   yıl×yön toplam: 2020:[-1:+0.006,+1:+0.117] 2021:[-1:+0.174,+1:+0.212] 2022:[-1:+0.049,+1:+0.098] 2023:[-1:+0.050,+1:+0.110] 2024:[-1:+0.064,+1:+0.026]
+/home/user/grafik-analiz/arastirma/tur2/t2_lead_lag/inceleme2.py:30: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + d).groupby(d.index.to_period("M")).prod() - 1
+   aylık: pozitif ay oranı=0.58 (aktif ay 57), en iyi ay +0.166 (2021-09), en kötü ay -0.038 (2024-04)
+== t2_lead_lag_baz_5m_kendi_w288_e6_t12 x1.0: toplam=+1.0029 islem=609 ilk5_cikinca=+0.5529 ilk10_cikinca=+0.3397
+   yillik: 2020:-0.031(n=126) 2021:+0.154(n=126) 2022:+0.277(n=122) 2023:+0.231(n=126) 2024:+0.139(n=109)
+   bacak: futures:BTCUSDT:n=272,toplam=+0.117 futures:ETHUSDT:n=230,toplam=+0.162 futures:SOLUSDT:n=107,toplam=+0.413
+   en iyi 5: 2021-05-19 12:50 SOL +1 +0.0819; 2024-01-03 12:10 SOL +1 +0.0561; 2022-11-11 14:30 SOL +1 +0.0473; 2021-09-07 14:30 SOL -1 +0.0388; 2021-04-18 03:35 ETH +1 +0.0375
+   en kötü 3: 2022-11-08 17:15 SOL +1 -0.0497; 2021-05-19 12:55 ETH -1 -0.0517; 2021-09-07 15:10 SOL -1 -0.0760
+   yön: -1:n=340,toplam=-0.027,ort=-0.8bps +1:n=269,toplam=+0.719,ort=+26.7bps
+   yıl×yön toplam: 2020:[-1:-0.051,+1:+0.017] 2021:[-1:-0.148,+1:+0.279] 2022:[-1:+0.057,+1:+0.187] 2023:[-1:+0.089,+1:+0.121] 2024:[-1:+0.025,+1:+0.115]
+/home/user/grafik-analiz/arastirma/tur2/t2_lead_lag/inceleme2.py:30: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + d).groupby(d.index.to_period("M")).prod() - 1
+   aylık: pozitif ay oranı=0.71 (aktif ay 59), en iyi ay +0.144 (2022-05), en kötü ay -0.071 (2024-04)
+== t2_lead_lag_baz_5m_hepsi_w288_e5_t12 x1.0: toplam=+1.2827 islem=420 ilk5_cikinca=+0.7318 ilk10_cikinca=+0.4919
+   yillik: 2020:-0.028(n=18) 2021:+0.429(n=102) 2022:+0.073(n=102) 2023:+0.264(n=111) 2024:+0.211(n=87)
+   bacak: futures:BTCUSDT:n=140,toplam=+0.129 futures:ETHUSDT:n=140,toplam=+0.205 futures:SOLUSDT:n=140,toplam=+0.521
+   en iyi 5: 2021-09-07 15:00 SOL +1 +0.0787; 2021-05-19 12:50 SOL +1 +0.0628; 2024-01-03 12:10 SOL +1 +0.0548; 2022-05-12 07:15 SOL +1 +0.0492; 2021-09-07 14:30 SOL -1 +0.0388
+   en kötü 3: 2022-11-08 18:05 ETH +1 -0.0234; 2021-02-08 12:45 BTC -1 -0.0253; 2021-02-22 14:15 SOL -1 -0.0271
+   yön: -1:n=225,toplam=-0.014,ort=-0.6bps +1:n=195,toplam=+0.869,ort=+44.6bps
+   yıl×yön toplam: 2020:[-1:-0.040,+1:+0.013] 2021:[-1:-0.088,+1:+0.448] 2022:[-1:-0.002,+1:+0.080] 2023:[-1:+0.068,+1:+0.173] 2024:[-1:+0.048,+1:+0.154]
+/home/user/grafik-analiz/arastirma/tur2/t2_lead_lag/inceleme2.py:30: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + d).groupby(d.index.to_period("M")).prod() - 1
+   aylık: pozitif ay oranı=0.65 (aktif ay 46), en iyi ay +0.194 (2021-09), en kötü ay -0.059 (2020-12)
+== t2_lead_lag_baz_15m_kendi_w96_e3.5_t16 x1.0: toplam=+2.2442 islem=1446 ilk5_cikinca=+1.0900 ilk10_cikinca=+0.6001
+   yillik: 2020:-0.038(n=334) 2021:+1.153(n=343) 2022:+0.347(n=246) 2023:+0.087(n=267) 2024:+0.069(n=256)
+   bacak: futures:BTCUSDT:n=539,toplam=+0.136 futures:ETHUSDT:n=574,toplam=+0.447 futures:SOLUSDT:n=333,toplam=+0.703
+   en iyi 5: 2021-05-19 13:00 SOL +1 +0.1277; 2021-02-22 14:15 SOL +1 +0.1126; 2021-04-18 03:30 SOL +1 +0.0769; 2021-01-04 06:30 ETH -1 +0.0748; 2021-06-22 13:00 SOL +1 +0.0688
+   en kötü 3: 2020-03-12 10:30 BTC +1 -0.0547; 2023-07-13 15:30 SOL -1 -0.0567; 2022-05-11 09:00 SOL +1 -0.0635
+   yön: -1:n=846,toplam=+0.004,ort=+0.0bps +1:n=600,toplam=+1.283,ort=+21.4bps
+   yıl×yön toplam: 2020:[-1:-0.048,+1:+0.007] 2021:[-1:+0.012,+1:+0.831] 2022:[-1:+0.188,+1:+0.127] 2023:[-1:-0.154,+1:+0.259] 2024:[-1:+0.006,+1:+0.060]
+/home/user/grafik-analiz/arastirma/tur2/t2_lead_lag/inceleme2.py:30: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + d).groupby(d.index.to_period("M")).prod() - 1
+   aylık: pozitif ay oranı=0.63 (aktif ay 60), en iyi ay +0.228 (2021-05), en kötü ay -0.160 (2020-11)
+== t2_lead_lag_baz_15m_kendi_w96_e4_t4 x1.0: toplam=+1.2129 islem=979 ilk5_cikinca=+0.6160 ilk10_cikinca=+0.3357
+   yillik: 2020:-0.107(n=234) 2021:+0.641(n=221) 2022:+0.202(n=161) 2023:+0.156(n=184) 2024:+0.087(n=179)
+   bacak: futures:BTCUSDT:n=392,toplam=+0.049 futures:ETHUSDT:n=384,toplam=+0.115 futures:SOLUSDT:n=203,toplam=+0.679
+   en iyi 5: 2020-03-13 02:15 BTC +1 +0.1051; 2021-05-19 13:00 SOL +1 +0.0839; 2021-01-22 01:15 SOL +1 +0.0471; 2022-11-11 14:30 SOL +1 +0.0467; 2024-04-13 21:30 SOL +1 +0.0430
+   en kötü 3: 2022-11-08 17:15 SOL +1 -0.0482; 2020-03-12 10:30 BTC +1 -0.0483; 2020-03-12 23:30 BTC +1 -0.0656
+   yön: -1:n=583,toplam=+0.176,ort=+3.0bps +1:n=396,toplam=+0.666,ort=+16.8bps
+   yıl×yön toplam: 2020:[-1:-0.087,+1:-0.008] 2021:[-1:+0.141,+1:+0.370] 2022:[-1:+0.079,+1:+0.107] 2023:[-1:+0.004,+1:+0.149] 2024:[-1:+0.040,+1:+0.048]
+/home/user/grafik-analiz/arastirma/tur2/t2_lead_lag/inceleme2.py:30: UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+  m = (1 + d).groupby(d.index.to_period("M")).prod() - 1
+   aylık: pozitif ay oranı=0.52 (aktif ay 60), en iyi ay +0.170 (2021-05), en kötü ay -0.069 (2020-03)
