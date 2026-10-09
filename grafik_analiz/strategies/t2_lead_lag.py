@@ -333,6 +333,57 @@ def make_spec(name: str, interval: str, description: str = "", **params) -> Stra
     )
 
 
+_COINS3 = ["BTCUSDT", "ETHUSDT", "SOLUSDT"]
+_LIMIT = dict(limit_bps=2.0, limit_mod="tum", limit_bar=2)
+
+DONDURULAN = [
+    (
+        "baz_5m_kendi_w288_e6_t12_limt2b2",
+        "5m",
+        dict(tur="baz", islem=_COINS3, kaynak="kendi", win=288, esik=6.0, tut=12, **_LIMIT),
+        "Coinin kendi bazı (vadeli/spot log fiyat farkı) 1 günlük kayan z-skoru |z|>6: iskontoda uzun, primde "
+        "kısa, 12 bar (1 saat) tut; 5m, iki yön, limit emir.",
+    ),
+    (
+        "baz_15m_kendi_w192_e5_t8_limt2b2",
+        "15m",
+        dict(tur="baz", islem=_COINS3, kaynak="kendi", win=192, esik=5.0, tut=8, **_LIMIT),
+        "Coinin kendi bazı 2 günlük kayan z-skoru |z|>5, 8 bar (2 saat) tut; 15m, iki yön, limit emir.",
+    ),
+    (
+        "sv_5m_hepsi_k6_e4_t36_limt2b2",
+        "5m",
+        dict(tur="spot_vadeli", islem=_COINS3, kaynak="hepsi", k=6, esik=4.0, tut=36, **_LIMIT),
+        "Spot öncülüğü: üç coinin son 6 barlık (30 dk) spot−vadeli getiri farkı z-skorlarının ortalaması |z|>4 "
+        "→ vadeli o yönde, 36 bar (3 saat) tut; 5m, iki yön, limit emir.",
+    ),
+    (
+        "baz_5m_hepsi_w288_e5_t12_uzun_limt2b2",
+        "5m",
+        dict(tur="baz", islem=_COINS3, kaynak="hepsi", win=288, esik=5.0, tut=12, taraf="uzun", **_LIMIT),
+        "Üç coinin baz z-skorlarının ortalaması < −5 (vadeli piyasa genelinde iskontoda) → üç vadeliye uzun, "
+        "12 bar tut; 5m, yalnız uzun, limit emir.",
+    ),
+    (
+        "sv_5m_hepsi_k4_e4_t12_uzun_limt2b2",
+        "5m",
+        dict(tur="spot_vadeli", islem=_COINS3, kaynak="hepsi", k=4, esik=4.0, tut=12, taraf="uzun", **_LIMIT),
+        "Spot öncülüğü: üç coinin son 4 barlık spot−vadeli getiri farkı z ortalaması > 4 → üç vadeliye uzun, "
+        "12 bar tut; 5m, yalnız uzun, limit emir.",
+    ),
+]
+"""Dondurulan yapılandırmalar (ad, zaman dilimi, parametreler, açıklama). Seçim yalnız dev_train'e göre;
+gerekçe ``arastirma/tur2/t2_lead_lag/NOTLAR.md`` (dondurma kararı)."""
+
+SONUC: dict[str, str] = {}
+"""İç doğrulama sonucu (candidate_check), değerlendirmeden sonra açıklamaya eklenir; parametreleri değiştirmez."""
+
+
 def specs() -> list[StrategySpec]:
     """Dondurulmuş ve iç doğrulamada bir kez ölçülen yapılandırmalar (RAPOR.md)."""
-    return []
+    out = []
+    for ad, iv, params, aciklama in DONDURULAN:
+        sonuc = SONUC.get(ad, "")
+        desc = aciklama + (f" İç doğrulama: {sonuc}" if sonuc else "")
+        out.append(make_spec(ad, iv, description=desc, **{k: (list(v) if isinstance(v, list) else v) for k, v in params.items()}))
+    return out

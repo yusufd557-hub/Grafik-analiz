@@ -158,3 +158,62 @@ Aşama 1'den çıkan tablo (yalnız dev_train, 1×):
 4. Limit emir: giriş/çıkış/tüm, 0–5 bps, piyasa emrine dönüş 1–6 bar.
 5. Umut veren bölgelerde 2× maliyet ve eğitim içi yıllık tutarlılık.
 6. Dondurma ölçütleri yukarıdaki planla aynı.
+
+### Aşama 2 sonuçları (yalnız dev_train)
+
+- `tarama4` (baz, 87 yeni): 1h hariç neredeyse bütün yapılandırmalar
+  pozitif; 5m/15m'de net +%35 … +%224, Sharpe 0,5–1,3, alfa t 1,0–3,2, beta
+  ≈ 0. Kâr ağırlıkla uzun işlemlerden (vadeli spota göre iskontoluyken
+  alış); 2021–2024'ün her yılı pozitif, 2020 ≈ 0.
+- `tarama5` (spot_vadeli "hepsi" komşuluğu, 70 yeni): k ≥ 3 ve eşik ≥ 4
+  bölgesinin tamamı pozitif (Sharpe 0,5–1,4); k = 2 ve düşük eşik zayıf.
+- `tarama6` (limit ve yalnız-uzun, 35): limit emir neti az değiştiriyor,
+  maliyeti 1/3'e indiriyor (tüm değişimlerde 2 bps, 2 bar sonra piyasa
+  emri: `limt2b2`). Yalnız-uzun 5m baz ve sv k=4'te Sharpe'ı artırıyor.
+- `tarama7` (BTC bazı → ETH/SOL, 4): pozitif ama coinin kendi bazından zayıf.
+- `tarama8`/`tarama10` (2× maliyet, 17): hepsi pozitif.
+- `tarama9` (yalnız-uzun komşuluğu + uzun/limit birleşimi, 22 yeni): 18
+  komşunun hepsi pozitif (Sharpe 1,15–1,72).
+- Eğitim içi yıllık inceleme: `inceleme2a/b/c.txt`. En iyi işlemler
+  likidasyon dalgalarında (2021-05-19, 2021-09-07, 2022-05-12, 2022-11-08,
+  2024-01-03); en iyi 10 işlem çıkınca bile seçilenlerin hepsi pozitif
+  kalıyor (+%34 … +%68).
+
+Defter: 361 dev_train 1× satırı + 17 dev_train 2× satırı; dev_valid satırı yok.
+
+## Dondurma kararı (9 Ekim 2026, dev_valid değerlendirmesinden ÖNCE)
+
+Beş yapılandırma donduruldu. Hepsi USDⓈ-M vadeli BTC/ETH/SOL, bacak başına
+1/3 sermaye, limit emir (`limit_bps=2, limit_mod="tum", limit_bar=2`: her
+pozisyon değişimi sinyal barının kapanışından 2 bps iyi fiyatla limit emirle
+denenir, 2 bar dolmazsa piyasa emri). Seçim yalnız dev_train'e göre; tasarım
+2 sinyal türü × (iki yön / yalnız uzun) + 15m'lik bir baz sürümü:
+
+| # | Ad (`t2_lead_lag_` önekiyle) | Tür | dev_train 1× net / Sharpe / alfa / alfa t / işlem | 2× net / Sharpe |
+|---|---|---|---|---|
+| 1 | `baz_5m_kendi_w288_e6_t12_limt2b2` | baz, coinin kendi bazı, iki yön | +%98,4 / 1,29 / +0,155 / 3,12 / 606 | +%80,0 / 1,12 |
+| 2 | `baz_15m_kendi_w192_e5_t8_limt2b2` | baz 15m, kendi, iki yön | +%183,1 / 1,17 / +0,250 / 2,92 / 446 | +%164,3 / 1,10 |
+| 3 | `sv_5m_hepsi_k6_e4_t36_limt2b2` | spot öncülüğü, üç coin ortalaması, iki yön | +%193,2 / 1,29 / +0,260 / 3,30 / 198 | +%183,3 / 1,26 |
+| 4 | `baz_5m_hepsi_w288_e5_t12_uzun_limt2b2` | baz, üç coin ortalaması, yalnız uzun | +%137,2 / 1,66 / +0,198 / 4,15 / 195 | +%129,7 / 1,62 |
+| 5 | `sv_5m_hepsi_k4_e4_t12_uzun_limt2b2` | spot öncülüğü, üç coin, yalnız uzun | +%153,0 / 1,36 / +0,230 / 3,65 / 132 | +%147,6 / 1,34 |
+
+Gerekçe:
+
+- Bölgeler komşulukta dayanıklı (bütün komşular pozitif), 2021–2024'ün her
+  yılında pozitif, 2× maliyette pozitif, alfa t > 2,9, beta ≈ 0.
+- En yüksek tek sonuç yerine bölgenin ortasından seçildi (ör. baz 5m kendi
+  e6/t12; e4–e6 ve t12–t48 arası hepsi pozitif).
+- İki yönlü sürümler (1–3) aile tanımına uygun ana sınama; yalnız-uzun
+  sürümler (4–5) eğitimde kârın uzun taraftan geldiği gözlemine dayanıyor ve
+  bu seçim bir çoklu deneme olarak raporlanır.
+- Hepsi aynı olaylardan (likidasyon dalgası, vadeli iskontosu) beslendiği
+  için birbirleriyle yüksek korelasyonlu olmaları beklenir; bağımsız kanıt
+  sayılmazlar.
+
+Riskler (önceden yazılır): kâr az sayıda büyük olaya bağlı; dev_valid'de
+böyle olay olmazsa sonuç sıfıra yakın ya da negatif çıkabilir. Yalnız-uzun
+sürümler ani düşüşlerin devam ettiği durumda zarar eder.
+
+Sonraki adım: `dogrulama.py` her yapılandırmayı bir kez `evaluate(spec)` ile
+ölçer, `candidate_check` ve `assert_causal` uygular. Sonuçtan sonra parametre
+değişmez.

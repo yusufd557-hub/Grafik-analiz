@@ -32,3 +32,4 @@
 16:37:16 t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2 x1.0: net=+1.9318 sh=+1.29 dd=-0.156 n=198 alfa=+0.2599 beta=-0.027 t=+3.30 maliyet=0.034 fon=-0.005 (3s)
 16:37:20 t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limg0b1 x1.0: net=+1.8917 sh=+1.29 dd=-0.157 n=198 alfa=+0.2562 beta=-0.026 t=+3.29 maliyet=0.082 fon=-0.005 (4s)
 16:37:22 t2_lead_lag_sv_5m_hepsi_k6_e4_t36_uzun x1.0: net=+1.6676 sh=+1.27 dd=-0.157 n=90 alfa=+0.2417 beta=-0.030 t=+3.34 maliyet=0.042 fon=-0.002 (3s)
+16:37:26 t2_lead_lag_sv_5m_hepsi_k6_e4_t36_uzun_limc0bx x1.0: net=+1.6708 sh=+1.27 dd=-0.157 n=90 alfa=+0.2420 beta=-0.030 t=+3.34 maliyet=0.038 fon=-0.002 (4s)

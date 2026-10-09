@@ -1,0 +1,1292 @@
+{
+ "zaman": "2026-10-09T16:43:36+00:00",
+ "sonuclar": {
+  "t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2": {
+   "metrics": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 0.983982,
+      "cagr": 0.146788,
+      "sharpe": 1.286658,
+      "sortino": 0.776551,
+      "volatility": 0.111104,
+      "max_drawdown": -0.227887,
+      "trades": 606,
+      "win_rate": 0.519802,
+      "profit_factor": 1.30013,
+      "avg_trade": 0.000749,
+      "best_trade": 0.08198,
+      "total_without_best": 0.833658,
+      "exposure": 0.011217,
+      "total_costs": 0.097133,
+      "total_funding": -0.009215,
+      "p_value": 0.0018,
+      "skew": 4.948399,
+      "kurtosis": 76.420338,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.154951,
+      "beta": -0.010438,
+      "alfa_t": 3.119542,
+      "avg_bars": 13.037954
+     },
+     "2.0": {
+      "total_return": 0.800423,
+      "cagr": 0.124745,
+      "sharpe": 1.116168,
+      "sortino": 0.665883,
+      "volatility": 0.110652,
+      "max_drawdown": -0.228934,
+      "trades": 606,
+      "win_rate": 0.462046,
+      "profit_factor": 1.103274,
+      "avg_trade": 0.000282,
+      "best_trade": 0.081514,
+      "total_without_best": 0.664725,
+      "exposure": 0.011217,
+      "total_costs": 0.194267,
+      "total_funding": -0.009215,
+      "p_value": 0.0082,
+      "skew": 4.737266,
+      "kurtosis": 75.399306,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.135195,
+      "beta": -0.010168,
+      "alfa_t": 2.732566,
+      "avg_bars": 13.037954
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": 0.165785,
+      "cagr": 0.091789,
+      "sharpe": 1.125007,
+      "sortino": 0.643969,
+      "volatility": 0.080814,
+      "max_drawdown": -0.101046,
+      "trades": 113,
+      "win_rate": 0.548673,
+      "profit_factor": 1.48337,
+      "avg_trade": 0.000966,
+      "best_trade": 0.045091,
+      "total_without_best": 0.115487,
+      "exposure": 0.005818,
+      "total_costs": 0.017567,
+      "total_funding": -0.000143,
+      "p_value": 0.0404,
+      "skew": 12.834035,
+      "kurtosis": 268.172872,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": 0.089375,
+      "beta": 0.026042,
+      "alfa_t": 1.489036,
+      "avg_bars": 11.955752
+     },
+     "2.0": {
+      "total_return": 0.1455,
+      "cagr": 0.080872,
+      "sharpe": 1.002316,
+      "sortino": 0.567611,
+      "volatility": 0.080677,
+      "max_drawdown": -0.101112,
+      "trades": 113,
+      "win_rate": 0.477876,
+      "profit_factor": 1.224524,
+      "avg_trade": 0.000499,
+      "best_trade": 0.044624,
+      "total_without_best": 0.096567,
+      "exposure": 0.005818,
+      "total_costs": 0.035133,
+      "total_funding": -0.000143,
+      "p_value": 0.0716,
+      "skew": 12.58165,
+      "kurtosis": 265.768551,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": 0.079322,
+      "beta": 0.026059,
+      "alfa_t": 1.323906,
+      "avg_bars": 11.955752
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": true,
+    "dogrulama_2x_maliyette_net_pozitif": true,
+    "dogrulama_sharpe_yeterli": true,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": true,
+    "aday": true
+   },
+   "deflated_sharpe": 4e-06,
+   "deflated_sharpe_benzersiz": 4e-06,
+   "deflated_sharpe_egitim": 0.0,
+   "dokum_dev_valid": {
+    "yon": {
+     "-1": {
+      "islem": 55,
+      "toplam_net": 0.013196
+     },
+     "1": {
+      "islem": 58,
+      "toplam_net": 0.095915
+     }
+    },
+    "bacak": {
+     "futures:BTCUSDT": {
+      "islem": 30,
+      "toplam_net": 0.006077
+     },
+     "futures:ETHUSDT": {
+      "islem": 59,
+      "toplam_net": 0.032116
+     },
+     "futures:SOLUSDT": {
+      "islem": 24,
+      "toplam_net": 0.070917
+     }
+    },
+    "en_iyi_n_cikinca": {
+     "1": 0.115487,
+     "5": 0.03255,
+     "10": -0.030598
+    },
+    "aylik": {
+     "2025-01": -0.007926,
+     "2025-02": 0.009578,
+     "2025-03": 0.014562,
+     "2025-04": 0.005609,
+     "2025-05": 0.000454,
+     "2025-06": 0.000944,
+     "2025-07": 0.001432,
+     "2025-08": 0.004014,
+     "2025-09": 0.00336,
+     "2025-10": -0.00742,
+     "2025-11": 0.002372,
+     "2025-12": -0.001514,
+     "2026-01": -0.009902,
+     "2026-02": 0.10787,
+     "2026-03": 0.002127,
+     "2026-04": 0.00137,
+     "2026-05": -0.002054,
+     "2026-06": 0.029769,
+     "2026-07": 0.0,
+     "2026-08": 0.004878,
+     "2026-09": 5e-05
+    },
+    "en_iyi_5": [
+     {
+      "giris": "2026-02-06 00:20:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.045091
+     },
+     {
+      "giris": "2026-02-06 00:15:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": 0.023253
+     },
+     {
+      "giris": "2025-02-03 01:50:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": -1,
+      "net": 0.019378
+     },
+     {
+      "giris": "2026-06-04 02:05:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.019018
+     },
+     {
+      "giris": "2026-02-06 00:25:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": 1,
+      "net": 0.016374
+     }
+    ],
+    "en_kotu_5": [
+     {
+      "giris": "2025-02-03 00:45:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": -0.009837
+     },
+     {
+      "giris": "2025-10-10 21:25:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": -1,
+      "net": -0.01612
+     },
+     {
+      "giris": "2025-01-19 22:20:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": -0.016358
+     },
+     {
+      "giris": "2025-10-10 21:00:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -0.018665
+     },
+     {
+      "giris": "2025-10-10 21:25:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": -1,
+      "net": -0.019367
+     }
+    ]
+   }
+  },
+  "t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2": {
+   "metrics": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 1.830914,
+      "cagr": 0.231257,
+      "sharpe": 1.169591,
+      "sortino": 1.20219,
+      "volatility": 0.191756,
+      "max_drawdown": -0.200358,
+      "trades": 446,
+      "win_rate": 0.55157,
+      "profit_factor": 1.886937,
+      "avg_trade": 0.002036,
+      "best_trade": 0.169909,
+      "total_without_best": 1.419774,
+      "exposure": 0.017287,
+      "total_costs": 0.068633,
+      "total_funding": -0.016556,
+      "p_value": 0.0004,
+      "skew": 19.858705,
+      "kurtosis": 527.178023,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:45:00+00:00",
+      "alfa": 0.249582,
+      "beta": -0.022014,
+      "alfa_t": 2.915426,
+      "avg_bars": 8.961883
+     },
+     "2.0": {
+      "total_return": 1.643179,
+      "cagr": 0.214482,
+      "sharpe": 1.101953,
+      "sortino": 1.133138,
+      "volatility": 0.190966,
+      "max_drawdown": -0.203302,
+      "trades": 446,
+      "win_rate": 0.491031,
+      "profit_factor": 1.623388,
+      "avg_trade": 0.001569,
+      "best_trade": 0.169442,
+      "total_without_best": 1.260206,
+      "exposure": 0.017287,
+      "total_costs": 0.137267,
+      "total_funding": -0.016556,
+      "p_value": 0.0006,
+      "skew": 19.84614,
+      "kurtosis": 527.93959,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:45:00+00:00",
+      "alfa": 0.235664,
+      "beta": -0.021948,
+      "alfa_t": 2.764267,
+      "avg_bars": 8.961883
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": -0.087157,
+      "cagr": -0.050868,
+      "sharpe": -0.721149,
+      "sortino": -0.217644,
+      "volatility": 0.069033,
+      "max_drawdown": -0.163443,
+      "trades": 80,
+      "win_rate": 0.3875,
+      "profit_factor": 0.566232,
+      "avg_trade": -0.001506,
+      "best_trade": 0.028298,
+      "total_without_best": -0.112277,
+      "exposure": 0.009045,
+      "total_costs": 0.0115,
+      "total_funding": -0.001803,
+      "p_value": 0.8264,
+      "skew": -0.281391,
+      "kurtosis": 156.765362,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:45:00+00:00",
+      "alfa": -0.050636,
+      "beta": 0.014409,
+      "alfa_t": -0.97666,
+      "avg_bars": 8.425
+     },
+     "2.0": {
+      "total_return": -0.09759,
+      "cagr": -0.057094,
+      "sharpe": -0.811645,
+      "sortino": -0.249472,
+      "volatility": 0.069404,
+      "max_drawdown": -0.170299,
+      "trades": 80,
+      "win_rate": 0.3125,
+      "profit_factor": 0.476887,
+      "avg_trade": -0.001973,
+      "best_trade": 0.027831,
+      "total_without_best": -0.122025,
+      "exposure": 0.009045,
+      "total_costs": 0.023,
+      "total_funding": -0.001803,
+      "p_value": 0.8562,
+      "skew": -0.601993,
+      "kurtosis": 155.590781,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:45:00+00:00",
+      "alfa": -0.057184,
+      "beta": 0.014412,
+      "alfa_t": -1.096982,
+      "avg_bars": 8.425
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": false,
+    "aday": false
+   },
+   "deflated_sharpe": 0.0,
+   "deflated_sharpe_benzersiz": 0.0,
+   "deflated_sharpe_egitim": 0.0,
+   "dokum_dev_valid": {
+    "yon": {
+     "-1": {
+      "islem": 44,
+      "toplam_net": -0.07129
+     },
+     "1": {
+      "islem": 36,
+      "toplam_net": -0.049186
+     }
+    },
+    "bacak": {
+     "futures:BTCUSDT": {
+      "islem": 25,
+      "toplam_net": -0.039767
+     },
+     "futures:ETHUSDT": {
+      "islem": 37,
+      "toplam_net": -0.091628
+     },
+     "futures:SOLUSDT": {
+      "islem": 18,
+      "toplam_net": 0.010919
+     }
+    },
+    "en_iyi_n_cikinca": {
+     "1": -0.112277,
+     "5": -0.164106,
+     "10": -0.188232
+    },
+    "aylik": {
+     "2025-01": -0.006117,
+     "2025-02": -0.054453,
+     "2025-03": -0.007338,
+     "2025-04": -0.015391,
+     "2025-05": 0.000834,
+     "2025-06": 0.002485,
+     "2025-07": -0.002563,
+     "2025-08": -0.014027,
+     "2025-09": 0.003071,
+     "2025-10": -0.041769,
+     "2025-11": -0.019718,
+     "2025-12": 0.0,
+     "2026-01": -0.007776,
+     "2026-02": 0.055855,
+     "2026-03": 0.000746,
+     "2026-04": 0.00423,
+     "2026-05": -0.002363,
+     "2026-06": 0.017102,
+     "2026-07": -0.000805,
+     "2026-08": 0.001407,
+     "2026-09": 0.0
+    },
+    "en_iyi_5": [
+     {
+      "giris": "2026-02-06 00:30:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.028298
+     },
+     {
+      "giris": "2026-02-06 00:15:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": 0.026059
+     },
+     {
+      "giris": "2025-10-10 21:00:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": -1,
+      "net": 0.019439
+     },
+     {
+      "giris": "2025-01-19 20:00:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": -1,
+      "net": 0.007732
+     },
+     {
+      "giris": "2025-01-19 21:30:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": -1,
+      "net": 0.007506
+     }
+    ],
+    "en_kotu_5": [
+     {
+      "giris": "2025-08-22 14:30:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": -1,
+      "net": -0.015705
+     },
+     {
+      "giris": "2025-10-10 21:30:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": -1,
+      "net": -0.016349
+     },
+     {
+      "giris": "2025-10-10 21:00:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -0.021736
+     },
+     {
+      "giris": "2025-10-10 21:30:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": -1,
+      "net": -0.022856
+     },
+     {
+      "giris": "2025-02-03 01:00:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -0.038999
+     }
+    ]
+   }
+  },
+  "t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2": {
+   "metrics": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 1.93185,
+      "cagr": 0.23991,
+      "sharpe": 1.294481,
+      "sortino": 1.117434,
+      "volatility": 0.176758,
+      "max_drawdown": -0.155869,
+      "trades": 198,
+      "win_rate": 0.585859,
+      "profit_factor": 3.920959,
+      "avg_trade": 0.00533,
+      "best_trade": 0.168378,
+      "total_without_best": 1.509333,
+      "exposure": 0.004116,
+      "total_costs": 0.0344,
+      "total_funding": -0.004861,
+      "p_value": 0.0,
+      "skew": 21.637359,
+      "kurtosis": 609.65904,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.259906,
+      "beta": -0.027052,
+      "alfa_t": 3.30466,
+      "avg_bars": 32.575758
+     },
+     "2.0": {
+      "total_return": 1.832887,
+      "cagr": 0.231428,
+      "sharpe": 1.261598,
+      "sortino": 1.06474,
+      "volatility": 0.175809,
+      "max_drawdown": -0.156495,
+      "trades": 198,
+      "win_rate": 0.535354,
+      "profit_factor": 3.392893,
+      "avg_trade": 0.004864,
+      "best_trade": 0.167912,
+      "total_without_best": 1.425601,
+      "exposure": 0.004116,
+      "total_costs": 0.0688,
+      "total_funding": -0.004861,
+      "p_value": 0.0,
+      "skew": 21.716915,
+      "kurtosis": 614.220964,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.252879,
+      "beta": -0.027037,
+      "alfa_t": 3.232905,
+      "avg_bars": 32.575758
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": -0.007595,
+      "cagr": -0.004355,
+      "sharpe": -0.004294,
+      "sortino": -0.000422,
+      "volatility": 0.088246,
+      "max_drawdown": -0.159511,
+      "trades": 36,
+      "win_rate": 0.5,
+      "profit_factor": 0.893041,
+      "avg_trade": -0.000489,
+      "best_trade": 0.03783,
+      "total_without_best": -0.043769,
+      "exposure": 0.001856,
+      "total_costs": 0.006633,
+      "total_funding": 0.000957,
+      "p_value": 0.4744,
+      "skew": -7.173521,
+      "kurtosis": 209.383649,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": -0.001617,
+      "beta": 0.020916,
+      "alfa_t": -0.02445,
+      "avg_bars": 28.25
+     },
+     "2.0": {
+      "total_return": -0.014178,
+      "cagr": -0.008142,
+      "sharpe": -0.046765,
+      "sortino": -0.004546,
+      "volatility": 0.088637,
+      "max_drawdown": -0.160539,
+      "trades": 36,
+      "win_rate": 0.472222,
+      "profit_factor": 0.801618,
+      "avg_trade": -0.000956,
+      "best_trade": 0.037363,
+      "total_without_best": -0.049685,
+      "exposure": 0.001856,
+      "total_costs": 0.013267,
+      "total_funding": 0.000957,
+      "p_value": 0.496,
+      "skew": -7.651179,
+      "kurtosis": 213.587314,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": -0.005383,
+      "beta": 0.02091,
+      "alfa_t": -0.081036,
+      "avg_bars": 28.25
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": false,
+    "dogrulama_2x_maliyette_net_pozitif": false,
+    "dogrulama_sharpe_yeterli": false,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": false,
+    "aday": false
+   },
+   "deflated_sharpe": 2e-06,
+   "deflated_sharpe_benzersiz": 2e-06,
+   "deflated_sharpe_egitim": 0.0,
+   "dokum_dev_valid": {
+    "yon": {
+     "-1": {
+      "islem": 18,
+      "toplam_net": -0.063924
+     },
+     "1": {
+      "islem": 18,
+      "toplam_net": 0.046312
+     }
+    },
+    "bacak": {
+     "futures:BTCUSDT": {
+      "islem": 12,
+      "toplam_net": -0.012658
+     },
+     "futures:ETHUSDT": {
+      "islem": 12,
+      "toplam_net": -0.029145
+     },
+     "futures:SOLUSDT": {
+      "islem": 12,
+      "toplam_net": 0.024191
+     }
+    },
+    "en_iyi_n_cikinca": {
+     "1": -0.043769,
+     "5": -0.097649,
+     "10": -0.129092
+    },
+    "aylik": {
+     "2025-01": -0.008658,
+     "2025-02": -0.041534,
+     "2025-03": 0.0,
+     "2025-04": 0.006117,
+     "2025-05": 0.0,
+     "2025-06": 0.0,
+     "2025-07": -0.001908,
+     "2025-08": 0.0,
+     "2025-09": 0.0,
+     "2025-10": -0.025323,
+     "2025-11": 0.0,
+     "2025-12": 0.0,
+     "2026-01": 0.0,
+     "2026-02": 0.052798,
+     "2026-03": 0.0,
+     "2026-04": 0.0,
+     "2026-05": 0.0,
+     "2026-06": 0.013594,
+     "2026-07": 0.0,
+     "2026-08": 0.0,
+     "2026-09": 0.0
+    },
+    "en_iyi_5": [
+     {
+      "giris": "2026-02-06 00:20:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.03783
+     },
+     {
+      "giris": "2026-02-06 00:20:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": 0.021668
+     },
+     {
+      "giris": "2025-10-16 09:35:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.017521
+     },
+     {
+      "giris": "2025-10-29 18:40:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.009672
+     },
+     {
+      "giris": "2026-02-06 00:25:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": 1,
+      "net": 0.009611
+     }
+    ],
+    "en_kotu_5": [
+     {
+      "giris": "2025-10-10 21:25:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": -1,
+      "net": -0.012258
+     },
+     {
+      "giris": "2025-10-10 21:25:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": -1,
+      "net": -0.016477
+     },
+     {
+      "giris": "2025-10-10 21:15:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": -0.017668
+     },
+     {
+      "giris": "2025-10-10 21:25:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": -1,
+      "net": -0.023764
+     },
+     {
+      "giris": "2025-02-03 00:50:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -0.036996
+     }
+    ]
+   }
+  },
+  "t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": {
+   "metrics": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 1.37146,
+      "cagr": 0.188427,
+      "sharpe": 1.661196,
+      "sortino": 0.593174,
+      "volatility": 0.107202,
+      "max_drawdown": -0.172196,
+      "trades": 195,
+      "win_rate": 0.646154,
+      "profit_factor": 3.529292,
+      "avg_trade": 0.00411,
+      "best_trade": 0.07883,
+      "total_without_best": 1.198178,
+      "exposure": 0.001606,
+      "total_costs": 0.032,
+      "total_funding": -0.000306,
+      "p_value": 0.0002,
+      "skew": 10.351537,
+      "kurtosis": 149.453934,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.198006,
+      "beta": -0.017331,
+      "alfa_t": 4.154789,
+      "avg_bars": 12.805128
+     },
+     "2.0": {
+      "total_return": 1.296954,
+      "cagr": 0.180867,
+      "sharpe": 1.615882,
+      "sortino": 0.558179,
+      "volatility": 0.106198,
+      "max_drawdown": -0.17255,
+      "trades": 195,
+      "win_rate": 0.620513,
+      "profit_factor": 3.025555,
+      "avg_trade": 0.003644,
+      "best_trade": 0.078363,
+      "total_without_best": 1.130037,
+      "exposure": 0.001606,
+      "total_costs": 0.064,
+      "total_funding": -0.000306,
+      "p_value": 0.0002,
+      "skew": 10.302224,
+      "kurtosis": 150.008306,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.19101,
+      "beta": -0.016883,
+      "alfa_t": 4.044756,
+      "avg_bars": 12.805128
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": 0.198101,
+      "cagr": 0.109014,
+      "sharpe": 1.246853,
+      "sortino": 0.455075,
+      "volatility": 0.085769,
+      "max_drawdown": -0.14226,
+      "trades": 48,
+      "win_rate": 0.583333,
+      "profit_factor": 3.177111,
+      "avg_trade": 0.003431,
+      "best_trade": 0.045091,
+      "total_without_best": 0.146409,
+      "exposure": 0.001083,
+      "total_costs": 0.007567,
+      "total_funding": 3.8e-05,
+      "p_value": 0.0248,
+      "skew": 14.049632,
+      "kurtosis": 263.197754,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": 0.106334,
+      "beta": 0.010254,
+      "alfa_t": 1.642023,
+      "avg_bars": 12.208333
+     },
+     "2.0": {
+      "total_return": 0.189054,
+      "cagr": 0.104212,
+      "sharpe": 1.202783,
+      "sortino": 0.45668,
+      "volatility": 0.085272,
+      "max_drawdown": -0.144277,
+      "trades": 48,
+      "win_rate": 0.583333,
+      "profit_factor": 2.674339,
+      "avg_trade": 0.002964,
+      "best_trade": 0.044624,
+      "total_without_best": 0.13826,
+      "exposure": 0.001083,
+      "total_costs": 0.015133,
+      "total_funding": 3.8e-05,
+      "p_value": 0.0298,
+      "skew": 14.01155,
+      "kurtosis": 264.063334,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": 0.101951,
+      "beta": 0.010362,
+      "alfa_t": 1.583636,
+      "avg_bars": 12.208333
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": true,
+    "dogrulama_2x_maliyette_net_pozitif": true,
+    "dogrulama_sharpe_yeterli": true,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": true,
+    "aday": true
+   },
+   "deflated_sharpe": 1e-06,
+   "deflated_sharpe_benzersiz": 1e-06,
+   "deflated_sharpe_egitim": 0.0,
+   "dokum_dev_valid": {
+    "yon": {
+     "1": {
+      "islem": 48,
+      "toplam_net": 0.164666
+     }
+    },
+    "bacak": {
+     "futures:BTCUSDT": {
+      "islem": 16,
+      "toplam_net": 0.033046
+     },
+     "futures:ETHUSDT": {
+      "islem": 16,
+      "toplam_net": 0.06441
+     },
+     "futures:SOLUSDT": {
+      "islem": 16,
+      "toplam_net": 0.067209
+     }
+    },
+    "en_iyi_n_cikinca": {
+     "1": 0.146409,
+     "5": 0.061317,
+     "10": 0.008968
+    },
+    "aylik": {
+     "2025-01": 0.0,
+     "2025-02": -0.012223,
+     "2025-03": -0.004233,
+     "2025-04": 0.0,
+     "2025-05": 0.0,
+     "2025-06": -0.001374,
+     "2025-07": 0.0,
+     "2025-08": 0.0,
+     "2025-09": 0.0,
+     "2025-10": 0.054279,
+     "2025-11": 0.002967,
+     "2025-12": 0.0,
+     "2026-01": 0.0,
+     "2026-02": 0.089572,
+     "2026-03": 0.017001,
+     "2026-04": 0.0,
+     "2026-05": 0.0,
+     "2026-06": 0.041008,
+     "2026-07": 0.0,
+     "2026-08": 0.0,
+     "2026-09": 0.0
+    },
+    "en_iyi_5": [
+     {
+      "giris": "2026-02-06 00:20:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.045091
+     },
+     {
+      "giris": "2026-02-06 00:20:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": 0.027199
+     },
+     {
+      "giris": "2026-06-04 02:05:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.019018
+     },
+     {
+      "giris": "2026-02-06 00:25:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": 1,
+      "net": 0.016374
+     },
+     {
+      "giris": "2025-10-16 09:35:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.015323
+     }
+    ],
+    "en_kotu_5": [
+     {
+      "giris": "2025-10-28 19:50:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -0.004949
+     },
+     {
+      "giris": "2025-02-03 00:45:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": 1,
+      "net": -0.00817
+     },
+     {
+      "giris": "2025-02-03 00:50:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -0.009158
+     },
+     {
+      "giris": "2025-02-03 00:45:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": -0.009837
+     },
+     {
+      "giris": "2025-03-02 16:40:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": -0.01082
+     }
+    ]
+   }
+  },
+  "t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": {
+   "metrics": {
+    "dev_train": {
+     "1.0": {
+      "total_return": 1.529672,
+      "cagr": 0.203871,
+      "sharpe": 1.362733,
+      "sortino": 0.579176,
+      "volatility": 0.142883,
+      "max_drawdown": -0.151114,
+      "trades": 132,
+      "win_rate": 0.704545,
+      "profit_factor": 6.277143,
+      "avg_trade": 0.006897,
+      "best_trade": 0.139108,
+      "total_without_best": 1.220749,
+      "exposure": 0.001066,
+      "total_costs": 0.0216,
+      "total_funding": 0.000237,
+      "p_value": 0.0,
+      "skew": 21.561866,
+      "kurtosis": 615.056838,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.230224,
+      "beta": -0.030893,
+      "alfa_t": 3.649193,
+      "avg_bars": 12.575758
+     },
+     "2.0": {
+      "total_return": 1.475897,
+      "cagr": 0.198711,
+      "sharpe": 1.340293,
+      "sortino": 0.55739,
+      "volatility": 0.141986,
+      "max_drawdown": -0.151114,
+      "trades": 132,
+      "win_rate": 0.674242,
+      "profit_factor": 5.420594,
+      "avg_trade": 0.00643,
+      "best_trade": 0.138641,
+      "total_without_best": 1.174431,
+      "exposure": 0.001066,
+      "total_costs": 0.0432,
+      "total_funding": 0.000237,
+      "p_value": 0.0,
+      "skew": 21.655994,
+      "kurtosis": 620.626092,
+      "days": 1827,
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2024-12-31 23:55:00+00:00",
+      "alfa": 0.225486,
+      "beta": -0.030608,
+      "alfa_t": 3.596354,
+      "avg_bars": 12.575758
+     }
+    },
+    "dev_valid": {
+     "1.0": {
+      "total_return": 0.171943,
+      "cagr": 0.095087,
+      "sharpe": 1.194798,
+      "sortino": 0.270073,
+      "volatility": 0.07844,
+      "max_drawdown": -0.146417,
+      "trades": 27,
+      "win_rate": 0.814815,
+      "profit_factor": 6.203352,
+      "avg_trade": 0.005516,
+      "best_trade": 0.045091,
+      "total_without_best": 0.121379,
+      "exposure": 0.00062,
+      "total_costs": 0.003933,
+      "total_funding": 3.8e-05,
+      "p_value": 0.0308,
+      "skew": 16.86204,
+      "kurtosis": 361.28507,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": 0.093188,
+      "beta": 0.008991,
+      "alfa_t": 1.573136,
+      "avg_bars": 12.222222
+     },
+     "2.0": {
+      "total_return": 0.167324,
+      "cagr": 0.092614,
+      "sharpe": 1.173262,
+      "sortino": 0.259446,
+      "volatility": 0.077922,
+      "max_drawdown": -0.147121,
+      "trades": 27,
+      "win_rate": 0.740741,
+      "profit_factor": 5.355235,
+      "avg_trade": 0.005049,
+      "best_trade": 0.044624,
+      "total_without_best": 0.117459,
+      "exposure": 0.00062,
+      "total_costs": 0.007867,
+      "total_funding": 3.8e-05,
+      "p_value": 0.033,
+      "skew": 16.888283,
+      "kurtosis": 363.860897,
+      "days": 638,
+      "start": "2025-01-01 00:00:00+00:00",
+      "end": "2026-09-30 23:55:00+00:00",
+      "alfa": 0.090889,
+      "beta": 0.00902,
+      "alfa_t": 1.544604,
+      "avg_bars": 12.222222
+     }
+    }
+   },
+   "candidate_check": {
+    "gelistirme_egitim_net_pozitif": true,
+    "dogrulama_net_pozitif": true,
+    "dogrulama_2x_maliyette_net_pozitif": true,
+    "dogrulama_sharpe_yeterli": true,
+    "dogrulama_islem_sayisi": true,
+    "egitim_alfa_pozitif": true,
+    "dogrulama_alfa_pozitif": true,
+    "aday": true
+   },
+   "deflated_sharpe": 0.0,
+   "deflated_sharpe_benzersiz": 0.0,
+   "deflated_sharpe_egitim": 0.0,
+   "dokum_dev_valid": {
+    "yon": {
+     "1": {
+      "islem": 27,
+      "toplam_net": 0.148922
+     }
+    },
+    "bacak": {
+     "futures:BTCUSDT": {
+      "islem": 9,
+      "toplam_net": 0.02239
+     },
+     "futures:ETHUSDT": {
+      "islem": 9,
+      "toplam_net": 0.055395
+     },
+     "futures:SOLUSDT": {
+      "islem": 9,
+      "toplam_net": 0.071138
+     }
+    },
+    "en_iyi_n_cikinca": {
+     "1": 0.121379,
+     "5": 0.043615,
+     "10": 0.007724
+    },
+    "aylik": {
+     "2025-01": -7.8e-05,
+     "2025-02": -0.025687,
+     "2025-03": 0.0,
+     "2025-04": 0.003255,
+     "2025-05": 0.0,
+     "2025-06": 0.0,
+     "2025-07": 0.0,
+     "2025-08": 0.0,
+     "2025-09": 0.0,
+     "2025-10": 0.065333,
+     "2025-11": 0.015913,
+     "2025-12": 0.0,
+     "2026-01": 0.0,
+     "2026-02": 0.089572,
+     "2026-03": 0.016793,
+     "2026-04": 0.0,
+     "2026-05": 0.0,
+     "2026-06": 0.0,
+     "2026-07": 0.0,
+     "2026-08": 0.0,
+     "2026-09": 0.0
+    },
+    "en_iyi_5": [
+     {
+      "giris": "2026-02-06 00:20:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.045091
+     },
+     {
+      "giris": "2026-02-06 00:20:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": 0.027199
+     },
+     {
+      "giris": "2026-02-06 00:25:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": 1,
+      "net": 0.016374
+     },
+     {
+      "giris": "2025-10-16 09:35:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": 0.015323
+     },
+     {
+      "giris": "2025-10-10 21:15:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": 0.013677
+     }
+    ],
+    "en_kotu_5": [
+     {
+      "giris": "2025-01-29 01:55:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -2.8e-05
+     },
+     {
+      "giris": "2025-01-29 02:05:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": 1,
+      "net": -0.001427
+     },
+     {
+      "giris": "2025-02-03 00:45:00+00:00",
+      "bacak": "futures:BTCUSDT",
+      "yon": 1,
+      "net": -0.00817
+     },
+     {
+      "giris": "2025-02-03 00:50:00+00:00",
+      "bacak": "futures:ETHUSDT",
+      "yon": 1,
+      "net": -0.009158
+     },
+     {
+      "giris": "2025-02-03 00:45:00+00:00",
+      "bacak": "futures:SOLUSDT",
+      "yon": 1,
+      "net": -0.009837
+     }
+    ]
+   }
+  }
+ },
+ "dsr_girdi": {
+  "deneme_satir": 366,
+  "deneme_benzersiz": 361,
+  "sharpe_varyans": 1.36823,
+  "sharpe_ort": 0.284411,
+  "sharpe_max": 1.720366
+ },
+ "al_tut_vadeli_port3": {
+  "dev_train": {
+   "getiri": 39.533788,
+   "sharpe": 1.284232,
+   "max_dusus": -0.851425,
+   "baslangic": "2019-09-08",
+   "bitis": "2024-12-31"
+  },
+  "dev_valid": {
+   "getiri": -0.189314,
+   "sharpe": 0.098718,
+   "max_dusus": -0.643175,
+   "baslangic": "2025-01-01",
+   "bitis": "2026-09-30"
+  }
+ },
+ "korelasyon_dev_valid": {
+  "t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2": {
+   "t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2": 1.0,
+   "t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2": 0.555998,
+   "t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2": 0.614367,
+   "t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": 0.695266,
+   "t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": 0.686047
+  },
+  "t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2": {
+   "t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2": 0.555998,
+   "t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2": 1.0,
+   "t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2": 0.750285,
+   "t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": 0.556169,
+   "t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": 0.589923
+  },
+  "t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2": {
+   "t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2": 0.614367,
+   "t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2": 0.750285,
+   "t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2": 1.0,
+   "t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": 0.393139,
+   "t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": 0.431571
+  },
+  "t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": {
+   "t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2": 0.695266,
+   "t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2": 0.556169,
+   "t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2": 0.393139,
+   "t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": 1.0,
+   "t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": 0.913149
+  },
+  "t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": {
+   "t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2": 0.686047,
+   "t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2": 0.589923,
+   "t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2": 0.431571,
+   "t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2": 0.913149,
+   "t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2": 1.0
+  }
+ }
+}

@@ -1,0 +1,24 @@
+t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2 | train +0.9840 alfa +0.1550 | valid 1x +0.1658 2x +0.1455 Sharpe +1.125 dd -0.1010 işlem 113 alfa +0.0894 beta +0.026 t +1.49 | aday True
+t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2 | train +1.8309 alfa +0.2496 | valid 1x -0.0872 2x -0.0976 Sharpe -0.721 dd -0.1634 işlem 80 alfa -0.0506 beta +0.014 t -0.98 | aday False
+t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2 | train +1.9318 alfa +0.2599 | valid 1x -0.0076 2x -0.0142 Sharpe -0.004 dd -0.1595 işlem 36 alfa -0.0016 beta +0.021 t -0.02 | aday False
+t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2 | train +1.3715 alfa +0.1980 | valid 1x +0.1981 2x +0.1891 Sharpe +1.247 dd -0.1423 işlem 48 alfa +0.1063 beta +0.010 t +1.64 | aday True
+t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2 | train +1.5297 alfa +0.2302 | valid 1x +0.1719 2x +0.1673 Sharpe +1.195 dd -0.1464 işlem 27 alfa +0.0932 beta +0.009 t +1.57 | aday True
+DSR t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2: valid 0.0000 (benzersiz 0.0000) eğitim 0.0000
+DSR t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2: valid 0.0000 (benzersiz 0.0000) eğitim 0.0000
+DSR t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2: valid 0.0000 (benzersiz 0.0000) eğitim 0.0000
+DSR t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2: valid 0.0000 (benzersiz 0.0000) eğitim 0.0000
+DSR t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2: valid 0.0000 (benzersiz 0.0000) eğitim 0.0000
+DSR girdi: {'deneme_satir': 366, 'deneme_benzersiz': 361, 'sharpe_varyans': 1.3682303385534909, 'sharpe_ort': 0.28441130874316956, 'sharpe_max': 1.720366}
+Al-tut (vadeli BTC/ETH/SOL eşit ağırlık): {'dev_train': {'getiri': 39.53378844872056, 'sharpe': 1.2842322497907002, 'max_dusus': -0.8514249572118242, 'baslangic': '2019-09-08', 'bitis': '2024-12-31'}, 'dev_valid': {'getiri': -0.189314272490535, 'sharpe': 0.09871795592606972, 'max_dusus': -0.6431749506198859, 'baslangic': '2025-01-01', 'bitis': '2026-09-30'}}
+t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2: yön {'-1': {'islem': 55, 'toplam_net': 0.013195609762047701}, '1': {'islem': 58, 'toplam_net': 0.09591493829156143}} | en iyi 1/5/10 çıkınca {1: 0.11548670974133221, 5: 0.032549566393589344, 10: -0.03059808653531595}
+t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2: yön {'-1': {'islem': 44, 'toplam_net': -0.0712897511423668}, '1': {'islem': 36, 'toplam_net': -0.04918626813337083}} | en iyi 1/5/10 çıkınca {1: -0.11227726988480762, 5: -0.16410600541482065, 10: -0.18823207260551625}
+t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2: yön {'-1': {'islem': 18, 'toplam_net': -0.06392375359677117}, '1': {'islem': 18, 'toplam_net': 0.04631237609865027}} | en iyi 1/5/10 çıkınca {1: -0.043768802872691394, 5: -0.09764877876079826, 10: -0.12909249849801405}
+t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2: yön {'1': {'islem': 48, 'toplam_net': 0.16466573140359175}} | en iyi 1/5/10 çıkınca {1: 0.1464088881372993, 5: 0.06131710701331204, 10: 0.008967623317462918}
+t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2: yön {'1': {'islem': 27, 'toplam_net': 0.1489222960798556}} | en iyi 1/5/10 çıkınca {1: 0.12137946128358669, 5: 0.04361506359944306, 10: 0.007723866481247332}
+                                                   t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2  t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2  t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2  t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2  t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2
+t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2                                               1.00                                          0.56                                       0.61                                               0.70                                            0.69
+t2_lead_lag_baz_15m_kendi_w192_e5_t8_limt2b2                                               0.56                                          1.00                                       0.75                                               0.56                                            0.59
+t2_lead_lag_sv_5m_hepsi_k6_e4_t36_limt2b2                                                  0.61                                          0.75                                       1.00                                               0.39                                            0.43
+t2_lead_lag_baz_5m_hepsi_w288_e5_t12_uzun_limt2b2                                          0.70                                          0.56                                       0.39                                               1.00                                            0.91
+t2_lead_lag_sv_5m_hepsi_k4_e4_t12_uzun_limt2b2                                             0.69                                          0.59                                       0.43                                               0.91                                            1.00
+yazıldı /home/user/grafik-analiz/arastirma/tur2/t2_lead_lag/dogrulama_sonuc.json

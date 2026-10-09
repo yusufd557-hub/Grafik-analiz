@@ -1,0 +1,4 @@
+16:37:54 t2_lead_lag_baz_5m_BTCkaynak_iz_w288_e5_t12 x1.0: net=+0.5449 sh=+0.50 dd=-0.481 n=719 alfa=+0.1390 beta=-0.024 t=+1.38 maliyet=0.503 fon=-0.010 (5s)
+16:37:55 t2_lead_lag_baz_5m_BTCkaynak_iz_w288_e6_t12 x1.0: net=+0.4404 sh=+0.43 dd=-0.489 n=489 alfa=+0.1298 beta=-0.029 t=+1.31 maliyet=0.342 fon=-0.008 (1s)
+16:37:56 t2_lead_lag_baz_15m_BTCkaynak_iz_w192_e5_t8 x1.0: net=+1.9167 sh=+0.97 dd=-0.164 n=328 alfa=+0.2930 beta=-0.045 t=+2.65 maliyet=0.230 fon=-0.019 (1s)
+16:37:56 t2_lead_lag_baz_15m_BTCkaynak_iz_w96_e4_t8 x1.0: net=+0.9226 sh=+0.61 dd=-0.238 n=673 alfa=+0.2070 beta=-0.038 t=+1.73 maliyet=0.471 fon=-0.019 (1s)
