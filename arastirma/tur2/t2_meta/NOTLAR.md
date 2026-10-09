@@ -230,3 +230,26 @@ metinleri (candidate_check sonucu) eklendi; sinyali etkilemez.
   yüksek), ama kabul edilen olayların ortalaması eğitimdeki +%0,6…+%1,1'den
   +%0,1…+%0,4'e indi. Geçen yapılandırmanın kazancı 2025'te (+%36,3);
   2026'nın ilk 9 ayında %−7,8.
+
+## 7. Kesinti ve devam (9 Ekim 2026)
+
+- Önceki oturum dev_valid değerlendirmesinden (18:01 UTC), modül, NOTLAR
+  bölüm 6 ve RAPOR yazıldıktan sonra kullanım sınırı nedeniyle durdu; yapısal
+  sonuç (structured output) döndürülmemişti.
+- Devam oturumunda **hiçbir şey yeniden ölçülmedi**: `evaluate` çağrılmadı,
+  dev_valid'e yeniden bakılmadı, parametre/kural/yapılandırma değişmedi, yeni
+  arama yapılmadı. Deftere satır eklenmedi.
+- Okunanlar ve yapılan kontroller (salt okuma): `dogrulama.log`,
+  `dogrulama_sonuc.json`, `yeniden_uretim.log`, `nedensellik.log`,
+  `dogrulama_tani.log`, modül ve defter.
+  - Defter 227 satır: dev_train 1× 191 (186 arama + 5 tekrar), dev_train 2×
+    26 (21 + 5), dev_valid 1× 5, 2× 5. dev_valid satırı olan 5 ayrı
+    yapılandırma; dev_valid'e tek bakış.
+  - Aramadaki 186 satır, varsayılan anahtarlar (`agirlik`, `topluluk`)
+    eşitlendiğinde de 186 benzersiz parametre kümesi. Dondurulan 5
+    yapılandırmanın tekrar satırları aramadaki eşleriyle aynı ölçüleri veriyor.
+  - Modül `GRAFIK_ANALIZ_PROTOKOL` olmadan içe aktarılabiliyor; `specs()` 5
+    yapılandırma döndürüyor ve parametreleri `dogrulama_sonuc.json` ile aynı.
+- RAPOR'a yalnız eksik olan 2× maliyet dev_valid tablosu (düşüş, alfa, beta,
+  alfa t, p) ve defter dökümü, mevcut `dogrulama_sonuc.json`/defterden
+  eklendi; ayrıca "Kesinti ve devam" bölümü (10).

@@ -235,9 +235,29 @@ dev_valid 638 gün.
 | 4 | %+25,72 | %+8,53 | 0,592 | 0,303 | %−35,35 | 315 | +0,1715 | 0,011 | 0,78 | 0,231 | %+15,50 | **GEÇTİ** (7/7 şart) |
 | 5 | %+6,64 | %+2,50 | 0,346 | 0,173 | %−20,94 | 85 | +0,0465 | −0,020 | 0,47 | 0,320 | %+2,81 | **geçmedi** (Sharpe < 0,5) |
 
+**2× maliyette dev_valid** (aynı değerlendirmeden, `dogrulama_sonuc.json`;
+bu tablo 9 Ekim 2026'daki kesintiden sonra yalnız mevcut çıktıdan eklendi):
+
+| # | Net 2× | Sharpe 2× | DD 2× | İşlem | Alfa 2× | Beta 2× | Alfa t 2× | p 2× | En iyi işlem çıkınca 2× |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | %−11,30 | −0,118 | %−32,75 | 227 | −0,0358 | 0,063 | −0,176 | 0,583 | %−18,56 |
+| 2 | %−6,34 | −0,040 | %−31,07 | 283 | −0,0121 | 0,042 | −0,068 | 0,543 | %−12,20 |
+| 3 | %−17,01 | −0,170 | %−40,12 | 241 | −0,0564 | 0,022 | −0,230 | 0,613 | %−26,06 |
+| 4 | %+8,53 | 0,303 | %−38,43 | 315 | +0,0877 | 0,011 | +0,397 | 0,371 | %−0,25 |
+| 5 | %+2,50 | 0,173 | %−22,10 | 85 | +0,0238 | −0,020 | +0,242 | 0,407 | %−1,14 |
+
+2× maliyette geçen yapılandırmanın (4) alfası +0,088'e, alfa t'si 0,40'a
+iner; en iyi tek işlem çıkarılınca 2× getiri %−0,25 olur.
+
 Eğitim sayıları dev_valid değerlendirmesinde aramadakiyle birebir aynı çıktı.
 `yeniden_uretim.py`, son modülden `record=False` ile yeniden üretti; en büyük
 fark 0,0.
+
+Defter dökümü (`t2_meta.jsonl`, 227 satır): dev_train 1× 191 (186 arama + 5
+dondurulan tekrar), dev_train 2× 26 (21 arama + 5 tekrar), dev_valid 1× 5 ve
+2× 5. dev_valid satırı olan **5 ayrı yapılandırma** var; hepsi 18:01 UTC'deki
+tek değerlendirmeden. Dondurulan 5 yapılandırmanın tekrar satırlarındaki
+eğitim ölçüleri, aramadaki karşılık satırlarıyla aynı.
 
 **dev_valid günlük getiri korelasyonları:**
 
@@ -368,3 +388,14 @@ olayları dönemlere ayrılarak incelendi.
   - `dogrulama.py` → `dogrulama.log`, `dogrulama_sonuc.json`;
   - `yeniden_uretim.py` → `yeniden_uretim.log`;
   - `dogrulama_tani.py` → `dogrulama_tani.log`.
+
+## 10. Kesinti ve devam (9 Ekim 2026)
+
+Araştırma, dev_valid değerlendirmesi ve bu rapor yazıldıktan sonra oturum
+kullanım sınırı nedeniyle kesildi. Devamda yeni ölçüm, arama ya da dev_valid
+değerlendirmesi yapılmadı; parametre, kural ve yapılandırma değişmedi.
+Yalnız şunlar yapıldı:
+
+- loglar, `dogrulama_sonuc.json` ve defter tutarlılık için okundu;
+- bölüm 5'e 2× maliyet tablosu ve defter dökümü eklendi (sayılar mevcut
+  `dogrulama_sonuc.json` ve defterden).

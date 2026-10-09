@@ -1,0 +1,6 @@
+27 yapılandırma
+t2_genis_evren_1d_fon_3Pmom_90_r3_k05                                  getiri +0.1239 sharpe +1.55 alfa +0.0221 beta -0.000 t +3.58 işlem 3449 (11s)
+t2_genis_evren_1d_fon_3Pmom_90_r7_k033                                 getiri +0.0908 sharpe +1.40 alfa +0.0159 beta +0.001 t +3.12 işlem 1702 (9s)
+t2_genis_evren_1d_fon_3Pmom_90_r7_k05_ters_oyn                         getiri +0.0627 sharpe +1.58 alfa +0.0111 beta +0.000 t +3.53 işlem 1940 (10s)
+t2_genis_evren_1d_fon_3Pmom_90_r7_k05_beta                             getiri +0.1004 sharpe +1.30 alfa +0.0164 beta +0.002 t +2.71 işlem 1940 (10s)
+t2_genis_evren_1d_fon_3Pmom_90_r1_k05_t01                              getiri +0.1190 sharpe +1.44 alfa +0.0213 beta -0.000 t +3.32 işlem 3132 (9s)

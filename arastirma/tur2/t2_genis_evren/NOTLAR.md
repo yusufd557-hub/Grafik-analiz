@@ -76,3 +76,52 @@ hepsi) ölçekten bağımsızdır. Bu bir harness kısıtıdır, raporda belirti
 ## Arama günlüğü
 
 (her taramadan sonra eklenir)
+
+## Kesinti ve devam (9 Ekim 2026, ~22:40 UTC)
+
+Önceki araştırmacı oturumu kullanım sınırı yüzünden arama ortasında kesildi.
+Kesinti dev_valid değerlendirmesinden **önce** oldu: defterde
+(`arastirma/tur2/deneyler/t2_genis_evren.jsonl`) yalnız `dev_train`
+satırları var (184 satır = 124 yapılandırma × 1×, bunların 60'ı ayrıca 2×).
+Bu çalışma kaldığı yerden devam ediyor; baştan başlanmadı. Defterdeki bütün
+satırlar deneme sayılır (Deflated Sharpe için), hiçbiri silinmedi ya da
+değiştirilmedi; defterde olan yapılandırmalar yeniden değerlendirilmeyecek.
+
+Kesinti anındaki durum (dosyalardan çıkarıldı):
+
+- `duman.py` / `duman.log`: duman testi tamam (performans bilgisi yok).
+- `tarama1.py`: 64 tek faktör yapılandırması, tamamlanmış (log ve csv 64 satır).
+- `tarama2.py`: 60 bileşik/komşuluk yapılandırması (1× ve 2×), tamamlanmış
+  (log 60 satır, defterde 120 satır). Yarıda kalan tarama yok.
+- `egitim_dokum.py` / `egitim_dokum_1.txt`: 5 yapılandırmanın eğitim içi
+  yıllık dökümü (yalnız 31.12.2024'e kesilmiş veriyle).
+- `grafik_analiz/strategies/t2_genis_evren.py`: `FROZEN` boş — dondurma
+  yapılmamıştı.
+
+### Kesintiye kadarki arama günlüğü (loglardan özet, yalnız dev_train)
+
+- **Tarama 1 (tek faktör, 1d, 64 yapılandırma):** kısa vadeli dönüş
+  (`rev_1`, `rev_3`) bütün ayarlarda negatif (Sharpe −0,29 … −1,33).
+  Momentum (`mom_7` … `mom_90`) çoğunlukla pozitif (en iyi `mom_90` r7 k0.5:
+  Sharpe 1,03, alfa t 2,23). Fonlama carry (`fon_1` … `fon_14`) pozitif, en
+  iyi `fon_3` r7 k0.5 (Sharpe 1,21, alfa t 2,86); `fon_30` ≈ 0. Düşük
+  oynaklık dolar nötrde betası negatif (−0,005…−0,008), beta nötrde Sharpe
+  0,16–0,82.
+- **Tarama 2 (bileşikler ve komşuluklar, 60 yapılandırma, 1×+2×):** fonlama
+  + momentum bileşikleri tek faktörlerden biraz daha iyi: `fon_3+mom_28+oyn_60`
+  r7 k0.5 Sharpe 1,42 (alfa t 3,86, beta −0,004), `fon_3+mom_90` r1 k0.5
+  1,46 (t 3,42), `fon_3+mom_28+mom_90` r7 k0.5 1,39 (t 3,11), `fon_3+mom_90`
+  r7 k0.5 1,36 (t 3,05). Dengeleme 14 günde zayıflıyor; `top_n` 20 daha kötü;
+  `delist_cik=False` farkı ihmal edilebilir (0,1047 vs 0,1046).
+- **Eğitim içi döküm:** `mom_28`/`mom_90` 2024'te negatif; `fon_3` 2022–2023'te
+  ≈ 0; `oyn_60` beta nötr her yıl pozitif ama zayıf. Tek faktörler yıllar
+  arasında tutarlı değil — bileşiklerin yıllık tutarlılığı ayrıca bakılacak.
+
+### Devam planı
+
+1. Öne çıkan bileşiklerin yıllık dökümü (yalnız deftere yazılmış olanlar).
+2. Tarama 3 (en fazla ~60 yapılandırma, 1× + 2×): öne çıkan bileşiklerin
+   komşulukları (fonlama penceresi 3/7, momentum 28/90, k 0.33, dengeleme
+   3/7, ters oynaklık boyutu, beta nötr, tampon). Toplam yapılandırma sayısı
+   ~200'ü geçmeyecek.
+3. Dondurma kararı bu dosyaya, dev_valid'den önce yazılacak (en fazla 5).

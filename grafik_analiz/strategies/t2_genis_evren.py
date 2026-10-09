@@ -163,9 +163,31 @@ def _funding_avg(funding: dict, syms: list[str], grid: pd.DatetimeIndex, days: f
     return out
 
 
-def _factor(name: str, logc: pd.DataFrame, r1: pd.DataFrame, funding: dict, syms, grid, bpd: int) -> np.ndarray:
+def _rolling_beta(r1: pd.DataFrame, bpd: int, days: int) -> pd.DataFrame:
+    """Geçmiş kayan beta (BTC/ETH/SOL eşit ağırlıklı getiriye göre); bar t'de t dahil geçmiş veri."""
+    bcols = [s for s in BENCH if s in r1.columns]
+    rm = r1[bcols].mean(axis=1)
+    w = int(days) * bpd
+    mp = max(10, int(0.8 * w))
+    cov = r1.rolling(w, min_periods=mp).cov(rm)
+    var = rm.rolling(w, min_periods=mp).var()
+    return cov.div(var, axis=0)
+
+
+def _factor(name: str, logc: pd.DataFrame, r1: pd.DataFrame, funding: dict, syms, grid, bpd: int, beta_gun: int = 60) -> np.ndarray:
     parts = name.split("_")
     kind = parts[0]
+    if kind == "rmom":
+        # Artık (piyasadan arındırılmış) momentum: getiri − önceki barın betası × piyasa getirisi,
+        # son L günün toplamı (son s gün atlanarak).
+        lb = int(round(float(parts[1]) * bpd))
+        skip = int(round(float(parts[2]) * bpd)) if len(parts) > 2 else 0
+        bcols = [s for s in BENCH if s in r1.columns]
+        rm = r1[bcols].mean(axis=1)
+        beta = _rolling_beta(r1, bpd, beta_gun).shift(1)
+        resid = r1 - beta.mul(rm, axis=0)
+        csum = resid.rolling(lb - skip, min_periods=int(0.8 * (lb - skip))).sum()
+        return csum.shift(skip).to_numpy()
     if kind in ("mom", "rev"):
         lb = int(round(float(parts[1]) * bpd))
         skip = int(round(float(parts[2]) * bpd)) if len(parts) > 2 else 0
@@ -216,7 +238,7 @@ def signal(data: dict, funding: dict, **params) -> dict:
 
     # Skor: tek faktör ya da sıra birleşimi.
     names = str(p["skor"]).split("+")
-    facs = [_factor(n, logc, r1, funding, syms, grid, bpd) for n in names]
+    facs = [_factor(n, logc, r1, funding, syms, grid, bpd, int(p["beta_gun"])) for n in names]
 
     # Beta (BTC/ETH/SOL eşit ağırlıklı getiriye göre) ve oynaklık.
     need_beta = p["notr"] == "beta"
