@@ -9,3 +9,6 @@
 16:35:55 t2_lead_lag_baz_5m_kendi_w288_e6_t12_limc0b3 x1.0: net=+0.9488 sh=+1.25 dd=-0.230 n=609 alfa=+0.1494 beta=-0.009 t=+2.99 maliyet=0.256 fon=-0.009 (3s)
 16:35:58 t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt0b1 x1.0: net=+1.0220 sh=+1.32 dd=-0.230 n=609 alfa=+0.1571 beta=-0.009 t=+3.15 maliyet=0.221 fon=-0.009 (3s)
 16:36:01 t2_lead_lag_baz_5m_kendi_w288_e6_t12_limt2b2 x1.0: net=+0.9840 sh=+1.29 dd=-0.228 n=606 alfa=+0.1550 beta=-0.010 t=+3.12 maliyet=0.097 fon=-0.009 (3s)
+16:36:04 t2_lead_lag_baz_5m_kendi_w288_e6_t12_limg0b1 x1.0: net=+1.0817 sh=+1.37 dd=-0.230 n=609 alfa=+0.1634 beta=-0.009 t=+3.27 maliyet=0.249 fon=-0.009 (3s)
+16:36:06 t2_lead_lag_baz_5m_kendi_w288_e6_t12_uzun x1.0: net=+1.2834 sh=+1.53 dd=-0.171 n=266 alfa=+0.1826 beta=-0.010 t=+3.64 maliyet=0.124 fon=-0.004 (1s)
+16:36:09 t2_lead_lag_baz_5m_kendi_w288_e6_t12_uzun_limc0bx x1.0: net=+1.2382 sh=+1.49 dd=-0.171 n=266 alfa=+0.1781 beta=-0.010 t=+3.55 maliyet=0.110 fon=-0.004 (3s)
