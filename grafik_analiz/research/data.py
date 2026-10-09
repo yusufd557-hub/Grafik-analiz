@@ -16,7 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 from ..data import FUTURES, SPOT, CandleStore
-from .protocol import DEV_END, HOLDOUT_END, research_data_dir, research_dir
+from .protocol import DEV_END, HOLDOUT_END, HOLDOUT_START, research_data_dir, research_dir
 
 
 class HoldoutLocked(PermissionError):
@@ -51,6 +51,8 @@ def holdout_unlocked() -> bool:
 def _limit(scope: str) -> pd.Timestamp:
     if scope == "dev":
         return DEV_END
+    if scope == "holdout" and HOLDOUT_START is None:
+        raise HoldoutLocked("bu protokol sürümünde görülmemiş dönem yok; değerlendirme ileriye dönük takiple yapılır")
     if scope in ("holdout", "all"):
         if not _UNLOCKED:
             raise HoldoutLocked(
@@ -100,3 +102,66 @@ def load_funding(symbol: str, scope: str = "dev", root: Path | None = None) -> p
 def clear_cache() -> None:
     _raw.cache_clear()
     _raw_funding.cache_clear()
+    for fn in ("_raw_metrics", "_raw_premium"):
+        if fn in globals():
+            globals()[fn].cache_clear()
+
+
+# ---------------------------------------------------------------- ek veriler (sürüm 2)
+
+
+@lru_cache(maxsize=16)
+def _raw_metrics(symbol: str, root: str) -> pd.DataFrame:
+    from ..data.extra import load_metrics as _lm
+
+    return _lm(Path(root), symbol)
+
+
+@lru_cache(maxsize=16)
+def _raw_premium(symbol: str, interval: str, root: str) -> pd.DataFrame:
+    from ..data.extra import load_premium as _lp
+
+    return _lp(Path(root), symbol, interval)
+
+
+def load_metrics(symbol: str, scope: str = "dev", root: Path | None = None) -> pd.DataFrame:
+    """Vadeli konumlanma ölçüleri (5 dakikalık): açık pozisyon, uzun/kısa oranları, taker oranı.
+
+    İndeks ölçüm anıdır. Bir barda yalnızca zamanı barın kapanışından **önce**
+    olan ölçümler kullanılabilir.
+    """
+    end = _limit(scope)
+    frame = _raw_metrics(symbol, str(root or research_data_dir()))
+    if frame.empty:
+        raise FileNotFoundError(f"konumlanma verisi yok: {symbol}")
+    return frame[frame.index < end].copy()
+
+
+def load_premium(symbol: str, interval: str = "1h", scope: str = "dev", root: Path | None = None) -> pd.DataFrame:
+    """Vadeli prim endeksi mumları (vadeli fiyatın endekse göre primi)."""
+    end = _limit(scope)
+    frame = _raw_premium(symbol, interval, str(root or research_data_dir()))
+    if frame.empty:
+        raise FileNotFoundError(f"prim endeksi verisi yok: {symbol} {interval}")
+    return frame[frame["close_time"] < end].copy()
+
+
+def load_universe(scope: str = "dev", root: Path | None = None) -> pd.DataFrame:
+    """Aylık geniş evren tablosu (`ay`, `sira`, `sembol`, `hacim_30g`); kapsam dışındaki aylar çıkarılır."""
+    end = _limit(scope)
+    from .universe import load_universe as _lu
+
+    table = _lu(root or research_data_dir())
+    return table[table["ay"] < end].copy()
+
+
+def available_symbols(market: str = FUTURES, interval: str = "4h", root: Path | None = None) -> list[str]:
+    """Araştırma verisinde bu piyasa ve zaman diliminde mumu bulunan semboller."""
+    base = Path(root or research_data_dir())
+    base = base / "vadeli" if market == FUTURES else base
+    return sorted(p.parent.name for p in base.glob(f"*/{interval}.parquet"))
+
+
+def clear_extra_cache() -> None:
+    _raw_metrics.cache_clear()
+    _raw_premium.cache_clear()

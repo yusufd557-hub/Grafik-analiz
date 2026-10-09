@@ -69,6 +69,23 @@ def deflated_sharpe(sr_annual: float, n_days: int, n_trials: int, sr_trials_var_
     return float(stats.norm.cdf((sr - sr0) * math.sqrt(n_days - 1) / denom))
 
 
+def alpha_beta(daily: pd.Series, benchmark: pd.Series) -> dict:
+    """Günlük getirilerin piyasa kıyasına göre OLS alfası (yıllık), betası ve alfa t değeri."""
+    joined = pd.concat([daily.rename("s"), benchmark.rename("m")], axis=1).dropna()
+    if len(joined) < 30 or joined["m"].std() == 0:
+        return {"alfa": float("nan"), "beta": float("nan"), "alfa_t": float("nan")}
+    x = joined["m"].to_numpy()
+    y = joined["s"].to_numpy()
+    X = np.column_stack([np.ones_like(x), x])
+    coef, *_ = np.linalg.lstsq(X, y, rcond=None)
+    resid = y - X @ coef
+    dof = max(1, len(y) - 2)
+    sigma2 = float(resid @ resid) / dof
+    cov = sigma2 * np.linalg.inv(X.T @ X)
+    t = coef[0] / np.sqrt(cov[0, 0]) if cov[0, 0] > 0 else float("nan")
+    return {"alfa": float(coef[0] * 365), "beta": float(coef[1]), "alfa_t": float(t)}
+
+
 def summarize(
     returns: pd.Series,
     trades: pd.DataFrame | None = None,

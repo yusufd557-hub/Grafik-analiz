@@ -9,7 +9,10 @@ from grafik_analiz.research import data as rdata
 from grafik_analiz.research.backtest import backtest_leg
 from grafik_analiz.research.evaluate import StrategySpec, assert_causal, candidate_check, evaluate, holdout_check
 from grafik_analiz.research.metrics import block_bootstrap_means, deflated_sharpe, summarize
-from grafik_analiz.research.protocol import DEV_END, FUTURES_COSTS, HOLDOUT_END, SPOT_COSTS, Costs
+from grafik_analiz.research.protocol import DEV_END, FUTURES_COSTS, HOLDOUT_END, PROTOCOL_VERSION, SPOT_COSTS, Costs
+
+ONLY_V1 = pytest.mark.skipif(PROTOCOL_VERSION != "1", reason="görülmemiş dönem yalnız protokol sürüm 1'de var")
+ONLY_V2 = pytest.mark.skipif(PROTOCOL_VERSION != "2", reason="protokol sürüm 2'ye özgü")
 
 ZERO = Costs(0.0, 0.0)
 
@@ -133,6 +136,7 @@ def research_store(tmp_path, monkeypatch):
     rdata.lock_holdout()
 
 
+@ONLY_V1
 def test_holdout_locked_until_unlocked(research_store):
     dev = rdata.load("BTCUSDT", "1d")
     assert dev["close_time"].max() < DEV_END
@@ -163,6 +167,7 @@ def test_assert_causal_catches_lookahead(research_store):
         assert_causal(bad)
 
 
+@ONLY_V1
 def test_evaluate_records_and_checks(research_store):
     spec = StrategySpec("ma", "test", "1d", (("spot", "BTCUSDT"),), _ma, {"n": 10})
     res = evaluate(spec)
@@ -179,3 +184,62 @@ def test_evaluate_records_and_checks(research_store):
     result = holdout_check(hold, n_finalists=1)
     assert set(result) == {"seviye1", "seviye1_gecti", "seviye2", "seviye2_gecti"}
     assert hold["holdout"][1.0]["start"].startswith("2025-07-01")
+
+
+# ---------------------------------------------------------------- limit emir ve alfa
+
+
+def test_limit_order_fills_only_when_price_trades_through():
+    frame = _frame([100, 100, 100, 100, 100, 100])
+    frame["low"] = [99.5, 99.5, 98.0, 99.5, 99.5, 99.5]
+    orders = pd.DataFrame({"target": [1.0] * 6, "limit": [99.0] * 6}, index=frame.index)
+    res = backtest_leg(frame, orders, FUTURES)
+    # Bar 1'de düşük 99,5 > 99 → dolmaz; bar 2'de düşük 98 < 99 × (1 − 0,0002) → 99'dan dolar.
+    assert list(res.position.to_numpy()) == [0, 0, 1, 1, 1, 1]
+    from grafik_analiz.research.protocol import MAKER_COSTS
+    assert res.cost.iloc[2] == pytest.approx(MAKER_COSTS["futures"].per_side)
+    # Dolum barında getiri limit fiyattan bir sonraki açılışa: 100 / 99 − 1.
+    assert res.gross.iloc[2] == pytest.approx(100 / 99 - 1)
+
+
+def test_marketable_limit_acts_as_market_order():
+    frame = _frame([100, 101, 102, 103])
+    orders = pd.DataFrame({"target": [1.0] * 4, "limit": [105.0] * 4}, index=frame.index)
+    res = backtest_leg(frame, orders, FUTURES)
+    assert res.position.iloc[1] == 1.0
+    assert res.cost.iloc[1] == pytest.approx(FUTURES_COSTS.per_side)
+
+
+def test_limit_without_limit_column_equals_market_backtest():
+    rng = np.random.default_rng(2)
+    frame = _frame(100 * np.exp(np.cumsum(rng.normal(0, 0.01, 300))))
+    target = (frame["close"] > frame["close"].rolling(10).mean()).astype(float)
+    market = backtest_leg(frame, target, FUTURES)
+    limit = backtest_leg(frame, pd.DataFrame({"target": target}), FUTURES)
+    np.testing.assert_allclose(market.net.to_numpy(), limit.net.to_numpy(), atol=1e-12)
+
+
+def test_alpha_beta_recovers_known_values():
+    from grafik_analiz.research.metrics import alpha_beta
+
+    idx = pd.date_range("2024-01-01", periods=500, freq="1D", tz="UTC")
+    rng = np.random.default_rng(1)
+    m = pd.Series(rng.normal(0, 0.03, 500), index=idx)
+    s = 0.0005 + 0.5 * m + pd.Series(rng.normal(0, 0.001, 500), index=idx)
+    ab = alpha_beta(s, m)
+    assert ab["beta"] == pytest.approx(0.5, abs=0.01)
+    # Alfa standart hatası ≈ 0,001 / √500 × 365 ≈ 0,016; 3 standart hata tolerans.
+    assert ab["alfa"] == pytest.approx(0.0005 * 365, abs=0.05)
+    assert ab["alfa_t"] > 3
+
+
+@ONLY_V2
+def test_v2_has_no_holdout_and_requires_alpha(research_store):
+    with pytest.raises(rdata.HoldoutLocked):
+        rdata.load("BTCUSDT", "1d", scope="holdout")
+    dev = rdata.load("BTCUSDT", "1d")
+    assert dev["close_time"].max() < DEV_END
+    spec = StrategySpec("ma", "test", "1d", (("spot", "BTCUSDT"),), _ma, {"n": 10})
+    res = evaluate(spec, record=False)
+    checks = candidate_check(res)
+    assert "egitim_alfa_pozitif" in checks and "dogrulama_alfa_pozitif" in checks

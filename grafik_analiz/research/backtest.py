@@ -12,6 +12,15 @@ Kurallar (bütün stratejiler için aynı):
   pozitif oranda öder, kısa pozisyon alır). Fonlama anı bir barın açılışına denk
   gelirse o açılıştaki işlemden **önceki** pozisyon esas alınır.
 - Spotta açığa satış yoktur: negatif hedef 0'a kırpılır.
+
+**Limit emir (isteğe bağlı):** Strateji, Series yerine `target` ve `limit`
+sütunlu bir DataFrame döndürürse, `limit` dolu olan barlarda pozisyon değişimi
+bir sonraki barda limit emirle denenir. Emir, verildiği anda piyasa fiyatının
+öbür tarafındaysa (alış limiti açılışın üstünde, satış limiti altında) hemen
+piyasa emri gibi işler. Değilse yalnız fiyat limitin `LIMIT_PENETRATION`
+ötesine geçerse limit fiyattan dolar ve maker komisyonu ödenir; dolmazsa bar
+sonunda iptal edilir ve pozisyon değişmez. `limit` boş olan barlarda emir
+piyasa emridir.
 """
 
 from __future__ import annotations
@@ -22,7 +31,7 @@ import numpy as np
 import pandas as pd
 
 from ..data import FUTURES, SPOT
-from .protocol import COSTS, MAX_LEVERAGE, Costs
+from .protocol import COSTS, LIMIT_PENETRATION, MAKER_COSTS, MAX_LEVERAGE, Costs
 
 
 @dataclass
@@ -50,6 +59,8 @@ def backtest_leg(
 ) -> LegResult:
     if market not in (SPOT, FUTURES):
         raise ValueError(f"bilinmeyen piyasa: {market}")
+    if isinstance(target, pd.DataFrame):
+        return _backtest_limit(frame, target, market, symbol, funding, costs, cost_multiplier, max_leverage)
     costs = (costs or COSTS[market]).scaled(cost_multiplier)
     lev = MAX_LEVERAGE[market] if max_leverage is None else max_leverage
     index = frame.index
@@ -78,6 +89,73 @@ def backtest_leg(
     net = gross - cost - fund
     trades = _trades(index, pos, gross, fund, costs.per_side)
     return LegResult(market, symbol, pos, gross, cost, fund, net, trades)
+
+
+def _backtest_limit(
+    frame: pd.DataFrame,
+    orders: pd.DataFrame,
+    market: str,
+    symbol: str,
+    funding: pd.DataFrame | None,
+    costs: Costs | None,
+    cost_multiplier: float,
+    max_leverage: float | None,
+) -> LegResult:
+    """Limit emirli sıralı simülasyon (bkz. modül açıklaması)."""
+    taker = (costs or COSTS[market]).scaled(cost_multiplier)
+    maker = MAKER_COSTS[market].scaled(cost_multiplier)
+    lev = MAX_LEVERAGE[market] if max_leverage is None else max_leverage
+    index = frame.index
+    n = len(index)
+    lower = -lev if market == FUTURES else 0.0
+    tgt = orders["target"].reindex(index).astype(float).fillna(0.0).clip(lower, lev).to_numpy()
+    lim = orders["limit"].reindex(index).astype(float).to_numpy() if "limit" in orders else np.full(n, np.nan)
+
+    o = frame["open"].to_numpy(dtype=float)
+    h = frame["high"].to_numpy(dtype=float)
+    lo = frame["low"].to_numpy(dtype=float)
+    c = frame["close"].to_numpy(dtype=float)
+    nxt = np.empty(n)
+    nxt[:-1] = o[1:]
+    if n:
+        nxt[-1] = c[-1]
+
+    pos_end = np.zeros(n)
+    gross = np.zeros(n)
+    cost = np.zeros(n)
+    pos = 0.0
+    for i in range(n):
+        desired = tgt[i - 1] if i > 0 else 0.0
+        limit = lim[i - 1] if i > 0 else np.nan
+        change = desired - pos
+        if change == 0.0:
+            gross[i] = pos * (nxt[i] / o[i] - 1.0)
+        elif np.isnan(limit) or (change > 0 and limit >= o[i]) or (change < 0 and limit <= o[i]):
+            # Piyasa emri ya da hemen işleyen limit: açılışta, taker maliyetiyle.
+            cost[i] = abs(change) * taker.per_side
+            pos = desired
+            gross[i] = pos * (nxt[i] / o[i] - 1.0)
+        else:
+            filled = lo[i] < limit * (1.0 - LIMIT_PENETRATION) if change > 0 else h[i] > limit * (1.0 + LIMIT_PENETRATION)
+            if filled:
+                before = 1.0 + pos * (limit / o[i] - 1.0)
+                after = 1.0 + desired * (nxt[i] / limit - 1.0)
+                gross[i] = before * after - 1.0
+                cost[i] = abs(change) * maker.per_side
+                pos = desired
+            else:
+                gross[i] = pos * (nxt[i] / o[i] - 1.0)
+        pos_end[i] = pos
+
+    pos_series = pd.Series(pos_end, index=index)
+    gross_s = pd.Series(gross, index=index)
+    cost_s = pd.Series(cost, index=index)
+    fund = pd.Series(0.0, index=index)
+    if market == FUTURES and funding is not None and not funding.empty and n:
+        fund = _funding_charges(index, pos_end, funding)
+    net = gross_s - cost_s - fund
+    trades = _trades(index, pos_series, gross_s, fund, taker.per_side)
+    return LegResult(market, symbol, pos_series, gross_s, cost_s, fund, net, trades)
 
 
 def _funding_charges(index: pd.DatetimeIndex, pos: np.ndarray, funding: pd.DataFrame) -> pd.Series:

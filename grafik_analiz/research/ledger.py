@@ -38,7 +38,7 @@ def ledger_path(family: str, root: Path | None = None) -> Path:
     return (root or research_dir()) / "deneyler" / f"{safe}.jsonl"
 
 
-KEEP = ("total_return", "sharpe", "max_drawdown", "trades", "days", "p_value")
+KEEP = ("total_return", "sharpe", "max_drawdown", "trades", "days", "p_value", "alfa", "beta")
 
 
 def record(

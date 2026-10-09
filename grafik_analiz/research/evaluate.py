@@ -22,8 +22,10 @@ from ..data import FUTURES
 from . import ledger
 from .backtest import LegResult, backtest_leg, combine
 from .data import load, load_funding
-from .metrics import summarize
+from .metrics import alpha_beta, daily_returns, summarize, window as cut_window
 from .protocol import (
+    BENCHMARK_SYMBOLS,
+    REQUIRE_ALPHA,
     HOLDOUT_CONFIDENCE,
     MIN_SHARPE_VALID,
     MIN_TRADES_HOLDOUT,
@@ -125,6 +127,30 @@ def run(spec: StrategySpec, scope: str = "dev", cost_multiplier: float = 1.0) ->
     return backtest(spec, data, funding, compute_signals(spec, data, funding), cost_multiplier)
 
 
+def benchmark_daily(spec: StrategySpec, scope: str = "dev") -> pd.Series:
+    """Piyasa kıyası: BTC/ETH/SOL eşit ağırlıklı al-tut günlük getirisi (stratejinin piyasasında).
+
+    Stratejinin herhangi bir bacağı vadeliyse vadeli, değilse spot fiyatlar kullanılır.
+    Henüz listelenmemiş coin o günlerde ortalamaya girmez.
+    """
+    market = FUTURES if any(m == FUTURES for m, _ in spec.legs) else "spot"
+    columns = []
+    for sym in BENCHMARK_SYMBOLS:
+        try:
+            df = load(sym, "1d", market, scope)
+        except FileNotFoundError:
+            continue
+        o = df["open"].astype(float)
+        r = o.shift(-1) / o - 1.0
+        if len(r):
+            r.iloc[-1] = float(df["close"].iloc[-1]) / float(o.iloc[-1]) - 1.0
+        r.index = r.index.floor("1D")
+        columns.append(r.rename(sym))
+    if not columns:
+        return pd.Series(dtype=float)
+    return pd.concat(columns, axis=1).mean(axis=1)
+
+
 def _scope_for(window: str) -> str:
     return "holdout" if window == "holdout" else "dev"
 
@@ -144,6 +170,7 @@ def evaluate(
     for scope, wins in by_scope.items():
         data, funding = load_data(spec, scope)
         signals = compute_signals(spec, data, funding)
+        bench = benchmark_daily(spec, scope)
         for mult in cost_multipliers:
             result = backtest(spec, data, funding, signals, mult)
             for w in wins:
@@ -158,6 +185,8 @@ def evaluate(
                     end,
                     confidence=confidence,
                 )
+                if not bench.empty:
+                    metrics.update(alpha_beta(daily_returns(cut_window(result.returns, start, end)), bench))
                 out.setdefault(w, {})[mult] = metrics
                 if record:
                     ledger.record(spec.family, spec.name, {"interval": spec.interval, "legs": [list(l) for l in spec.legs], **spec.params}, w, mult, metrics)
@@ -180,16 +209,24 @@ def assert_causal(
         part_funding = {sym: f[f.index <= cut] for sym, f in funding.items()}
         part = compute_signals(spec, part_data, part_funding)
         for leg in spec.legs:
-            a = pd.Series(full[leg], dtype=float).reindex(part_data[leg].index)
-            b = pd.Series(part[leg], dtype=float).reindex(part_data[leg].index)
-            both_nan = a.isna() & b.isna()
-            diff = (a - b).abs().where(~both_nan, 0.0).fillna(np.inf)
-            if (diff > atol).any():
-                bad = diff[diff > atol].index[0]
-                raise AssertionError(
-                    f"{spec.name}: {leg} sinyali {bad} tarihinde seri {cut} noktasında kesilince değişiyor "
-                    f"(tam: {a.loc[bad]}, kesik: {b.loc[bad]}) — ileri bakış var"
-                )
+            fa, fb = _as_frame(full[leg]), _as_frame(part[leg])
+            for col in fa.columns:
+                a = fa[col].astype(float).reindex(part_data[leg].index)
+                b = fb[col].astype(float).reindex(part_data[leg].index) if col in fb else pd.Series(np.nan, index=a.index)
+                both_nan = a.isna() & b.isna()
+                diff = (a - b).abs().where(~both_nan, 0.0).fillna(np.inf)
+                if (diff > atol).any():
+                    bad = diff[diff > atol].index[0]
+                    raise AssertionError(
+                        f"{spec.name}: {leg} sinyali ({col}) {bad} tarihinde seri {cut} noktasında kesilince değişiyor "
+                        f"(tam: {a.loc[bad]}, kesik: {b.loc[bad]}) — ileri bakış var"
+                    )
+
+
+def _as_frame(signal) -> pd.DataFrame:
+    if isinstance(signal, pd.DataFrame):
+        return signal
+    return pd.Series(signal, dtype=float).to_frame("target")
 
 
 def candidate_check(results: dict) -> dict:
@@ -204,6 +241,10 @@ def candidate_check(results: dict) -> dict:
         "dogrulama_sharpe_yeterli": (v1.get("sharpe") or -9) >= MIN_SHARPE_VALID,
         "dogrulama_islem_sayisi": v1.get("trades", 0) >= MIN_TRADES_VALID,
     }
+    if REQUIRE_ALPHA:
+        # Sürüm 2: kâr piyasanın yönünden değil stratejiden gelmeli.
+        checks["egitim_alfa_pozitif"] = (t1.get("alfa") or -1) > 0
+        checks["dogrulama_alfa_pozitif"] = (v1.get("alfa") or -1) > 0
     checks["aday"] = all(checks.values())
     return checks
 

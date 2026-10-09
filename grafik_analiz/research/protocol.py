@@ -13,29 +13,43 @@ from pathlib import Path
 
 import pandas as pd
 
-PROTOCOL_VERSION = "1"
+PROTOCOL_VERSION = os.environ.get("GRAFIK_ANALIZ_PROTOKOL", "1")
+"""Etkin protokol sürümü. Sürüm 1: docs/PROTOKOL.md, sürüm 2: docs/PROTOKOL_2.md.
+
+Sürüm `GRAFIK_ANALIZ_PROTOKOL` ortam değişkeniyle seçilir ve süreç boyunca
+değişmez. Sürüm 1'in değerleri sonuçlarıyla birlikte olduğu gibi korunur.
+"""
+if PROTOCOL_VERSION not in ("1", "2"):
+    raise ValueError(f"bilinmeyen protokol sürümü: {PROTOCOL_VERSION}")
 
 # ---------------------------------------------------------------- dönemler
 
-DEV_TRAIN_END = pd.Timestamp("2024-01-01", tz="UTC")
-"""Parametreler yalnızca bu tarihten önceki veriyle seçilir."""
+if PROTOCOL_VERSION == "1":
+    DEV_TRAIN_END = pd.Timestamp("2024-01-01", tz="UTC")
+    DEV_END = pd.Timestamp("2025-07-01", tz="UTC")
+    HOLDOUT_START: pd.Timestamp | None = DEV_END
+    HOLDOUT_END = pd.Timestamp("2026-10-01", tz="UTC")
+else:
+    # Sürüm 2: sürüm 1'in görülmemiş dönemi kullanıldı; geliştirme verisi
+    # 30.09.2026'ya kadar uzar. Kanıt yalnızca ileriye dönük takiptir.
+    DEV_TRAIN_END = pd.Timestamp("2025-01-01", tz="UTC")
+    DEV_END = pd.Timestamp("2026-10-01", tz="UTC")
+    HOLDOUT_START = None
+    HOLDOUT_END = DEV_END
+"""DEV_TRAIN_END: parametreler yalnızca bu tarihten önceki veriyle seçilir.
+DEV_END: geliştirme döneminin sonu (hariç); [DEV_TRAIN_END, DEV_END) iç doğrulamadır.
+HOLDOUT_*: sürüm 1'de görülmemiş dönem (01.07.2025 – 30.09.2026); sürüm 2'de yok."""
 
-DEV_END = pd.Timestamp("2025-07-01", tz="UTC")
-"""Geliştirme döneminin sonu (hariç). [DEV_TRAIN_END, DEV_END) iç doğrulamadır."""
-
-HOLDOUT_START = DEV_END
-HOLDOUT_END = pd.Timestamp("2026-10-01", tz="UTC")
-"""Görülmemiş dönem: 1 Temmuz 2025 – 30 Eylül 2026. Finalistler burada tek kez ölçülür."""
-
-FORWARD_START = HOLDOUT_END
+FORWARD_START = pd.Timestamp("2026-10-01", tz="UTC")
 """İleriye dönük sanal takip bu tarihten sonraki, önceden kaydedilen sinyallerle yapılır."""
 
 PERIODS: dict[str, tuple[pd.Timestamp | None, pd.Timestamp]] = {
     "dev": (None, DEV_END),
     "dev_train": (None, DEV_TRAIN_END),
     "dev_valid": (DEV_TRAIN_END, DEV_END),
-    "holdout": (HOLDOUT_START, HOLDOUT_END),
 }
+if HOLDOUT_START is not None:
+    PERIODS["holdout"] = (HOLDOUT_START, HOLDOUT_END)
 
 # ---------------------------------------------------------------- maliyetler
 
@@ -66,6 +80,16 @@ STRESS_MULTIPLIER = 2.0
 
 COSTS = {"spot": SPOT_COSTS, "futures": FUTURES_COSTS}
 
+MAKER_COSTS = {"spot": Costs(fee=0.0010, slippage=0.0), "futures": Costs(fee=0.0002, slippage=0.0)}
+"""Limit (maker) emir: Binance VIP 0 spot maker %0,10, vadeli maker %0,02; kayma yok (fiyat sabit)."""
+
+LIMIT_PENETRATION = 0.0002
+"""Limit emrin dolduğu sayılması için fiyatın limitin 2 bps ötesine geçmesi gerekir
+(kuyrukta öncelik bilinmediği için ihtiyatlı varsayım)."""
+
+BENCHMARK_SYMBOLS = ("BTCUSDT", "ETHUSDT", "SOLUSDT")
+"""Sürüm 2 alfa ölçüsünde piyasa kıyası: bu coinlerin eşit ağırlıklı al-tutu."""
+
 MAX_LEVERAGE = {"spot": 1.0, "futures": 1.0}
 """Araştırmada kaldıraç yok: bacak başına pozisyon büyüklüğü sermayenin en fazla 1 katı."""
 
@@ -73,6 +97,10 @@ MAX_LEVERAGE = {"spot": 1.0, "futures": 1.0}
 
 MIN_TRADES_VALID = 20
 MIN_SHARPE_VALID = 0.5
+REQUIRE_ALPHA = PROTOCOL_VERSION == "2"
+"""Sürüm 2: aday, eğitim ve iç doğrulama dönemlerinde piyasa kıyasına göre pozitif alfa üretmeli."""
+MAX_FORWARD_FINALISTS = 5
+"""Sürüm 2: ileriye dönük takibe alınacak en fazla yapılandırma."""
 MIN_TRADES_HOLDOUT = 20
 MAX_FINALISTS = 3
 HOLDOUT_CONFIDENCE = 0.95
@@ -93,8 +121,9 @@ def research_data_dir() -> Path:
 
 
 def research_dir() -> Path:
-    """Deney defteri ve raporların tutulduğu depo klasörü (`arastirma/`)."""
-    return Path(__file__).resolve().parents[2] / "arastirma"
+    """Deney defteri ve raporların tutulduğu depo klasörü (`arastirma/`, sürüm 2'de `arastirma/tur2/`)."""
+    base = Path(__file__).resolve().parents[2] / "arastirma"
+    return base if PROTOCOL_VERSION == "1" else base / "tur2"
 
 
 BARS_PER_YEAR = {
