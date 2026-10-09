@@ -1,6 +1,6 @@
 # İleriye Dönük Sanal Takip
 
-Son güncelleme: 2026-10-09 22:05 UTC. Kurallar: `grafik_analiz/forward/tracker.py`.
+Son güncelleme: 2026-10-09 23:05 UTC. Kurallar: `grafik_analiz/forward/tracker.py`.
 Sinyaller her 4 saatlik mum kapanınca **önce** kaydedilir; sonuç sonraki mumlarla hesaplanır.
 Maliyetler araştırma protokolüyle aynıdır (spot %0,12, vadeli %0,07 taraf başına; fonlama dahil).
 
