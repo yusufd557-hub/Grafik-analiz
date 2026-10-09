@@ -1,0 +1,37 @@
+
+== t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1
+  BTCUSDT: net -0.070 brüt +0.459 sh +0.10 alfa +0.037 beta +0.06 | uzun %37 (net +0.237) kısa %42 (net -0.060)
+  ETHUSDT: net -0.275 brüt +0.428 sh +0.02 alfa +0.004 beta +0.13 | uzun %36 (net +0.028) kısa %38 (net -0.025)
+  SOLUSDT: net -0.510 brüt +0.034 sh -0.24 alfa -0.178 beta +0.16 | uzun %35 (net -0.040) kısa %39 (net -0.287)
+  sepet net -0.233, brüt +0.434
+  yarıyıl net: 2025-Y1 +0.173, 2025-Y2 -0.328, 2026-Y1 -0.100, 2026-Y2 +0.082
+
+== t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1
+  BTCUSDT: net +0.203 brüt +0.352 sh +0.47 alfa +0.180 beta -0.03 | uzun %38 (net -0.081) kısa %36 (net +0.393)
+  ETHUSDT: net -0.266 brüt -0.098 sh -0.03 alfa -0.014 beta -0.02 | uzun %37 (net -0.195) kısa %35 (net +0.007)
+  SOLUSDT: net +0.552 brüt +0.882 sh +0.70 alfa +0.478 beta +0.00 | uzun %38 (net +0.052) kısa %35 (net +0.594)
+  sepet net +0.242, brüt +0.475
+  yarıyıl net: 2025-Y1 +0.044, 2025-Y2 -0.171, 2026-Y1 +0.520, 2026-Y2 -0.055
+
+== t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12
+  BTCUSDT: net -0.097 brüt +0.091 sh -0.23 alfa -0.043 beta +0.02 | uzun %8 (net -0.038) kısa %5 (net +0.030)
+  ETHUSDT: net +0.110 brüt +0.324 sh +0.34 alfa +0.107 beta +0.12 | uzun %8 (net +0.194) kısa %4 (net +0.006)
+  SOLUSDT: net +0.089 brüt +0.332 sh +0.31 alfa +0.099 beta +0.01 | uzun %8 (net +0.236) kısa %5 (net -0.038)
+  sepet net +0.064, brüt +0.285
+  yarıyıl net: 2025-Y1 +0.017, 2025-Y2 -0.032, 2026-Y1 -0.017, 2026-Y2 +0.099
+
+== t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1
+  BTCUSDT: net -0.491 brüt -0.254 sh -0.70 alfa -0.295 beta -0.04 | uzun %42 (net -0.182) kısa %44 (net -0.270)
+  ETHUSDT: net -0.736 brüt -0.545 sh -0.85 alfa -0.549 beta -0.05 | uzun %44 (net -0.520) kısa %45 (net -0.322)
+  SOLUSDT: net +0.584 brüt +1.483 sh +0.72 alfa +0.555 beta -0.04 | uzun %46 (net +0.739) kısa %45 (net +0.070)
+  sepet net -0.304, brüt +0.101
+  yarıyıl net: 2025-Y1 -0.121, 2025-Y2 -0.334, 2026-Y1 +0.096, 2026-Y2 +0.085
+
+== t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1
+  BTCUSDT: net -0.209 brüt -0.151 sh -0.56 alfa -0.116 beta +0.04 | uzun %12 (net -0.144) kısa %13 (net -0.041)
+  ETHUSDT: net -0.165 brüt -0.103 sh -0.19 alfa -0.063 beta +0.09 | uzun %12 (net +0.074) kısa %10 (net -0.196)
+  SOLUSDT: net +0.191 brüt +0.282 sh +0.45 alfa +0.172 beta +0.11 | uzun %13 (net +0.017) kısa %11 (net +0.211)
+  sepet net -0.039, brüt +0.033
+  yarıyıl net: 2025-Y1 -0.007, 2025-Y2 -0.057, 2026-Y1 -0.043, 2026-Y2 +0.072
+
+al-tut yarıyıl: 2025-Y1 -0.087, 2025-Y2 -0.061, 2026-Y1 -0.402, 2026-Y2 +0.581

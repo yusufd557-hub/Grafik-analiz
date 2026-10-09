@@ -40,6 +40,9 @@ SHORT = {
     "filtre": "",
     "gecikme_dk": "g",
     "w_taker_gun": "wt",
+    "emir": "",
+    "limit_bar": "lb",
+    "w_liste": "w",
 }
 
 
@@ -132,7 +135,26 @@ def stage4():
     return cfgs
 
 
-STAGES = {"1": stage1, "2a": stage2a, "2b": stage2b, "3": stage3, "4": stage4}
+def stage5():
+    """Devam (kesintiden sonra): limit emir, prim izle yönü, kalabalık topluluğu, trend filtresi."""
+    cfgs = []
+    k1 = dict(kind="kalabalik", oran="genel", w_gun=7, c=0.5, cx=0.5, isaret=-1)
+    k2 = dict(kind="kalabalik", oran="genel", w_gun=7, c=1.0, cx=0.0, isaret=-1)
+    for lb in (1, 2):
+        cfgs.append(("SEPET3", "1h", {**k1, "emir": "limit", "limit_bar": lb}))
+        cfgs.append(("SEPET3", "1h", {**k2, "emir": "limit", "limit_bar": lb}))
+        cfgs.append(("SEPET3", "4h", {**k2, "emir": "limit", "limit_bar": lb}))
+    for iv, ns in (("1h", (8, 24)), ("4h", (2, 6))):
+        for p in grid(kind=["prim"], n=ns, w_gun=[7, 30], c=[1.0], cx=[0.0], isaret=[1]):
+            cfgs.append(("SEPET3", iv, p))
+    for iv in ("1h", "4h"):
+        cfgs.append(("SEPET3", iv, dict(kind="kalabalik_top", w_liste="3-7-14", c=1.0, cx=0.0, isaret=-1)))
+    for tg in (7, 30):
+        cfgs.append(("SEPET3", "1h", {**k2, "trend_gun": tg, "filtre": "ile"}))
+    return cfgs
+
+
+STAGES = {"1": stage1, "2a": stage2a, "2b": stage2b, "3": stage3, "4": stage4, "5": stage5}
 
 
 def summary(name, universe, interval, params, res, seconds):

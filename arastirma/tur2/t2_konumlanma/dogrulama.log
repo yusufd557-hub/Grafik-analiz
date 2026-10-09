@@ -1,0 +1,63 @@
+t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1: aday=False
+t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1: aday=True
+t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12: aday=False
+t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1: aday=False
+t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1: aday=False
+
+== t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1
+  dev_train 1.0x  total_return +48.8400  sharpe +2.1120  max_drawdown -0.3867  trades 3132  alfa +0.8561  beta +0.0069  alfa_t +4.6677  p_value +0.0000  exposure +0.7724
+  dev_train 2.0x  total_return +14.5265  sharpe +1.5358  max_drawdown -0.3978  trades 3132  alfa +0.6234  beta +0.0072  alfa_t +3.3813  p_value +0.0002  exposure +0.7724
+  dev_valid 1.0x  total_return -0.2327  sharpe -0.1053  max_drawdown -0.5507  trades 1579  alfa -0.0550  beta +0.1151  alfa_t -0.1606  p_value +0.5738  exposure +0.9666
+  dev_valid 2.0x  total_return -0.5821  sharpe -0.8530  max_drawdown -0.7101  trades 1579  alfa -0.4006  beta +0.1160  alfa_t -1.1597  p_value +0.8808  exposure +0.9666
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': False, 'aday': False}
+  DSR: 0.0003
+
+== t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1
+  dev_train 1.0x  total_return +20.8285  sharpe +1.7895  max_drawdown -0.3604  trades 595  alfa +0.6729  beta +0.0148  alfa_t +3.8947  p_value +0.0000  exposure +0.7457
+  dev_train 2.0x  total_return +15.5453  sharpe +1.6436  max_drawdown -0.3743  trades 595  alfa +0.6173  beta +0.0151  alfa_t +3.5671  p_value +0.0000  exposure +0.7457
+  dev_valid 1.0x  total_return +0.2423  sharpe +0.5026  max_drawdown -0.2974  trades 340  alfa +0.2104  beta -0.0176  alfa_t +0.6674  p_value +0.2648  exposure +0.9585
+  dev_valid 2.0x  total_return +0.0592  sharpe +0.2842  max_drawdown -0.3210  trades 340  alfa +0.1199  beta -0.0179  alfa_t +0.3789  p_value +0.3726  exposure +0.9585
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': True, 'dogrulama_sharpe_yeterli': True, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': True}
+  DSR: 0.0040
+
+== t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12
+  dev_train 1.0x  total_return +3.6727  sharpe +1.5387  max_drawdown -0.2255  trades 731  alfa +0.3538  beta -0.0209  alfa_t +3.6930  p_value +0.0000  exposure +0.2061
+  dev_train 2.0x  total_return +2.3224  sharpe +1.2229  max_drawdown -0.2338  trades 731  alfa +0.2856  beta -0.0209  alfa_t +2.9876  p_value +0.0004  exposure +0.2061
+  dev_valid 1.0x  total_return +0.0637  sharpe +0.2767  max_drawdown -0.2063  trades 382  alfa +0.0509  beta +0.0521  alfa_t +0.3492  p_value +0.3622  exposure +0.2868
+  dev_valid 2.0x  total_return -0.1100  sharpe -0.2465  max_drawdown -0.2804  trades 382  alfa -0.0511  beta +0.0514  alfa_t -0.3506  p_value +0.6508  exposure +0.2868
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': True, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': True, 'aday': False}
+  DSR: 0.0015
+
+== t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1
+  dev_train 1.0x  total_return +5.5569  sharpe +1.3503  max_drawdown -0.3591  trades 1374  alfa +0.4218  beta +0.0027  alfa_t +2.9897  p_value +0.0004  exposure +0.6403
+  dev_train 2.0x  total_return +2.4540  sharpe +0.9419  max_drawdown -0.3838  trades 1374  alfa +0.2944  beta +0.0023  alfa_t +2.0818  p_value +0.0138  exposure +0.6403
+  dev_valid 1.0x  total_return -0.3044  sharpe -0.2108  max_drawdown -0.5308  trades 904  alfa -0.0962  beta -0.0424  alfa_t -0.2718  p_value +0.6130  exposure +0.9982
+  dev_valid 2.0x  total_return -0.5439  sharpe -0.7196  max_drawdown -0.6606  trades 904  alfa -0.3361  beta -0.0444  alfa_t -0.9447  p_value +0.8300  exposure +0.9982
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': False, 'aday': False}
+  DSR: 0.0002
+
+== t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1
+  dev_train 1.0x  total_return +3.5532  sharpe +1.1059  max_drawdown -0.2596  trades 368  alfa +0.3744  beta -0.0185  alfa_t +2.6184  p_value +0.0040  exposure +0.4992
+  dev_train 2.0x  total_return +2.8358  sharpe +0.9982  max_drawdown -0.2654  trades 368  alfa +0.3402  beta -0.0186  alfa_t +2.3779  p_value +0.0088  exposure +0.4992
+  dev_valid 1.0x  total_return -0.0388  sharpe +0.0119  max_drawdown -0.2329  trades 149  alfa -0.0020  beta +0.0784  alfa_t -0.0118  p_value +0.5114  exposure +0.4990
+  dev_valid 2.0x  total_return -0.1036  sharpe -0.1647  max_drawdown -0.2637  trades 149  alfa -0.0418  beta +0.0782  alfa_t -0.2501  p_value +0.6148  exposure +0.4990
+  candidate_check: {'gelistirme_egitim_net_pozitif': True, 'dogrulama_net_pozitif': False, 'dogrulama_2x_maliyette_net_pozitif': False, 'dogrulama_sharpe_yeterli': False, 'dogrulama_islem_sayisi': True, 'egitim_alfa_pozitif': True, 'dogrulama_alfa_pozitif': False, 'aday': False}
+  DSR: 0.0006
+
+al-tut (BTC/ETH/SOL vadeli eşit ağırlık, brüt): {
+ "dev_train": {
+  "total_return": 39.53378844872056,
+  "sharpe": 1.2842322497907002,
+  "max_drawdown": -0.8514249572118242,
+  "start": "2019-09-08 00:00:00+00:00",
+  "end": "2024-12-31 00:00:00+00:00"
+ },
+ "dev_valid": {
+  "total_return": -0.189314272490535,
+  "sharpe": 0.09871795592606972,
+  "max_drawdown": -0.6431749506198859,
+  "start": "2025-01-01 00:00:00+00:00",
+  "end": "2026-09-30 00:00:00+00:00"
+ }
+}
+DSR: deneme 250 (benzersiz 245), Sharpe varyansı 0.7648, gün 638

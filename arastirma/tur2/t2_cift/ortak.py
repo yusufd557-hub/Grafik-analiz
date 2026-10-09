@@ -17,8 +17,9 @@ import pandas as pd
 
 from grafik_analiz.research import protocol
 from grafik_analiz.research.evaluate import backtest, compute_signals, evaluate, load_data
+from grafik_analiz.research.ledger import _clean, ledger_path
 from grafik_analiz.research.metrics import daily_returns
-from grafik_analiz.strategies.t2_cift import make_spec
+from grafik_analiz.strategies.t2_cift import FAMILY, make_spec
 
 assert protocol.PROTOCOL_VERSION == "2", "GRAFIK_ANALIZ_PROTOKOL=2 gerekli"
 TRAIN_END = protocol.DEV_TRAIN_END
@@ -60,11 +61,58 @@ def degerlendir(interval: str, p: dict, mults=(1.0, 2.0)) -> dict:
     return row
 
 
+def _defter() -> dict:
+    """Defterdeki dev_train satırları: ad → {maliyet_kat: (parametreler, ölçüler)}."""
+    out: dict = {}
+    path = ledger_path(FAMILY)
+    if not path.exists():
+        return out
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        e = json.loads(line)
+        if e.get("pencere") != "dev_train" or e.get("protokol") != "2":
+            continue
+        out.setdefault(e["strateji"], {})[float(e["maliyet_kat"])] = (e["parametreler"], e["olcu"])
+    return out
+
+
+def defterden(interval: str, p: dict, mults=(1.0, 2.0), defter: dict | None = None) -> dict | None:
+    """Aynı ad ve parametrelerle defterde zaten varsa ölçüleri defterden döndürür (yeniden değerlendirmez)."""
+    spec = make_spec(ad(interval, p), interval, **p)
+    defter = _defter() if defter is None else defter
+    kayit = defter.get(spec.name)
+    if not kayit or any(m not in kayit for m in mults):
+        return None
+    beklenen = _clean({"interval": spec.interval, "legs": [list(l) for l in spec.legs], **spec.params})
+    if any(kayit[m][0] != beklenen for m in mults):
+        return None
+    o1 = kayit[1.0][1]
+    row = {
+        "ad": spec.name,
+        "interval": interval,
+        **{k: (json.dumps(v) if isinstance(v, (list, tuple)) else v) for k, v in p.items()},
+        "ret": o1.get("total_return"),
+        "sharpe": o1.get("sharpe"),
+        "mdd": o1.get("max_drawdown"),
+        "trades": o1.get("trades"),
+        "alfa": o1.get("alfa"),
+        "beta": o1.get("beta"),
+        "defterden": True,
+    }
+    if 2.0 in kayit:
+        row["ret2"] = kayit[2.0][1].get("total_return")
+        row["sharpe2"] = kayit[2.0][1].get("sharpe")
+    return row
+
+
 def tara(konfigler: list[tuple[str, dict]], cikti: str | None = None, mults=(1.0, 2.0)) -> pd.DataFrame:
     rows = []
     t0 = time.time()
+    defter = _defter()
     for i, (iv, p) in enumerate(konfigler):
-        rows.append(degerlendir(iv, p, mults))
+        eski = defterden(iv, p, mults, defter)
+        rows.append(eski if eski is not None else degerlendir(iv, p, mults))
         if (i + 1) % 10 == 0:
             print(f"  {i + 1}/{len(konfigler)} {time.time() - t0:.0f}s", flush=True)
             if cikti:

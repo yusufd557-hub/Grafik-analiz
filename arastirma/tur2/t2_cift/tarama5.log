@@ -1,0 +1,54 @@
+128 yapılandırma
+  10/128 11s
+  20/128 20s
+  30/128 28s
+  40/128 38s
+  50/128 51s
+  60/128 67s
+  70/128 76s
+  80/128 81s
+  90/128 86s
+  100/128 92s
+  110/128 98s
+  120/128 106s
+                                                                                                                                                      ad    ret   ret2  sharpe    mdd  trades   alfa   beta  maliyet  fonlama  maruz
+84                 t2_cift_4h_SOLBTC_bir_z_win12_z_in2.5_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.154  0.135   0.408 -0.156      82  0.033 -0.002    0.017    0.014  0.031
+88                 t2_cift_4h_SOLBTC_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.293  0.254   0.395 -0.256     150  0.051  0.011    0.030    0.040  0.127
+89                 t2_cift_4h_SOLBTC_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum  0.242  0.174   0.312 -0.413     280  0.042  0.020    0.056    0.030  0.232
+94                 t2_cift_4h_SOLBTC_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.142  0.118   0.280 -0.300     106  0.024  0.008    0.021    0.017  0.095
+92                 t2_cift_4h_SOLBTC_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.082  0.067   0.209 -0.236      72  0.020  0.001    0.014    0.020  0.065
+90                 t2_cift_4h_SOLBTC_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.093  0.049   0.189 -0.382     206  0.009  0.023    0.041    0.038  0.174
+25                 t2_cift_1h_SOLBTC_bir_z_win48_z_in2.0_z_exit0.0_max_bar48_rejimtrend_rejim_win500_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum  0.017 -0.158   0.143 -0.467     869  0.044 -0.006    0.189    0.010  0.275
+80                 t2_cift_4h_SOLBTC_bir_z_win12_z_in2.0_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.049 -0.014   0.141 -0.394     306  0.014  0.008    0.062    0.023  0.110
+93                 t2_cift_4h_SOLBTC_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum  0.044  0.014   0.131 -0.288     140  0.013  0.004    0.028    0.016  0.122
+24                 t2_cift_1h_SOLBTC_bir_z_win48_z_in2.0_z_exit0.0_max_bar48_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.022 -0.090   0.130 -0.472     532  0.034 -0.004    0.116    0.007  0.167
+85                 t2_cift_4h_SOLBTC_bir_z_win12_z_in2.5_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum  0.028 -0.004   0.107 -0.190     156  0.015 -0.004    0.032    0.009  0.063
+86                 t2_cift_4h_SOLBTC_bir_z_win12_z_in2.5_z_exit0.0_max_bar12_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.018 -0.002   0.084 -0.239      98  0.012 -0.004    0.020    0.013  0.040
+29                 t2_cift_1h_SOLBTC_bir_z_win48_z_in2.5_z_exit0.0_max_bar48_rejimtrend_rejim_win500_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.042 -0.154   0.077 -0.394     565  0.038 -0.018    0.124    0.009  0.192
+22                t2_cift_1h_SOLBTC_bir_z_win24_z_in2.5_z_exit0.0_max_bar24_rejimtrend_rejim_win1500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.011 -0.139   0.069 -0.450     624  0.009  0.002    0.139    0.025  0.115
+68                 t2_cift_4h_ETHBTC_bir_z_win12_z_in2.5_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum  0.004 -0.023   0.043 -0.112     131 -0.000  0.002    0.027   -0.006  0.048
+26                t2_cift_1h_SOLBTC_bir_z_win48_z_in2.0_z_exit0.0_max_bar48_rejimtrend_rejim_win1500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.075 -0.192   0.037 -0.516     622  0.007  0.001    0.135    0.036  0.200
+81                 t2_cift_4h_SOLBTC_bir_z_win12_z_in2.0_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.073 -0.168   0.032 -0.465     525 -0.005  0.010    0.107   -0.003  0.194
+105                t2_cift_4h_SOLETH_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.058 -0.105   0.032 -0.416     254  0.016 -0.009    0.052    0.017  0.213
+76                 t2_cift_4h_ETHBTC_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.004 -0.026   0.024 -0.162     107 -0.008  0.008    0.022   -0.003  0.092
+21                 t2_cift_1h_SOLBTC_bir_z_win24_z_in2.5_z_exit0.0_max_bar24_rejimtrend_rejim_win500_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.076 -0.233   0.007 -0.478     853  0.005 -0.003    0.186    0.013  0.157
+120  t2_cift_4h_ETHBTC-SOLBTC-SOLETH_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.033 -0.064  -0.017 -0.219     399 -0.006  0.004    0.033    0.021  0.310
+28                 t2_cift_1h_SOLBTC_bir_z_win48_z_in2.5_z_exit0.0_max_bar48_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.123 -0.182  -0.063 -0.328     313  0.010 -0.018    0.069    0.026  0.105
+82                 t2_cift_4h_SOLBTC_bir_z_win12_z_in2.0_z_exit0.0_max_bar12_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.127 -0.188  -0.066 -0.481     358 -0.032  0.017    0.073    0.020  0.135
+121  t2_cift_4h_ETHBTC-SOLBTC-SOLETH_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.081 -0.132  -0.072 -0.330     650 -0.015  0.005    0.058    0.013  0.484
+91                 t2_cift_4h_SOLBTC_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win500_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.192 -0.244  -0.079 -0.616     332 -0.039  0.019    0.067    0.031  0.283
+30                t2_cift_1h_SOLBTC_bir_z_win48_z_in2.5_z_exit0.0_max_bar48_rejimtrend_rejim_win1500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.161 -0.233  -0.089 -0.480     408 -0.008 -0.008    0.091    0.032  0.142
+104                t2_cift_4h_SOLETH_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.135 -0.163  -0.101 -0.353     160 -0.006 -0.009    0.033    0.029  0.134
+116  t2_cift_4h_ETHBTC-SOLBTC-SOLETH_bir_z_win12_z_in2.5_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.031 -0.050  -0.104 -0.118     267 -0.004 -0.001    0.020    0.006  0.092
+109                t2_cift_4h_SOLETH_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.145 -0.171  -0.116 -0.413     154 -0.006 -0.011    0.032    0.021  0.132
+110                t2_cift_4h_SOLETH_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.131 -0.153  -0.126 -0.321     128 -0.020  0.002    0.026    0.022  0.108
+106                t2_cift_4h_SOLETH_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.171 -0.203  -0.132 -0.391     194 -0.030  0.006    0.040    0.027  0.161
+124  t2_cift_4h_ETHBTC-SOLBTC-SOLETH_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.063 -0.080  -0.150 -0.184     244 -0.009 -0.001    0.019    0.014  0.196
+41                 t2_cift_1h_SOLETH_bir_z_win48_z_in2.0_z_exit0.0_max_bar48_rejimtrend_rejim_win500_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.270 -0.392  -0.158 -0.438     856 -0.017 -0.017    0.182    0.011  0.271
+18                t2_cift_1h_SOLBTC_bir_z_win24_z_in2.0_z_exit0.0_max_bar24_rejimtrend_rejim_win1500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.236 -0.395  -0.171 -0.500    1069 -0.038  0.004    0.234    0.049  0.187
+122  t2_cift_4h_ETHBTC-SOLBTC-SOLETH_bir_z_win30_z_in2.0_z_exit0.0_max_bar30_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.132 -0.169  -0.188 -0.312     505 -0.037  0.013    0.043    0.017  0.378
+38                t2_cift_1h_SOLETH_bir_z_win24_z_in2.5_z_exit0.0_max_bar24_rejimtrend_rejim_win1500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.225 -0.327  -0.190 -0.394     661 -0.012 -0.019    0.141    0.022  0.120
+112  t2_cift_4h_ETHBTC-SOLBTC-SOLETH_bir_z_win12_z_in2.0_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.112 -0.170  -0.204 -0.228     837 -0.022  0.002    0.067    0.012  0.276
+126  t2_cift_4h_ETHBTC-SOLBTC-SOLETH_bir_z_win30_z_in2.5_z_exit0.0_max_bar30_rejimtrend_rejim_win500_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.096 -0.119  -0.206 -0.238     322 -0.021  0.004    0.026    0.012  0.262
+96                 t2_cift_4h_SOLETH_bir_z_win12_z_in2.0_z_exit0.0_max_bar12_rejimtrend_rejim_win180_rejim_esik0.0_limit_bps10.0_limit_bar2_limit_modtum -0.185 -0.236  -0.219 -0.329     318 -0.028 -0.003    0.064    0.019  0.115
+23                t2_cift_1h_SOLBTC_bir_z_win24_z_in2.5_z_exit0.0_max_bar24_rejimtrend_rejim_win1500_rejim_esik1.0_limit_bps10.0_limit_bar2_limit_modtum -0.279 -0.419  -0.235 -0.596     981 -0.038 -0.007    0.216    0.024  0.179

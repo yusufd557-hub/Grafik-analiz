@@ -1,0 +1,26 @@
+t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum | valid 1x 0.075 2x 0.0677 Sharpe 0.909 işlem 28 alfa 0.0424 aday True
+t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum | valid 1x 0.0433 2x 0.038 Sharpe 0.725 işlem 55 alfa 0.0249 aday True
+t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win500_z_in5.0_max_bar3_limit_bps10.0_limit_bar2_limit_modtum | valid 1x 0.0056 2x 0.0025 Sharpe 0.189 işlem 41 alfa 0.0036 aday False
+{
+ "zaman": "2026-10-09T08:59:25+00:00",
+ "dsr_girdi": {
+  "deneme_satir": 639,
+  "deneme_benzersiz": 636,
+  "sharpe_varyans": 0.631882
+ },
+ "al_tut_port3_vadeli": {
+  "dev_train": {
+   "getiri": 39.533788,
+   "sharpe": 1.284232,
+   "max_dusus": -0.851425
+  },
+  "dev_valid": {
+   "getiri": -0.189314,
+   "sharpe": 0.098718,
+   "max_dusus": -0.643175
+  }
+ }
+}
+t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum DSR 0.0013406775540323347 DSR(benzersiz) 0.0013499563003752822 {'yillik': {'2025': 0.027, '2026': 0.0467}, 'fonlama_toplam_odenen': -0.0020035699999999997, 'maliyet_toplam': 0.00685, 'bacak_islem': {'futures:BTCUSDT': 14, 'futures:SOLUSDT': 14}}
+t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum DSR 0.0021505531790345597 DSR(benzersiz) 0.0021626972204915867 {'yillik': {'2025': 0.0257, '2026': 0.0171}, 'fonlama_toplam_odenen': -0.001226375, 'maliyet_toplam': 0.0050166666666666675, 'bacak_islem': {'futures:BTCUSDT': 14, 'futures:ETHUSDT': 18, 'futures:SOLUSDT': 23}}
+t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win500_z_in5.0_max_bar3_limit_bps10.0_limit_bar2_limit_modtum DSR 0.001471958156334292 DSR(benzersiz) 0.0014788210994323872 {'yillik': {'2025': 0.0148, '2026': -0.0091}, 'fonlama_toplam_odenen': -0.0008934083333333333, 'maliyet_toplam': 0.003183333333333333, 'bacak_islem': {'futures:BTCUSDT': 12, 'futures:ETHUSDT': 10, 'futures:SOLUSDT': 19}}

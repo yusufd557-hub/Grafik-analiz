@@ -1,0 +1,263 @@
+{
+ "secilen": [
+  {
+   "strateji": "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1",
+   "evren": "SEPET3",
+   "dilim": "1h",
+   "parametreler": {
+    "kind": "kalabalik",
+    "oran": "genel",
+    "w_gun": 7,
+    "c": 0.5,
+    "cx": 0.5,
+    "isaret": -1,
+    "emir": "limit",
+    "limit_bar": 1
+   },
+   "egitim_1x": {
+    "total_return": 48.84004662181613,
+    "sharpe": 2.112018238822308,
+    "max_drawdown": -0.38673894672231734,
+    "trades": 3132,
+    "alfa": 0.8561479498470356,
+    "beta": 0.006921365555432856,
+    "alfa_t": 4.667744831040282,
+    "exposure": 0.7724411603721949,
+    "win_rate": 0.39080459770114945,
+    "total_without_best": 41.54820655981807,
+    "total_funding": -0.12717302666666663,
+    "total_costs": 1.1659000000000002
+   },
+   "egitim_2x": {
+    "total_return": 14.526450626931373,
+    "sharpe": 1.535840050634075,
+    "alfa": 0.6234294819363725,
+    "alfa_t": 3.381296909434432
+   },
+   "komsu": [
+    2,
+    2
+   ]
+  },
+  {
+   "strateji": "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1",
+   "evren": "SEPET3",
+   "dilim": "1h",
+   "parametreler": {
+    "kind": "kalabalik",
+    "oran": "genel",
+    "w_gun": 30,
+    "c": 1.0,
+    "cx": 0.0,
+    "isaret": -1
+   },
+   "egitim_1x": {
+    "total_return": 20.828498730258637,
+    "sharpe": 1.7895233794933032,
+    "max_drawdown": -0.36037365754590023,
+    "trades": 595,
+    "alfa": 0.6728667788051367,
+    "beta": 0.01481640029682903,
+    "alfa_t": 3.8947072463969095,
+    "exposure": 0.7456668491151249,
+    "win_rate": 0.4369747899159664,
+    "total_without_best": 13.000570135238087,
+    "total_funding": -0.16961246666666663,
+    "total_costs": 0.2769666666666667
+   },
+   "egitim_2x": {
+    "total_return": 15.545319811646017,
+    "sharpe": 1.6435677072045525,
+    "alfa": 0.6173337186555408,
+    "alfa_t": 3.5671017032783703
+   },
+   "komsu": [
+    5,
+    5
+   ]
+  },
+  {
+   "strateji": "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12",
+   "evren": "SEPET3",
+   "dilim": "1h",
+   "parametreler": {
+    "kind": "oi",
+    "mod": "birikim",
+    "k": 8,
+    "w_gun": 30,
+    "a": 1.0,
+    "b": 1.5,
+    "tut": 12
+   },
+   "egitim_1x": {
+    "total_return": 3.6726875149039566,
+    "sharpe": 1.5386563969014866,
+    "max_drawdown": -0.22552568106886095,
+    "trades": 731,
+    "alfa": 0.3537999281397001,
+    "beta": -0.020888642511511908,
+    "alfa_t": 3.693036065661483,
+    "exposure": 0.20605272760445173,
+    "win_rate": 0.49794801641586867,
+    "total_without_best": 2.875412043063033,
+    "total_funding": 0.08847902666666665,
+    "total_costs": 0.3409
+   },
+   "egitim_2x": {
+    "total_return": 2.322444309235849,
+    "sharpe": 1.2229088486437913,
+    "alfa": 0.2855755252720504,
+    "alfa_t": 2.9876207711220957
+   },
+   "komsu": [
+    7,
+    7
+   ]
+  },
+  {
+   "strateji": "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1",
+   "evren": "SEPET3",
+   "dilim": "1h",
+   "parametreler": {
+    "kind": "fark",
+    "w_gun": 14,
+    "c": 0.5,
+    "cx": 0.0,
+    "isaret": 1
+   },
+   "egitim_1x": {
+    "total_return": 5.556908872237371,
+    "sharpe": 1.350342969222495,
+    "max_drawdown": -0.3590962682713412,
+    "trades": 1374,
+    "alfa": 0.421829586353631,
+    "beta": 0.0027220827955074783,
+    "alfa_t": 2.9897272499136243,
+    "exposure": 0.6402800583835067,
+    "win_rate": 0.4177583697234352,
+    "total_without_best": 4.675253784316847,
+    "total_funding": 0.02355388,
+    "total_costs": 0.6407333333333333
+   },
+   "egitim_2x": {
+    "total_return": 2.4539556891502077,
+    "sharpe": 0.9418972645842352,
+    "alfa": 0.29436410583663264,
+    "alfa_t": 2.0818143504941635
+   },
+   "komsu": [
+    4,
+    4
+   ]
+  },
+  {
+   "strateji": "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1",
+   "evren": "SEPET3",
+   "dilim": "4h",
+   "parametreler": {
+    "kind": "taker",
+    "k": 12,
+    "w_gun": 30,
+    "c": 2.0,
+    "cx": 0.0,
+    "isaret": 1
+   },
+   "egitim_1x": {
+    "total_return": 3.553246001825425,
+    "sharpe": 1.1059041340861275,
+    "max_drawdown": -0.2595873709090173,
+    "trades": 368,
+    "alfa": 0.37439642917954413,
+    "beta": -0.01854529054569291,
+    "alfa_t": 2.618405792891778,
+    "exposure": 0.49917898193760263,
+    "win_rate": 0.4701086956521739,
+    "total_without_best": 2.1343578846784315,
+    "total_funding": -0.05487612,
+    "total_costs": 0.17149999999999999
+   },
+   "egitim_2x": {
+    "total_return": 2.835829058129527,
+    "sharpe": 0.9981633994219516,
+    "alfa": 0.34020394598251835,
+    "alfa_t": 2.377902409094483
+   },
+   "komsu": [
+    5,
+    4
+   ]
+  }
+ ],
+ "korelasyon": {
+  "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1": {
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1": 1.0,
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1": 0.5914,
+   "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12": 0.2984,
+   "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1": 0.39,
+   "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1": 0.2533
+  },
+  "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1": {
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1": 0.5914,
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1": 1.0,
+   "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12": 0.2182,
+   "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1": 0.457,
+   "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1": 0.3306
+  },
+  "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12": {
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1": 0.2984,
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1": 0.2182,
+   "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12": 1.0,
+   "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1": 0.1056,
+   "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1": 0.1606
+  },
+  "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1": {
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1": 0.39,
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1": 0.457,
+   "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12": 0.1056,
+   "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1": 1.0,
+   "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1": 0.1283
+  },
+  "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1": {
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1": 0.2533,
+   "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1": 0.3306,
+   "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12": 0.1606,
+   "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1": 0.1283,
+   "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1": 1.0
+  }
+ },
+ "gunluk": [
+  "SEÇ  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1: alfa t 4.67, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +48.840 (defter +48.840), en yüksek korelasyon nan",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1: alfa t 4.56, komşu 6/6 pozitif, kesik veriyle eğitim getirisi +44.516 (defter +44.516), en yüksek korelasyon 0.999",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.0_s-1: alfa t 4.55, komşu 6/6 pozitif, kesik veriyle eğitim getirisi +51.918 (defter +51.918), en yüksek korelasyon 0.956",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.0_cx0.5_s-1: alfa t 4.48, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +35.360 (defter +35.360), en yüksek korelasyon 0.949",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.0_cx0.0_s-1_g30: alfa t 4.38, komşu 3/3 pozitif, kesik veriyle eğitim getirisi +37.846 (defter +37.846), en yüksek korelasyon 0.920",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.0_cx0.0_s-1_g60: alfa t 4.32, komşu 3/3 pozitif, kesik veriyle eğitim getirisi +35.841 (defter +35.841), en yüksek korelasyon 0.910",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.0_cx0.0_s-1_limit_lb1: alfa t 4.30, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +35.642 (defter +35.642), en yüksek korelasyon 0.928",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.0_cx0.0_s-1: alfa t 4.27, komşu 14/14 pozitif, kesik veriyle eğitim getirisi +34.772 (defter +34.772), en yüksek korelasyon 0.928",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w3_c1.0_cx0.5_s-1: alfa t 4.18, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +28.723 (defter +28.723), en yüksek korelasyon 0.760",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w3_c1.5_cx0.5_s-1: alfa t 4.17, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +23.861 (defter +23.861), en yüksek korelasyon 0.744",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.5_cx0.5_s-1: alfa t 4.16, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +21.970 (defter +21.970), en yüksek korelasyon 0.882",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w14_c1.5_cx0.5_s-1: alfa t 4.15, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +17.134 (defter +17.134), en yüksek korelasyon 0.761",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w14_c0.5_cx0.0_s-1: alfa t 4.10, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +34.519 (defter +34.519), en yüksek korelasyon 0.805",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w3_c1.0_cx0.0_s-1: alfa t 4.04, komşu 7/7 pozitif, kesik veriyle eğitim getirisi +28.877 (defter +28.877), en yüksek korelasyon 0.788",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.0_cx0.0_s-1_g120: alfa t 4.00, komşu 3/3 pozitif, kesik veriyle eğitim getirisi +26.623 (defter +26.623), en yüksek korelasyon 0.891",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c1.5_cx0.0_s-1: alfa t 3.99, komşu 6/6 pozitif, kesik veriyle eğitim getirisi +24.092 (defter +24.092), en yüksek korelasyon 0.880",
+  "ret  t2_konumlanma_kalabalik_1h_SEPET3_genel_w14_c1.0_cx0.5_s-1: alfa t 3.98, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +19.767 (defter +19.767), en yüksek korelasyon 0.828",
+  "ret  t2_konumlanma_kalabalik_4h_SEPET3_genel_w7_c1.0_cx0.5_s-1: alfa t 3.90, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +20.397 (defter +20.397), en yüksek korelasyon 0.894",
+  "SEÇ  t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1: alfa t 3.89, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +20.829 (defter +20.828), en yüksek korelasyon 0.591",
+  "SEÇ  t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12: alfa t 3.69, komşu 7/7 pozitif, kesik veriyle eğitim getirisi +3.673 (defter +3.673), en yüksek korelasyon 0.298",
+  "ret  t2_konumlanma_bilesik_1h_SEPET3_w7_k48_wt30_c0.5_cx0.0: alfa t 3.31, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +14.905 (defter +14.905), en yüksek korelasyon 0.864",
+  "ret  t2_konumlanma_bilesik_1h_SEPET3_w7_k48_wt30_c1.0_cx0.0: alfa t 3.30, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +12.555 (defter +12.555), en yüksek korelasyon 0.815",
+  "ret  t2_konumlanma_bilesik_4h_SEPET3_w7_k12_wt30_c1.0_cx0.0: alfa t 3.25, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +12.156 (defter +12.156), en yüksek korelasyon 0.775",
+  "ret  t2_konumlanma_bilesik_1h_SEPET3_w7_k24_wt30_c0.5_cx0.0: alfa t 3.20, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +13.484 (defter +13.484), en yüksek korelasyon 0.885",
+  "ret  t2_konumlanma_bilesik_4h_SEPET3_w7_k12_wt30_c0.5_cx0.0: alfa t 3.14, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +11.403 (defter +11.403), en yüksek korelasyon 0.823",
+  "SEÇ  t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1: alfa t 2.99, komşu 4/4 pozitif, kesik veriyle eğitim getirisi +5.557 (defter +5.557), en yüksek korelasyon 0.457",
+  "ret  t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b2.0_t12: alfa t 2.78, komşu 5/5 pozitif, kesik veriyle eğitim getirisi +1.418 (defter +1.418), en yüksek korelasyon 0.872",
+  "ret  t2_konumlanma_oi_1h_SEPET3_birikim_k12_w30_a1.0_b1.5_t12: alfa t 2.75, komşu 9/10 pozitif, kesik veriyle eğitim getirisi +1.806 (defter +1.806), en yüksek korelasyon 0.870",
+  "ret  t2_konumlanma_bilesik_4h_SEPET3_w7_k6_wt30_c0.5_cx0.0: alfa t 2.69, komşu 2/2 pozitif, kesik veriyle eğitim getirisi +7.776 (defter +7.776), en yüksek korelasyon 0.844",
+  "ret  t2_konumlanma_fark_1h_SEPET3_w14_c1.0_cx0.0_s1: alfa t 2.68, komşu 4/4 pozitif, kesik veriyle eğitim getirisi +3.882 (defter +3.882), en yüksek korelasyon 0.940",
+  "SEÇ  t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1: alfa t 2.62, komşu 4/5 pozitif, kesik veriyle eğitim getirisi +3.553 (defter +3.553), en yüksek korelasyon 0.331"
+ ],
+ "uygun_sayisi": 121,
+ "toplam": 245
+}

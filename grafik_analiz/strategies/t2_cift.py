@@ -375,6 +375,49 @@ def make_spec(name: str, interval: str, description: str = "", **params) -> Stra
     )
 
 
+# Dondurulmuş yapılandırmalar: hepsi 1h, 1:1 dolar nötr yayılım, şok sönümlenmesi,
+# limit emir (her pozisyon değişiminde, 2 bar sonra piyasa emri). Ad ve parametreler
+# eğitim aramasında deftere yazılanlarla birebir aynıdır.
+_SOK = dict(hedge="bir", z_tur="sok", vol_win=500, z_exit=None, limit_bar=2, limit_mod="tum")
+
+FROZEN = [
+    (
+        "t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum",
+        dict(ciftler=["SOLBTC"], k=6, z_in=5.0, max_bar=6, limit_bps=20.0, **_SOK),
+        "B — SOL/BTC yayılımında son 6 saatlik hareket önceki 500 saatin oynaklığına göre 5σ'yı "
+        "aşınca ters yönde gir (SOL ve BTC vadeli, 1:1), 6 saat sonra çık. Giriş/çıkış kapanışın "
+        "20 bp ötesine limit emir, 2 bar dolmazsa piyasa emri.",
+    ),
+    (
+        "t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum",
+        dict(ciftler=["SOLBTC", "SOLETH"], k=6, z_in=5.0, max_bar=6, limit_bps=20.0, **_SOK),
+        "C — B'nin kuralı SOL/BTC ve SOL/ETH çiftlerine birlikte uygulanır (BTC, ETH, SOL bacakları; "
+        "coin başına net pozisyon).",
+    ),
+    (
+        "t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win500_z_in5.0_max_bar3_limit_bps10.0_limit_bar2_limit_modtum",
+        dict(ciftler=["SOLBTC", "SOLETH"], k=12, z_in=5.0, max_bar=3, limit_bps=10.0, **_SOK),
+        "D — SOL/BTC ve SOL/ETH: son 12 saatlik yayılım hareketi 5σ'yı aşınca ters yönde gir, "
+        "3 saat sonra çık; limit 10 bp, 2 bar.",
+    ),
+]
+
+SONUC = {
+    # dev_valid değerlendirmesi (9 Ekim 2026, tek bakış; bkz. arastirma/tur2/t2_cift/RAPOR.md).
+    FROZEN[0][0]: "candidate_check: GEÇTİ (dev_valid +%7,50, 2× +%6,77, Sharpe 0,91, 28 işlem, alfa +%4,24, "
+    "alfa t 1,20; en iyi işlem çıkınca −%0,52; DSR 0,001).",
+    FROZEN[1][0]: "candidate_check: GEÇTİ (dev_valid +%4,33, 2× +%3,80, Sharpe 0,73, 55 işlem, alfa +%2,49, "
+    "alfa t 0,96; en iyi işlem çıkınca −%0,99; DSR 0,002).",
+    FROZEN[2][0]: "candidate_check: GEÇMEDİ (dev_valid Sharpe 0,19 < 0,5; +%0,56, 2× +%0,25, 41 işlem).",
+}
+
+
 def specs() -> list[StrategySpec]:
     """Dondurulmuş yapılandırmalar (iç doğrulamada bir kez ölçülenler)."""
-    return []
+    out = []
+    for name, params, desc in FROZEN:
+        sonuc = SONUC.get(name)
+        if sonuc:
+            desc = f"{desc} {sonuc}"
+        out.append(make_spec(name, "1h", description=desc, **params))
+    return out

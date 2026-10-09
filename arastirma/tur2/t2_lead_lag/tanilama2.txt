@@ -1,0 +1,242 @@
+=== 5m
+BTC->ETH k=1 h= 1 |ze|>2.0: n= 25901 izleyen= +0.53bps artık= +1.25bps | lider|z|>2.0&geride n= 8263  -0.23bps | yıllar 2020:-0.3 2021:+2.9 2022:-0.2 2023:-0.0 2024:+0.1
+BTC->ETH k=1 h= 1 |ze|>3.0: n=  8170 izleyen= +1.73bps artık= +2.34bps | lider|z|>3.0&geride n= 3628  +0.53bps | yıllar 2020:-1.3 2021:+7.9 2022:+1.3 2023:-0.0 2024:+0.8
+BTC->ETH k=1 h= 1 |ze|>4.0: n=  3438 izleyen= +4.36bps artık= +4.15bps | lider|z|>4.0&geride n= 1891  +2.01bps | yıllar 2020:+2.1 2021:+15.7 2022:+3.9 2023:+1.4 2024:-0.0
+BTC->ETH k=1 h= 2 |ze|>2.0: n= 25901 izleyen= +0.32bps artık= +1.18bps | lider|z|>2.0&geride n= 8263  -1.28bps | yıllar 2020:-0.1 2021:+1.7 2022:-0.5 2023:-0.1 2024:+0.5
+BTC->ETH k=1 h= 2 |ze|>3.0: n=  8170 izleyen= +1.01bps artık= +1.87bps | lider|z|>3.0&geride n= 3628  -0.27bps | yıllar 2020:-1.2 2021:+5.4 2022:-0.3 2023:+0.0 2024:+1.2
+BTC->ETH k=1 h= 2 |ze|>4.0: n=  3438 izleyen= +3.44bps artık= +2.91bps | lider|z|>4.0&geride n= 1891  +1.33bps | yıllar 2020:-0.0 2021:+12.8 2022:+1.8 2023:+1.7 2024:+2.0
+BTC->ETH k=1 h= 3 |ze|>2.0: n= 25901 izleyen= +0.14bps artık= +1.06bps | lider|z|>2.0&geride n= 8263  -0.06bps | yıllar 2020:+0.3 2021:+0.8 2022:-0.4 2023:-0.4 2024:+0.4
+BTC->ETH k=1 h= 3 |ze|>3.0: n=  8170 izleyen= +0.16bps artık= +1.24bps | lider|z|>3.0&geride n= 3628  +2.42bps | yıllar 2020:-0.1 2021:+0.7 2022:+0.5 2023:-0.7 2024:+0.4
+BTC->ETH k=1 h= 3 |ze|>4.0: n=  3438 izleyen= +2.23bps artık= +1.72bps | lider|z|>4.0&geride n= 1891  +4.30bps | yıllar 2020:+2.7 2021:+0.3 2022:+6.0 2023:+0.1 2024:+2.0
+BTC->ETH k=1 h= 6 |ze|>2.0: n= 25901 izleyen= +0.54bps artık= +1.48bps | lider|z|>2.0&geride n= 8263  -1.17bps | yıllar 2020:+0.5 2021:+1.8 2022:-0.2 2023:-0.1 2024:+0.5
+BTC->ETH k=1 h= 6 |ze|>3.0: n=  8170 izleyen= +0.03bps artık= +1.75bps | lider|z|>3.0&geride n= 3628  +1.26bps | yıllar 2020:-1.8 2021:+1.2 2022:+1.1 2023:+0.1 2024:-0.5
+BTC->ETH k=1 h= 6 |ze|>4.0: n=  3438 izleyen= +2.02bps artık= +2.78bps | lider|z|>4.0&geride n= 1891  +1.88bps | yıllar 2020:+4.0 2021:-0.2 2022:+6.3 2023:+1.2 2024:-1.6
+BTC->ETH k=1 h=12 |ze|>2.0: n= 25899 izleyen= +1.14bps artık= +1.40bps | lider|z|>2.0&geride n= 8263  -1.76bps | yıllar 2020:-0.1 2021:+4.0 2022:+0.7 2023:-0.3 2024:+1.1
+BTC->ETH k=1 h=12 |ze|>3.0: n=  8170 izleyen= +0.76bps artık= +1.14bps | lider|z|>3.0&geride n= 3628  +0.46bps | yıllar 2020:-2.9 2021:+2.9 2022:+1.3 2023:-0.7 2024:+3.1
+BTC->ETH k=1 h=12 |ze|>4.0: n=  3438 izleyen= +4.59bps artık= +2.61bps | lider|z|>4.0&geride n= 1891  +1.86bps | yıllar 2020:+7.2 2021:+3.9 2022:+9.8 2023:-0.4 2024:+2.9
+BTC->ETH k=3 h= 1 |ze|>2.0: n= 23905 izleyen= +0.48bps artık= +0.70bps | lider|z|>2.0&geride n= 7738  +1.17bps | yıllar 2020:+1.1 2021:+1.7 2022:+0.3 2023:-0.1 2024:-0.5
+BTC->ETH k=3 h= 1 |ze|>3.0: n=  7453 izleyen= +1.14bps artık= +1.33bps | lider|z|>3.0&geride n= 3459  +3.08bps | yıllar 2020:+0.2 2021:+6.2 2022:+1.4 2023:-1.2 2024:-0.7
+BTC->ETH k=3 h= 1 |ze|>4.0: n=  2938 izleyen= +2.96bps artık= +2.96bps | lider|z|>4.0&geride n= 1754  +3.53bps | yıllar 2020:-0.6 2021:+16.2 2022:-0.8 2023:+1.3 2024:+0.9
+BTC->ETH k=3 h= 2 |ze|>2.0: n= 23905 izleyen= +0.11bps artık= +0.54bps | lider|z|>2.0&geride n= 7738  +0.84bps | yıllar 2020:+1.4 2021:+0.3 2022:+0.0 2023:-0.4 2024:-0.6
+BTC->ETH k=3 h= 2 |ze|>3.0: n=  7453 izleyen= -0.06bps artık= +0.24bps | lider|z|>3.0&geride n= 3459  +3.13bps | yıllar 2020:-0.2 2021:+0.4 2022:+1.3 2023:-1.2 2024:-0.5
+BTC->ETH k=3 h= 2 |ze|>4.0: n=  2938 izleyen= +0.55bps artık= +0.25bps | lider|z|>4.0&geride n= 1754  +1.97bps | yıllar 2020:+0.2 2021:+2.0 2022:-1.0 2023:-0.2 2024:+2.1
+BTC->ETH k=3 h= 3 |ze|>2.0: n= 23905 izleyen= -0.53bps artık= +0.15bps | lider|z|>2.0&geride n= 7738  +0.55bps | yıllar 2020:+0.6 2021:-1.1 2022:-0.2 2023:-0.8 2024:-0.9
+BTC->ETH k=3 h= 3 |ze|>3.0: n=  7453 izleyen= -0.68bps artık= -0.15bps | lider|z|>3.0&geride n= 3459  +2.03bps | yıllar 2020:-0.4 2021:-3.0 2022:+2.7 2023:-0.7 2024:-2.0
+BTC->ETH k=3 h= 3 |ze|>4.0: n=  2938 izleyen= -1.20bps artık= -0.66bps | lider|z|>4.0&geride n= 1754  +1.94bps | yıllar 2020:-0.2 2021:-6.1 2022:+0.6 2023:-0.0 2024:-1.0
+BTC->ETH k=3 h= 6 |ze|>2.0: n= 23905 izleyen= -0.73bps artık= +0.28bps | lider|z|>2.0&geride n= 7738  -0.21bps | yıllar 2020:+1.5 2021:-5.1 2022:+0.8 2023:-0.2 2024:-0.3
+BTC->ETH k=3 h= 6 |ze|>3.0: n=  7453 izleyen= -1.26bps artık= -0.58bps | lider|z|>3.0&geride n= 3459  +1.11bps | yıllar 2020:-2.6 2021:-7.1 2022:+6.0 2023:-0.7 2024:-1.9
+BTC->ETH k=3 h= 6 |ze|>4.0: n=  2938 izleyen= -0.20bps artık= -1.51bps | lider|z|>4.0&geride n= 1754  -1.37bps | yıllar 2020:-3.2 2021:+1.8 2022:+1.9 2023:+0.7 2024:-1.7
+BTC->ETH k=3 h=12 |ze|>2.0: n= 23905 izleyen= -0.47bps artık= +0.39bps | lider|z|>2.0&geride n= 7738  -1.13bps | yıllar 2020:+1.1 2021:-3.6 2022:+0.7 2023:-1.9 2024:+1.3
+BTC->ETH k=3 h=12 |ze|>3.0: n=  7453 izleyen= +0.28bps artık= -0.29bps | lider|z|>3.0&geride n= 3459  +0.82bps | yıllar 2020:-1.3 2021:-4.0 2022:+6.8 2023:-1.4 2024:+1.4
+BTC->ETH k=3 h=12 |ze|>4.0: n=  2938 izleyen= +1.30bps artık= -1.71bps | lider|z|>4.0&geride n= 1754  -2.11bps | yıllar 2020:-1.1 2021:-4.0 2022:+9.7 2023:-0.6 2024:+2.9
+BTC->SOL k=1 h= 1 |ze|>2.0: n= 23172 izleyen= +0.28bps artık= +1.01bps | lider|z|>2.0&geride n= 6467  -2.69bps | yıllar 2020:-3.7 2021:+0.6 2022:+0.2 2023:+0.1 2024:+1.4
+BTC->SOL k=1 h= 1 |ze|>3.0: n=  7111 izleyen= +1.38bps artık= +2.92bps | lider|z|>3.0&geride n= 3070  -3.24bps | yıllar 2020:-5.7 2021:-1.5 2022:+0.2 2023:+4.3 2024:+5.4
+BTC->SOL k=1 h= 1 |ze|>4.0: n=  2695 izleyen= +0.70bps artık= +5.06bps | lider|z|>4.0&geride n= 1671  -4.30bps | yıllar 2020:-10.5 2021:-11.3 2022:+1.8 2023:+8.9 2024:+7.4
+BTC->SOL k=1 h= 2 |ze|>2.0: n= 23171 izleyen= +0.64bps artık= +1.30bps | lider|z|>2.0&geride n= 6467  -2.62bps | yıllar 2020:-4.5 2021:+0.3 2022:+1.3 2023:+0.2 2024:+2.3
+BTC->SOL k=1 h= 2 |ze|>3.0: n=  7111 izleyen= +1.44bps artık= +3.84bps | lider|z|>3.0&geride n= 3070  -2.78bps | yıllar 2020:-5.7 2021:-1.5 2022:-0.9 2023:+4.1 2024:+7.3
+BTC->SOL k=1 h= 2 |ze|>4.0: n=  2695 izleyen= +1.69bps artık= +6.24bps | lider|z|>4.0&geride n= 1671  -3.96bps | yıllar 2020:-8.6 2021:-8.3 2022:+1.1 2023:+6.8 2024:+12.3
+BTC->SOL k=1 h= 3 |ze|>2.0: n= 23170 izleyen= +0.75bps artık= +1.74bps | lider|z|>2.0&geride n= 6466  -1.96bps | yıllar 2020:-3.1 2021:-0.3 2022:+1.2 2023:+0.4 2024:+2.9
+BTC->SOL k=1 h= 3 |ze|>3.0: n=  7111 izleyen= +1.09bps artık= +3.48bps | lider|z|>3.0&geride n= 3069  -0.73bps | yıllar 2020:-2.7 2021:-3.7 2022:-1.6 2023:+4.0 2024:+7.5
+BTC->SOL k=1 h= 3 |ze|>4.0: n=  2695 izleyen= +2.09bps artık= +6.72bps | lider|z|>4.0&geride n= 1671  -2.27bps | yıllar 2020:-2.0 2021:-13.8 2022:+1.0 2023:+6.7 2024:+18.2
+BTC->SOL k=1 h= 6 |ze|>2.0: n= 23170 izleyen= +1.66bps artık= +2.51bps | lider|z|>2.0&geride n= 6466  -5.51bps | yıllar 2020:-3.5 2021:+3.9 2022:+1.5 2023:+0.6 2024:+2.1
+BTC->SOL k=1 h= 6 |ze|>3.0: n=  7111 izleyen= +2.74bps artık= +5.38bps | lider|z|>3.0&geride n= 3069  -5.09bps | yıllar 2020:+0.7 2021:+3.6 2022:-2.5 2023:+4.7 2024:+6.1
+BTC->SOL k=1 h= 6 |ze|>4.0: n=  2695 izleyen= +4.97bps artık=+10.49bps | lider|z|>4.0&geride n= 1671  -6.06bps | yıllar 2020:+6.2 2021:-8.0 2022:+3.6 2023:+7.2 2024:+18.8
+BTC->SOL k=1 h=12 |ze|>2.0: n= 23169 izleyen= +0.30bps artık= +1.78bps | lider|z|>2.0&geride n= 6466  -6.87bps | yıllar 2020:+0.4 2021:+0.4 2022:+0.0 2023:-3.6 2024:+4.0
+BTC->SOL k=1 h=12 |ze|>3.0: n=  7111 izleyen= +0.20bps artık= +3.97bps | lider|z|>3.0&geride n= 3069  -8.66bps | yıllar 2020:+8.5 2021:-5.5 2022:-5.6 2023:-0.4 2024:+10.0
+BTC->SOL k=1 h=12 |ze|>4.0: n=  2695 izleyen= +2.04bps artık=+10.28bps | lider|z|>4.0&geride n= 1671  -7.97bps | yıllar 2020:+12.8 2021:-17.3 2022:-2.6 2023:+0.4 2024:+29.2
+BTC->SOL k=3 h= 1 |ze|>2.0: n= 21681 izleyen= -0.05bps artık= +0.76bps | lider|z|>2.0&geride n= 6298  -1.56bps | yıllar 2020:-3.8 2021:-1.4 2022:-0.9 2023:+1.7 2024:+2.0
+BTC->SOL k=3 h= 1 |ze|>3.0: n=  6192 izleyen= +0.65bps artık= +2.50bps | lider|z|>3.0&geride n= 3071  -1.88bps | yıllar 2020:-0.8 2021:-3.9 2022:-2.1 2023:+3.5 2024:+6.8
+BTC->SOL k=3 h= 1 |ze|>4.0: n=  2259 izleyen= +3.09bps artık= +5.59bps | lider|z|>4.0&geride n= 1593  -3.45bps | yıllar 2020:-3.9 2021:-9.0 2022:+8.2 2023:+5.8 2024:+13.6
+BTC->SOL k=3 h= 2 |ze|>2.0: n= 21681 izleyen= -0.10bps artık= +1.15bps | lider|z|>2.0&geride n= 6298  -2.88bps | yıllar 2020:-5.3 2021:-2.4 2022:-0.8 2023:+1.9 2024:+3.2
+BTC->SOL k=3 h= 2 |ze|>3.0: n=  6192 izleyen= +0.46bps artık= +3.07bps | lider|z|>3.0&geride n= 3071  -2.17bps | yıllar 2020:-0.2 2021:-6.0 2022:-0.3 2023:+2.1 2024:+7.7
+BTC->SOL k=3 h= 2 |ze|>4.0: n=  2259 izleyen= +2.57bps artık= +6.83bps | lider|z|>4.0&geride n= 1593  -5.36bps | yıllar 2020:-3.2 2021:-13.2 2022:+5.5 2023:+7.2 2024:+18.1
+BTC->SOL k=3 h= 3 |ze|>2.0: n= 21681 izleyen= -0.29bps artık= +1.29bps | lider|z|>2.0&geride n= 6298  -2.74bps | yıllar 2020:-6.0 2021:-1.9 2022:-1.7 2023:+1.2 2024:+3.5
+BTC->SOL k=3 h= 3 |ze|>3.0: n=  6192 izleyen= +0.87bps artık= +3.60bps | lider|z|>3.0&geride n= 3071  -2.36bps | yıllar 2020:+3.3 2021:-5.3 2022:-2.0 2023:+2.2 2024:+8.9
+BTC->SOL k=3 h= 3 |ze|>4.0: n=  2259 izleyen= +4.22bps artık= +9.19bps | lider|z|>4.0&geride n= 1593  -3.88bps | yıllar 2020:+5.1 2021:-12.0 2022:+4.4 2023:+10.2 2024:+18.0
+BTC->SOL k=3 h= 6 |ze|>2.0: n= 21681 izleyen= +0.17bps artık= +1.97bps | lider|z|>2.0&geride n= 6298  -4.52bps | yıllar 2020:-5.7 2021:+0.5 2022:-2.4 2023:+0.5 2024:+4.2
+BTC->SOL k=3 h= 6 |ze|>3.0: n=  6192 izleyen= +1.77bps artık= +5.85bps | lider|z|>3.0&geride n= 3071  -7.12bps | yıllar 2020:+1.2 2021:+0.4 2022:-3.1 2023:+0.9 2024:+10.5
+BTC->SOL k=3 h= 6 |ze|>4.0: n=  2259 izleyen= +6.22bps artık=+12.54bps | lider|z|>4.0&geride n= 1593  -9.66bps | yıllar 2020:+7.2 2021:-2.1 2022:+3.7 2023:+3.5 2024:+25.7
+BTC->SOL k=3 h=12 |ze|>2.0: n= 21679 izleyen= -1.66bps artık= +1.07bps | lider|z|>2.0&geride n= 6298  -6.12bps | yıllar 2020:+3.7 2021:-3.8 2022:-7.2 2023:-3.5 2024:+5.6
+BTC->SOL k=3 h=12 |ze|>3.0: n=  6192 izleyen= -2.19bps artık= +4.19bps | lider|z|>3.0&geride n= 3071 -12.57bps | yıllar 2020:+13.8 2021:-3.3 2022:-11.5 2023:-8.3 2024:+9.1
+BTC->SOL k=3 h=12 |ze|>4.0: n=  2259 izleyen= +1.36bps artık=+10.60bps | lider|z|>4.0&geride n= 1593 -19.31bps | yıllar 2020:+25.1 2021:-9.6 2022:-4.3 2023:-9.2 2024:+26.0
+ETH->SOL k=1 h= 1 |ze|>2.0: n= 23143 izleyen= +0.46bps artık= +1.69bps | lider|z|>2.0&geride n= 6199  -0.82bps | yıllar 2020:-1.6 2021:-0.2 2022:+1.1 2023:+1.4 2024:+0.2
+ETH->SOL k=1 h= 1 |ze|>3.0: n=  7087 izleyen= +0.76bps artık= +3.04bps | lider|z|>3.0&geride n= 2861  -2.41bps | yıllar 2020:-2.8 2021:-3.0 2022:+1.6 2023:+3.9 2024:+1.9
+ETH->SOL k=1 h= 1 |ze|>4.0: n=  2741 izleyen= +1.79bps artık= +5.43bps | lider|z|>4.0&geride n= 1480  -3.27bps | yıllar 2020:-7.4 2021:-8.7 2022:+4.3 2023:+7.6 2024:+6.4
+ETH->SOL k=1 h= 2 |ze|>2.0: n= 23143 izleyen= +0.59bps artık= +2.28bps | lider|z|>2.0&geride n= 6199  -0.30bps | yıllar 2020:-3.8 2021:-0.5 2022:+2.1 2023:+1.6 2024:+0.7
+ETH->SOL k=1 h= 2 |ze|>3.0: n=  7087 izleyen= +0.72bps artık= +3.96bps | lider|z|>3.0&geride n= 2861  -1.14bps | yıllar 2020:-1.6 2021:-3.0 2022:+0.5 2023:+2.9 2024:+3.5
+ETH->SOL k=1 h= 2 |ze|>4.0: n=  2741 izleyen= +0.93bps artık= +6.17bps | lider|z|>4.0&geride n= 1480  -0.66bps | yıllar 2020:-4.3 2021:-8.9 2022:+3.0 2023:+3.3 2024:+8.5
+ETH->SOL k=1 h= 3 |ze|>2.0: n= 23143 izleyen= +0.74bps artık= +2.22bps | lider|z|>2.0&geride n= 6198  +1.19bps | yıllar 2020:-2.5 2021:+0.4 2022:+1.4 2023:+1.9 2024:+0.4
+ETH->SOL k=1 h= 3 |ze|>3.0: n=  7087 izleyen= +0.30bps artık= +2.84bps | lider|z|>3.0&geride n= 2860  +0.33bps | yıllar 2020:+1.1 2021:-4.1 2022:-0.7 2023:+1.9 2024:+4.1
+ETH->SOL k=1 h= 3 |ze|>4.0: n=  2741 izleyen= +1.85bps artık= +5.18bps | lider|z|>4.0&geride n= 1480  +0.17bps | yıllar 2020:+0.2 2021:-7.2 2022:+2.7 2023:+1.5 2024:+12.3
+ETH->SOL k=1 h= 6 |ze|>2.0: n= 23143 izleyen= +2.43bps artık= +3.87bps | lider|z|>2.0&geride n= 6198  -0.83bps | yıllar 2020:+0.3 2021:+7.1 2022:+1.4 2023:+1.1 2024:+0.5
+ETH->SOL k=1 h= 6 |ze|>3.0: n=  7087 izleyen= +1.62bps artık= +4.82bps | lider|z|>3.0&geride n= 2860  -1.98bps | yıllar 2020:+7.6 2021:+1.9 2022:-0.1 2023:+1.9 2024:+0.5
+ETH->SOL k=1 h= 6 |ze|>4.0: n=  2741 izleyen= +3.06bps artık= +7.29bps | lider|z|>4.0&geride n= 1480  -2.16bps | yıllar 2020:+4.7 2021:+3.1 2022:-0.8 2023:+2.6 2024:+7.9
+ETH->SOL k=1 h=12 |ze|>2.0: n= 23141 izleyen= +1.61bps artık= +3.67bps | lider|z|>2.0&geride n= 6195  -1.54bps | yıllar 2020:+6.4 2021:+3.8 2022:+1.6 2023:-1.8 2024:+1.0
+ETH->SOL k=1 h=12 |ze|>3.0: n=  7087 izleyen= +0.75bps artık= +3.51bps | lider|z|>3.0&geride n= 2859  -3.25bps | yıllar 2020:+19.8 2021:-0.4 2022:-3.2 2023:-1.0 2024:+0.7
+ETH->SOL k=1 h=12 |ze|>4.0: n=  2741 izleyen= +2.23bps artık= +6.33bps | lider|z|>4.0&geride n= 1480  -3.63bps | yıllar 2020:+21.9 2021:-1.4 2022:-4.9 2023:-3.5 2024:+14.4
+ETH->SOL k=3 h= 1 |ze|>2.0: n= 21494 izleyen= +0.52bps artık= +1.10bps | lider|z|>2.0&geride n= 6130  -1.38bps | yıllar 2020:-1.6 2021:-0.2 2022:+0.5 2023:+1.5 2024:+1.1
+ETH->SOL k=3 h= 1 |ze|>3.0: n=  6117 izleyen= +0.53bps artık= +3.06bps | lider|z|>3.0&geride n= 2825  -1.56bps | yıllar 2020:-0.4 2021:-1.9 2022:-0.1 2023:+2.4 2024:+2.2
+ETH->SOL k=3 h= 1 |ze|>4.0: n=  2183 izleyen= +3.02bps artık= +7.68bps | lider|z|>4.0&geride n= 1450  -2.70bps | yıllar 2020:-0.1 2021:-4.9 2022:+5.5 2023:+5.9 2024:+6.9
+ETH->SOL k=3 h= 2 |ze|>2.0: n= 21494 izleyen= +0.40bps artık= +1.23bps | lider|z|>2.0&geride n= 6130  -1.20bps | yıllar 2020:-3.1 2021:-0.7 2022:+1.6 2023:+1.0 2024:+1.2
+ETH->SOL k=3 h= 2 |ze|>3.0: n=  6117 izleyen= +0.86bps artık= +3.58bps | lider|z|>3.0&geride n= 2825  +0.16bps | yıllar 2020:+0.0 2021:-1.5 2022:-0.3 2023:+2.1 2024:+3.7
+ETH->SOL k=3 h= 2 |ze|>4.0: n=  2183 izleyen= +3.34bps artık= +8.91bps | lider|z|>4.0&geride n= 1450  -0.84bps | yıllar 2020:+10.1 2021:-4.6 2022:+2.4 2023:+6.6 2024:+5.9
+ETH->SOL k=3 h= 3 |ze|>2.0: n= 21494 izleyen= +0.55bps artık= +1.39bps | lider|z|>2.0&geride n= 6130  -0.16bps | yıllar 2020:-1.4 2021:+0.7 2022:+0.8 2023:+0.1 2024:+1.3
+ETH->SOL k=3 h= 3 |ze|>3.0: n=  6117 izleyen= +2.64bps artık= +4.39bps | lider|z|>3.0&geride n= 2825  +0.98bps | yıllar 2020:+3.7 2021:+4.0 2022:-0.8 2023:+1.4 2024:+5.8
+ETH->SOL k=3 h= 3 |ze|>4.0: n=  2183 izleyen= +4.15bps artık= +8.38bps | lider|z|>4.0&geride n= 1450  -1.18bps | yıllar 2020:+20.4 2021:-3.4 2022:+0.1 2023:+7.5 2024:+5.2
+ETH->SOL k=3 h= 6 |ze|>2.0: n= 21494 izleyen= +0.89bps artık= +2.26bps | lider|z|>2.0&geride n= 6128  -1.85bps | yıllar 2020:+0.0 2021:+4.4 2022:-1.1 2023:-0.4 2024:+0.7
+ETH->SOL k=3 h= 6 |ze|>3.0: n=  6117 izleyen= +3.34bps artık= +5.15bps | lider|z|>3.0&geride n= 2825  -2.57bps | yıllar 2020:+8.2 2021:+10.2 2022:-3.7 2023:-0.9 2024:+5.9
+ETH->SOL k=3 h= 6 |ze|>4.0: n=  2183 izleyen= +3.15bps artık=+10.11bps | lider|z|>4.0&geride n= 1450  -9.10bps | yıllar 2020:+23.0 2021:+6.6 2022:-8.6 2023:+1.5 2024:+6.2
+ETH->SOL k=3 h=12 |ze|>2.0: n= 21490 izleyen= -0.19bps artık= +1.84bps | lider|z|>2.0&geride n= 6126  -2.13bps | yıllar 2020:+10.7 2021:+1.8 2022:-5.4 2023:-3.9 2024:+2.2
+ETH->SOL k=3 h=12 |ze|>3.0: n=  6116 izleyen= +1.51bps artık= +4.28bps | lider|z|>3.0&geride n= 2824  -7.61bps | yıllar 2020:+26.3 2021:+6.9 2022:-9.1 2023:-8.2 2024:+7.0
+ETH->SOL k=3 h=12 |ze|>4.0: n=  2183 izleyen= -0.58bps artık= +8.17bps | lider|z|>4.0&geride n= 1449 -12.16bps | yıllar 2020:+45.7 2021:+2.1 2022:-17.2 2023:-9.0 2024:+5.7
+ETH->BTC k=1 h= 1 |ze|>2.0: n= 25828 izleyen= +0.90bps artık= +1.07bps | lider|z|>2.0&geride n= 8164  +0.01bps | yıllar 2020:+1.8 2021:+0.4 2022:+1.4 2023:+0.7 2024:+0.2
+ETH->BTC k=1 h= 1 |ze|>3.0: n=  8273 izleyen= +1.04bps artık= +1.77bps | lider|z|>3.0&geride n= 3291  -0.12bps | yıllar 2020:+1.3 2021:-1.2 2022:+2.4 2023:+1.4 2024:+1.0
+ETH->BTC k=1 h= 1 |ze|>4.0: n=  3618 izleyen= +0.94bps artık= +3.18bps | lider|z|>4.0&geride n= 1534  +0.33bps | yıllar 2020:+1.9 2021:-6.0 2022:+1.3 2023:+2.7 2024:+4.0
+ETH->BTC k=1 h= 2 |ze|>2.0: n= 25828 izleyen= +1.31bps artık= +1.03bps | lider|z|>2.0&geride n= 8164  +0.33bps | yıllar 2020:+2.2 2021:+1.4 2022:+2.2 2023:+0.8 2024:+0.1
+ETH->BTC k=1 h= 2 |ze|>3.0: n=  8273 izleyen= +1.30bps artık= +1.64bps | lider|z|>3.0&geride n= 3291  +0.61bps | yıllar 2020:+3.2 2021:-2.5 2022:+3.7 2023:+1.6 2024:+0.4
+ETH->BTC k=1 h= 2 |ze|>4.0: n=  3618 izleyen= +0.90bps artık= +2.57bps | lider|z|>4.0&geride n= 1534  -0.44bps | yıllar 2020:+3.2 2021:-8.2 2022:+2.7 2023:+3.3 2024:+1.9
+ETH->BTC k=1 h= 3 |ze|>2.0: n= 25828 izleyen= +1.11bps artık= +0.83bps | lider|z|>2.0&geride n= 8164  +0.91bps | yıllar 2020:+1.0 2021:+2.2 2022:+1.8 2023:+0.8 2024:-0.0
+ETH->BTC k=1 h= 3 |ze|>3.0: n=  8273 izleyen= +0.92bps artık= +1.15bps | lider|z|>3.0&geride n= 3291  +2.32bps | yıllar 2020:+1.5 2021:+0.1 2022:+2.1 2023:+1.4 2024:-0.5
+ETH->BTC k=1 h= 3 |ze|>4.0: n=  3618 izleyen= +0.16bps artık= +1.70bps | lider|z|>4.0&geride n= 1534  +1.37bps | yıllar 2020:+2.6 2021:-4.8 2022:+1.4 2023:+1.3 2024:-0.7
+ETH->BTC k=1 h= 6 |ze|>2.0: n= 25828 izleyen= +1.31bps artık= +0.77bps | lider|z|>2.0&geride n= 8164  +0.59bps | yıllar 2020:+1.4 2021:+4.2 2022:+1.0 2023:+0.1 2024:+0.0
+ETH->BTC k=1 h= 6 |ze|>3.0: n=  8273 izleyen= +0.54bps artık= +0.97bps | lider|z|>3.0&geride n= 3291  +2.46bps | yıllar 2020:-0.6 2021:+2.8 2022:+0.2 2023:+1.3 2024:-1.0
+ETH->BTC k=1 h= 6 |ze|>4.0: n=  3618 izleyen= -0.29bps artık= +1.39bps | lider|z|>4.0&geride n= 1534  +0.90bps | yıllar 2020:-0.2 2021:-3.0 2022:+0.4 2023:+1.1 2024:-0.4
+ETH->BTC k=1 h=12 |ze|>2.0: n= 25828 izleyen= +1.17bps artık= +0.73bps | lider|z|>2.0&geride n= 8164  -0.92bps | yıllar 2020:+3.5 2021:+2.3 2022:+1.2 2023:+0.1 2024:-0.9
+ETH->BTC k=1 h=12 |ze|>3.0: n=  8273 izleyen= -0.48bps artık= +0.82bps | lider|z|>3.0&geride n= 3291  +0.58bps | yıllar 2020:-1.4 2021:+0.8 2022:+0.5 2023:+1.1 2024:-3.5
+ETH->BTC k=1 h=12 |ze|>4.0: n=  3618 izleyen= -0.95bps artık= +0.93bps | lider|z|>4.0&geride n= 1534  -0.75bps | yıllar 2020:-0.6 2021:-0.3 2022:-1.3 2023:-0.9 2024:-1.6
+ETH->BTC k=3 h= 1 |ze|>2.0: n= 23661 izleyen= +0.40bps artık= +0.50bps | lider|z|>2.0&geride n= 7965  +0.51bps | yıllar 2020:+1.0 2021:-0.4 2022:+1.2 2023:+0.3 2024:+0.1
+ETH->BTC k=3 h= 1 |ze|>3.0: n=  7419 izleyen= +0.48bps artık= +0.79bps | lider|z|>3.0&geride n= 3222  +0.14bps | yıllar 2020:+0.5 2021:-1.0 2022:+1.9 2023:+0.6 2024:+0.3
+ETH->BTC k=3 h= 1 |ze|>4.0: n=  2997 izleyen= +0.56bps artık= +1.63bps | lider|z|>4.0&geride n= 1447  +0.46bps | yıllar 2020:+0.5 2021:-1.6 2022:+1.0 2023:+1.9 2024:+0.7
+ETH->BTC k=3 h= 2 |ze|>2.0: n= 23661 izleyen= +0.34bps artık= +0.25bps | lider|z|>2.0&geride n= 7965  +0.53bps | yıllar 2020:+1.0 2021:-0.1 2022:+1.1 2023:+0.3 2024:-0.3
+ETH->BTC k=3 h= 2 |ze|>3.0: n=  7419 izleyen= +0.38bps artık= +0.13bps | lider|z|>3.0&geride n= 3222  +0.54bps | yıllar 2020:+1.5 2021:-2.2 2022:+2.1 2023:+1.2 2024:-0.8
+ETH->BTC k=3 h= 2 |ze|>4.0: n=  2997 izleyen= +0.36bps artık= +0.53bps | lider|z|>4.0&geride n= 1447  +1.31bps | yıllar 2020:+1.3 2021:-1.8 2022:+1.1 2023:+1.3 2024:-0.7
+ETH->BTC k=3 h= 3 |ze|>2.0: n= 23661 izleyen= +0.39bps artık= -0.04bps | lider|z|>2.0&geride n= 7965  +1.35bps | yıllar 2020:+1.0 2021:+1.1 2022:+0.9 2023:-0.0 2024:-0.8
+ETH->BTC k=3 h= 3 |ze|>3.0: n=  7419 izleyen= +0.98bps artık= -0.20bps | lider|z|>3.0&geride n= 3222  +1.00bps | yıllar 2020:+3.1 2021:+1.1 2022:+0.7 2023:+0.9 2024:-0.7
+ETH->BTC k=3 h= 3 |ze|>4.0: n=  2997 izleyen= +0.23bps artık= -0.30bps | lider|z|>4.0&geride n= 1447  +1.07bps | yıllar 2020:+1.7 2021:+3.3 2022:-2.2 2023:-0.2 2024:-1.4
+ETH->BTC k=3 h= 6 |ze|>2.0: n= 23661 izleyen= +0.87bps artık= -0.03bps | lider|z|>2.0&geride n= 7965  +1.23bps | yıllar 2020:+0.9 2021:+4.7 2022:+0.5 2023:-0.7 2024:-0.9
+ETH->BTC k=3 h= 6 |ze|>3.0: n=  7419 izleyen= +0.99bps artık= -0.42bps | lider|z|>3.0&geride n= 3222  +1.01bps | yıllar 2020:+3.2 2021:+3.7 2022:-0.9 2023:+0.8 2024:-1.4
+ETH->BTC k=3 h= 6 |ze|>4.0: n=  2997 izleyen= -1.03bps artık= -0.73bps | lider|z|>4.0&geride n= 1447  -0.17bps | yıllar 2020:+1.1 2021:+2.1 2022:-4.2 2023:-1.7 2024:-2.3
+ETH->BTC k=3 h=12 |ze|>2.0: n= 23661 izleyen= +1.57bps artık= +0.27bps | lider|z|>2.0&geride n= 7965  +0.88bps | yıllar 2020:+2.1 2021:+5.6 2022:+1.7 2023:-0.8 2024:-0.5
+ETH->BTC k=3 h=12 |ze|>3.0: n=  7419 izleyen= +0.41bps artık= -0.67bps | lider|z|>3.0&geride n= 3222  +0.63bps | yıllar 2020:+2.2 2021:+3.3 2022:-1.1 2023:-0.6 2024:-1.3
+ETH->BTC k=3 h=12 |ze|>4.0: n=  2997 izleyen= -2.50bps artık= -1.90bps | lider|z|>4.0&geride n= 1447  -1.71bps | yıllar 2020:+0.3 2021:+0.4 2022:-9.8 2023:-2.4 2024:-0.6
+=== 15m
+BTC->ETH k=1 h= 1 |ze|>2.0: n=  9309 izleyen= -0.27bps artık= -0.12bps | lider|z|>2.0&geride n= 3113  +4.30bps | yıllar 2020:+0.7 2021:-1.2 2022:+0.3 2023:-0.8 2024:-0.4
+BTC->ETH k=1 h= 1 |ze|>3.0: n=  3198 izleyen= -0.94bps artık= -1.34bps | lider|z|>3.0&geride n= 1449  +6.26bps | yıllar 2020:-1.5 2021:-1.8 2022:+1.6 2023:-1.9 2024:-0.9
+BTC->ETH k=1 h= 1 |ze|>4.0: n=  1378 izleyen= -0.97bps artık= -2.56bps | lider|z|>4.0&geride n=  790 +10.29bps | yıllar 2020:+1.7 2021:+1.1 2022:-0.0 2023:-3.4 2024:-4.3
+BTC->ETH k=1 h= 2 |ze|>2.0: n=  9309 izleyen= -0.93bps artık= -0.16bps | lider|z|>2.0&geride n= 3113  +1.83bps | yıllar 2020:-0.6 2021:-5.6 2022:+2.0 2023:-0.6 2024:+0.2
+BTC->ETH k=1 h= 2 |ze|>3.0: n=  3198 izleyen= -2.13bps artık= -1.84bps | lider|z|>3.0&geride n= 1449  +3.46bps | yıllar 2020:-6.1 2021:-7.9 2022:+5.9 2023:-1.5 2024:-1.0
+BTC->ETH k=1 h= 2 |ze|>4.0: n=  1378 izleyen= -1.84bps artık= -4.73bps | lider|z|>4.0&geride n=  790  +8.22bps | yıllar 2020:-5.5 2021:+6.6 2022:-1.1 2023:-5.3 2024:-2.1
+BTC->ETH k=1 h= 3 |ze|>2.0: n=  9309 izleyen= -0.42bps artık= +0.04bps | lider|z|>2.0&geride n= 3113  +1.57bps | yıllar 2020:+0.4 2021:-6.0 2022:+4.2 2023:-1.4 2024:+0.7
+BTC->ETH k=1 h= 3 |ze|>3.0: n=  3198 izleyen= -1.50bps artık= -1.04bps | lider|z|>3.0&geride n= 1449  +3.32bps | yıllar 2020:-4.3 2021:-4.3 2022:+5.6 2023:-3.4 2024:-0.8
+BTC->ETH k=1 h= 3 |ze|>4.0: n=  1378 izleyen= +0.52bps artık= -3.35bps | lider|z|>4.0&geride n=  790  +4.97bps | yıllar 2020:-5.2 2021:+14.0 2022:+3.8 2023:-6.4 2024:-0.4
+BTC->ETH k=1 h= 6 |ze|>2.0: n=  9309 izleyen= +0.78bps artık= +0.67bps | lider|z|>2.0&geride n= 3113  +1.76bps | yıllar 2020:+3.7 2021:-5.9 2022:+4.4 2023:-1.3 2024:+3.1
+BTC->ETH k=1 h= 6 |ze|>3.0: n=  3198 izleyen= -1.25bps artık= -1.41bps | lider|z|>3.0&geride n= 1449  +0.63bps | yıllar 2020:-1.6 2021:-5.3 2022:+6.4 2023:-4.0 2024:-1.6
+BTC->ETH k=1 h= 6 |ze|>4.0: n=  1378 izleyen= -0.62bps artık= -3.40bps | lider|z|>4.0&geride n=  790  +3.54bps | yıllar 2020:-7.7 2021:+4.7 2022:+3.5 2023:-2.6 2024:+1.2
+BTC->ETH k=1 h=12 |ze|>2.0: n=  9309 izleyen= +0.87bps artık= +0.79bps | lider|z|>2.0&geride n= 3113  -0.62bps | yıllar 2020:-0.0 2021:-4.0 2022:+8.4 2023:-3.6 2024:+3.4
+BTC->ETH k=1 h=12 |ze|>3.0: n=  3198 izleyen= -1.57bps artık= -2.19bps | lider|z|>3.0&geride n= 1449  +1.75bps | yıllar 2020:-2.6 2021:-9.9 2022:+14.1 2023:-8.4 2024:-0.6
+BTC->ETH k=1 h=12 |ze|>4.0: n=  1378 izleyen= -1.78bps artık= -4.90bps | lider|z|>4.0&geride n=  790  +5.24bps | yıllar 2020:-1.7 2021:-8.1 2022:+7.2 2023:-8.1 2024:+2.8
+BTC->ETH k=3 h= 1 |ze|>2.0: n=  8719 izleyen= -1.15bps artık= -0.36bps | lider|z|>2.0&geride n= 3139  +2.51bps | yıllar 2020:-1.5 2021:-2.5 2022:+0.1 2023:-0.0 2024:-1.8
+BTC->ETH k=3 h= 1 |ze|>3.0: n=  2597 izleyen= -0.42bps artık= -1.57bps | lider|z|>3.0&geride n= 1462  +4.33bps | yıllar 2020:-5.8 2021:-0.6 2022:+3.4 2023:+1.2 2024:-0.1
+BTC->ETH k=3 h= 1 |ze|>4.0: n=   954 izleyen= -1.86bps artık= -4.01bps | lider|z|>4.0&geride n=  652  +2.33bps | yıllar 2020:-9.9 2021:+3.0 2022:+1.4 2023:-0.8 2024:-0.6
+BTC->ETH k=3 h= 2 |ze|>2.0: n=  8719 izleyen= -0.90bps artık= +0.34bps | lider|z|>2.0&geride n= 3139  +2.19bps | yıllar 2020:-3.1 2021:-3.2 2022:+2.6 2023:+0.3 2024:-1.2
+BTC->ETH k=3 h= 2 |ze|>3.0: n=  2597 izleyen= -1.39bps artık= -1.99bps | lider|z|>3.0&geride n= 1462  +4.44bps | yıllar 2020:-10.1 2021:-4.8 2022:+6.6 2023:+1.5 2024:-0.0
+BTC->ETH k=3 h= 2 |ze|>4.0: n=   954 izleyen= -2.94bps artık= -5.49bps | lider|z|>4.0&geride n=  652  +2.22bps | yıllar 2020:-22.8 2021:+6.5 2022:+5.0 2023:-2.9 2024:+4.9
+BTC->ETH k=3 h= 3 |ze|>2.0: n=  8719 izleyen= -0.06bps artık= +0.81bps | lider|z|>2.0&geride n= 3139  +2.14bps | yıllar 2020:-2.1 2021:-1.9 2022:+3.7 2023:-0.1 2024:+0.2
+BTC->ETH k=3 h= 3 |ze|>3.0: n=  2597 izleyen= +0.11bps artık= -1.55bps | lider|z|>3.0&geride n= 1462  +6.86bps | yıllar 2020:-9.1 2021:-1.0 2022:+9.8 2023:+0.3 2024:+1.4
+BTC->ETH k=3 h= 3 |ze|>4.0: n=   954 izleyen= -5.62bps artık= -6.41bps | lider|z|>4.0&geride n=  652  +5.55bps | yıllar 2020:-26.0 2021:+3.9 2022:+3.4 2023:-7.1 2024:+3.7
+BTC->ETH k=3 h= 6 |ze|>2.0: n=  8719 izleyen= -0.28bps artık= +1.00bps | lider|z|>2.0&geride n= 3139  +1.07bps | yıllar 2020:-0.1 2021:-6.7 2022:+7.3 2023:-1.9 2024:+0.2
+BTC->ETH k=3 h= 6 |ze|>3.0: n=  2597 izleyen= -1.87bps artık= -4.22bps | lider|z|>3.0&geride n= 1462  +9.10bps | yıllar 2020:-11.8 2021:-10.4 2022:+11.1 2023:-1.1 2024:+3.3
+BTC->ETH k=3 h= 6 |ze|>4.0: n=   954 izleyen= -9.67bps artık=-10.98bps | lider|z|>4.0&geride n=  652  +7.52bps | yıllar 2020:-37.0 2021:-2.2 2022:+0.9 2023:-12.1 2024:+8.3
+BTC->ETH k=3 h=12 |ze|>2.0: n=  8719 izleyen= +0.35bps artık= +1.09bps | lider|z|>2.0&geride n= 3139  +1.93bps | yıllar 2020:-0.2 2021:-10.2 2022:+14.1 2023:-5.7 2024:+4.0
+BTC->ETH k=3 h=12 |ze|>3.0: n=  2597 izleyen= -0.93bps artık= -3.18bps | lider|z|>3.0&geride n= 1462  +7.33bps | yıllar 2020:-5.4 2021:-17.9 2022:+24.1 2023:-4.8 2024:+1.3
+BTC->ETH k=3 h=12 |ze|>4.0: n=   954 izleyen=-15.71bps artık=-12.93bps | lider|z|>4.0&geride n=  652  +8.60bps | yıllar 2020:-39.6 2021:-27.4 2022:+10.1 2023:-16.6 2024:-0.5
+BTC->SOL k=1 h= 1 |ze|>2.0: n=  8252 izleyen= -0.16bps artık= +0.89bps | lider|z|>2.0&geride n= 2547  +3.83bps | yıllar 2020:-8.4 2021:-2.5 2022:-1.2 2023:+2.2 2024:+3.6
+BTC->SOL k=1 h= 1 |ze|>3.0: n=  2554 izleyen= +2.16bps artık= +3.06bps | lider|z|>3.0&geride n= 1275  +2.26bps | yıllar 2020:-11.3 2021:+2.9 2022:-1.1 2023:+0.9 2024:+12.0
+BTC->SOL k=1 h= 1 |ze|>4.0: n=  1062 izleyen= +0.87bps artık= +1.61bps | lider|z|>4.0&geride n=  704  +4.20bps | yıllar 2020:+4.2 2021:-14.1 2022:+0.6 2023:+1.4 2024:+15.1
+BTC->SOL k=1 h= 2 |ze|>2.0: n=  8252 izleyen= +0.64bps artık= +1.81bps | lider|z|>2.0&geride n= 2547  -0.33bps | yıllar 2020:-5.1 2021:+0.0 2022:-2.0 2023:+1.6 2024:+4.6
+BTC->SOL k=1 h= 2 |ze|>3.0: n=  2554 izleyen= +1.79bps artık= +4.55bps | lider|z|>3.0&geride n= 1275  -3.59bps | yıllar 2020:-7.9 2021:+5.5 2022:-5.8 2023:-1.8 2024:+14.7
+BTC->SOL k=1 h= 2 |ze|>4.0: n=  1062 izleyen= -0.39bps artık= +3.76bps | lider|z|>4.0&geride n=  704  -5.05bps | yıllar 2020:+4.1 2021:-13.5 2022:-6.2 2023:-8.3 2024:+30.7
+BTC->SOL k=1 h= 3 |ze|>2.0: n=  8252 izleyen= +0.82bps artık= +2.21bps | lider|z|>2.0&geride n= 2547  -1.50bps | yıllar 2020:-2.8 2021:-1.8 2022:-2.3 2023:-0.1 2024:+8.3
+BTC->SOL k=1 h= 3 |ze|>3.0: n=  2554 izleyen= +2.55bps artık= +4.90bps | lider|z|>3.0&geride n= 1275  -5.70bps | yıllar 2020:+1.4 2021:+7.5 2022:-2.1 2023:-7.9 2024:+15.4
+BTC->SOL k=1 h= 3 |ze|>4.0: n=  1062 izleyen= -1.04bps artık= +3.51bps | lider|z|>4.0&geride n=  704 -11.14bps | yıllar 2020:+12.2 2021:-10.8 2022:-9.0 2023:-16.1 2024:+35.8
+BTC->SOL k=1 h= 6 |ze|>2.0: n=  8251 izleyen= +1.55bps artık= +1.93bps | lider|z|>2.0&geride n= 2547  -0.06bps | yıllar 2020:+1.0 2021:-4.2 2022:-1.6 2023:+2.0 2024:+10.0
+BTC->SOL k=1 h= 6 |ze|>3.0: n=  2554 izleyen= +0.78bps artık= +6.73bps | lider|z|>3.0&geride n= 1275  -7.40bps | yıllar 2020:+0.2 2021:+8.7 2022:-2.4 2023:-13.1 2024:+12.6
+BTC->SOL k=1 h= 6 |ze|>4.0: n=  1062 izleyen= -6.44bps artık= +1.82bps | lider|z|>4.0&geride n=  704 -17.41bps | yıllar 2020:+4.9 2021:-23.9 2022:-17.2 2023:-16.2 2024:+35.4
+BTC->SOL k=1 h=12 |ze|>2.0: n=  8251 izleyen= -1.98bps artık= +2.25bps | lider|z|>2.0&geride n= 2547  -4.97bps | yıllar 2020:-1.0 2021:-11.7 2022:-3.3 2023:-3.6 2024:+10.0
+BTC->SOL k=1 h=12 |ze|>3.0: n=  2554 izleyen= -9.76bps artık= +3.99bps | lider|z|>3.0&geride n= 1275 -18.51bps | yıllar 2020:+18.2 2021:-20.0 2022:-7.2 2023:-26.4 2024:+6.6
+BTC->SOL k=1 h=12 |ze|>4.0: n=  1062 izleyen=-21.89bps artık= -3.44bps | lider|z|>4.0&geride n=  704 -34.53bps | yıllar 2020:+31.5 2021:-46.9 2022:-22.3 2023:-49.5 2024:+21.3
+BTC->SOL k=3 h= 1 |ze|>2.0: n=  7676 izleyen= +1.04bps artık= +1.63bps | lider|z|>2.0&geride n= 2536  -5.12bps | yıllar 2020:+2.2 2021:-2.2 2022:+1.3 2023:-0.4 2024:+5.4
+BTC->SOL k=3 h= 1 |ze|>3.0: n=  2022 izleyen= +0.35bps artık= +2.80bps | lider|z|>3.0&geride n= 1223  -4.38bps | yıllar 2020:+5.3 2021:-6.2 2022:-10.9 2023:+4.8 2024:+14.1
+BTC->SOL k=3 h= 1 |ze|>4.0: n=   650 izleyen= -0.40bps artık= +8.80bps | lider|z|>4.0&geride n=  584  -4.99bps | yıllar 2020:+21.7 2021:-12.8 2022:-18.4 2023:+17.9 2024:+4.9
+BTC->SOL k=3 h= 2 |ze|>2.0: n=  7676 izleyen= -0.58bps artık= +1.65bps | lider|z|>2.0&geride n= 2536 -11.20bps | yıllar 2020:+6.1 2021:-2.9 2022:-3.2 2023:-5.5 2024:+7.1
+BTC->SOL k=3 h= 2 |ze|>3.0: n=  2022 izleyen= +0.39bps artık= +4.85bps | lider|z|>3.0&geride n= 1223 -13.11bps | yıllar 2020:+11.4 2021:+1.2 2022:-16.8 2023:-1.8 2024:+17.6
+BTC->SOL k=3 h= 2 |ze|>4.0: n=   650 izleyen= -2.24bps artık=+12.22bps | lider|z|>4.0&geride n=  584 -18.74bps | yıllar 2020:+22.6 2021:-6.2 2022:-26.7 2023:+10.1 2024:+9.3
+BTC->SOL k=3 h= 3 |ze|>2.0: n=  7676 izleyen= -2.20bps artık= +1.31bps | lider|z|>2.0&geride n= 2536 -12.08bps | yıllar 2020:+13.7 2021:-8.1 2022:-7.0 2023:-7.3 2024:+8.4
+BTC->SOL k=3 h= 3 |ze|>3.0: n=  2022 izleyen= -1.75bps artık= +2.76bps | lider|z|>3.0&geride n= 1223 -12.83bps | yıllar 2020:+26.9 2021:+3.3 2022:-27.0 2023:-9.4 2024:+18.8
+BTC->SOL k=3 h= 3 |ze|>4.0: n=   650 izleyen= -1.35bps artık= +6.90bps | lider|z|>4.0&geride n=  584 -13.94bps | yıllar 2020:+47.5 2021:+11.9 2022:-35.7 2023:-1.5 2024:+9.0
+BTC->SOL k=3 h= 6 |ze|>2.0: n=  7674 izleyen= -2.31bps artık= +3.21bps | lider|z|>2.0&geride n= 2536 -13.51bps | yıllar 2020:+21.3 2021:-11.8 2022:-9.3 2023:-5.3 2024:+9.5
+BTC->SOL k=3 h= 6 |ze|>3.0: n=  2022 izleyen= -0.03bps artık= +6.13bps | lider|z|>3.0&geride n= 1223  -8.80bps | yıllar 2020:+52.5 2021:-7.5 2022:-22.1 2023:-7.1 2024:+21.1
+BTC->SOL k=3 h= 6 |ze|>4.0: n=   650 izleyen= +7.75bps artık=+13.75bps | lider|z|>4.0&geride n=  584 -13.13bps | yıllar 2020:+127.9 2021:-1.1 2022:-29.4 2023:+3.6 2024:+30.4
+BTC->SOL k=3 h=12 |ze|>2.0: n=  7672 izleyen=-13.93bps artık= -0.94bps | lider|z|>2.0&geride n= 2536 -21.78bps | yıllar 2020:+6.6 2021:-35.7 2022:-19.9 2023:-13.2 2024:+7.7
+BTC->SOL k=3 h=12 |ze|>3.0: n=  2022 izleyen=-10.63bps artık= +3.66bps | lider|z|>3.0&geride n= 1223 -24.89bps | yıllar 2020:+30.6 2021:-35.1 2022:-14.9 2023:-26.8 2024:+25.5
+BTC->SOL k=3 h=12 |ze|>4.0: n=   650 izleyen= -2.43bps artık=+11.77bps | lider|z|>4.0&geride n=  584 -32.72bps | yıllar 2020:+100.7 2021:-29.3 2022:+11.6 2023:-32.7 2024:+21.9
+ETH->SOL k=1 h= 1 |ze|>2.0: n=  8317 izleyen= -0.13bps artık= +0.50bps | lider|z|>2.0&geride n= 2368  +3.36bps | yıllar 2020:-3.2 2021:-2.6 2022:+1.3 2023:+0.9 2024:+1.0
+ETH->SOL k=1 h= 1 |ze|>3.0: n=  2544 izleyen= +1.69bps artık= +3.22bps | lider|z|>3.0&geride n= 1138  +3.30bps | yıllar 2020:-9.0 2021:+3.5 2022:+3.2 2023:+0.7 2024:+3.2
+ETH->SOL k=1 h= 1 |ze|>4.0: n=  1013 izleyen= +5.95bps artık= +7.52bps | lider|z|>4.0&geride n=  586  +6.41bps | yıllar 2020:+11.9 2021:-5.3 2022:-2.7 2023:+7.5 2024:+22.7
+ETH->SOL k=1 h= 2 |ze|>2.0: n=  8317 izleyen= +0.37bps artık= +1.60bps | lider|z|>2.0&geride n= 2367  +0.48bps | yıllar 2020:+2.9 2021:+1.2 2022:+0.4 2023:+0.2 2024:-1.1
+ETH->SOL k=1 h= 2 |ze|>3.0: n=  2544 izleyen= +1.29bps artık= +6.19bps | lider|z|>3.0&geride n= 1138  -1.24bps | yıllar 2020:-4.8 2021:+13.4 2022:-2.7 2023:-4.6 2024:+2.0
+ETH->SOL k=1 h= 2 |ze|>4.0: n=  1013 izleyen= +5.78bps artık= +9.24bps | lider|z|>4.0&geride n=  586  -4.39bps | yıllar 2020:+15.4 2021:+0.9 2022:-0.9 2023:-2.8 2024:+27.3
+ETH->SOL k=1 h= 3 |ze|>2.0: n=  8317 izleyen= +0.26bps artık= +1.94bps | lider|z|>2.0&geride n= 2367  -1.48bps | yıllar 2020:+8.2 2021:-0.1 2022:+1.0 2023:-2.8 2024:+0.3
+ETH->SOL k=1 h= 3 |ze|>3.0: n=  2544 izleyen= +0.83bps artık= +6.21bps | lider|z|>3.0&geride n= 1138  -2.90bps | yıllar 2020:+4.9 2021:+14.9 2022:-5.2 2023:-11.4 2024:+5.6
+ETH->SOL k=1 h= 3 |ze|>4.0: n=  1013 izleyen= +4.53bps artık= +7.88bps | lider|z|>4.0&geride n=  586  -5.55bps | yıllar 2020:+22.1 2021:+10.5 2022:-7.9 2023:-9.9 2024:+28.0
+ETH->SOL k=1 h= 6 |ze|>2.0: n=  8315 izleyen= +0.00bps artık= +2.64bps | lider|z|>2.0&geride n= 2366  -0.87bps | yıllar 2020:+14.2 2021:-2.3 2022:-4.2 2023:+1.6 2024:+0.5
+ETH->SOL k=1 h= 6 |ze|>3.0: n=  2543 izleyen= -0.33bps artık= +5.86bps | lider|z|>3.0&geride n= 1137  -6.92bps | yıllar 2020:-10.1 2021:+5.9 2022:-1.0 2023:-9.6 2024:+8.4
+ETH->SOL k=1 h= 6 |ze|>4.0: n=  1012 izleyen= +3.73bps artık= +7.08bps | lider|z|>4.0&geride n=  585  +0.79bps | yıllar 2020:+17.5 2021:-3.9 2022:+1.3 2023:-7.0 2024:+24.4
+ETH->SOL k=1 h=12 |ze|>2.0: n=  8315 izleyen= -3.68bps artık= +1.18bps | lider|z|>2.0&geride n= 2366  -6.72bps | yıllar 2020:+9.0 2021:-11.3 2022:-3.8 2023:-1.8 2024:-1.5
+ETH->SOL k=1 h=12 |ze|>3.0: n=  2543 izleyen= -5.40bps artık= +5.94bps | lider|z|>3.0&geride n= 1137 -21.66bps | yıllar 2020:+25.5 2021:-11.8 2022:+2.9 2023:-20.9 2024:-1.0
+ETH->SOL k=1 h=12 |ze|>4.0: n=  1012 izleyen= -8.91bps artık= -0.05bps | lider|z|>4.0&geride n=  585 -12.20bps | yıllar 2020:+31.0 2021:-44.6 2022:+10.5 2023:-25.7 2024:+11.3
+ETH->SOL k=3 h= 1 |ze|>2.0: n=  7569 izleyen= +0.75bps artık= +1.86bps | lider|z|>2.0&geride n= 2368  -4.19bps | yıllar 2020:+3.6 2021:+1.5 2022:-0.8 2023:-1.8 2024:+3.0
+ETH->SOL k=3 h= 1 |ze|>3.0: n=  2046 izleyen= +0.61bps artık= +2.96bps | lider|z|>3.0&geride n= 1073  -5.92bps | yıllar 2020:+6.7 2021:+7.5 2022:-12.4 2023:+3.1 2024:+3.0
+ETH->SOL k=3 h= 1 |ze|>4.0: n=   662 izleyen= +2.70bps artık= +8.27bps | lider|z|>4.0&geride n=  473  -7.41bps | yıllar 2020:-0.7 2021:+1.2 2022:-16.2 2023:+12.2 2024:+15.6
+ETH->SOL k=3 h= 2 |ze|>2.0: n=  7567 izleyen= -0.20bps artık= +2.58bps | lider|z|>2.0&geride n= 2367 -10.02bps | yıllar 2020:+7.6 2021:+2.0 2022:-3.9 2023:-5.3 2024:+3.5
+ETH->SOL k=3 h= 2 |ze|>3.0: n=  2045 izleyen= +0.25bps artık= +3.04bps | lider|z|>3.0&geride n= 1072 -16.51bps | yıllar 2020:+24.9 2021:+14.5 2022:-20.8 2023:-3.5 2024:+4.6
+ETH->SOL k=3 h= 2 |ze|>4.0: n=   662 izleyen= +3.59bps artık= +6.85bps | lider|z|>4.0&geride n=  473 -23.25bps | yıllar 2020:+2.7 2021:+16.8 2022:-20.7 2023:+3.3 2024:+18.5
+ETH->SOL k=3 h= 3 |ze|>2.0: n=  7566 izleyen= -2.26bps artık= +2.26bps | lider|z|>2.0&geride n= 2366 -10.26bps | yıllar 2020:+11.1 2021:-1.2 2022:-7.3 2023:-7.8 2024:+2.2
+ETH->SOL k=3 h= 3 |ze|>3.0: n=  2045 izleyen= -2.40bps artık= +0.25bps | lider|z|>3.0&geride n= 1072 -15.18bps | yıllar 2020:+43.2 2021:+11.0 2022:-32.7 2023:-6.3 2024:+5.8
+ETH->SOL k=3 h= 3 |ze|>4.0: n=   662 izleyen= +3.60bps artık= +4.49bps | lider|z|>4.0&geride n=  473 -25.30bps | yıllar 2020:+25.7 2021:+26.8 2022:-40.9 2023:+3.3 2024:+22.9
+ETH->SOL k=3 h= 6 |ze|>2.0: n=  7564 izleyen= -4.21bps artık= +3.61bps | lider|z|>2.0&geride n= 2366 -16.92bps | yıllar 2020:+18.0 2021:-11.9 2022:-13.0 2023:-5.6 2024:+5.2
+ETH->SOL k=3 h= 6 |ze|>3.0: n=  2045 izleyen= -3.38bps artık= +2.37bps | lider|z|>3.0&geride n= 1072 -24.04bps | yıllar 2020:+64.2 2021:-12.2 2022:-31.2 2023:-2.4 2024:+11.5
+ETH->SOL k=3 h= 6 |ze|>4.0: n=   662 izleyen= +8.09bps artık=+11.55bps | lider|z|>4.0&geride n=  473 -26.50bps | yıllar 2020:+104.2 2021:+12.8 2022:-36.1 2023:+2.3 2024:+29.4
+ETH->SOL k=3 h=12 |ze|>2.0: n=  7564 izleyen=-11.88bps artık= +1.07bps | lider|z|>2.0&geride n= 2366 -25.70bps | yıllar 2020:+15.1 2021:-28.4 2022:-13.4 2023:-14.7 2024:-0.7
+ETH->SOL k=3 h=12 |ze|>3.0: n=  2045 izleyen=-19.84bps artık= -4.97bps | lider|z|>3.0&geride n= 1072 -25.63bps | yıllar 2020:+42.4 2021:-60.7 2022:-24.6 2023:-17.2 2024:+2.5
+ETH->SOL k=3 h=12 |ze|>4.0: n=   662 izleyen= -3.01bps artık=+10.16bps | lider|z|>4.0&geride n=  473 -39.86bps | yıllar 2020:+102.9 2021:-31.6 2022:+19.6 2023:-37.0 2024:+11.2
+ETH->BTC k=1 h= 1 |ze|>2.0: n=  9514 izleyen= -0.95bps artık= -0.53bps | lider|z|>2.0&geride n= 2961  +1.69bps | yıllar 2020:+0.1 2021:-3.0 2022:-0.2 2023:-1.3 2024:-0.3
+ETH->BTC k=1 h= 1 |ze|>3.0: n=  3244 izleyen= -1.12bps artık= -0.99bps | lider|z|>3.0&geride n= 1258  +1.15bps | yıllar 2020:-1.4 2021:-6.3 2022:-0.2 2023:+2.3 2024:-0.2
+ETH->BTC k=1 h= 1 |ze|>4.0: n=  1454 izleyen= -2.98bps artık= -0.88bps | lider|z|>4.0&geride n=  607  -0.39bps | yıllar 2020:-1.3 2021:-13.0 2022:-3.1 2023:+0.9 2024:-0.5
+ETH->BTC k=1 h= 2 |ze|>2.0: n=  9514 izleyen= +0.03bps artık= -0.44bps | lider|z|>2.0&geride n= 2961  +1.48bps | yıllar 2020:+2.9 2021:+0.1 2022:-0.6 2023:-1.8 2024:-0.1
+ETH->BTC k=1 h= 2 |ze|>3.0: n=  3244 izleyen= +0.29bps artık= -0.62bps | lider|z|>3.0&geride n= 1258  +1.29bps | yıllar 2020:+0.8 2021:-1.2 2022:+0.3 2023:+1.9 2024:-0.4
+ETH->BTC k=1 h= 2 |ze|>4.0: n=  1454 izleyen= -1.99bps artık= -1.34bps | lider|z|>4.0&geride n=  607  -2.08bps | yıllar 2020:-0.9 2021:-7.7 2022:-2.6 2023:+1.6 2024:-1.9
+ETH->BTC k=1 h= 3 |ze|>2.0: n=  9514 izleyen= -0.03bps artık= -0.48bps | lider|z|>2.0&geride n= 2961  +2.21bps | yıllar 2020:+3.3 2021:+0.1 2022:-1.7 2023:-1.9 2024:+0.4
+ETH->BTC k=1 h= 3 |ze|>3.0: n=  3244 izleyen= +0.48bps artık= -0.54bps | lider|z|>3.0&geride n= 1258  +2.13bps | yıllar 2020:-0.8 2021:+1.6 2022:-2.5 2023:+2.2 2024:+1.9
+ETH->BTC k=1 h= 3 |ze|>4.0: n=  1454 izleyen= -3.05bps artık= -1.90bps | lider|z|>4.0&geride n=  607  -0.93bps | yıllar 2020:-2.8 2021:-3.0 2022:-7.0 2023:+1.2 2024:-4.5
+ETH->BTC k=1 h= 6 |ze|>2.0: n=  9514 izleyen= -0.36bps artık= -0.43bps | lider|z|>2.0&geride n= 2961  +0.75bps | yıllar 2020:+2.9 2021:-2.0 2022:-0.8 2023:-0.8 2024:-0.7
+ETH->BTC k=1 h= 6 |ze|>3.0: n=  3244 izleyen= +2.26bps artık= +0.38bps | lider|z|>3.0&geride n= 1258  +0.56bps | yıllar 2020:+2.6 2021:+4.0 2022:-0.5 2023:+3.0 2024:+2.3
+ETH->BTC k=1 h= 6 |ze|>4.0: n=  1454 izleyen= +0.20bps artık= -0.24bps | lider|z|>4.0&geride n=  607  +1.51bps | yıllar 2020:+4.0 2021:+0.3 2022:-5.5 2023:+3.7 2024:-2.9
+ETH->BTC k=1 h=12 |ze|>2.0: n=  9514 izleyen= +1.87bps artık= +0.31bps | lider|z|>2.0&geride n= 2961  +3.08bps | yıllar 2020:+7.7 2021:+1.2 2022:-0.5 2023:+0.6 2024:+0.9
+ETH->BTC k=1 h=12 |ze|>3.0: n=  3244 izleyen= +3.23bps artık= -0.03bps | lider|z|>3.0&geride n= 1258  +4.00bps | yıllar 2020:+1.2 2021:+8.0 2022:-1.4 2023:+6.0 2024:+2.3
+ETH->BTC k=1 h=12 |ze|>4.0: n=  1454 izleyen= +0.22bps artık= -2.43bps | lider|z|>4.0&geride n=  607  +4.06bps | yıllar 2020:-3.2 2021:+7.4 2022:-2.1 2023:+4.6 2024:-5.3
+ETH->BTC k=3 h= 1 |ze|>2.0: n=  8857 izleyen= -0.19bps artık= -0.50bps | lider|z|>2.0&geride n= 2923  +0.86bps | yıllar 2020:+1.0 2021:+0.1 2022:-0.9 2023:-0.5 2024:-0.4
+ETH->BTC k=3 h= 1 |ze|>3.0: n=  2712 izleyen= -1.88bps artık= -0.99bps | lider|z|>3.0&geride n= 1190  -0.30bps | yıllar 2020:-0.9 2021:-5.3 2022:-3.1 2023:-0.4 2024:-0.5
+ETH->BTC k=3 h= 1 |ze|>4.0: n=   972 izleyen= -2.19bps artık= -1.71bps | lider|z|>4.0&geride n=  484  -1.99bps | yıllar 2020:+3.4 2021:-7.9 2022:-6.9 2023:-2.6 2024:+1.0
+ETH->BTC k=3 h= 2 |ze|>2.0: n=  8857 izleyen= +0.24bps artık= -0.30bps | lider|z|>2.0&geride n= 2923  +1.81bps | yıllar 2020:+1.5 2021:+2.2 2022:-0.8 2023:-1.5 2024:+0.1
+ETH->BTC k=3 h= 2 |ze|>3.0: n=  2712 izleyen= -1.45bps artık= -1.07bps | lider|z|>3.0&geride n= 1190  +1.42bps | yıllar 2020:+1.0 2021:-1.2 2022:-8.0 2023:-2.1 2024:+2.4
+ETH->BTC k=3 h= 2 |ze|>4.0: n=   972 izleyen= -1.73bps artık= -0.65bps | lider|z|>4.0&geride n=  484  -0.85bps | yıllar 2020:+8.0 2021:-4.6 2022:-11.8 2023:-5.5 2024:+4.2
+ETH->BTC k=3 h= 3 |ze|>2.0: n=  8857 izleyen= +0.32bps artık= +0.00bps | lider|z|>2.0&geride n= 2923  +0.97bps | yıllar 2020:+1.9 2021:+1.9 2022:-1.5 2023:-1.4 2024:+0.9
+ETH->BTC k=3 h= 3 |ze|>3.0: n=  2712 izleyen= -1.72bps artık= -1.70bps | lider|z|>3.0&geride n= 1190  -0.41bps | yıllar 2020:+0.6 2021:-3.7 2022:-9.7 2023:-2.2 2024:+5.0
+ETH->BTC k=3 h= 3 |ze|>4.0: n=   972 izleyen= -4.23bps artık= -2.75bps | lider|z|>4.0&geride n=  484  -0.40bps | yıllar 2020:+8.5 2021:-17.1 2022:-20.3 2023:-5.8 2024:+9.8
+ETH->BTC k=3 h= 6 |ze|>2.0: n=  8857 izleyen= +0.21bps artık= +0.10bps | lider|z|>2.0&geride n= 2923  +3.10bps | yıllar 2020:-0.7 2021:+3.0 2022:-1.7 2023:-0.6 2024:+1.0
+ETH->BTC k=3 h= 6 |ze|>3.0: n=  2712 izleyen= -1.29bps artık= -2.14bps | lider|z|>3.0&geride n= 1190  +1.90bps | yıllar 2020:+1.0 2021:-7.7 2022:-9.0 2023:-0.7 2024:+7.7
+ETH->BTC k=3 h= 6 |ze|>4.0: n=   972 izleyen= -5.62bps artık= -4.55bps | lider|z|>4.0&geride n=  484  -2.10bps | yıllar 2020:+6.1 2021:-31.6 2022:-21.7 2023:-5.1 2024:+18.6
+ETH->BTC k=3 h=12 |ze|>2.0: n=  8857 izleyen= +0.69bps artık= -0.23bps | lider|z|>2.0&geride n= 2923  +4.62bps | yıllar 2020:+0.2 2021:+6.9 2022:-2.4 2023:-0.0 2024:-0.8
+ETH->BTC k=3 h=12 |ze|>3.0: n=  2712 izleyen= -2.11bps artık= -3.42bps | lider|z|>3.0&geride n= 1190  +7.55bps | yıllar 2020:-6.9 2021:+4.7 2022:-11.4 2023:+0.2 2024:+2.7
+ETH->BTC k=3 h=12 |ze|>4.0: n=   972 izleyen= -8.42bps artık= -7.16bps | lider|z|>4.0&geride n=  484  +3.36bps | yıllar 2020:-2.0 2021:-40.7 2022:-20.6 2023:-3.9 2024:+18.3

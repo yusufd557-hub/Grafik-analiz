@@ -1,0 +1,22 @@
+19 yapılandırma
+  10/19 10s
+                                                                                                              ad    ret   ret2  sharpe    mdd  trades   alfa   beta  maliyet  fonlama  maruz
+0            t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win250_z_in4.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum  0.484  0.414   0.721 -0.151     196  0.109 -0.021    0.048   -0.002  0.015
+1           t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win1000_z_in4.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum -0.139 -0.177  -0.094 -0.381     184 -0.013 -0.002    0.044    0.026  0.014
+2            t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in4.5_max_bar6_limit_bps20.0_limit_bar2_limit_modtum  0.495  0.447   0.760 -0.137     134  0.114 -0.024    0.033    0.006  0.010
+3            t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in4.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum  0.516  0.452   0.722 -0.171     188  0.115 -0.021      NaN      NaN    NaN
+4            t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win250_z_in5.0_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.516  0.484   0.869 -0.123      94  0.102 -0.012    0.021   -0.032  0.007
+5           t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win1000_z_in5.0_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.226  0.199   0.426 -0.177     100  0.066 -0.017    0.022    0.010  0.007
+6            t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in4.5_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.424  0.382   0.697 -0.143     134  0.103 -0.023    0.030    0.006  0.010
+7            t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum  0.655  0.613   1.098 -0.123     108  0.121 -0.014    0.026   -0.002  0.008
+8            t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.606  0.568   1.079 -0.122     108  0.115 -0.014      NaN      NaN    NaN
+9     t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win250_z_in5.0_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.206  0.190   0.662 -0.086     149  0.046 -0.006    0.014   -0.019  0.009
+10   t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win1000_z_in5.0_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.027  0.012   0.109 -0.125     165  0.015 -0.006    0.015    0.007  0.009
+11    t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win500_z_in4.5_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.294  0.268   0.778 -0.075     224  0.068 -0.012    0.020   -0.000  0.013
+12    t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum  0.310  0.290   0.883 -0.088     163  0.066 -0.009    0.016   -0.002  0.009
+13    t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps10.0_limit_bar2_limit_modtum  0.290  0.271   0.854 -0.086     163  0.063 -0.009      NaN      NaN    NaN
+14   t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win250_z_in5.0_max_bar3_limit_bps10.0_limit_bar2_limit_modtum  0.291  0.278   1.021 -0.049     115  0.058 -0.005    0.010   -0.006  0.004
+15  t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win1000_z_in5.0_max_bar3_limit_bps10.0_limit_bar2_limit_modtum  0.139  0.128   0.552 -0.050     105  0.033 -0.005    0.009    0.013  0.003
+16   t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win500_z_in4.5_max_bar3_limit_bps10.0_limit_bar2_limit_modtum  0.173  0.159   0.694 -0.048     133  0.041 -0.007    0.011   -0.002  0.004
+17   t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win500_z_in5.0_max_bar3_limit_bps20.0_limit_bar2_limit_modtum  0.241  0.229   0.907 -0.042     102  0.048 -0.003    0.010   -0.003  0.003
+18   t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win500_z_in5.0_max_bar3_limit_bps10.0_limit_bar2_limit_modtum  0.240  0.229   0.918 -0.043     102  0.048 -0.003      NaN      NaN    NaN

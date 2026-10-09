@@ -1,0 +1,26 @@
+/home/user/venv/lib/python3.13/site-packages/pandas/core/arraylike.py:402: RuntimeWarning: divide by zero encountered in log
+  result = getattr(ufunc, method)(*inputs, **kwargs)
+SOL/BTC k3 H3 z>3.0: hepsi:n493 +15bp oiA<-1%:n173 +2bp oiA>+1%:n288 +19bp ort<-1%:n169 +1bp ort>+1%:n260 +29bp ort<0:n203 -6bp ort>=0:n290 +30bp
+SOL/BTC k3 H3 z>4.0: hepsi:n215 +12bp oiA<-1%:n75 -67bp oiA>+1%:n128 +42bp ort<-1%:n77 -71bp ort>+1%:n117 +54bp ort<0:n87 -55bp ort>=0:n128 +57bp
+SOL/BTC k3 H6 z>3.0: hepsi:n493 +25bp oiA<-1%:n173 +16bp oiA>+1%:n288 +49bp ort<-1%:n169 +16bp ort>+1%:n260 +63bp ort<0:n203 -25bp ort>=0:n290 +61bp
+SOL/BTC k3 H6 z>4.0: hepsi:n215 +25bp oiA<-1%:n75 -62bp oiA>+1%:n128 +96bp ort<-1%:n77 -66bp ort>+1%:n117 +111bp ort<0:n87 -100bp ort>=0:n128 +111bp
+SOL/BTC k6 H3 z>3.0: hepsi:n493 +17bp oiA<-1%:n168 +15bp oiA>+1%:n297 +22bp ort<-1%:n178 -3bp ort>+1%:n259 +42bp ort<0:n201 -7bp ort>=0:n292 +33bp
+SOL/BTC k6 H3 z>4.0: hepsi:n210 +50bp oiA<-1%:n68 +31bp oiA>+1%:n127 +63bp ort<-1%:n71 +16bp ort>+1%:n109 +82bp ort<0:n81 +26bp ort>=0:n129 +66bp
+SOL/BTC k6 H6 z>3.0: hepsi:n493 -20bp oiA<-1%:n168 +27bp oiA>+1%:n297 -34bp ort<-1%:n178 -7bp ort>+1%:n259 +1bp ort<0:n201 -31bp ort>=0:n292 -13bp
+SOL/BTC k6 H6 z>4.0: hepsi:n210 +6bp oiA<-1%:n68 +95bp oiA>+1%:n127 -26bp ort<-1%:n71 +64bp ort>+1%:n109 -7bp ort<0:n81 +39bp ort>=0:n129 -14bp
+SOL/ETH k3 H3 z>3.0: hepsi:n500 +6bp oiA<-1%:n170 -6bp oiA>+1%:n288 +7bp ort<-1%:n145 +20bp ort>+1%:n280 +4bp ort<0:n180 +34bp ort>=0:n320 -10bp
+SOL/ETH k3 H3 z>4.0: hepsi:n220 +51bp oiA<-1%:n80 +12bp oiA>+1%:n123 +59bp ort<-1%:n77 +24bp ort>+1%:n117 +42bp ort<0:n90 +62bp ort>=0:n130 +43bp
+SOL/ETH k3 H6 z>3.0: hepsi:n500 +12bp oiA<-1%:n170 -1bp oiA>+1%:n288 +32bp ort<-1%:n145 +20bp ort>+1%:n280 +33bp ort<0:n180 +20bp ort>=0:n320 +8bp
+SOL/ETH k3 H6 z>4.0: hepsi:n220 +49bp oiA<-1%:n80 +23bp oiA>+1%:n123 +77bp ort<-1%:n77 +22bp ort>+1%:n117 +66bp ort<0:n90 +32bp ort>=0:n130 +61bp
+SOL/ETH k6 H3 z>3.0: hepsi:n498 +10bp oiA<-1%:n156 +27bp oiA>+1%:n309 +2bp ort<-1%:n148 +18bp ort>+1%:n289 +10bp ort<0:n176 +31bp ort>=0:n322 -2bp
+SOL/ETH k6 H3 z>4.0: hepsi:n210 +33bp oiA<-1%:n59 +35bp oiA>+1%:n134 +32bp ort<-1%:n59 +29bp ort>+1%:n129 +36bp ort<0:n71 +61bp ort>=0:n139 +18bp
+SOL/ETH k6 H6 z>3.0: hepsi:n498 -27bp oiA<-1%:n156 +35bp oiA>+1%:n309 -49bp ort<-1%:n148 +13bp ort>+1%:n289 -26bp ort<0:n176 +11bp ort>=0:n322 -48bp
+SOL/ETH k6 H6 z>4.0: hepsi:n210 -4bp oiA<-1%:n59 +117bp oiA>+1%:n134 -41bp ort<-1%:n59 +84bp ort>+1%:n129 -20bp ort<0:n71 +79bp ort>=0:n139 -47bp
+ETH/BTC k3 H3 z>3.0: hepsi:n518 -2bp oiA<-1%:n209 +15bp oiA>+1%:n249 -13bp ort<-1%:n218 +14bp ort>+1%:n217 -6bp ort<0:n249 +8bp ort>=0:n269 -12bp
+ETH/BTC k3 H3 z>4.0: hepsi:n217 -2bp oiA<-1%:n93 +8bp oiA>+1%:n109 -16bp ort<-1%:n97 +12bp ort>+1%:n93 -14bp ort<0:n107 +9bp ort>=0:n110 -13bp
+ETH/BTC k3 H6 z>3.0: hepsi:n518 -2bp oiA<-1%:n209 +14bp oiA>+1%:n249 -22bp ort<-1%:n218 +12bp ort>+1%:n217 -11bp ort<0:n249 +8bp ort>=0:n269 -11bp
+ETH/BTC k3 H6 z>4.0: hepsi:n217 -14bp oiA<-1%:n93 -4bp oiA>+1%:n109 -31bp ort<-1%:n97 -5bp ort>+1%:n93 -25bp ort<0:n107 -5bp ort>=0:n110 -22bp
+ETH/BTC k6 H3 z>3.0: hepsi:n505 +2bp oiA<-1%:n223 +8bp oiA>+1%:n253 -6bp ort<-1%:n226 +3bp ort>+1%:n223 -4bp ort<0:n254 +5bp ort>=0:n251 -1bp
+ETH/BTC k6 H3 z>4.0: hepsi:n219 -6bp oiA<-1%:n88 +9bp oiA>+1%:n122 -22bp ort<-1%:n99 -3bp ort>+1%:n104 -13bp ort<0:n105 -1bp ort>=0:n114 -11bp
+ETH/BTC k6 H6 z>3.0: hepsi:n505 -2bp oiA<-1%:n223 +5bp oiA>+1%:n253 -13bp ort<-1%:n226 -4bp ort>+1%:n223 -8bp ort<0:n254 -1bp ort>=0:n251 -3bp
+ETH/BTC k6 H6 z>4.0: hepsi:n219 -14bp oiA<-1%:n88 +3bp oiA>+1%:n122 -33bp ort<-1%:n99 -14bp ort>+1%:n104 -17bp ort<0:n105 -12bp ort>=0:n114 -16bp

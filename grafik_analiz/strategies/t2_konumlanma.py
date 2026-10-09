@@ -272,6 +272,23 @@ def _signal_bilesik(frame, met, bpd, w_gun=7, k=24, w_taker_gun=30, c=1.0, cx=0.
     return _band(score.to_numpy(), c, cx)
 
 
+def _signal_kalabalik_top(frame, met, bpd, w_liste="3-7-14", c=1.0, cx=0.0, isaret=-1, **_):
+    """Topluluk: farklı pencereli kalabalık sinyallerinin pozisyon ortalaması (−1…+1)."""
+    windows = [float(w) for w in str(w_liste).split("-")]
+    parts = [_signal_kalabalik(frame, met, bpd, oran="genel", w_gun=w, c=c, cx=cx, isaret=isaret) for w in windows]
+    return np.mean(parts, axis=0)
+
+
+def _limit_orders(pos: np.ndarray, close: pd.Series, limit_bar: int) -> pd.DataFrame:
+    """Hedef değiştikten sonraki ``limit_bar`` karar barında, kararın verildiği barın
+    kapanışından limit emir; sonra (dolmadıysa) piyasa emri."""
+    tgt = pd.Series(pos, index=close.index, dtype=float)
+    groups = tgt.ne(tgt.shift(1)).cumsum()
+    age = tgt.groupby(groups).cumcount().to_numpy()
+    lim = np.where(age < int(limit_bar), close.to_numpy(dtype=float), np.nan)
+    return pd.DataFrame({"target": tgt.to_numpy(), "limit": lim}, index=close.index)
+
+
 def _signal_fiyat(frame, bpd, w_gun=7, c=1.0, cx=0.0, isaret=1, **_):
     """Kontrol: yalnız fiyat (log kapanışın kayan z-skoru); konumlanma verisi kullanmaz."""
     z = _z(np.log(frame["close"].astype(float)), int(w_gun * bpd)).to_numpy()
@@ -286,6 +303,8 @@ def signal_fn(
     trend_gun: int = 0,
     filtre: str = "yok",
     gecikme_dk: int = 10,
+    emir: str = "piyasa",
+    limit_bar: int = 1,
     **params,
 ) -> dict:
     out = {}
@@ -312,11 +331,16 @@ def signal_fn(
             pos = _signal_fiyat(frame, bpd, **params)
         elif kind == "fark":
             pos = _signal_fark(frame, bar_metrics(symbol, index, step, lag), bpd, **params)
+        elif kind == "kalabalik_top":
+            pos = _signal_kalabalik_top(frame, bar_metrics(symbol, index, step, lag), bpd, **params)
         else:
             raise ValueError(f"bilinmeyen tür: {kind}")
         pos = _side(np.asarray(pos, dtype=float), yon)
         pos = _trend(pos, frame["close"].astype(float), int(trend_gun), bpd, filtre)
-        out[leg] = pd.Series(pos, index=index, dtype=float)
+        if emir == "limit":
+            out[leg] = _limit_orders(pos, frame["close"].astype(float), int(limit_bar))
+        else:
+            out[leg] = pd.Series(pos, index=index, dtype=float)
     return out
 
 
@@ -337,7 +361,54 @@ def make_spec(name: str, universe: str, interval: str, params: dict, description
     )
 
 
-FROZEN: list = []
+FROZEN: list = [
+    (
+        "t2_konumlanma_kalabalik_1h_SEPET3_genel_w7_c0.5_cx0.5_s-1_limit_lb1",
+        "SEPET3",
+        "1h",
+        {"kind": "kalabalik", "oran": "genel", "w_gun": 7, "c": 0.5, "cx": 0.5, "isaret": -1, "emir": "limit", "limit_bar": 1},
+        "D1. Genel hesapların uzun/kısa oranının (log) 7 günlük z-skoru +0,5'in üstündeyse kısa, "
+        "−0,5'in altındaysa uzun (karşıt); |z| 0,5 altına inince kapat. Pozisyon değişimi önce kararın "
+        "verildiği barın kapanışından limit emirle (1 bar), dolmazsa piyasa emriyle. BTC/ETH/SOL vadeli, 1s. "
+        "candidate_check: GEÇMEDİ (dev_valid 1× %−23,3, 2× %−58,2, Sharpe −0,11, alfa −0,055).",
+    ),
+    (
+        "t2_konumlanma_kalabalik_1h_SEPET3_genel_w30_c1.0_cx0.0_s-1",
+        "SEPET3",
+        "1h",
+        {"kind": "kalabalik", "oran": "genel", "w_gun": 30, "c": 1.0, "cx": 0.0, "isaret": -1},
+        "D2. Genel hesapların uzun/kısa oranının (log) 30 günlük z-skoru +1'in üstündeyse kısa, "
+        "−1'in altındaysa uzun (karşıt); z işaret değiştirince kapat. BTC/ETH/SOL vadeli, 1s, piyasa emri. "
+        "candidate_check: GEÇTİ, sınırda (dev_valid 1× %+24,2, 2× %+5,9, Sharpe 0,503, alfa +0,210, alfa t 0,67; DSR 0,004).",
+    ),
+    (
+        "t2_konumlanma_oi_1h_SEPET3_birikim_k8_w30_a1.0_b1.5_t12",
+        "SEPET3",
+        "1h",
+        {"kind": "oi", "mod": "birikim", "k": 8, "w_gun": 30, "a": 1.0, "b": 1.5, "tut": 12},
+        "D3. Açık pozisyonun 8 saatlik değişiminin z-skoru > 1,5 (yeni pozisyon birikimi) ve fiyatın "
+        "8 saatlik getirisi oynaklığın 1 katından büyükse fiyat yönünde 12 saat pozisyon. BTC/ETH/SOL vadeli, 1s. "
+        "candidate_check: GEÇMEDİ (dev_valid 1× %+6,4 ama 2× %−11,0, Sharpe 0,28).",
+    ),
+    (
+        "t2_konumlanma_fark_1h_SEPET3_w14_c0.5_cx0.0_s1",
+        "SEPET3",
+        "1h",
+        {"kind": "fark", "w_gun": 14, "c": 0.5, "cx": 0.0, "isaret": 1},
+        "D4. En büyük hesapların pozisyon oranı z-skoru eksi genel hesap oranı z-skoru (14 gün) +0,5'in "
+        "üstündeyse uzun, −0,5'in altındaysa kısa (büyük hesapları izle). BTC/ETH/SOL vadeli, 1s. "
+        "candidate_check: GEÇMEDİ (dev_valid 1× %−30,4, 2× %−54,4, Sharpe −0,21, alfa −0,096).",
+    ),
+    (
+        "t2_konumlanma_taker_4h_SEPET3_k12_w30_c2.0_cx0.0_s1",
+        "SEPET3",
+        "4h",
+        {"kind": "taker", "k": 12, "w_gun": 30, "c": 2.0, "cx": 0.0, "isaret": 1},
+        "D5. Son 12 dört saatlik barın taker alım payının 30 günlük z-skoru +2'nin üstündeyse uzun, "
+        "−2'nin altındaysa kısa (akışı izle); z işaret değiştirince kapat. BTC/ETH/SOL vadeli, 4s. "
+        "candidate_check: GEÇMEDİ (dev_valid 1× %−3,9, 2× %−10,4, Sharpe 0,01, alfa −0,002).",
+    ),
+]
 """(ad, evren, dilim, parametreler, açıklama) — iç doğrulamadan önce dondurulanlar."""
 
 

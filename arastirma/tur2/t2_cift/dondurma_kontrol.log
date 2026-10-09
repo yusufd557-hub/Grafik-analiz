@@ -1,0 +1,9 @@
+t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum defter eşleşmesi: 2 satır
+  assert_causal (0.55, 0.8, 0.97): geçti
+  assert_causal (0.3, 0.5, 0.65, 0.75, 0.9, 0.99): geçti
+t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k6_vol_win500_z_in5.0_max_bar6_limit_bps20.0_limit_bar2_limit_modtum defter eşleşmesi: 2 satır
+  assert_causal (0.55, 0.8, 0.97): geçti
+  assert_causal (0.3, 0.5, 0.65, 0.75, 0.9, 0.99): geçti
+t2_cift_1h_SOLBTC-SOLETH_bir_z_tursok_k12_vol_win500_z_in5.0_max_bar3_limit_bps10.0_limit_bar2_limit_modtum defter eşleşmesi: 2 satır
+  assert_causal (0.55, 0.8, 0.97): geçti
+  assert_causal (0.3, 0.5, 0.65, 0.75, 0.9, 0.99): geçti

@@ -1,3 +1,57 @@
 156 yapılandırma
-  10/156 8s
-  20/156 14s
+  10/156 0s
+  20/156 0s
+  30/156 4s
+  40/156 11s
+  50/156 17s
+  60/156 24s
+  70/156 30s
+  80/156 36s
+  90/156 43s
+  100/156 50s
+  110/156 57s
+  120/156 61s
+  130/156 66s
+  140/156 70s
+  150/156 75s
+                                                                              ad    ret   ret2  sharpe    mdd  trades   alfa   beta  maliyet  fonlama  maruz
+52                 t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in4.0_max_bar6  0.271  0.114   0.463 -0.184     188  0.076 -0.018    0.132    0.009  0.013
+51                 t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in4.0_max_bar3  0.231  0.072   0.336 -0.181     198  0.081 -0.024    0.139    0.008  0.007
+106   t2_cift_1h_SOLETH_oyn_z_tursok_k6_vol_win500_hedge_win500_z_in4.0_max_bar6  0.093 -0.019   0.315 -0.122     194  0.021 -0.001    0.109   -0.009  0.013
+82                 t2_cift_1h_SOLETH_bir_z_tursok_k3_vol_win500_z_in4.0_max_bar6  0.194 -0.024   0.287 -0.314     288  0.046  0.005    0.202   -0.018  0.020
+87                 t2_cift_1h_SOLETH_bir_z_tursok_k6_vol_win500_z_in4.0_max_bar3  0.084 -0.062   0.194 -0.209     206  0.041 -0.016    0.144    0.010  0.007
+81                 t2_cift_1h_SOLETH_bir_z_tursok_k3_vol_win500_z_in4.0_max_bar3  0.092 -0.117   0.192 -0.270     304  0.035 -0.006    0.213    0.003  0.010
+43                 t2_cift_1h_SOLBTC_bir_z_tursok_k3_vol_win500_z_in3.0_max_bar6  0.087 -0.316   0.186 -0.396     662  0.028  0.009    0.463   -0.022  0.045
+40                 t2_cift_1h_SOLBTC_bir_z_tursok_k1_vol_win500_z_in4.0_max_bar6  0.065 -0.215   0.158 -0.319     436  0.030 -0.004    0.305   -0.032  0.030
+45                 t2_cift_1h_SOLBTC_bir_z_tursok_k3_vol_win500_z_in4.0_max_bar3  0.043 -0.153   0.131 -0.295     298  0.043 -0.019    0.209    0.020  0.010
+64    t2_cift_1h_SOLBTC_oyn_z_tursok_k3_vol_win500_hedge_win500_z_in4.0_max_bar6  0.005 -0.145   0.049 -0.161     308  0.006 -0.002    0.162   -0.000  0.021
+105   t2_cift_1h_SOLETH_oyn_z_tursok_k6_vol_win500_hedge_win500_z_in4.0_max_bar3  0.000 -0.109   0.034 -0.081     206 -0.008  0.008    0.115   -0.007  0.007
+100   t2_cift_1h_SOLETH_oyn_z_tursok_k3_vol_win500_hedge_win500_z_in4.0_max_bar6 -0.012 -0.149   0.014 -0.188     266 -0.001  0.002    0.150   -0.006  0.018
+88                 t2_cift_1h_SOLETH_bir_z_tursok_k6_vol_win500_z_in4.0_max_bar6 -0.038 -0.157   0.001 -0.242     188  0.006 -0.005    0.132    0.019  0.013
+83                t2_cift_1h_SOLETH_bir_z_tursok_k3_vol_win500_z_in4.0_max_bar12 -0.113 -0.261  -0.012 -0.352     262 -0.027  0.022    0.183   -0.079  0.036
+39                 t2_cift_1h_SOLBTC_bir_z_tursok_k1_vol_win500_z_in4.0_max_bar3 -0.083 -0.336  -0.012 -0.355     462  0.005 -0.006    0.323   -0.018  0.016
+93    t2_cift_1h_SOLETH_oyn_z_tursok_k1_vol_win500_hedge_win500_z_in4.0_max_bar3 -0.033 -0.259  -0.029 -0.233     470 -0.007  0.003    0.266   -0.020  0.016
+76                 t2_cift_1h_SOLETH_bir_z_tursok_k1_vol_win500_z_in4.0_max_bar6 -0.097 -0.341  -0.033 -0.345     450  0.016 -0.019    0.315   -0.025  0.031
+94    t2_cift_1h_SOLETH_oyn_z_tursok_k1_vol_win500_hedge_win500_z_in4.0_max_bar6 -0.044 -0.258  -0.048 -0.254     446 -0.006  0.001    0.253   -0.018  0.031
+128                t2_cift_4h_SOLBTC_bir_z_tursok_k2_vol_win500_z_in3.0_max_bar1 -0.041 -0.171  -0.090 -0.129     208  0.000 -0.005    0.146    0.030  0.009
+63    t2_cift_1h_SOLBTC_oyn_z_tursok_k3_vol_win500_hedge_win500_z_in4.0_max_bar3 -0.026 -0.181  -0.092 -0.125     330 -0.007  0.003    0.173    0.006  0.011
+48                 t2_cift_1h_SOLBTC_bir_z_tursok_k6_vol_win500_z_in3.0_max_bar3 -0.158 -0.405  -0.120 -0.335     496  0.010 -0.027    0.347    0.020  0.017
+66    t2_cift_1h_SOLBTC_oyn_z_tursok_k6_vol_win500_hedge_win500_z_in3.0_max_bar3 -0.048 -0.279  -0.124 -0.169     526 -0.005 -0.002    0.278   -0.000  0.018
+73                 t2_cift_1h_SOLETH_bir_z_tursok_k1_vol_win500_z_in3.0_max_bar6 -0.191 -0.560  -0.126 -0.377     870  0.003 -0.023    0.609   -0.040  0.060
+46                 t2_cift_1h_SOLBTC_bir_z_tursok_k3_vol_win500_z_in4.0_max_bar6 -0.185 -0.331  -0.128 -0.477     282 -0.013 -0.009    0.197    0.017  0.019
+69    t2_cift_1h_SOLBTC_oyn_z_tursok_k6_vol_win500_hedge_win500_z_in4.0_max_bar3 -0.031 -0.129  -0.131 -0.097     204 -0.005 -0.001    0.107   -0.001  0.007
+42                 t2_cift_1h_SOLBTC_bir_z_tursok_k3_vol_win500_z_in3.0_max_bar3 -0.209 -0.524  -0.171 -0.305     724 -0.031  0.001    0.507   -0.016  0.025
+79                 t2_cift_1h_SOLETH_bir_z_tursok_k3_vol_win500_z_in3.0_max_bar6 -0.247 -0.513  -0.174 -0.409     622 -0.027 -0.007    0.435   -0.033  0.043
+37                 t2_cift_1h_SOLBTC_bir_z_tursok_k1_vol_win500_z_in3.0_max_bar6 -0.267 -0.613  -0.176 -0.414     910 -0.008 -0.027    0.637   -0.037  0.062
+75                 t2_cift_1h_SOLETH_bir_z_tursok_k1_vol_win500_z_in4.0_max_bar3 -0.221 -0.445  -0.208 -0.359     484 -0.021 -0.013    0.339   -0.012  0.017
+67    t2_cift_1h_SOLBTC_oyn_z_tursok_k6_vol_win500_hedge_win500_z_in3.0_max_bar6 -0.094 -0.300  -0.223 -0.255     484 -0.019  0.002    0.257    0.004  0.033
+141                t2_cift_4h_SOLETH_bir_z_tursok_k1_vol_win500_z_in3.0_max_bar3 -0.204 -0.320  -0.250 -0.358     224 -0.051  0.014    0.157   -0.029  0.031
+84                 t2_cift_1h_SOLETH_bir_z_tursok_k6_vol_win500_z_in3.0_max_bar3 -0.215 -0.440  -0.257 -0.342     484 -0.010 -0.024    0.339    0.027  0.017
+89                t2_cift_1h_SOLETH_bir_z_tursok_k6_vol_win500_z_in4.0_max_bar12 -0.209 -0.298  -0.260 -0.383     170 -0.044  0.006    0.119   -0.009  0.023
+99    t2_cift_1h_SOLETH_oyn_z_tursok_k3_vol_win500_hedge_win500_z_in4.0_max_bar3 -0.090 -0.222  -0.264 -0.144     278 -0.021  0.003    0.156    0.005  0.010
+101  t2_cift_1h_SOLETH_oyn_z_tursok_k3_vol_win500_hedge_win500_z_in4.0_max_bar12 -0.135 -0.246  -0.265 -0.258     242 -0.027  0.002    0.136   -0.021  0.033
+124                t2_cift_4h_SOLBTC_bir_z_tursok_k1_vol_win500_z_in3.0_max_bar1 -0.128 -0.275  -0.277 -0.222     264 -0.015 -0.007    0.185    0.012  0.012
+146                t2_cift_4h_SOLETH_bir_z_tursok_k2_vol_win500_z_in4.0_max_bar1 -0.106 -0.157  -0.324 -0.191      84 -0.016 -0.004    0.059    0.018  0.004
+142                t2_cift_4h_SOLETH_bir_z_tursok_k1_vol_win500_z_in4.0_max_bar1 -0.119 -0.183  -0.327 -0.178     108 -0.024  0.001    0.076   -0.001  0.005
+144                t2_cift_4h_SOLETH_bir_z_tursok_k2_vol_win500_z_in3.0_max_bar1 -0.143 -0.249  -0.340 -0.175     188 -0.021 -0.005    0.132    0.011  0.009
+70    t2_cift_1h_SOLBTC_oyn_z_tursok_k6_vol_win500_hedge_win500_z_in4.0_max_bar6 -0.083 -0.174  -0.349 -0.140     198 -0.010 -0.006    0.104    0.008  0.014
