@@ -1,1 +1,2 @@
 {"strateji": "fonlama_carry_btc_surekli", "bar": "2026-10-08T16:00:00+00:00", "kapanis": "2026-10-08T20:00:00+00:00", "kayit": "2026-10-08T20:58:12+00:00", "zamaninda": true, "kod": "02d49afb307b9cbf", "hedef": {"spot:BTCUSDT": 1.0, "futures:BTCUSDT": -1.0}}
+{"strateji": "fonlama_carry_btc_surekli", "bar": "2026-10-08T20:00:00+00:00", "kapanis": "2026-10-09T00:00:00+00:00", "kayit": "2026-10-09T01:11:27+00:00", "zamaninda": true, "kod": "02d49afb307b9cbf", "hedef": {"spot:BTCUSDT": 1.0, "futures:BTCUSDT": -1.0}}
