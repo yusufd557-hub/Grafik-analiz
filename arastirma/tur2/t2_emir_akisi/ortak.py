@@ -93,16 +93,24 @@ def degerlendir(name: str, market: str, interval: str, csv_name: str, cost2: boo
         "gross_total": gross_total,
         "cost_total": cost_total,
         "sec": round(time.time() - t0, 1),
+        "wo_best": m.get("total_without_best"),
+        "p_value": m.get("p_value"),
+        "win_rate": m.get("win_rate"),
     }
     for y in range(2020, 2025):
         row[f"y{y}"] = float(yearly.get(y, float("nan")))
     row.update(leg_ret)
     if cost2:
         row["ret_2x"] = res["dev_train"][2.0].get("total_return")
+        row["sharpe_2x"] = res["dev_train"][2.0].get("sharpe")
     path = HERE / csv_name
     new = not path.exists()
+    # tarama1/tarama2 dosyaları eski başlıkla yazıldı; sonrakiler ek sütunlarla.
+    fields = FIELDS + (["ret_2x"] if cost2 else [])
+    if csv_name not in ("tarama1.csv", "tarama2.csv"):
+        fields = FIELDS + ["wo_best", "p_value", "win_rate", "ret_2x", "sharpe_2x"]
     with path.open("a", newline="", encoding="utf-8") as fh:
-        wr = csv.DictWriter(fh, fieldnames=FIELDS + (["ret_2x"] if cost2 else []), extrasaction="ignore")
+        wr = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
         if new:
             wr.writeheader()
         wr.writerow(row)
@@ -123,6 +131,7 @@ def _print(row: dict) -> None:
         f"b {_f(row['beta']):>6s} g/t {row['gross_pt_bps']:+7.1f} n/t {row['net_pt_bps']:+7.1f} "
         f"exp {row['exposure'] or 0:.2f} yrs " + " ".join(_f(row[f'y{y}'], True, 0) for y in range(2020, 2025))
         + (f" 2x {_f(row.get('ret_2x'), True, 1)}" if "ret_2x" in row else "")
+        + (f" wob {_f(row.get('wo_best'), True, 0)}" if row.get("wo_best") is not None else "")
         + " | " + " ".join(f"{k[4:]} {_f(v, True, 0)}" for k, v in row.items() if k.startswith("leg_"))
         + f" [{row['sec']}s]",
         flush=True,

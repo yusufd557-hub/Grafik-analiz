@@ -15,6 +15,9 @@ Skor S (pozitif = akış, fiyata göre alım yönünde), ``kind``:
   kısmı (L barlık kayan regresyon artığı), L barlık z-skoru.
 - ``getiri``: kontrol amaçlı, akış içermeyen n barlık log getiri z-skoru
   (akışın fiyat momentumundan fazlasını taşıyıp taşımadığını ölçmek için).
+- ``getiri_artik``: n barlık getirinin aynı n barlık akışla açıklanamayan kısmı
+  (L barlık kayan regresyon artığı), L barlık z-skoru; dönüş yönüyle
+  kullanılır (fiyat akışın gerektirdiğinden fazla düştüyse alım).
 - ``cvd_aralik``: CVD'nin n barlık aralık içindeki konumu − kapanışın n barlık
   aralık içindeki konumu (−1…1; klasik CVD uyumsuzluğu).
 - ``spot_vadeli``: aynı coinin spot akışı − vadeli akışı (n bar), L barlık
@@ -132,6 +135,13 @@ def score(df: pd.DataFrame, kind: str, n: int, L: int, leg: tuple | None = None,
         # Kontrol (akış değil): n barlık log getirinin z-skoru; akışın fiyat momentumundan
         # fazla bir şey taşıyıp taşımadığını ölçmek için.
         return _zscore(np.log(close).diff(n), L)
+    if kind == "getiri_artik":
+        # Fiyat hareketinin aynı n barlık akışla açıklanamayan kısmı: r − c·f,
+        # c = kayan cov(r, f) / var(f); L barlık z-skoru (dönüş yönüyle kullanılır).
+        f = flow(df, n)
+        r = np.log(close).diff(n)
+        c = r.rolling(L, min_periods=L).cov(f) / f.rolling(L, min_periods=L).var()
+        return _zscore(r - c * f, L)
     if kind == "cvd_aralik":
         d, _ = _delta(df)
         cvd = d.cumsum()

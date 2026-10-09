@@ -1,6 +1,6 @@
 """t2_lead_lag ailesi (protokol sürüm 2): öncü–izleyen (lead–lag) ilişkileri, USDⓈ-M vadeli.
 
-Üç sinyal türü (``tur``), hepsi aynı zaman diliminde, aynı açılış zamanlı mumlarla:
+Beş sinyal türü (``tur``), hepsi aynı zaman diliminde, aynı açılış zamanlı mumlarla:
 
 - ``yetis`` — coinler arası yetişme: izleyen coinin (``islem``) son ``k`` barlık
   getirisi ile liderin (``lider``) getirisinin kayan betayla ölçeklenmiş hali
@@ -12,6 +12,8 @@
   ``hedge=True``: izleyen bacaklar sermayenin yarısını eşit paylaşır, lider
   bacağı diğer yarıdır ve −ortalama(β·izleyen pozisyonu) tutar (dolar/beta
   yaklaşık nötr).
+- ``lider`` — izleyen, liderin son ``k`` barlık getirisinin z-skoru yönünde
+  (``yon=-1`` ile ters yönde) tutulur; izleyenin kendi hareketi yok sayılır.
 - ``spot_vadeli`` — spot öncülüğü: kaynak coinlerin (``kaynak``: "kendi",
   coin sembolü ya da "hepsi") spot getirisi − vadeli getirisi (aynı bar, k bar
   toplamı), 1 barlık farkın kayan std'sine göre z. Skor s = z (spot vadeliden
@@ -27,9 +29,12 @@
 Tetik: |s| > ``esik`` → yön = ``yon`` · sign(s). Pozisyon son tetikten sonra
 ``tut`` bar tutulur; yeni tetik süreyi uzatır, ters tetik yönü çevirir.
 
-Bilgi bacakları: sinyal için gereken ama işlem görmeyen seriler (örneğin
-yalnız ETH/SOL işlenirken BTC vadeli, ya da spot mumları) sıfır ağırlıklı
-bacak olarak verilir; hedefleri hep 0'dır. Böylece ileri bakış denetimi
+Bilgi bacakları: sinyal için gereken ama işlem görmeyen vadeli seriler
+(örneğin yalnız ETH/SOL işlenirken BTC vadeli) sıfır ağırlıklı bacak olarak
+verilir; hedefleri hep 0'dır. Spot mumları ise ``research.data.load(scope=
+"dev")`` ile signal_fn içinde yüklenir ve geçirilen verinin son bar
+kapanışına kesilir (sıfır ağırlıklı spot bacağı 15m/1h'de birleşik indeksi
+vadeli verinin başlangıcından öteye uzatırdı). Böylece ileri bakış denetimi
 (`assert_causal`) bu serileri de keser.
 
 Limit emir (``limit_bps``): pozisyon değişimi sinyal barının kapanışından
@@ -66,13 +71,33 @@ VARSAYILAN_WIN = {"5m": 288, "15m": 96, "1h": 168, "4h": 42}
 # ---------------------------------------------------------------- yardımcılar
 
 
-def _logret(df: pd.DataFrame) -> pd.Series:
-    return np.log(df["close"].astype(float)).diff()
+def _logret(df: pd.DataFrame, index: pd.Index | None = None) -> pd.Series:
+    """Kapanıştan kapanışa log getiri. ``index`` verilirse kapanış önce bu açılış
+    zamanlarına eşlenir, sonra fark alınır (eksik barda getiri NaN olur; iki
+    barlık getiri tek bara yazılmaz)."""
+    c = df["close"].astype(float)
+    if index is not None:
+        c = c.reindex(index)
+    return np.log(c).diff()
 
 
 def _on(series: pd.Series, index: pd.Index) -> pd.Series:
     """Aynı açılış zamanlı barlara eşle (eksik bar → NaN)."""
     return series.reindex(index)
+
+
+def _last_close(data: dict) -> pd.Timestamp:
+    """Geçirilen verideki en son bar kapanışı (ek veriler buna kesilir)."""
+    return max(frame["close_time"].max() for frame in data.values())
+
+
+def _spot_frame(symbol: str, interval: str, data: dict) -> pd.DataFrame:
+    """Spot mumları: ``research.data.load(scope="dev")`` ile yüklenir ve geçirilen
+    verinin son bar kapanışına kesilir (ileri bakış denetimi kesimi de keser)."""
+    from grafik_analiz.research.data import load
+
+    s = load(symbol, interval, SPOT, scope="dev")
+    return s[s["close_time"] <= _last_close(data)]
 
 
 def _sources(tur: str, coin: str, kaynak) -> list[str]:
@@ -125,7 +150,7 @@ def _premium_on(symbol: str, frame: pd.DataFrame, dilim: str) -> pd.Series:
 
     p = load_premium(symbol, dilim, scope="dev")
     last = frame["close_time"].max()
-    p = p[p["close_time"] <= last]  # geçirilen verinin son barına kes
+    p = p[p["close_time"] <= last]  # geçirilen verinin son bar kapanışına kes
     left = pd.DataFrame({"t": frame["close_time"].to_numpy()}, index=frame.index)
     right = pd.DataFrame({"t": p["close_time"].to_numpy(), "p": p["close"].astype(float).to_numpy()})
     left["t"] = left["t"].astype("datetime64[ns, UTC]")
@@ -150,39 +175,50 @@ def _score_yetis(data, coin, lider, k, win, lider_esik):
     f = data[(FUT, coin)]
     idx = f.index
     rf = _logret(f)
-    rl = _on(_logret(data[(FUT, lider)]), idx)
-    beta = (rf.rolling(win, min_periods=win // 2).cov(rl) / rl.rolling(win, min_periods=win // 2).var()).shift(1)
+    rl = _logret(data[(FUT, lider)], idx)
+    mp = max(2, win // 2)
+    beta = (rf.rolling(win, min_periods=mp).cov(rl) / rl.rolling(win, min_periods=mp).var()).shift(1)
     res1 = rf - beta * rl
-    sd_e = res1.rolling(win, min_periods=win // 2).std().shift(1) * np.sqrt(k)
+    sd_e = res1.rolling(win, min_periods=mp).std().shift(1) * np.sqrt(k)
     e = rf.rolling(k).sum() - beta * rl.rolling(k).sum()
     s = -(e / sd_e)
     if lider_esik is not None:
-        zl = rl.rolling(k).sum() / (rl.rolling(win, min_periods=win // 2).std().shift(1) * np.sqrt(k))
+        zl = rl.rolling(k).sum() / (rl.rolling(win, min_periods=mp).std().shift(1) * np.sqrt(k))
         ok = (zl.abs() > lider_esik) & (np.sign(zl) == np.sign(s))
         s = s.where(ok, 0.0)
     return s, beta
 
 
-def _score_spot_vadeli(data, coin, kaynak, k, win):
+def _score_lider(data, coin, lider, k, win):
+    """Liderin son k barlık getirisinin z-skoru (izleyenin kendi hareketi yok sayılır)."""
+    idx = data[(FUT, coin)].index
+    rl = _logret(data[(FUT, lider)], idx)
+    mp = max(2, win // 2)
+    return rl.rolling(k).sum() / (rl.rolling(win, min_periods=mp).std().shift(1) * np.sqrt(k))
+
+
+def _score_spot_vadeli(data, coin, kaynak, k, win, interval):
     idx = data[(FUT, coin)].index
     zs = []
+    mp = max(2, win // 2)
     for src in _sources("spot_vadeli", coin, kaynak):
-        rf = _logret(data[(FUT, src)])
-        rs = _on(_logret(data[(SPOT, src)]), rf.index)
+        fut = data[(FUT, src)]
+        rf = _logret(fut, idx)
+        rs = _logret(_spot_frame(src, interval, data), idx)
         d = rs - rf
-        sd = d.rolling(win, min_periods=win // 2).std().shift(1) * np.sqrt(k)
-        zs.append(_on(d.rolling(k).sum() / sd, idx))
+        sd = d.rolling(win, min_periods=mp).std().shift(1) * np.sqrt(k)
+        zs.append(d.rolling(k).sum() / sd)
     return pd.concat(zs, axis=1).mean(axis=1, skipna=False)
 
 
-def _score_baz(data, coin, kaynak, win):
+def _score_baz(data, coin, kaynak, win, interval):
     idx = data[(FUT, coin)].index
     zs = []
     for src in _sources("baz", coin, kaynak):
-        cf = data[(FUT, src)]["close"].astype(float)
-        cs = _on(data[(SPOT, src)]["close"].astype(float), cf.index)
+        cf = data[(FUT, src)]["close"].astype(float).reindex(idx)
+        cs = _spot_frame(src, interval, data)["close"].astype(float).reindex(idx)
         b = np.log(cf / cs)
-        zs.append(_on(-_zscore_level(b, win), idx))
+        zs.append(-_zscore_level(b, win))
     return pd.concat(zs, axis=1).mean(axis=1, skipna=False)
 
 
@@ -223,10 +259,12 @@ def signal_fn(
         if tur == "yetis":
             s, beta = _score_yetis(data, coin, lider, k, win, lider_esik)
             betas[coin] = beta
+        elif tur == "lider":
+            s = _score_lider(data, coin, lider, k, win)
         elif tur == "spot_vadeli":
-            s = _score_spot_vadeli(data, coin, kaynak, k, win)
+            s = _score_spot_vadeli(data, coin, kaynak, k, win, interval)
         elif tur == "baz":
-            s = _score_baz(data, coin, kaynak, win)
+            s = _score_baz(data, coin, kaynak, win, interval)
         elif tur == "prim":
             s = _score_prim(data, coin, win, prim_dilim)
         else:
@@ -257,18 +295,19 @@ def make_spec(name: str, interval: str, description: str = "", **params) -> Stra
     hedge = bool(params.get("hedge", False))
     legs: list = [(FUT, c) for c in islem]
     weights: dict = {}
-    if tur == "yetis":
+    if tur in ("yetis", "lider"):
         if lider not in islem:
             legs.append((FUT, lider))
-        if hedge:
+        if hedge and tur == "yetis":
             for c in islem:
                 weights[(FUT, c)] = 0.5 / len(islem)
             weights[(FUT, lider)] = 0.5
+    # Spot mumları signal_fn içinde yüklenir; yalnız kaynak coinlerin vadeli
+    # mumları (işlem görmüyorsa) sıfır ağırlıklı bilgi bacağı olur.
     srcs = sorted({s for c in islem for s in _sources(tur, c, params.get("kaynak"))})
     for s in srcs:
         if (FUT, s) not in legs:
             legs.append((FUT, s))
-        legs.append((SPOT, s))
     if not weights:
         for leg in legs:
             weights[leg] = (1.0 / len(islem)) if (leg[0] == FUT and leg[1] in islem) else 0.0
