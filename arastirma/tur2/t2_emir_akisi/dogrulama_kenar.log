@@ -1,0 +1,5 @@
+t2_emir_akisi_uyum_5m_n72_k3.5_h12 | dev_train: işlem 398, brüt +140.5 bps, net +127.3 bps, maliyet+fonlama 13.2 bps, kazanan 0.65 | dev_valid: işlem 147, brüt +18.1 bps, net +4.4 bps, maliyet+fonlama 13.7 bps, kazanan 0.52
+t2_emir_akisi_uyum_15m_n24_k3.5_h2 | dev_train: işlem 479, brüt +109.7 bps, net +95.7 bps, maliyet+fonlama 14.0 bps, kazanan 0.65 | dev_valid: işlem 144, brüt +20.5 bps, net +6.7 bps, maliyet+fonlama 13.7 bps, kazanan 0.53
+t2_emir_akisi_artik_15m_n12_k3.5_h8 | dev_train: işlem 625, brüt +63.7 bps, net +50.3 bps, maliyet+fonlama 13.4 bps, kazanan 0.47 | dev_valid: işlem 217, brüt +9.5 bps, net -4.4 bps, maliyet+fonlama 13.9 bps, kazanan 0.35
+t2_emir_akisi_uyum_spot_5m_n72_k3.5_h12_uzun | dev_train: işlem 321, brüt +153.2 bps, net +129.2 bps, maliyet+fonlama 24.0 bps, kazanan 0.64 | dev_valid: işlem 139, brüt +12.6 bps, net -11.4 bps, maliyet+fonlama 24.0 bps, kazanan 0.45
+t2_emir_akisi_kontrol_getiri_donus_5m_n72_k5_h12 | dev_train: işlem 296, brüt +180.1 bps, net +166.2 bps, maliyet+fonlama 13.9 bps, kazanan 0.69 | dev_valid: işlem 79, brüt +28.4 bps, net +14.5 bps, maliyet+fonlama 13.9 bps, kazanan 0.61

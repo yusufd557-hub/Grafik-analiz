@@ -321,7 +321,16 @@ FROZEN = (
 )
 
 CHECK = {
-    # candidate_check sonucu (dev_valid'de tek değerlendirme; bkz. RAPOR.md). Parametreler değişmedi.
+    # candidate_check sonucu (dev_valid'de tek değerlendirme, 9 Ekim 2026; bkz. RAPOR.md).
+    # Yalnız açıklama metni eklendi; parametreler değişmedi.
+    "uyum_5m_n72_k3.5_h12": "GEÇMEDİ — dev_valid 1× %+2,09, 2× %−4,68, Sharpe 0,18, 147 işlem, alfa %+1,6 "
+    "(2× maliyet ve Sharpe şartları başarısız).",
+    "uyum_15m_n24_k3.5_h2": "GEÇMEDİ — dev_valid 1× %+2,57, 2× %−4,10, Sharpe 0,18, 144 işlem, alfa %+2,1 "
+    "(2× maliyet ve Sharpe şartları başarısız).",
+    "artik_15m_n12_k3.5_h8": "GEÇMEDİ — dev_valid 1× %−3,24, 2× %−12,56, Sharpe −0,35, 217 işlem, alfa %−1,7.",
+    "uyum_spot_5m_n72_k3.5_h12_uzun": "GEÇMEDİ — dev_valid 1× %−5,34, 2× %−15,30, Sharpe −0,43, 139 işlem, alfa %−3,1.",
+    "kontrol_getiri_donus_5m_n72_k5_h12": "GEÇMEDİ — dev_valid 1× %+3,98, 2× %+0,21, Sharpe 0,36, 79 işlem, alfa %+2,5 "
+    "(Sharpe şartı başarısız).",
 }
 
 

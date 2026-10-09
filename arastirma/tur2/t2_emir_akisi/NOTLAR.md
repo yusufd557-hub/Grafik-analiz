@@ -241,3 +241,24 @@ Beklenti (önceden yazılıyor): Kâr çöküş günlerine bağlı olduğundan d
 sonucu bu dönemdeki ani düşüşlerin sayısına çok duyarlı olacak; az çöküş
 olursa işlem sayısı ve getiri düşük kalabilir. 1 ile 5 arasındaki fark,
 akışın ek bilgisinin ölçüsüdür.
+
+## dev_valid sonucu (9 Ekim 2026, değerlendirmeden SONRA eklendi)
+
+`nedensellik.py` (16:34 UTC, değerlendirmeden önce): beşi de `assert_causal`'ı
+7 kesimle geçti; her birinin defterde aynı parametreli dev_train satırı var.
+`dogrulama.py` bir kez çalıştırıldı (ilk dev_valid satırı 16:35:41 UTC).
+Bu notun yukarısı o saatten önce yazıldı.
+
+| Yapılandırma | dev_valid 1× | 2× | Sharpe | İşlem | Alfa | aday |
+|---|---:|---:|---:|---:|---:|---|
+| uyum 5m n72 k3,5 h12 | %+2,09 | %−4,68 | 0,18 | 147 | %+1,6 | hayır |
+| uyum 15m n24 k3,5 h2 | %+2,57 | %−4,10 | 0,18 | 144 | %+2,1 | hayır |
+| artik 15m n12 k3,5 h8 | %−3,24 | %−12,56 | −0,35 | 217 | %−1,7 | hayır |
+| uyum spot 5m (uzun) | %−5,34 | %−15,30 | −0,43 | 139 | %−3,1 | hayır |
+| kontrol getiri dönüş k5 | %+3,98 | %+0,21 | 0,36 | 79 | %+2,5 | hayır |
+
+Hiçbiri `candidate_check`'i geçmedi. İşlem başına brüt kenar dev_train'de
+64–180 bps iken dev_valid'de 9–28 bps'e düştü; maliyet (13–14 bps vadeli,
+24 bps spot) kenarın çoğunu ya da tamamını yiyor. Akışlı sürüm (1) akışsız
+kontrolden (5) iyi değil. dev_valid'den sonra hiçbir parametre değişmedi,
+yeni arama yapılmadı; modüle yalnız sonuç açıklamaları eklendi.
