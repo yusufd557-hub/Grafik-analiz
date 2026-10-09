@@ -54,24 +54,27 @@ def _download_symbol(root: Path, symbol: str, interval: str, start: str, with_fu
     session = requests.Session()
     path = store.path(symbol, interval)
     if path.exists():
-        return "var"
-    months = [m for m in _months_listed(session, symbol, interval) if m >= start]
-    parts = []
-    for m in months:
-        y, mo = map(int, m.split("-"))
-        for attempt in range(3):
-            try:
-                chunk = fetch_month_archive(session, symbol, interval, y, mo, market="futures")
-                if chunk is not None and not chunk.empty:
-                    parts.append(chunk)
-                break
-            except (requests.RequestException, DataError):
-                time.sleep(2**attempt)
-    if not parts:
-        return "yok"
-    frame = pd.concat(parts)
-    frame = frame[~frame.index.duplicated(keep="last")].sort_index()
-    store.save(symbol, interval, frame)
+        result = "var"
+    else:
+        months = [m for m in _months_listed(session, symbol, interval) if m >= start]
+        parts = []
+        for m in months:
+            y, mo = map(int, m.split("-"))
+            for attempt in range(3):
+                try:
+                    chunk = fetch_month_archive(session, symbol, interval, y, mo, market="futures")
+                    if chunk is not None and not chunk.empty:
+                        parts.append(chunk)
+                    break
+                except (requests.RequestException, DataError):
+                    time.sleep(2**attempt)
+        if not parts:
+            return "yok"
+        frame = pd.concat(parts)
+        frame = frame[~frame.index.duplicated(keep="last")].sort_index()
+        store.save(symbol, interval, frame)
+        result = f"{len(frame)} mum"
+    # Mumlar önceki bir çalışmada inmiş olsa da eksik fonlama tamamlanır.
     if with_funding and not store.funding_path(symbol).exists():
         fparts = []
         for m in _months_listed(session, symbol, "", kind="fundingRate"):
@@ -92,7 +95,7 @@ def _download_symbol(root: Path, symbol: str, interval: str, start: str, with_fu
             fpath = store.funding_path(symbol)
             fpath.parent.mkdir(parents=True, exist_ok=True)
             fr.to_parquet(fpath)
-    return f"{len(frame)} mum"
+    return result
 
 
 def download(root: Path, symbols: list[str], interval: str, start: str = "2020-01", with_funding: bool = False) -> dict:
