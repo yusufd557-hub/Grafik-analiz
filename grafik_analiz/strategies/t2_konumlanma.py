@@ -95,8 +95,8 @@ def _key(tag: str, symbol: str, index: pd.DatetimeIndex, step: pd.Timedelta) -> 
     return (tag, symbol, len(index), int(_ns(index[:1])[0]), int(_ns(index[-1:])[0]), step.value)
 
 
-def bar_metrics(symbol: str, index: pd.DatetimeIndex, step: pd.Timedelta) -> pd.DataFrame:
-    """Her bar için kapanıştan en az ``METRIC_LAG`` önceki son konumlanma ölçümü."""
+def bar_metrics(symbol: str, index: pd.DatetimeIndex, step: pd.Timedelta, lag: pd.Timedelta = METRIC_LAG) -> pd.DataFrame:
+    """Her bar için kapanıştan en az ``lag`` (varsayılan ``METRIC_LAG``) önceki son konumlanma ölçümü."""
 
     def compute() -> pd.DataFrame:
         from grafik_analiz.research.data import load_metrics
@@ -110,7 +110,7 @@ def bar_metrics(symbol: str, index: pd.DatetimeIndex, step: pd.Timedelta) -> pd.
             return out
         # Açık kesme: verilen mumların son barının kapanışından önceki kayıtlar.
         raw = raw[raw.index < index[-1] + step]
-        cutoff = _ns(index + step - METRIC_LAG)
+        cutoff = _ns(index + step - lag)
         for col in METRIC_COLS:
             s = raw[col].astype(float)
             if col in ("oi", "oi_usdt"):
@@ -128,7 +128,7 @@ def bar_metrics(symbol: str, index: pd.DatetimeIndex, step: pd.Timedelta) -> pd.
             out[col] = np.where(ok, vals, np.nan)
         return out
 
-    return _cache_get(_key("metrics", symbol, index, step), compute)
+    return _cache_get(_key("metrics", symbol, index, step) + (pd.Timedelta(lag).value,), compute)
 
 
 def bar_premium(symbol: str, index: pd.DatetimeIndex, step: pd.Timedelta) -> pd.Series:
@@ -262,6 +262,22 @@ def _signal_fark(frame, met, bpd, w_gun=30, c=1.5, cx=0.0, isaret=1, **_):
     return isaret * _band(d.to_numpy(), c, cx)
 
 
+def _signal_bilesik(frame, met, bpd, w_gun=7, k=24, w_taker_gun=30, c=1.0, cx=0.0, **_):
+    """Kalabalık (genel oran, karşıt) ile taker akışının (izle) z-skorlarının ortalaması."""
+    z1 = -_z(np.log(met["genel_oran"]), int(w_gun * bpd))
+    tb = frame["taker_buy_base"].astype(float).rolling(int(k), min_periods=int(k)).sum()
+    vol = frame["volume"].astype(float).rolling(int(k), min_periods=int(k)).sum()
+    z2 = _z(tb / vol.replace(0.0, np.nan), int(w_taker_gun * bpd))
+    score = (z1 + z2) / 2.0
+    return _band(score.to_numpy(), c, cx)
+
+
+def _signal_fiyat(frame, bpd, w_gun=7, c=1.0, cx=0.0, isaret=1, **_):
+    """Kontrol: yalnız fiyat (log kapanışın kayan z-skoru); konumlanma verisi kullanmaz."""
+    z = _z(np.log(frame["close"].astype(float)), int(w_gun * bpd)).to_numpy()
+    return isaret * _band(z, c, cx)
+
+
 def signal_fn(
     data: dict,
     funding: dict,
@@ -269,6 +285,7 @@ def signal_fn(
     yon: str = "iki",
     trend_gun: int = 0,
     filtre: str = "yok",
+    gecikme_dk: int = 10,
     **params,
 ) -> dict:
     out = {}
@@ -280,16 +297,21 @@ def signal_fn(
             continue
         step = _step(frame)
         bpd = int(round(pd.Timedelta(days=1) / step))
+        lag = pd.Timedelta(minutes=max(int(gecikme_dk), int(METRIC_LAG / pd.Timedelta(minutes=1))))
         if kind == "oi":
-            pos = _signal_oi(frame, bar_metrics(symbol, index, step), bpd, **params)
+            pos = _signal_oi(frame, bar_metrics(symbol, index, step, lag), bpd, **params)
         elif kind == "kalabalik":
-            pos = _signal_kalabalik(frame, bar_metrics(symbol, index, step), bpd, **params)
+            pos = _signal_kalabalik(frame, bar_metrics(symbol, index, step, lag), bpd, **params)
         elif kind == "prim":
             pos = _signal_prim(frame, bar_premium(symbol, index, step), bpd, **params)
         elif kind == "taker":
             pos = _signal_taker(frame, bpd, **params)
+        elif kind == "bilesik":
+            pos = _signal_bilesik(frame, bar_metrics(symbol, index, step, lag), bpd, **params)
+        elif kind == "fiyat":
+            pos = _signal_fiyat(frame, bpd, **params)
         elif kind == "fark":
-            pos = _signal_fark(frame, bar_metrics(symbol, index, step), bpd, **params)
+            pos = _signal_fark(frame, bar_metrics(symbol, index, step, lag), bpd, **params)
         else:
             raise ValueError(f"bilinmeyen tür: {kind}")
         pos = _side(np.asarray(pos, dtype=float), yon)

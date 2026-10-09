@@ -95,8 +95,24 @@ def _panel(data: dict) -> tuple[pd.DataFrame, pd.DataFrame, pd.Series]:
     return pd.DataFrame(close, index=index), pd.DataFrame(real, index=index), bar_close
 
 
-def _spread_z(la: pd.Series, lb: pd.Series, hedge: str, hedge_win: int, z_win: int) -> tuple[pd.Series, pd.Series, pd.Series]:
-    """(z, h, S): z-skoru, o barda bilinen hedge oranı ve yayılım serisi."""
+def _spread_z(
+    la: pd.Series,
+    lb: pd.Series,
+    hedge: str,
+    hedge_win: int,
+    z_win: int,
+    z_tur: str = "duzey",
+    k: int = 1,
+    vol_win: int = 500,
+) -> tuple[pd.Series, pd.Series, pd.Series]:
+    """(z, h, S): z-skoru, o barda bilinen hedge oranı ve yayılım serisi.
+
+    ``z_tur="duzey"``: yayılımın kayan ortalamadan sapması (z_win).
+    ``z_tur="sok"``: son ``k`` barlık yayılım hareketi / (hareketten önceki ``vol_win``
+    barlık bar başı yayılım oynaklığı × √k).
+    """
+    if z_tur == "sok" and hedge == "ols":
+        raise ValueError("sok modu ols hedge ile kullanılmaz")
     if hedge == "bir":
         s = la - lb
         h = pd.Series(1.0, index=la.index)
@@ -125,6 +141,12 @@ def _spread_z(la: pd.Series, lb: pd.Series, hedge: str, hedge_win: int, z_win: i
         return z.replace([np.inf, -np.inf], np.nan), h, resid
     else:
         raise ValueError(f"bilinmeyen hedge: {hedge}")
+    if z_tur == "sok":
+        vol = s.diff().rolling(vol_win, min_periods=vol_win).std().shift(k)
+        z = (s - s.shift(k)) / (vol * math.sqrt(k))
+        return z.replace([np.inf, -np.inf], np.nan), h, s
+    if z_tur != "duzey":
+        raise ValueError(f"bilinmeyen z_tur: {z_tur}")
     m = s.rolling(z_win, min_periods=z_win).mean()
     sd = s.rolling(z_win, min_periods=z_win).std()
     z = (s - m) / sd
@@ -155,7 +177,7 @@ def _pair_state(
     h: np.ndarray,
     can_enter: np.ndarray,
     z_in: float,
-    z_exit: float,
+    z_exit: float | None,
     z_stop: float | None,
     max_bar: int | None,
     allow_long: np.ndarray,
@@ -163,6 +185,7 @@ def _pair_state(
     teyit: bool,
     h_min: float,
     h_max: float,
+    block_after_exit: bool = False,
 ) -> tuple[np.ndarray, np.ndarray]:
     """Çift durum makinesi → (A bacağı birimi, B bacağı birimi), her bar kapanışında hedef."""
     n = len(z)
@@ -180,8 +203,9 @@ def _pair_state(
         if state != 0:
             bars += 1
             if not np.isnan(zt):
-                if (state == 1 and zt >= -z_exit) or (state == -1 and zt <= z_exit):
+                if z_exit is not None and ((state == 1 and zt >= -z_exit) or (state == -1 and zt <= z_exit)):
                     state = 0
+                    blocked = block_after_exit
                 elif abs(zt) >= zs or bars >= mb:
                     state = 0
                     blocked = True
@@ -221,8 +245,11 @@ def sinyal_cift(
     hedge: str = "bir",
     hedge_win: int = 500,
     z_win: int = 200,
+    z_tur: str = "duzey",
+    k: int = 1,
+    vol_win: int = 500,
     z_in: float = 2.0,
-    z_exit: float = 0.0,
+    z_exit: float | None = 0.0,
     z_stop: float | None = None,
     max_bar: int | None = None,
     rejim: str | None = None,
@@ -257,7 +284,7 @@ def sinyal_cift(
 
     units = {sym: np.zeros(len(index)) for sym in close.columns}
     for a, b in pairs:
-        z, h, s = _spread_z(logp[a], logp[b], hedge, hedge_win, z_win)
+        z, h, s = _spread_z(logp[a], logp[b], hedge, hedge_win, z_win, z_tur, k, vol_win)
         can = (real[a] & real[b]).to_numpy() & funded[a] & funded[b] & close[a].notna().to_numpy() & close[b].notna().to_numpy()
         allow_l = np.ones(len(index), dtype=bool)
         allow_s = np.ones(len(index), dtype=bool)
@@ -275,7 +302,8 @@ def sinyal_cift(
                 allow_s = ok.copy()
                 allow_l = ok.copy()
         ua, ub = _pair_state(
-            z.to_numpy(), h.to_numpy(), can, z_in, z_exit, z_stop, max_bar, allow_l, allow_s, teyit, h_min, h_max
+            z.to_numpy(), h.to_numpy(), can, z_in, z_exit, z_stop, max_bar, allow_l, allow_s, teyit, h_min, h_max,
+            block_after_exit=(z_tur == "sok"),
         )
         units[a] += ua
         units[b] += ub

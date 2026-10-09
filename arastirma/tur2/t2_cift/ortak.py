@@ -26,7 +26,7 @@ TRAIN_END = protocol.DEV_TRAIN_END
 
 def ad(interval: str, p: dict) -> str:
     parts = [interval, "-".join(p.get("ciftler", ["ETHBTC"])), p.get("hedge", "bir")]
-    keys = ["hedge_win", "z_win", "z_in", "z_exit", "z_stop", "max_bar", "rejim", "rejim_win", "rejim_esik", "teyit", "limit_bps", "limit_bar", "limit_mod"]
+    keys = ["z_tur", "k", "vol_win", "hedge_win", "z_win", "z_in", "z_exit", "z_stop", "max_bar", "rejim", "rejim_win", "rejim_esik", "teyit", "limit_bps", "limit_bar", "limit_mod"]
     for k in keys:
         if k in p and p[k] is not None and p[k] is not False:
             parts.append(f"{k}{p[k]}")

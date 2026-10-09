@@ -1,0 +1,12 @@
+1h ETH/BTC otokor: [-0.008 -0.007 -0.009  0.024  0.01 ] VR: {6: np.float64(0.96), 24: np.float64(1.07), 72: np.float64(1.13), 168: np.float64(1.15), 500: np.float64(1.27)}
+1h SOL/BTC otokor: [-0.022 -0.019  0.005 -0.012 -0.005] VR: {6: np.float64(0.95), 24: np.float64(1.01), 72: np.float64(1.0), 168: np.float64(1.05), 500: np.float64(1.23)}
+1h SOL/ETH otokor: [-0.025 -0.017  0.006 -0.013 -0.003] VR: {6: np.float64(0.94), 24: np.float64(1.0), 72: np.float64(1.03), 168: np.float64(1.08), 500: np.float64(1.19)}
+  yıllık VR 72 ETH/BTC {2020: np.float64(1.09), 2021: np.float64(1.19), 2022: np.float64(0.98), 2023: np.float64(1.01), 2024: np.float64(1.15)}
+  yıllık VR 72 SOL/BTC {2020: np.float64(0.83), 2021: np.float64(0.96), 2022: np.float64(0.93), 2023: np.float64(1.15), 2024: np.float64(0.82)}
+  yıllık VR 72 SOL/ETH {2020: np.float64(0.77), 2021: np.float64(1.04), 2022: np.float64(0.82), 2023: np.float64(1.13), 2024: np.float64(1.12)}
+4h ETH/BTC otokor: [-0.011  0.056  0.007 -0.023  0.005] VR: {6: np.float64(1.09), 18: np.float64(1.15), 42: np.float64(1.16), 90: np.float64(1.25), 180: np.float64(1.34)}
+4h SOL/BTC otokor: [-0.011  0.023  0.028 -0.039 -0.021] VR: {6: np.float64(1.07), 18: np.float64(1.07), 42: np.float64(1.12), 90: np.float64(1.23), 180: np.float64(1.48)}
+4h SOL/ETH otokor: [-0.005  0.027  0.026 -0.015 -0.007] VR: {6: np.float64(1.09), 18: np.float64(1.12), 42: np.float64(1.18), 90: np.float64(1.22), 180: np.float64(1.43)}
+  yıllık VR 18 ETH/BTC {2020: np.float64(1.15), 2021: np.float64(1.18), 2022: np.float64(1.0), 2023: np.float64(0.98), 2024: np.float64(1.19)}
+  yıllık VR 18 SOL/BTC {2020: np.float64(0.87), 2021: np.float64(1.01), 2022: np.float64(1.07), 2023: np.float64(1.13), 2024: np.float64(0.9)}
+  yıllık VR 18 SOL/ETH {2020: np.float64(0.84), 2021: np.float64(1.11), 2022: np.float64(1.02), 2023: np.float64(1.11), 2024: np.float64(1.22)}

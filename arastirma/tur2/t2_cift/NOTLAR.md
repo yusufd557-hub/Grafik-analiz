@@ -50,3 +50,28 @@ dondurma kararı da burada, dev_valid'e bakmadan kaydedilir.
 ## Arama günlüğü
 
 (aşağıda, her taramadan sonra eklenir)
+
+### Tarama 1 (162 yapılandırma, 09.10 07:00)
+
+Temel düzey z-skoru (z_win 1h: 48/168/500, 4h: 30/90/180; z_in 1,5/2/2,5; çıkış z=0;
+hedge bir/oyn/ols; üç çift tek tek; piyasa emri). **Hiçbir yapılandırma eğitimde
+pozitif değil** (en iyi Sharpe −0,07). Maliyet öncesi brüt getiri de bütün
+yapılandırmalarda negatif. Fonlama genelde lehte (SOL çiftlerinde 4 yılda +%10–30),
+ama brüt zararı kapatmıyor.
+
+Betimleyici tanılama (`tanilama.txt`, yalnız eğitim verisi): yayılımların varyans
+oranı 1 günden uzun ufuklarda 1'in üstünde (1h VR(500) 1,19–1,27; 4h VR(180) 1,34–1,48):
+yayılımlar bu ufuklarda trend yapıyor, ortalamaya dönmüyor. Çok kısa ufukta
+(1–6 saat) hafif dönüş var (1h birinci gecikme otokorelasyonu −0,01…−0,025, VR(6) 0,94–0,96).
+
+`tanilama2.txt` (yalnız eğitim verisi, betimleyici): büyük kısa vadeli yayılım
+şokundan (son k bar hareketi > 3–4σ) sonra 1–6 saatlik ortalama dönüş SOL
+çiftlerinde 10–80 bp, ETH/BTC'de 0–10 bp; 24 saatte işaret tersine dönüyor (devam).
+Çift gidiş-dönüş maliyeti piyasa emriyle yaklaşık 28 bp (bacak başına notional 1).
+
+### Tarama 2 planı
+
+Yayılım şoku sönümlenmesi (`z_tur="sok"`): son k barlık yayılım hareketi /
+(hareketten önceki 500 barlık oynaklık × √k) > z_in ise ters yönde gir, `max_bar` bar
+sonra çık (z çıkışı yok, durdurma yok). Çıkıştan sonra |z| < z_in olmadan yeni giriş yok.
+1h: k 1/3/6, z_in 3/4, tutma 3/6/12, hedge bir/oyn(500); 4h: k 1/2, z_in 3/4, tutma 1/3.

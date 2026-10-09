@@ -38,6 +38,8 @@ SHORT = {
     "isaret": "s",
     "trend_gun": "tr",
     "filtre": "",
+    "gecikme_dk": "g",
+    "w_taker_gun": "wt",
 }
 
 
@@ -81,7 +83,56 @@ def stage1():
     return cfgs
 
 
-STAGES = {"1": stage1}
+def stage2a():
+    """Gecikme dayanıklılığı: kalabalık sinyali ölçüm gecikmesi büyütülünce de var mı?"""
+    cfgs = []
+    base = dict(kind="kalabalik", oran="genel", w_gun=7, c=1.0, cx=0.0, isaret=-1)
+    for g in (30, 60, 120):
+        cfgs.append(("SEPET3", "1h", {**base, "gecikme_dk": g}))
+    for g in (60, 240):
+        cfgs.append(("SEPET3", "4h", {**base, "gecikme_dk": g}))
+    return cfgs
+
+
+def stage2b():
+    """Kontrol: kalabalık sinyalinin yalnız fiyatla taklidi (fiyat z-skoru, momentum yönü)."""
+    cfgs = []
+    for iv in ("1h", "4h"):
+        for w in (7, 30):
+            cfgs.append(("SEPET3", iv, dict(kind="fiyat", w_gun=w, c=1.0, cx=0.0, isaret=1)))
+    return cfgs
+
+
+def stage3():
+    """Umut veren türlerin komşulukları (sağlamlık ve ince ayar), yalnız eğitim."""
+    cfgs = []
+    for iv in ("1h", "4h"):
+        for p in grid(kind=["kalabalik"], oran=["genel"], w_gun=[3, 7, 14], c=[0.5, 1.0, 1.5], cx=[0.0, 0.5], isaret=[-1]):
+            cfgs.append(("SEPET3", iv, p))
+        for p in grid(kind=["kalabalik"], oran=["top_hesap", "top_poz"], w_gun=[7], c=[1.0], cx=[0.0], isaret=[-1]):
+            cfgs.append(("SEPET3", iv, p))
+    for iv, ks, tuts in (("1h", (8, 12, 16), (6, 12, 24)), ("4h", (2, 3, 4), (2, 3, 6))):
+        for p in grid(kind=["oi"], mod=["birikim"], k=ks, w_gun=[30], a=[1.0], b=[1.5, 2.0], tut=tuts):
+            cfgs.append(("SEPET3", iv, p))
+    for iv in ("1h", "4h"):
+        for p in grid(kind=["fark"], w_gun=[7, 14, 30], c=[0.5, 1.0, 1.5], cx=[0.0], isaret=[1]):
+            cfgs.append(("SEPET3", iv, p))
+    for iv, ks in (("1h", (12, 24, 48)), ("4h", (3, 6, 12))):
+        for p in grid(kind=["taker"], k=ks, w_gun=[30], c=[1.5, 2.0, 2.5], cx=[0.0], isaret=[1]):
+            cfgs.append(("SEPET3", iv, p))
+    return cfgs
+
+
+def stage4():
+    """Bileşik: kalabalık (karşıt) + taker akışı (izle) z-skor ortalaması."""
+    cfgs = []
+    for iv, ks in (("1h", (24, 48)), ("4h", (6, 12))):
+        for p in grid(kind=["bilesik"], w_gun=[7], k=ks, w_taker_gun=[30], c=[0.5, 1.0], cx=[0.0]):
+            cfgs.append(("SEPET3", iv, p))
+    return cfgs
+
+
+STAGES = {"1": stage1, "2a": stage2a, "2b": stage2b, "3": stage3, "4": stage4}
 
 
 def summary(name, universe, interval, params, res, seconds):
