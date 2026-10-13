@@ -1,14 +1,10 @@
 name: İleriye dönük takip
 
-# 15 dakikada bir çalışır. GitHub zamanlanmış çalışmaları yoğunlukta geciktirip
-# atlayabildiği için sık çalıştırılır; yeni kapanmış mum yoksa hiçbir şey
-# commit edilmez. Kayıtlar `ileri-takip` dalına commit edilir.
-# GitHub zamanlanmış iş akışlarını yalnız varsayılan daldaki (main) dosyadan
-# çalıştırır.
+# Zamanlanmış çalışma durduruldu; iş akışı yalnız elle (workflow_dispatch)
+# çalıştırılır. Yeni kapanmış mum yoksa hiçbir şey commit edilmez.
+# Kayıtlar `ileri-takip` dalına commit edilir.
 
 on:
-  schedule:
-    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
 
 permissions:
